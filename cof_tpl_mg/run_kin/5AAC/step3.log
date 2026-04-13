@@ -1,0 +1,664 @@
+INFO - step3.py: Step 3. Energies calculation with PBE solver.
+INFO - step3.py: Calling new VDW....No Scaling Applied
+INFO - step3.py:    Process run time options & convert step2_out.pdb.
+INFO - step3.py:    Prepare input for PB solver.
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Set up parallel envrionment and run PB solver.
+INFO - step3.py:    Running PBE solver in 1 threads
+Warning: VDW_RAD HOH-1 " O  " not defined in RADIUS parameter
+Warning: VDW_RAD HOH-1 " H1 " not defined in RADIUS parameter
+Warning: VDW_RAD HOH+1 " O  " not defined in RADIUS parameter
+Warning: VDW_RAD HOH+1 " H1 " not defined in RADIUS parameter
+Warning: VDW_RAD HOH+1 " H2 " not defined in RADIUS parameter
+Warning: VDW_RAD HOH+1 " H3 " not defined in RADIUS parameter
+Warning: VDW_RAD SO401 " HO1" not defined in RADIUS parameter
+Warning: VDW_RAD SO401 " HO2" not defined in RADIUS parameter
+Warning: VDW_RAD SO4-1 " HO1" not defined in RADIUS parameter
+Warning, parameter ('RADIUS', 'VGH+a', ' H53') not found, using default values as C
+Warning, parameter ('RADIUS', 'VGH+a', ' H54') not found, using default values as C
+Warning, parameter ('RADIUS', 'VGH+1', ' H53') not found, using default values as C
+Warning, parameter ('RADIUS', 'VGH+2', ' H53') not found, using default values as C
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (1/624) ASN01A1093_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1093_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (2/624) ASN01A1093_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1093_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (3/624) PRO01A1094_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (4/624) ASN01A1095_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1095_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (5/624) ASN01A1095_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1095_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (6/624) TYR01A1096_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1096_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (7/624) TYR-1A1096_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR-1A1096_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (8/624) CYS01A1097_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1097_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (9/624) CYS01A1097_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1097_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (10/624) CYS01A1097_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1097_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (11/624) CYS-1A1097_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS-1A1097_004
+INFO - step3.py: Skipping PBE solver for non-charge conformer (12/624) PHE01A1098_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (13/624) ALA01A1099_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (14/624) LYS01A1101_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS01A1101_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (15/624) LYS+1A1101_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS+1A1101_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (16/624) THR01A1102_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1102_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (17/624) THR01A1102_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1102_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (18/624) SER01A1103_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1103_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (19/624) SER01A1104_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1104_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (20/624) SER01A1104_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1104_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (21/624) ILE01A1105_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (22/624) SER01A1106_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1106_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (23/624) ASP01A1107_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1107_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (24/624) ASP01A1107_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1107_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (25/624) ASP02A1107_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1107_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (26/624) ASP02A1107_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1107_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (27/624) ASP-1A1107_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1107_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (28/624) LEU01A1108_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (29/624) LYS01A1109_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS01A1109_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (30/624) LYS+1A1109_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS+1A1109_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (31/624) GLU01A1110_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1110_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (32/624) GLU01A1110_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1110_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (33/624) GLU02A1110_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1110_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (34/624) GLU02A1110_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1110_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (35/624) GLU-1A1110_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1110_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (36/624) VAL01A1111_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (37/624) PRO01A1112_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (38/624) ARG01A1113_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1113_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (39/624) ARG02A1113_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1113_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (40/624) ARG03A1113_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1113_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (41/624) ARG+1A1113_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1113_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (42/624) LYS01A1114_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS01A1114_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (43/624) LYS+1A1114_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS+1A1114_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (44/624) ASN01A1115_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1115_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (45/624) ASN01A1115_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1115_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (46/624) ILE01A1116_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (47/624) THR01A1117_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1117_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (48/624) THR01A1117_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1117_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (49/624) LEU01A1118_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (50/624) ILE01A1119_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (51/624) ARG01A1120_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1120_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (52/624) ARG02A1120_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1120_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (53/624) ARG02A1120_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1120_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (54/624) ARG03A1120_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1120_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (55/624) ARG+1A1120_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1120_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (56/624) LEU01A1122_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (57/624) HIS01A1124_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS01A1124_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (58/624) HIS02A1124_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS02A1124_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (59/624) HIS+1A1124_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS+1A1124_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (60/624) GLU01A1129_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1129_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (61/624) GLU01A1129_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1129_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (62/624) GLU02A1129_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1129_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (63/624) GLU02A1129_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1129_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (64/624) GLU-1A1129_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1129_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (65/624) VAL01A1130_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (66/624) TYR01A1131_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1131_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (67/624) TYR01A1131_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1131_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (68/624) TYR-1A1131_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR-1A1131_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (69/624) GLU01A1132_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1132_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (70/624) GLU01A1132_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1132_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (71/624) GLU02A1132_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1132_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (72/624) GLU02A1132_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1132_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (73/624) GLU-1A1132_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1132_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (74/624) GLN01A1134_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1134_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (75/624) GLN01A1134_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1134_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (76/624) VAL01A1135_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (77/624) PRO01A1144_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (78/624) LEU01A1145_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (79/624) GLN01A1146_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1146_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (80/624) GLN01A1146_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1146_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (81/624) VAL01A1147_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (82/624) ALA01A1148_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (83/624) VAL01A1149_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (84/624) LYS01A1150_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS01A1150_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (85/624) LYS+1A1150_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS+1A1150_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (86/624) THR01A1151_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1151_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (87/624) THR01A1151_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1151_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (88/624) LEU01A1152_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (89/624) PRO01A1153_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (90/624) GLU01A1154_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1154_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (91/624) GLU01A1154_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1154_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (92/624) GLU02A1154_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1154_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (93/624) GLU02A1154_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1154_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (94/624) GLU-1A1154_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1154_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (95/624) VAL01A1155_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (96/624) TYR01A1156_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1156_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (97/624) TYR01A1156_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1156_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (98/624) TYR-1A1156_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR-1A1156_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (99/624) SER01A1157_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1157_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (100/624) SER01A1157_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1157_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (101/624) GLU01A1158_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1158_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (102/624) GLU01A1158_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1158_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (103/624) GLU02A1158_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1158_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (104/624) GLU02A1158_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1158_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (105/624) GLU-1A1158_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1158_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (106/624) GLN01A1159_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1159_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (107/624) GLN01A1159_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1159_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (108/624) ASP01A1160_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1160_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (109/624) ASP01A1160_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1160_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (110/624) ASP02A1160_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1160_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (111/624) ASP02A1160_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1160_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (112/624) ASP-1A1160_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1160_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (113/624) GLU01A1161_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1161_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (114/624) GLU01A1161_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1161_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (115/624) GLU01A1161_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1161_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (116/624) GLU01A1161_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1161_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (117/624) GLU02A1161_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1161_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (118/624) GLU02A1161_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1161_006
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (119/624) GLU02A1161_007 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1161_007
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (120/624) GLU02A1161_008 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1161_008
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (121/624) GLU-1A1161_009 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1161_009
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (122/624) GLU-1A1161_010 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1161_010
+INFO - step3.py: Skipping PBE solver for non-charge conformer (123/624) LEU01A1162_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (124/624) ASP01A1163_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1163_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (125/624) ASP01A1163_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1163_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (126/624) ASP01A1163_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1163_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (127/624) ASP01A1163_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1163_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (128/624) ASP02A1163_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1163_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (129/624) ASP02A1163_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1163_006
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (130/624) ASP02A1163_007 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1163_007
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (131/624) ASP02A1163_008 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1163_008
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (132/624) ASP-1A1163_009 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1163_009
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (133/624) ASP-1A1163_010 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1163_010
+INFO - step3.py: Skipping PBE solver for non-charge conformer (134/624) PHE01A1164_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (135/624) LEU01A1165_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (136/624) MET01A1166_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_MET01A1166_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (137/624) GLU01A1167_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1167_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (138/624) GLU01A1167_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1167_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (139/624) GLU02A1167_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1167_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (140/624) GLU02A1167_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1167_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (141/624) GLU-1A1167_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1167_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (142/624) ALA01A1168_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (143/624) LEU01A1169_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (144/624) ILE01A1170_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (145/624) ILE01A1171_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (146/624) SER01A1172_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1172_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (147/624) SER01A1172_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1172_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (148/624) SER01A1172_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1172_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (149/624) LYS01A1173_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS01A1173_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (150/624) LYS+1A1173_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS+1A1173_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (151/624) PHE01A1174_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (152/624) ASN01A1175_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1175_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (153/624) ASN01A1175_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1175_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (154/624) ASN01A1175_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1175_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (155/624) HIS01A1176_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS01A1176_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (156/624) HIS01A1176_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS01A1176_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (157/624) HIS02A1176_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS02A1176_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (158/624) HIS02A1176_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS02A1176_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (159/624) HIS+1A1176_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS+1A1176_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (160/624) HIS+1A1176_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS+1A1176_006
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (161/624) GLN01A1177_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1177_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (162/624) ASN01A1178_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1178_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (163/624) ASN01A1178_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1178_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (164/624) ILE01A1179_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (165/624) VAL01A1180_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (166/624) ARG01A1181_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1181_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (167/624) ARG02A1181_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1181_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (168/624) ARG02A1181_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1181_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (169/624) ARG03A1181_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1181_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (170/624) ARG+1A1181_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1181_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (171/624) CYS01A1182_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1182_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (172/624) CYS01A1182_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1182_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (173/624) CYS01A1182_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1182_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (174/624) CYS-1A1182_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS-1A1182_004
+INFO - step3.py: Skipping PBE solver for non-charge conformer (175/624) ILE01A1183_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (176/624) VAL01A1185_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (177/624) SER01A1186_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1186_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (178/624) SER01A1186_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1186_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (179/624) SER01A1186_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1186_003
+INFO - step3.py: Skipping PBE solver for non-charge conformer (180/624) LEU01A1187_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (181/624) GLN01A1188_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1188_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (182/624) SER01A1189_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1189_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (183/624) SER01A1189_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1189_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (184/624) LEU01A1190_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (185/624) PRO01A1191_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (186/624) ARG01A1192_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1192_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (187/624) ARG02A1192_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1192_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (188/624) ARG03A1192_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1192_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (189/624) ARG03A1192_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1192_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (190/624) ARG+1A1192_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1192_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (191/624) PHE01A1193_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (192/624) ILE01A1194_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (193/624) LEU01A1195_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (194/624) LEU01A1196_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (195/624) GLU01A1197_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1197_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (196/624) GLU01A1197_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1197_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (197/624) GLU02A1197_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1197_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (198/624) GLU02A1197_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1197_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (199/624) GLU-1A1197_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1197_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (200/624) LEU01A1198_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (201/624) MET01A1199_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_MET01A1199_001
+INFO - step3.py: Skipping PBE solver for non-charge conformer (202/624) ALA01A1200_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (203/624) ASP01A1203_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1203_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (204/624) ASP01A1203_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1203_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (205/624) ASP02A1203_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1203_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (206/624) ASP02A1203_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1203_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (207/624) ASP-1A1203_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1203_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (208/624) LEU01A1204_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (209/624) LYS01A1205_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS01A1205_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (210/624) LYS+1A1205_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS+1A1205_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (211/624) SER01A1206_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1206_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (212/624) SER01A1206_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1206_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (213/624) SER01A1206_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1206_003
+INFO - step3.py: Skipping PBE solver for non-charge conformer (214/624) PHE01A1207_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (215/624) LEU01A1208_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (216/624) ARG01A1209_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1209_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (217/624) ARG02A1209_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1209_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (218/624) ARG03A1209_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1209_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (219/624) ARG+1A1209_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1209_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (220/624) GLU01A1210_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1210_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (221/624) GLU01A1210_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1210_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (222/624) GLU02A1210_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1210_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (223/624) GLU02A1210_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1210_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (224/624) GLU-1A1210_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1210_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (225/624) THR01A1211_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1211_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (226/624) THR01A1211_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1211_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (227/624) ARG01A1212_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1212_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (228/624) ARG02A1212_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1212_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (229/624) ARG02A1212_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1212_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (230/624) ARG03A1212_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1212_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (231/624) ARG+1A1212_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1212_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (232/624) PRO01A1213_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (233/624) ARG01A1214_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1214_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (234/624) ARG02A1214_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1214_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (235/624) ARG03A1214_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1214_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (236/624) ARG+1A1214_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1214_004
+INFO - step3.py: Skipping PBE solver for non-charge conformer (237/624) PRO01A1215_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (238/624) SER01A1216_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1216_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (239/624) GLN01A1217_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1217_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (240/624) GLN01A1217_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1217_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (241/624) PRO01A1218_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (242/624) SER01A1219_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1219_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (243/624) SER01A1220_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1220_001
+INFO - step3.py: Skipping PBE solver for non-charge conformer (244/624) LEU01A1221_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (245/624) ALA01A1222_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (246/624) MET01A1223_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_MET01A1223_001
+INFO - step3.py: Skipping PBE solver for non-charge conformer (247/624) LEU01A1224_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (248/624) ASP01A1225_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1225_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (249/624) ASP01A1225_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1225_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (250/624) ASP02A1225_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1225_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (251/624) ASP02A1225_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1225_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (252/624) ASP-1A1225_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1225_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (253/624) LEU01A1226_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (254/624) LEU01A1227_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (255/624) HIS01A1228_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS01A1228_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (256/624) HIS01A1228_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS01A1228_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (257/624) HIS02A1228_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS02A1228_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (258/624) HIS02A1228_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS02A1228_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (259/624) HIS+1A1228_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS+1A1228_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (260/624) HIS+1A1228_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS+1A1228_006
+INFO - step3.py: Skipping PBE solver for non-charge conformer (261/624) VAL01A1229_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (262/624) ALA01A1230_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (263/624) ARG01A1231_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1231_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (264/624) ARG02A1231_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1231_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (265/624) ARG03A1231_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1231_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (266/624) ARG+1A1231_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1231_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (267/624) ASP01A1232_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1232_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (268/624) ASP01A1232_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1232_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (269/624) ASP02A1232_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1232_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (270/624) ASP02A1232_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1232_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (271/624) ASP-1A1232_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1232_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (272/624) ILE01A1233_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (273/624) ALA01A1234_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (274/624) CYS01A1235_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1235_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (275/624) CYS01A1235_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1235_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (276/624) CYS01A1235_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1235_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (277/624) CYS-1A1235_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS-1A1235_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (278/624) CYS01A1237_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1237_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (279/624) CYS01A1237_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1237_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (280/624) CYS01A1237_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1237_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (281/624) CYS-1A1237_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS-1A1237_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (282/624) GLN01A1238_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1238_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (283/624) GLN01A1238_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1238_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (284/624) TYR01A1239_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1239_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (285/624) TYR-1A1239_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR-1A1239_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (286/624) LEU01A1240_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (287/624) GLU01A1241_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1241_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (288/624) GLU01A1241_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1241_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (289/624) GLU02A1241_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1241_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (290/624) GLU02A1241_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1241_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (291/624) GLU-1A1241_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1241_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (292/624) GLU01A1242_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1242_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (293/624) GLU01A1242_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1242_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (294/624) GLU02A1242_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1242_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (295/624) GLU02A1242_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1242_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (296/624) GLU-1A1242_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1242_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (297/624) ASN01A1243_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1243_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (298/624) ASN01A1243_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1243_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (299/624) HIS01A1244_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS01A1244_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (300/624) HIS01A1244_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS01A1244_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (301/624) HIS02A1244_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS02A1244_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (302/624) HIS02A1244_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS02A1244_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (303/624) HIS+1A1244_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS+1A1244_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (304/624) HIS+1A1244_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS+1A1244_006
+INFO - step3.py: Skipping PBE solver for non-charge conformer (305/624) PHE01A1245_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (306/624) ILE01A1246_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (307/624) HIS01A1247_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS01A1247_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (308/624) HIS02A1247_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS02A1247_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (309/624) HIS+1A1247_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS+1A1247_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (310/624) ARG01A1248_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1248_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (311/624) ARG02A1248_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1248_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (312/624) ARG03A1248_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1248_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (313/624) ARG+1A1248_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1248_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (314/624) ASP01A1249_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1249_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (315/624) ASP01A1249_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1249_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (316/624) ASP02A1249_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1249_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (317/624) ASP02A1249_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1249_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (318/624) ASP-1A1249_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1249_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (319/624) ILE01A1250_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (320/624) ALA01A1251_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (321/624) ALA01A1252_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (322/624) ARG01A1253_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1253_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (323/624) ARG02A1253_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1253_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (324/624) ARG03A1253_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1253_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (325/624) ARG03A1253_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1253_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (326/624) ARG+1A1253_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1253_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (327/624) ASN01A1254_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1254_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (328/624) ASN01A1254_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1254_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (329/624) CYS01A1255_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1255_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (330/624) CYS01A1255_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1255_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (331/624) CYS01A1255_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1255_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (332/624) CYS-1A1255_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS-1A1255_004
+INFO - step3.py: Skipping PBE solver for non-charge conformer (333/624) LEU01A1256_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (334/624) LEU01A1257_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (335/624) THR01A1258_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1258_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (336/624) THR01A1258_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1258_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (337/624) CYS01A1259_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1259_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (338/624) CYS01A1259_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1259_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (339/624) CYS01A1259_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1259_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (340/624) CYS-1A1259_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS-1A1259_004
+INFO - step3.py: Skipping PBE solver for non-charge conformer (341/624) PRO01A1260_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (342/624) PRO01A1262_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (343/624) ARG01A1264_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1264_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (344/624) ARG01A1264_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1264_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (345/624) ARG02A1264_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1264_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (346/624) ARG02A1264_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1264_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (347/624) ARG02A1264_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1264_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (348/624) ARG02A1264_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1264_006
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (349/624) ARG03A1264_007 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1264_007
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (350/624) ARG03A1264_008 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1264_008
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (351/624) ARG03A1264_009 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1264_009
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (352/624) ARG03A1264_010 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1264_010
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (353/624) ARG+1A1264_011 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1264_011
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (354/624) ARG+1A1264_012 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1264_012
+INFO - step3.py: Skipping PBE solver for non-charge conformer (355/624) VAL01A1265_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (356/624) ALA01A1266_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (357/624) LYS01A1267_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS01A1267_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (358/624) LYS+1A1267_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS+1A1267_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (359/624) ILE01A1268_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (360/624) ASP01A1270_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1270_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (361/624) ASP01A1270_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1270_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (362/624) ASP02A1270_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1270_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (363/624) ASP02A1270_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1270_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (364/624) ASP-1A1270_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1270_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (365/624) PHE01A1271_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (366/624) MET01A1273_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_MET01A1273_001
+INFO - step3.py: Skipping PBE solver for non-charge conformer (367/624) ALA01A1274_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (368/624) ARG01A1275_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1275_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (369/624) ARG02A1275_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1275_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (370/624) ARG02A1275_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1275_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (371/624) ARG03A1275_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1275_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (372/624) ARG03A1275_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1275_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (373/624) ARG+1A1275_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1275_006
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (374/624) ASP01A1276_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1276_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (375/624) ASP01A1276_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1276_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (376/624) ASP02A1276_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1276_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (377/624) ASP02A1276_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1276_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (378/624) ASP-1A1276_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1276_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (379/624) ILE01A1277_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (380/624) TYR01A1278_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1278_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (381/624) TYR-1A1278_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR-1A1278_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (382/624) ARG01A1279_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1279_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (383/624) ARG01A1279_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1279_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (384/624) ARG02A1279_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1279_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (385/624) ARG02A1279_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1279_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (386/624) ARG03A1279_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1279_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (387/624) ARG03A1279_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1279_006
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (388/624) ARG03A1279_007 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1279_007
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (389/624) ARG+1A1279_008 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1279_008
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (390/624) ARG+1A1279_009 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1279_009
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (391/624) CYS01A1288_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1288_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (392/624) CYS01A1288_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1288_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (393/624) CYS01A1288_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1288_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (394/624) CYS-1A1288_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS-1A1288_004
+INFO - step3.py: Skipping PBE solver for non-charge conformer (395/624) ALA01A1289_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (396/624) MET01A1290_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_MET01A1290_001
+INFO - step3.py: Skipping PBE solver for non-charge conformer (397/624) LEU01A1291_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (398/624) PRO01A1292_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (399/624) VAL01A1293_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (400/624) LYS01A1294_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS01A1294_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (401/624) LYS+1A1294_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS+1A1294_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (402/624) TRP01A1295_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (403/624) MET01A1296_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_MET01A1296_001
+INFO - step3.py: Skipping PBE solver for non-charge conformer (404/624) PRO01A1297_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (405/624) PRO01A1298_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (406/624) GLU01A1299_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1299_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (407/624) GLU01A1299_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1299_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (408/624) GLU02A1299_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1299_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (409/624) GLU02A1299_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1299_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (410/624) GLU-1A1299_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1299_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (411/624) ALA01A1300_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (412/624) PHE01A1301_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (413/624) MET01A1302_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_MET01A1302_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (414/624) GLU01A1303_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1303_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (415/624) GLU01A1303_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1303_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (416/624) GLU02A1303_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1303_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (417/624) GLU02A1303_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1303_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (418/624) GLU-1A1303_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1303_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (419/624) ILE01A1305_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (420/624) PHE01A1306_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (421/624) THR01A1307_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1307_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (422/624) THR01A1307_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1307_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (423/624) SER01A1308_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1308_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (424/624) SER01A1308_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1308_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (425/624) SER01A1308_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1308_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (426/624) LYS01A1309_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS01A1309_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (427/624) LYS+1A1309_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS+1A1309_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (428/624) THR01A1310_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1310_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (429/624) THR01A1310_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1310_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (430/624) ASP01A1311_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1311_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (431/624) ASP01A1311_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1311_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (432/624) ASP02A1311_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1311_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (433/624) ASP02A1311_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1311_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (434/624) ASP-1A1311_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1311_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (435/624) THR01A1312_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1312_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (436/624) THR01A1312_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1312_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (437/624) TRP01A1313_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (438/624) SER01A1314_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1314_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (439/624) SER01A1314_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1314_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (440/624) PHE01A1315_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (441/624) VAL01A1317_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (442/624) LEU01A1318_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (443/624) LEU01A1319_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (444/624) TRP01A1320_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (445/624) GLU01A1321_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1321_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (446/624) GLU01A1321_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1321_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (447/624) GLU02A1321_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1321_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (448/624) GLU02A1321_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1321_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (449/624) GLU-1A1321_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1321_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (450/624) ILE01A1322_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (451/624) PHE01A1323_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (452/624) SER01A1324_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1324_001
+INFO - step3.py: Skipping PBE solver for non-charge conformer (453/624) LEU01A1325_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (454/624) TYR01A1327_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1327_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (455/624) TYR-1A1327_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR-1A1327_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (456/624) MET01A1328_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_MET01A1328_001
+INFO - step3.py: Skipping PBE solver for non-charge conformer (457/624) PRO01A1329_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (458/624) TYR01A1330_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1330_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (459/624) TYR01A1330_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1330_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (460/624) TYR-1A1330_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR-1A1330_003
+INFO - step3.py: Skipping PBE solver for non-charge conformer (461/624) PRO01A1331_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (462/624) SER01A1332_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1332_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (463/624) SER01A1332_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1332_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (464/624) LYS01A1333_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS01A1333_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (465/624) LYS+1A1333_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS+1A1333_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (466/624) SER01A1334_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1334_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (467/624) SER01A1334_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1334_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (468/624) SER01A1334_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1334_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (469/624) ASN01A1335_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1335_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (470/624) ASN01A1335_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1335_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (471/624) GLN01A1336_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1336_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (472/624) GLN01A1336_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1336_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (473/624) GLU01A1337_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1337_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (474/624) GLU01A1337_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1337_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (475/624) GLU02A1337_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1337_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (476/624) GLU02A1337_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1337_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (477/624) GLU-1A1337_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1337_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (478/624) VAL01A1338_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (479/624) LEU01A1339_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (480/624) GLU01A1340_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1340_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (481/624) GLU01A1340_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1340_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (482/624) GLU02A1340_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1340_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (483/624) GLU02A1340_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1340_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (484/624) GLU-1A1340_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1340_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (485/624) PHE01A1341_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (486/624) VAL01A1342_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (487/624) THR01A1343_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1343_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (488/624) THR01A1343_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1343_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (489/624) SER01A1344_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1344_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (490/624) SER01A1344_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_SER01A1344_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (491/624) ARG01A1347_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1347_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (492/624) ARG02A1347_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1347_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (493/624) ARG02A1347_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1347_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (494/624) ARG03A1347_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1347_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (495/624) ARG+1A1347_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1347_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (496/624) MET01A1348_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_MET01A1348_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (497/624) ASP01A1349_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1349_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (498/624) ASP01A1349_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1349_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (499/624) ASP02A1349_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1349_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (500/624) ASP02A1349_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1349_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (501/624) ASP-1A1349_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1349_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (502/624) PRO01A1350_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (503/624) PRO01A1351_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (504/624) LYS01A1352_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS01A1352_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (505/624) LYS+1A1352_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_LYS+1A1352_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (506/624) ASN01A1353_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1353_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (507/624) ASN01A1353_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1353_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (508/624) CYS01A1354_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1354_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (509/624) CYS01A1354_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1354_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (510/624) CYS01A1354_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1354_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (511/624) CYS-1A1354_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS-1A1354_004
+INFO - step3.py: Skipping PBE solver for non-charge conformer (512/624) PRO01A1355_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (513/624) PRO01A1357_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (514/624) VAL01A1358_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (515/624) TYR01A1359_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1359_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (516/624) TYR01A1359_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1359_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (517/624) TYR-1A1359_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR-1A1359_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (518/624) ARG01A1360_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1360_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (519/624) ARG02A1360_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1360_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (520/624) ARG03A1360_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1360_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (521/624) ARG+1A1360_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1360_004
+INFO - step3.py: Skipping PBE solver for non-charge conformer (522/624) ILE01A1361_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (523/624) MET01A1362_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_MET01A1362_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (524/624) THR01A1363_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1363_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (525/624) THR01A1363_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1363_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (526/624) GLN01A1364_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1364_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (527/624) GLN01A1364_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1364_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (528/624) CYS01A1365_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1365_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (529/624) CYS01A1365_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1365_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (530/624) CYS01A1365_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1365_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (531/624) CYS-1A1365_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS-1A1365_004
+INFO - step3.py: Skipping PBE solver for non-charge conformer (532/624) TRP01A1366_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (533/624) GLN01A1367_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1367_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (534/624) GLN01A1367_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1367_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (535/624) HIS01A1368_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS01A1368_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (536/624) HIS01A1368_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS01A1368_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (537/624) HIS02A1368_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS02A1368_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (538/624) HIS02A1368_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS02A1368_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (539/624) HIS+1A1368_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS+1A1368_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (540/624) HIS+1A1368_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_HIS+1A1368_006
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (541/624) GLN01A1369_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1369_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (542/624) GLN01A1369_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1369_002
+INFO - step3.py: Skipping PBE solver for non-charge conformer (543/624) PRO01A1370_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (544/624) GLU01A1371_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1371_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (545/624) GLU01A1371_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1371_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (546/624) GLU02A1371_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1371_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (547/624) GLU02A1371_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1371_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (548/624) GLU-1A1371_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1371_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (549/624) ASP01A1372_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1372_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (550/624) ASP01A1372_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1372_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (551/624) ASP02A1372_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1372_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (552/624) ASP02A1372_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1372_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (553/624) ASP-1A1372_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1372_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (554/624) ARG01A1373_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1373_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (555/624) ARG02A1373_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1373_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (556/624) ARG02A1373_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1373_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (557/624) ARG03A1373_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1373_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (558/624) ARG03A1373_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1373_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (559/624) ARG+1A1373_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1373_006
+INFO - step3.py: Skipping PBE solver for non-charge conformer (560/624) PRO01A1374_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (561/624) ASN01A1375_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1375_001
+INFO - step3.py: Skipping PBE solver for non-charge conformer (562/624) PHE01A1376_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (563/624) ALA01A1377_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (564/624) ILE01A1378_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (565/624) ILE01A1379_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (566/624) LEU01A1380_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (567/624) GLU01A1381_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1381_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (568/624) GLU01A1381_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1381_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (569/624) GLU02A1381_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1381_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (570/624) GLU02A1381_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1381_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (571/624) GLU-1A1381_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1381_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (572/624) ARG01A1382_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG01A1382_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (573/624) ARG02A1382_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG02A1382_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (574/624) ARG03A1382_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG03A1382_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (575/624) ARG+1A1382_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ARG+1A1382_004
+INFO - step3.py: Skipping PBE solver for non-charge conformer (576/624) ILE01A1383_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (577/624) GLU01A1384_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1384_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (578/624) GLU01A1384_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1384_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (579/624) GLU02A1384_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1384_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (580/624) GLU02A1384_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1384_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (581/624) GLU-1A1384_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1384_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (582/624) TYR01A1385_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1385_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (583/624) TYR01A1385_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1385_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (584/624) TYR-1A1385_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR-1A1385_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (585/624) CYS01A1386_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1386_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (586/624) CYS01A1386_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1386_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (587/624) CYS01A1386_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS01A1386_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (588/624) CYS-1A1386_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_CYS-1A1386_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (589/624) THR01A1387_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1387_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (590/624) THR01A1387_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1387_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (591/624) GLN01A1388_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1388_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (592/624) GLN01A1388_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLN01A1388_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (593/624) ASP01A1389_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1389_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (594/624) ASP01A1389_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1389_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (595/624) ASP02A1389_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1389_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (596/624) ASP02A1389_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1389_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (597/624) ASP-1A1389_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1389_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (598/624) PRO01A1390_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (599/624) ASP01A1391_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1391_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (600/624) ASP01A1391_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP01A1391_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (601/624) ASP02A1391_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1391_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (602/624) ASP02A1391_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP02A1391_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (603/624) ASP-1A1391_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASP-1A1391_005
+INFO - step3.py: Skipping PBE solver for non-charge conformer (604/624) VAL01A1392_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (605/624) ILE01A1393_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (606/624) ASN01A1394_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1394_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (607/624) ASN01A1394_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_ASN01A1394_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (608/624) THR01A1395_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_THR01A1395_001
+INFO - step3.py: Skipping PBE solver for non-charge conformer (609/624) ALA01A1396_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (610/624) LEU01A1397_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (611/624) PRO01A1398_001...
+INFO - step3.py: Skipping PBE solver for non-charge conformer (612/624) ILE01A1399_001...
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (613/624) GLU01A1400_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1400_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (614/624) GLU01A1400_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU01A1400_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (615/624) GLU02A1400_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1400_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (616/624) GLU02A1400_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU02A1400_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (617/624) GLU-1A1400_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_GLU-1A1400_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (618/624) TYR01A1401_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1401_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (619/624) TYR01A1401_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR01A1401_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (620/624) TYR-1A1401_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_TYR-1A1401_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (621/624) VGH+aA9000_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_VGH+aA9000_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (622/624) VGH+1A9000_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_VGH+1A9000_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (623/624) VGH01A9000_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_VGH01A9000_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (624/624) VGH+2A9000_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_kin.5AAC_VGH+2A9000_004
+INFO - step3.py:    Time needed: 2667 seconds.
+INFO - step3.py:    Post-processing of electrostatic potential.
+INFO - step3.py:    Processing ele pairwise interaction...
+INFO - step3.py:    Time needed: 1 seconds.
+INFO - step3.py:    Making atom connectivity ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Calculating vdw ...
+INFO - step3.py:    Time needed: 8 seconds.
+INFO - step3.py:    Calculating torsion energy ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Composing head3.lst ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Composing opp files ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Total time for step3 is 2679 seconds.
+Warning: Ligand atom bond to " N  ASN1093A000" was not found
+Warning: Ligand atom bond to " N  GLY1128A000" was not found
+Warning: Ligand atom bond to " N  PRO1144A000" was not found
+Warning: Ligand atom bond to " N  GLY1286A000" was not found
+[SUCCESS]: Step 3 completed successfully.

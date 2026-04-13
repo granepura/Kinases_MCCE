@@ -1,0 +1,92 @@
+Preprocessing input pdb file, identifying ligands ...
+Done, writing to step0_out.pdb ...
+================================================================
+<<< MCCE Multi-Conformation Continuum Electrostatics >>>        
+ Marilyn Gunner's Lab at City College of New York, 2023         
+----------------------------------------------------------------
+Version:         4.0                                            
+MCCE Home:                                                      
+  Private (Dev): https://github.com/GunnerLab/MCCE4             
+  Public:        https://github.com/GunnerLab/MCCE4-Alpha       
+  Docs:          https://gunnerlab.github.io/mcce4_tutorial/    
+Support:         https://github.com/GunnerLab/MCCE4-Alpha/issues
+Developed by:    The Gunner Lab                                 
+                 https://gunnerlab.ccny.cuny.edu/               
+Citations:       If you publish data calculated with MCCE, please cite the papers in
+                 https://gunnerlab.github.io/mcce4_tutorial/docs/mcce/
+================================================================
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "./param" ... 
+   Done
+
+   Load linear free energy correction parameters from "./user_param/extra.tpl"...
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "step0_out.pdb"...
+   Done
+
+   Read name rule file "/home/granepura/MCCE4/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Done
+
+   Strip free cofactors with SAS >  -1%...
+       89 free cofactors were stripped off in this round
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 89.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Missing heavy atoms for GLN01 in "GLN A 252":   CG ,  CD ,  OE1,  NE2
+   Missing heavy atoms for TYR01 in "TYR A 253":   CG ,  CD1,  CD2,  CE1,  CE2,  CZ ,  OH
+
+
+   Missing heavy atoms detected.
+   Ignore warning messages if they are in the terminal residues
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Not doing "Step 2. Make multi side chain conformers"
+
+Not doing "Step 3. Compute energy lookup table"
+
+Not doing "Step 4. Monte Carlo Sampling"
+
+Not doing "Step 6. Hydrogen Bond Network Analysis"
+

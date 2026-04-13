@@ -1,0 +1,48 @@
+Preprocessing input pdb file, identifying ligands ...
+Done, writing to step0_out.pdb ...
+===========================================================
+<<< MCCE Multi-Conformation Continuum Electrostatics >>>   
+ Marilyn Gunner's Lab at City College of New York, 2023    
+-----------------------------------------------------------
+Version:        2.7.1                                      
+MCCE Home Page: https://gunnerlab.github.io/Stable-MCCE/quick/
+Support:        mgunner@ccny.cuny.edu                   
+Developed by:   Junjun Mao, Yifan Song, Marilyn Gunner     
+Reference MCCE: If you publish data calculated with MCCE,  
+                you need to cite papers suggested in MCCE  
+                Home Page.                                 
+===========================================================
+
+Last Updates:                                              
+   02/26/2023: vdw calculated by vdw_pw.py after step3.
+   06/04/2018: Removed dependency on gdbm
+   06/04/2018: Clear text energy table in step 3 and 4 
+===========================================================
+
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "./param" ... 
+   Done
+
+   Load linear free energy correction parameters from "/home/granepura/MCCE4/extra.tpl"...
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "step0_out.pdb"...
+   Done
+
+   Read name rule file "/home/granepura/MCCE4/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+

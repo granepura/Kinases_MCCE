@@ -1,0 +1,19 @@
+Final input PDB file: prot_center.pdb
+STEP1 SKIPPED (flag was f).
+STEP2 SKIPPED (flag was f).
+Running STEP3 ...
+STEP3 completed SUCCESSFULLY in 00h:27m:06s.
+Running custom stepC script "vdw0_update2zero.py" (between STEP3 and STEP4)...
+vdw0_update2zero.py completed SUCCESSFULLY in 00h:00m:00s.
+Running STEP4 ...
+STEP4 completed SUCCESSFULLY in 00h:00m:30s.
+Temporary PBE data will be stored in:                             /tmp
+Full path of the working directory is:                            /home/granepura/5-kinases/cof_tpl_mg/run_prot2/4AGC
+Subdirectories matching this pattern will be removed from temp dir: granepura.5-kinases.cof_tpl_mg.run_prot2.4AGC
+STEP_CLEAN: cleaning matching pbe_data folders in /tmp...
+STEP_CLEAN: no matching /tmp pbe_data folders found.
+Script complete.
+Total runtime: 00h:27m:36s
+Timing report written to mcce_timing.log
+
+>>> Caught termination signal. Running STEP_CLEAN before exiting...

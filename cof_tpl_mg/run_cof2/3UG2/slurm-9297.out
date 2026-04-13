@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/granepura/MCCE4/bin/orientation.py", line 59, in <module>
+    center_protein(mol_atoms)
+  File "/home/granepura/MCCE4/bin/orientation.py", line 26, in center_protein
+    x_lo = x_up = atoms[0].xyz[0]
+IndexError: list index out of range

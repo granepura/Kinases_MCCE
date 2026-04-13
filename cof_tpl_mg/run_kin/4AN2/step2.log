@@ -1,0 +1,520 @@
+================================================================
+<<< MCCE Multi-Conformation Continuum Electrostatics >>>        
+ Marilyn Gunner's Lab at City College of New York, 2023         
+----------------------------------------------------------------
+Version:         4.0                                            
+MCCE Home:                                                      
+  Private (Dev): https://github.com/GunnerLab/MCCE4             
+  Public:        https://github.com/GunnerLab/MCCE4-Alpha       
+  Docs:          https://gunnerlab.github.io/mcce4_tutorial/    
+Support:         https://github.com/GunnerLab/MCCE4-Alpha/issues
+Developed by:    The Gunner Lab                                 
+                 https://gunnerlab.ccny.cuny.edu/               
+Citations:       If you publish data calculated with MCCE, please cite the papers in
+                 https://gunnerlab.github.io/mcce4_tutorial/docs/mcce/
+================================================================
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "./param" ... 
+   Done
+
+   Load linear free energy correction parameters from "./user_param/extra.tpl"...
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Not doing "Step 1. Test and format structral file"
+
+Step 2. Make multi side chain conformers
+   Load step 1 output file step1_out.pdb...
+   Done
+
+   Rotamer statistics is dynamically updated in file "rot_stat"
+
+   Remove redundant heavy atom conformers in step1_out.pdb
+   0 conformers were deleted.
+   Done
+
+
+   Relax crystal water..
+   Done
+
+   Prepare for rotamer making ...
+   Deleting H atoms...2263 H atoms were deleted.
+   Warning! assign_vdw_param(): missing parameter(s), default value is used and saved in debug.log.
+   Assigning radii.
+   Estimating Solvent Accessible Surface (SAS).
+   Done.
+
+   Swap atoms...
+   Done
+
+
+   Extra rotamers...
+   Done
+
+
+   Delete duplicate conformers ... 0 conformers deleted.
+   Done. Time spent = 0
+
+   Prune rotamers by self VDW potential...
+   Missing atom  HE2 at slot    9 of conf MET01 in "MET A  58 01".
+   Missing atom  HE3 at slot   10 of conf MET01 in "MET A  58 01".
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A  59 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A  59 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A  60 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A  60 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A  60 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A  60 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A  63 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A  63 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A  63 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A  63 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A  71 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A  71 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A  71 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A  71 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A  74 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A  74 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A  74 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A  74 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A  76 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A  76 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A  81 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A  81 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A  81 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A  81 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A  82 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A  82 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A  82 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A  82 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A  85 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A  85 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A  85 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A  85 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A  92 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A  92 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A  92 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A  92 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A  93 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A  93 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A  93 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A  93 01".
+   Missing atom  HE2 at slot    9 of conf MET01 in "MET A  94 01".
+   Missing atom  HE3 at slot   10 of conf MET01 in "MET A  94 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A  95 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A  95 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A  98 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A  98 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A  98 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A  98 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A  99 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A  99 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A  99 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A  99 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 101 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 101 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 101 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 101 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 103 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 103 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 103 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 103 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 106 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 106 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 107 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 107 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 107 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 107 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 111 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 111 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 111 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 111 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 112 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 112 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 112 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 112 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 115 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 115 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 115 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 115 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 117 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 117 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 117 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 117 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 118 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 118 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 118 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 118 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 126 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 126 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 126 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 126 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 127 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 127 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 127 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 127 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 132 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 132 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 139 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 139 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 139 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 139 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 141 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 141 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 141 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 141 01".
+   Missing atom  HE2 at slot    9 of conf MET01 in "MET A 143 01".
+   Missing atom  HE3 at slot   10 of conf MET01 in "MET A 143 01".
+   Missing atom  HE2 at slot    9 of conf MET01 in "MET A 146 01".
+   Missing atom  HE3 at slot   10 of conf MET01 in "MET A 146 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 151 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 151 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 151 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 151 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 154 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 154 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 154 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 154 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 155 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 155 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 155 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 155 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 158 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 158 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 161 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 161 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 161 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 161 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 165 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 165 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 165 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 165 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 166 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 166 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 166 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 166 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 169 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 169 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 169 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 169 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 171 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 171 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 171 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 171 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 172 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 172 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 173 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 173 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 173 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 173 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 174 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 174 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 174 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 174 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 177 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 177 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 177 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 177 01".
+   Missing atom HG22 at slot    6 of conf THR01 in "THR A 178 01".
+   Missing atom HG23 at slot    7 of conf THR01 in "THR A 178 01".
+   Missing atom HG22 at slot    6 of conf THR01 in "THR A 178 02".
+   Missing atom HG23 at slot    7 of conf THR01 in "THR A 178 02".
+   Missing atom HG22 at slot    6 of conf THR01 in "THR A 178 03".
+   Missing atom HG23 at slot    7 of conf THR01 in "THR A 178 03".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 180 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 180 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 180 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 180 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 186 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 186 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 186 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 186 01".
+   Missing atom  HE2 at slot    9 of conf MET01 in "MET A 187 01".
+   Missing atom  HE3 at slot   10 of conf MET01 in "MET A 187 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 191 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 191 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 191 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 191 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 196 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 196 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 196 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 196 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 197 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 197 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 197 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 197 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 198 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 198 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 198 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 198 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 204 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 204 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 204 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 204 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 206 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 206 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 206 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 206 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 211 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 211 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 211 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 211 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 215 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 215 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 215 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 215 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 216 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 216 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 216 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 216 01".
+   Missing atom  HE2 at slot    9 of conf MET01 in "MET A 219 01".
+   Missing atom  HE3 at slot   10 of conf MET01 in "MET A 219 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 220 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 220 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 224 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 224 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 224 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 224 01".
+   Missing atom HG22 at slot    6 of conf THR01 in "THR A 226 01".
+   Missing atom HG23 at slot    7 of conf THR01 in "THR A 226 01".
+   Missing atom HG22 at slot    6 of conf THR01 in "THR A 226 02".
+   Missing atom HG23 at slot    7 of conf THR01 in "THR A 226 02".
+   Missing atom HG22 at slot    6 of conf THR01 in "THR A 226 03".
+   Missing atom HG23 at slot    7 of conf THR01 in "THR A 226 03".
+   Missing atom  HE2 at slot    9 of conf MET01 in "MET A 230 01".
+   Missing atom  HE3 at slot   10 of conf MET01 in "MET A 230 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 235 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 235 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 235 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 235 01".
+   Missing atom HG22 at slot    6 of conf THR01 in "THR A 238 01".
+   Missing atom HG23 at slot    7 of conf THR01 in "THR A 238 01".
+   Missing atom HG22 at slot    6 of conf THR01 in "THR A 238 02".
+   Missing atom HG23 at slot    7 of conf THR01 in "THR A 238 02".
+   Missing atom HG22 at slot    6 of conf THR01 in "THR A 238 03".
+   Missing atom HG23 at slot    7 of conf THR01 in "THR A 238 03".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 242 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 242 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 242 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 242 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 246 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 246 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 246 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 246 01".
+   Missing atom  HE2 at slot    9 of conf MET01 in "MET A 249 01".
+   Missing atom  HE3 at slot   10 of conf MET01 in "MET A 249 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 251 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 251 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 251 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 251 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 253 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 253 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 253 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 253 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 254 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 254 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 254 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 254 01".
+   Missing atom  HE2 at slot    9 of conf MET01 in "MET A 256 01".
+   Missing atom  HE3 at slot   10 of conf MET01 in "MET A 256 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 257 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 257 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 258 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 258 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 258 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 258 01".
+   Missing atom  HE2 at slot    9 of conf MET01 in "MET A 308 01".
+   Missing atom  HE3 at slot   10 of conf MET01 in "MET A 308 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 309 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 309 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 310 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 310 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 310 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 310 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 313 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 313 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 313 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 313 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 314 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 314 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 314 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 314 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 317 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 317 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 317 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 317 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 318 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 318 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 318 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 318 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 325 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 325 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 325 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 325 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 328 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 328 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 329 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 329 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 329 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 329 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 332 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 332 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 332 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 332 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 338 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 338 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 338 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 338 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 342 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 342 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 342 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 342 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 343 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 343 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 343 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 343 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 347 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 347 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 350 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 350 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 352 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 352 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 352 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 352 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 355 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 355 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 355 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 355 01".
+   Missing atom  HE2 at slot    9 of conf MET01 in "MET A 356 01".
+   Missing atom  HE3 at slot   10 of conf MET01 in "MET A 356 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 357 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 357 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 357 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 357 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 359 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 359 01".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 361 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 361 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 361 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 361 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 366 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 366 01".
+   Missing atom HG12 at slot    4 of conf VAL01 in "VAL A 369 01".
+   Missing atom HG13 at slot    5 of conf VAL01 in "VAL A 369 01".
+   Missing atom HG22 at slot    8 of conf VAL01 in "VAL A 369 01".
+   Missing atom HG23 at slot    9 of conf VAL01 in "VAL A 369 01".
+   Missing atom  HB2 at slot    2 of conf ALA01 in "ALA A 372 01".
+   Missing atom  HB3 at slot    3 of conf ALA01 in "ALA A 372 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 375 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 375 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 375 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 375 01".
+   Missing atom HG22 at slot    6 of conf THR01 in "THR A 378 01".
+   Missing atom HG23 at slot    7 of conf THR01 in "THR A 378 01".
+   Missing atom HG22 at slot    6 of conf THR01 in "THR A 378 02".
+   Missing atom HG23 at slot    7 of conf THR01 in "THR A 378 02".
+   Missing atom HG22 at slot    6 of conf THR01 in "THR A 378 03".
+   Missing atom HG23 at slot    7 of conf THR01 in "THR A 378 03".
+   Missing atom HG22 at slot    7 of conf ILE01 in "ILE A 379 01".
+   Missing atom HG23 at slot    8 of conf ILE01 in "ILE A 379 01".
+   Missing atom HD12 at slot   11 of conf ILE01 in "ILE A 379 01".
+   Missing atom HD13 at slot   12 of conf ILE01 in "ILE A 379 01".
+   Missing atom HD12 at slot    7 of conf LEU01 in "LEU A 381 01".
+   Missing atom HD13 at slot    8 of conf LEU01 in "LEU A 381 01".
+   Missing atom HD22 at slot   11 of conf LEU01 in "LEU A 381 01".
+   Missing atom HD23 at slot   12 of conf LEU01 in "LEU A 381 01".
+   Missing atom  H24 at slot   51 of conf EUI01 in "EUI A 1382 01".
+   Missing atom  H24 at slot   51 of conf EUI01 in "EUI A 1382 02".
+   Missing atom  H24 at slot   51 of conf EUI01 in "EUI A 1382 03".
+   Missing atom  H24 at slot   51 of conf EUI01 in "EUI A 1382 04".
+   Missing atom  H24 at slot   51 of conf EUI01 in "EUI A 1382 05".
+   Missing atom  H24 at slot   51 of conf EUI01 in "EUI A 1382 06".
+   1 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Creating connectivity table...
+   Computing self VDW potential. It may take a while...
+   Warning! assign_vdw_param(): missing parameter(s), default value is used and saved in debug.log.
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+   Pruning rotamers...3 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Tuning exposed rotamers...
+   Done. Time spent = 2
+
+   Hydrogen bond directed rotamer making...
+   0 conformers are deleted to fit the limit (36) of derived conformer number
+   Updating self vdw
+   Pruning rotamers by new self energy...29 rotamers deleted.
+   Done. Time spent = 0
+
+
+   Repack side chains 5000 times, remove inaccessible conformers...
+   Computing pairwise LJ potential. This may take a while.
+      Estimated time on AMD 1.6GHz is 5 seconds.
+      Actual time is 3
+   Repacking in progress, see progress.log for details...
+   Done. Time spent = 3
+
+
+   Skip writing heavy atome rotamer pdb file hvrot.pdb
+   Randomly prune conformers...
+   Done
+
+   Making ionization conformers...
+   Done
+
+
+   Add H atoms...
+   2 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   clean up ...
+   Warning! assign_rad():      missing parameter(s), default value is used and saved in debug.log.
+   Warning! assign_vdw_param(): missing parameter(s), default value is used and saved in debug.log.
+   Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
+   Done
+
+       40 conformers deleted in this cycle at    2.000    2.000    2.000
+
+   Optimizing hydroxyl and water...
+   Total number of atoms 8623
+   Done. Time spent = 18
+
+
+   Sorting conformers...
+   Done
+
+   Skip writing full rotamer file step2_out.full.
+   Delete duplicate conformers ...
+      1 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 4
+
+
+   Write output...
+   Done
+
+   Total time for step2 (rotamer making) is 36 seconds.
+
+   Output files:
+      step2_out.pdb   : mcce pdb file, the input of step 3
+      head2.lst       : conformer summary
+      step2_out.full  : rotamers without pairwise pruning.
+      hvrot.pdb       : heavy atom rotamers, can be used recursively by step 2
+
+Step 2 Done.
+
+Not doing "Step 3. Compute energy lookup table"
+
+Not doing "Step 4. Monte Carlo Sampling"
+
+Not doing "Step 6. Hydrogen Bond Network Analysis"
+

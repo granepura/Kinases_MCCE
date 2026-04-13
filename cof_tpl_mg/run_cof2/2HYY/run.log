@@ -1,0 +1,742 @@
+2025-07-16 18:25:22 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-16 18:25:22 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-16 18:25:22 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-16 18:25:22 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-16 18:25:22 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-16 18:25:22 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-16 18:25:22 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-16 18:25:22 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-16 18:25:22 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-16 18:25:22 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-16 18:25:22 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-16 18:25:22 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001
+2025-07-16 18:25:23 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002
+2025-07-16 18:25:24 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003
+2025-07-16 18:25:24 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004
+2025-07-16 18:25:25 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005
+2025-07-16 18:25:26 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006
+2025-07-16 18:25:26 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Time needed: 4 seconds.
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-16 18:25:27 - INFO: pdbio_gr, <module>:    Total time for step3 is 4 seconds.
+2025-07-17 16:04:10 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-17 16:04:10 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-17 16:04:10 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-17 16:04:10 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-17 16:04:11 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-17 16:04:11 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-17 16:04:11 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-17 16:04:11 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-17 16:04:11 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-17 16:04:11 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-17 16:04:11 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-17 16:04:11 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001
+2025-07-17 16:04:11 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002
+2025-07-17 16:04:12 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003
+2025-07-17 16:04:13 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004
+2025-07-17 16:04:13 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005
+2025-07-17 16:04:14 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006
+2025-07-17 16:04:15 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007
+2025-07-17 16:04:15 - INFO: pdbio_gr, <module>:    Time needed: 4 seconds.
+2025-07-17 16:04:15 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-17 16:04:15 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-17 16:04:15 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-17 16:04:15 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-17 16:04:16 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-17 16:04:16 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-17 16:04:16 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-17 16:04:16 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-17 16:04:16 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-17 16:04:16 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-17 16:04:16 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-17 16:04:16 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-17 16:04:16 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-17 16:04:16 - INFO: pdbio_gr, <module>:    Total time for step3 is 5 seconds.
+2025-07-18 19:13:27 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-18 19:13:27 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-18 19:13:27 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-18 19:13:27 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-18 19:13:27 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:13:27 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:13:27 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-18 19:13:27 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:13:28 - INFO: pdbio_gr, <module>:    Time needed: 1 seconds.
+2025-07-18 19:13:28 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-18 19:13:28 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-18 19:13:28 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer STI+1A0600_001
+2025-07-18 19:13:28 - INFO: pdbio_gr, pbe: ForkPoolWorker-2: Calling ngpb to calculate conformer STI+2A0600_002
+2025-07-18 19:13:28 - INFO: pdbio_gr, pbe: ForkPoolWorker-3: Calling ngpb to calculate conformer STI01A0600_003
+2025-07-18 19:13:28 - INFO: pdbio_gr, pbe: ForkPoolWorker-4: Calling ngpb to calculate conformer STI+aA0600_004
+2025-07-18 19:13:28 - INFO: pdbio_gr, pbe: ForkPoolWorker-5: Calling ngpb to calculate conformer STI+aA0600_005
+2025-07-18 19:13:28 - INFO: pdbio_gr, pbe: ForkPoolWorker-6: Calling ngpb to calculate conformer STI+bA0600_006
+2025-07-18 19:13:28 - INFO: pdbio_gr, pbe: ForkPoolWorker-7: Calling ngpb to calculate conformer STI+bA0600_007
+2025-07-18 19:13:58 - ERROR: pdbio_gr, <module>: Task 0 timed out
+2025-07-18 19:14:28 - ERROR: pdbio_gr, <module>: Task 1 timed out
+2025-07-18 19:14:58 - ERROR: pdbio_gr, <module>: Task 2 timed out
+2025-07-18 19:15:28 - ERROR: pdbio_gr, <module>: Task 3 timed out
+2025-07-18 19:15:58 - ERROR: pdbio_gr, <module>: Task 4 timed out
+2025-07-18 19:16:28 - ERROR: pdbio_gr, <module>: Task 5 timed out
+2025-07-18 19:16:58 - ERROR: pdbio_gr, <module>: Task 6 timed out
+2025-07-18 19:16:58 - WARNING: pdbio_gr, <module>:     Error PBE solving on ['[ERROR] Task timed out', '[ERROR] Task timed out', '[ERROR] Task timed out', '[ERROR] Task timed out', '[ERROR] Task timed out', '[ERROR] Task timed out', '[ERROR] Task timed out']
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Time needed: 210 seconds.
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:16:58 - INFO: pdbio_gr, <module>:    Total time for step3 is 211 seconds.
+2025-07-18 19:26:19 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-18 19:26:19 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-18 19:26:19 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-18 19:26:19 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-18 19:26:19 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:26:19 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:26:19 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-18 19:26:19 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:26:20 - INFO: pdbio_gr, <module>:    Time needed: 1 seconds.
+2025-07-18 19:26:20 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-18 19:26:20 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-18 19:26:20 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer STI+1A0600_001
+2025-07-18 19:26:20 - INFO: pdbio_gr, pbe: ForkPoolWorker-2: Calling ngpb to calculate conformer STI+2A0600_002
+2025-07-18 19:26:21 - INFO: pdbio_gr, pbe: ForkPoolWorker-3: Calling ngpb to calculate conformer STI01A0600_003
+2025-07-18 19:26:21 - INFO: pdbio_gr, pbe: ForkPoolWorker-4: Calling ngpb to calculate conformer STI+aA0600_004
+2025-07-18 19:26:21 - INFO: pdbio_gr, pbe: ForkPoolWorker-5: Calling ngpb to calculate conformer STI+aA0600_005
+2025-07-18 19:26:21 - INFO: pdbio_gr, pbe: ForkPoolWorker-6: Calling ngpb to calculate conformer STI+bA0600_006
+2025-07-18 19:26:21 - INFO: pdbio_gr, pbe: ForkPoolWorker-7: Calling ngpb to calculate conformer STI+bA0600_007
+2025-07-18 19:26:50 - ERROR: pdbio_gr, <module>: Task 0 timed out
+2025-07-18 19:27:20 - ERROR: pdbio_gr, <module>: Task 1 timed out
+2025-07-18 19:27:50 - ERROR: pdbio_gr, <module>: Task 2 timed out
+2025-07-18 19:28:20 - ERROR: pdbio_gr, <module>: Task 3 timed out
+2025-07-18 19:28:50 - ERROR: pdbio_gr, <module>: Task 4 timed out
+2025-07-18 19:29:20 - ERROR: pdbio_gr, <module>: Task 5 timed out
+2025-07-18 19:29:50 - ERROR: pdbio_gr, <module>: Task 6 timed out
+2025-07-18 19:29:50 - WARNING: pdbio_gr, <module>:     Error PBE solving on ['[ERROR] Task timed out', '[ERROR] Task timed out', '[ERROR] Task timed out', '[ERROR] Task timed out', '[ERROR] Task timed out', '[ERROR] Task timed out', '[ERROR] Task timed out']
+2025-07-18 19:29:50 - INFO: pdbio_gr, <module>:    Time needed: 210 seconds.
+2025-07-18 19:29:50 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-18 19:29:50 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-18 19:29:50 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:29:50 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-18 19:29:50 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:29:50 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-18 19:29:51 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:29:51 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-18 19:29:51 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:29:51 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-18 19:29:51 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:29:51 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-18 19:29:51 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:29:51 - INFO: pdbio_gr, <module>:    Total time for step3 is 211 seconds.
+2025-07-18 19:35:31 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-18 19:35:31 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-18 19:35:31 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-18 19:35:31 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-18 19:35:31 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:35:31 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:35:31 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-18 19:35:31 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:35:32 - INFO: pdbio_gr, <module>:    Time needed: 1 seconds.
+2025-07-18 19:35:32 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-18 19:35:32 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-18 19:35:32 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer STI+1A0600_001
+2025-07-18 19:35:32 - INFO: pdbio_gr, pbe: ForkPoolWorker-2: Calling ngpb to calculate conformer STI+2A0600_002
+2025-07-18 19:35:32 - INFO: pdbio_gr, pbe: ForkPoolWorker-3: Calling ngpb to calculate conformer STI01A0600_003
+2025-07-18 19:35:32 - INFO: pdbio_gr, pbe: ForkPoolWorker-4: Calling ngpb to calculate conformer STI+aA0600_004
+2025-07-18 19:35:32 - INFO: pdbio_gr, pbe: ForkPoolWorker-5: Calling ngpb to calculate conformer STI+aA0600_005
+2025-07-18 19:35:32 - INFO: pdbio_gr, pbe: ForkPoolWorker-6: Calling ngpb to calculate conformer STI+bA0600_006
+2025-07-18 19:35:32 - INFO: pdbio_gr, pbe: ForkPoolWorker-7: Calling ngpb to calculate conformer STI+bA0600_007
+2025-07-18 19:36:02 - ERROR: pdbio_gr, <module>: Task 0 timed out
+2025-07-18 19:36:32 - ERROR: pdbio_gr, <module>: Task 1 timed out
+2025-07-18 19:37:02 - ERROR: pdbio_gr, <module>: Task 2 timed out
+2025-07-18 19:37:32 - ERROR: pdbio_gr, <module>: Task 3 timed out
+2025-07-18 19:38:02 - ERROR: pdbio_gr, <module>: Task 4 timed out
+2025-07-18 19:38:32 - ERROR: pdbio_gr, <module>: Task 5 timed out
+2025-07-18 19:42:54 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-18 19:42:54 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-18 19:42:54 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-18 19:42:54 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-18 19:42:54 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:42:54 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:42:54 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-18 19:42:54 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:42:54 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:42:54 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-18 19:42:54 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-18 19:42:54 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001
+2025-07-18 19:42:55 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002
+2025-07-18 19:42:55 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003
+2025-07-18 19:42:56 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004
+2025-07-18 19:42:57 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005
+2025-07-18 19:42:57 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006
+2025-07-18 19:42:58 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Time needed: 4 seconds.
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:42:59 - INFO: pdbio_gr, <module>:    Total time for step3 is 4 seconds.
+2025-07-18 19:47:09 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-18 19:47:09 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-18 19:47:09 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-18 19:47:09 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-18 19:47:09 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:47:09 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:47:09 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-18 19:47:09 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:47:09 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:47:09 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-18 19:47:09 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-18 19:47:09 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001
+2025-07-18 19:47:10 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002
+2025-07-18 19:47:11 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003
+2025-07-18 19:47:11 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004
+2025-07-18 19:47:12 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005
+2025-07-18 19:47:12 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006
+2025-07-18 19:47:13 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Time needed: 4 seconds.
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:47:14 - INFO: pdbio_gr, <module>:    Total time for step3 is 4 seconds.
+2025-07-18 19:50:48 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-18 19:50:48 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-18 19:50:48 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-18 19:50:48 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-18 19:50:48 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:50:48 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:50:48 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-18 19:50:48 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:50:48 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:50:48 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-18 19:50:48 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-18 19:50:48 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001
+2025-07-18 19:50:49 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002
+2025-07-18 19:50:50 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003
+2025-07-18 19:50:50 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004
+2025-07-18 19:50:51 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005
+2025-07-18 19:50:52 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006
+2025-07-18 19:50:52 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Time needed: 4 seconds.
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:50:53 - INFO: pdbio_gr, <module>:    Total time for step3 is 4 seconds.
+2025-07-18 19:56:41 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-18 19:56:41 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-18 19:56:41 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-18 19:56:41 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-18 19:56:41 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:56:41 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:56:41 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-18 19:56:41 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:56:41 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:56:41 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-18 19:56:41 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-18 19:56:41 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001
+2025-07-18 19:56:41 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002
+2025-07-18 19:56:42 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003
+2025-07-18 19:56:43 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004
+2025-07-18 19:56:43 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005
+2025-07-18 19:56:44 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006
+2025-07-18 19:56:45 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Time needed: 4 seconds.
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:56:45 - INFO: pdbio_gr, <module>:    Total time for step3 is 4 seconds.
+2025-07-18 19:58:25 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-18 19:58:25 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-18 19:58:25 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-18 19:58:25 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-18 19:58:25 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:58:25 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 19:58:25 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-18 19:58:25 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:58:25 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:58:25 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-18 19:58:25 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-18 19:58:25 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001
+2025-07-18 19:58:26 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002
+2025-07-18 19:58:26 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003
+2025-07-18 19:58:27 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004
+2025-07-18 19:58:27 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005
+2025-07-18 19:58:28 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006
+2025-07-18 19:58:29 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Time needed: 4 seconds.
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 19:58:29 - INFO: pdbio_gr, <module>:    Total time for step3 is 4 seconds.
+2025-07-18 20:06:15 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-18 20:06:15 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-18 20:06:15 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-18 20:06:15 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-18 20:06:15 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 20:06:15 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 20:06:15 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-18 20:06:15 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:06:15 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:06:15 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-18 20:06:15 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-18 20:06:15 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001
+2025-07-18 20:06:16 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002
+2025-07-18 20:06:16 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003
+2025-07-18 20:06:17 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004
+2025-07-18 20:06:18 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005
+2025-07-18 20:06:18 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006
+2025-07-18 20:06:19 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007
+2025-07-18 20:06:19 - INFO: pdbio_gr, <module>:    Time needed: 4 seconds.
+2025-07-18 20:06:19 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-18 20:06:19 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-18 20:06:19 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:06:19 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-18 20:06:19 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:06:19 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-18 20:06:20 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:06:20 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-18 20:06:20 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:06:20 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-18 20:06:20 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:06:20 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-18 20:06:20 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:06:20 - INFO: pdbio_gr, <module>:    Total time for step3 is 4 seconds.
+2025-07-18 20:08:55 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-18 20:08:55 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-18 20:08:55 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-18 20:08:55 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-18 20:08:55 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 20:08:55 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 20:08:56 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-18 20:08:56 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:08:56 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:08:56 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-18 20:08:56 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-18 20:08:56 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001
+2025-07-18 20:08:56 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002
+2025-07-18 20:08:57 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003
+2025-07-18 20:08:57 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004
+2025-07-18 20:08:58 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005
+2025-07-18 20:08:59 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006
+2025-07-18 20:08:59 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Time needed: 4 seconds.
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:09:00 - INFO: pdbio_gr, <module>:    Total time for step3 is 4 seconds.
+2025-07-18 20:10:38 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-18 20:10:38 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-18 20:10:38 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-18 20:10:38 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-18 20:10:38 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 20:10:38 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 20:10:38 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-18 20:10:38 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:10:38 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:10:38 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-18 20:10:38 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-18 20:10:38 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001
+2025-07-18 20:10:39 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002
+2025-07-18 20:10:39 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003
+2025-07-18 20:10:40 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004
+2025-07-18 20:10:41 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005
+2025-07-18 20:10:41 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006
+2025-07-18 20:10:42 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Time needed: 4 seconds.
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:10:43 - INFO: pdbio_gr, <module>:    Total time for step3 is 5 seconds.
+2025-07-18 20:25:50 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-18 20:25:50 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-18 20:25:50 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-18 20:25:50 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-18 20:25:50 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 20:25:50 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-18 20:25:50 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-18 20:25:50 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:25:50 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:25:50 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-18 20:25:50 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-18 20:25:51 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001
+2025-07-18 20:25:51 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002
+2025-07-18 20:25:52 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003
+2025-07-18 20:25:53 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004
+2025-07-18 20:25:53 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005
+2025-07-18 20:25:54 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006
+2025-07-18 20:25:55 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007
+2025-07-18 20:25:55 - INFO: pdbio_gr, <module>:    Time needed: 4 seconds.
+2025-07-18 20:25:55 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-18 20:25:55 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-18 20:25:55 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:25:55 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-18 20:25:55 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:25:55 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-18 20:25:56 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:25:56 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-18 20:25:56 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:25:56 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-18 20:25:56 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:25:56 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-18 20:25:56 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-18 20:25:56 - INFO: pdbio_gr, <module>:    Total time for step3 is 5 seconds.
+2025-07-19 11:08:45 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-07-19 11:08:45 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-07-19 11:08:45 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-07-19 11:08:45 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-07-19 11:08:45 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-19 11:08:45 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-07-19 11:08:45 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-07-19 11:08:45 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-19 11:08:45 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-19 11:08:45 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-07-19 11:08:45 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-07-19 11:08:45 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001
+2025-07-19 11:08:45 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002
+2025-07-19 11:08:46 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003
+2025-07-19 11:08:47 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004
+2025-07-19 11:08:48 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005
+2025-07-19 11:08:48 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006
+2025-07-19 11:08:49 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Time needed: 4 seconds.
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-07-19 11:08:50 - INFO: pdbio_gr, <module>:    Total time for step3 is 4 seconds.
+2025-08-27 23:37:25 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-08-27 23:37:25 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-08-27 23:37:25 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-08-27 23:37:25 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-08-27 23:37:25 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-08-27 23:37:25 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-08-27 23:37:25 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-08-27 23:37:25 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-27 23:37:25 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-27 23:37:25 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-08-27 23:37:25 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-08-27 23:37:25 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI+1A0600_001
+2025-08-27 23:37:26 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI+2A0600_002
+2025-08-27 23:37:26 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI01A0600_003
+2025-08-27 23:37:27 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI+aA0600_004
+2025-08-27 23:37:27 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI+aA0600_005
+2025-08-27 23:37:28 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI+bA0600_006
+2025-08-27 23:37:28 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI+bA0600_007
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Time needed: 3 seconds.
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-27 23:37:28 - INFO: pdbio_gr, <module>:    Total time for step3 is 3 seconds.
+2025-08-29 00:55:00 - INFO: pdbio_gr, <module>: Step 3. Energies calculation with PBE solver.
+2025-08-29 00:55:00 - INFO: pdbio_gr, <module>: Calling new VDW....No Scaling Applied
+2025-08-29 00:55:00 - INFO: pdbio_gr, <module>:    Process run time options & convert step2_out.pdb.
+2025-08-29 00:55:00 - INFO: pdbio_gr, load_ftpl: Reading parameters from /home/granepura/MCCE4/param
+2025-08-29 00:55:00 - INFO: pdbio_gr, load_ftpl: Updating vdw parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-08-29 00:55:00 - INFO: pdbio_gr, load_ftpl: Loading TORSION parameters from /data/home/granepura/MCCE4/param/00always_needed.tpl
+2025-08-29 00:55:00 - INFO: pdbio_gr, <module>:    Prepare input for PB solver.
+2025-08-29 00:55:00 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-29 00:55:00 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-29 00:55:00 - INFO: pdbio_gr, <module>:    Set up parallel envrionment and run PB solver.
+2025-08-29 00:55:00 - INFO: pdbio_gr, <module>:    Running PBE solver in 1 threads
+2025-08-29 00:55:00 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI+1A0600_001
+2025-08-29 00:55:01 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI+2A0600_002
+2025-08-29 00:55:02 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI01A0600_003
+2025-08-29 00:55:03 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI+aA0600_004
+2025-08-29 00:55:04 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI+aA0600_005
+2025-08-29 00:55:05 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI+bA0600_006
+2025-08-29 00:55:06 - INFO: pdbio_gr, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2hyy_STI+bA0600_007
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Time needed: 6 seconds.
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Post-processing of electrostatic potential.
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Processing ele pairwise interaction...
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Making atom connectivity ...
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Calculating vdw ...
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Calculating torsion energy ...
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Composing head3.lst ...
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Composing opp files ...
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Time needed: 0 seconds.
+2025-08-29 00:55:07 - INFO: pdbio_gr, <module>:    Total time for step3 is 6 seconds.
+2025-10-15 23:22:22 - INFO: step3.py, <module>: Step 3. Energies calculation with PBE solver.
+2025-10-15 23:22:22 - INFO: step3.py, <module>: Calling new VDW....No Scaling Applied
+2025-10-15 23:22:22 - INFO: step3.py, <module>:    Process run time options & convert step2_out.pdb.
+2025-10-15 23:22:22 - INFO: step3.py, <module>:    Prepare input for PB solver.
+2025-10-15 23:22:22 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:22:22 - INFO: step3.py, <module>:    Set up parallel envrionment and run PB solver.
+2025-10-15 23:22:22 - INFO: step3.py, <module>:    Running PBE solver in 1 threads
+2025-10-15 23:22:22 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+1A0600_001
+2025-10-15 23:22:23 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+2A0600_002
+2025-10-15 23:22:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI01A0600_003
+2025-10-15 23:22:25 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_004
+2025-10-15 23:22:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_005
+2025-10-15 23:22:27 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_006
+2025-10-15 23:22:28 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_007
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Time needed: 6 seconds.
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Post-processing of electrostatic potential.
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Processing ele pairwise interaction...
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Making atom connectivity ...
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Calculating vdw ...
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Calculating torsion energy ...
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Composing head3.lst ...
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Composing opp files ...
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:22:29 - INFO: step3.py, <module>:    Total time for step3 is 6 seconds.
+2025-10-15 23:27:05 - INFO: step3.py, <module>: Step 3. Energies calculation with PBE solver.
+2025-10-15 23:27:05 - INFO: step3.py, <module>: Calling new VDW....No Scaling Applied
+2025-10-15 23:27:05 - INFO: step3.py, <module>:    Process run time options & convert step2_out.pdb.
+2025-10-15 23:27:05 - INFO: step3.py, <module>:    Prepare input for PB solver.
+2025-10-15 23:27:05 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:27:05 - INFO: step3.py, <module>:    Set up parallel envrionment and run PB solver.
+2025-10-15 23:27:05 - INFO: step3.py, <module>:    Running PBE solver in 1 threads
+2025-10-15 23:27:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+1A0600_001
+2025-10-15 23:27:06 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+2A0600_002
+2025-10-15 23:27:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI01A0600_003
+2025-10-15 23:27:08 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_004
+2025-10-15 23:27:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_005
+2025-10-15 23:27:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_006
+2025-10-15 23:27:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_007
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Time needed: 6 seconds.
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Post-processing of electrostatic potential.
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Processing ele pairwise interaction...
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Making atom connectivity ...
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Calculating vdw ...
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Calculating torsion energy ...
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Composing head3.lst ...
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Composing opp files ...
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:27:11 - INFO: step3.py, <module>:    Total time for step3 is 6 seconds.
+2025-10-15 23:29:26 - INFO: step3.py, <module>: Step 3. Energies calculation with PBE solver.
+2025-10-15 23:29:26 - INFO: step3.py, <module>: Calling new VDW....No Scaling Applied
+2025-10-15 23:29:26 - INFO: step3.py, <module>:    Process run time options & convert step2_out.pdb.
+2025-10-15 23:29:26 - INFO: step3.py, <module>:    Prepare input for PB solver.
+2025-10-15 23:29:26 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:29:26 - INFO: step3.py, <module>:    Set up parallel envrionment and run PB solver.
+2025-10-15 23:29:26 - INFO: step3.py, <module>:    Running PBE solver in 1 threads
+2025-10-15 23:29:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+1A0600_001
+2025-10-15 23:29:27 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+2A0600_002
+2025-10-15 23:29:28 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI01A0600_003
+2025-10-15 23:29:29 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_004
+2025-10-15 23:29:30 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_005
+2025-10-15 23:29:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_006
+2025-10-15 23:29:32 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_007
+2025-10-15 23:29:32 - INFO: step3.py, <module>:    Time needed: 6 seconds.
+2025-10-15 23:29:32 - INFO: step3.py, <module>:    Post-processing of electrostatic potential.
+2025-10-15 23:29:32 - INFO: step3.py, <module>:    Processing ele pairwise interaction...
+2025-10-15 23:29:32 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:29:32 - INFO: step3.py, <module>:    Making atom connectivity ...
+2025-10-15 23:29:32 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:29:32 - INFO: step3.py, <module>:    Calculating vdw ...
+2025-10-15 23:29:33 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:29:33 - INFO: step3.py, <module>:    Calculating torsion energy ...
+2025-10-15 23:29:33 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:29:33 - INFO: step3.py, <module>:    Composing head3.lst ...
+2025-10-15 23:29:33 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:29:33 - INFO: step3.py, <module>:    Composing opp files ...
+2025-10-15 23:29:33 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 23:29:33 - INFO: step3.py, <module>:    Total time for step3 is 6 seconds.
+2025-10-16 16:28:07 - INFO: step3.py, <module>: Step 3. Energies calculation with PBE solver.
+2025-10-16 16:28:07 - INFO: step3.py, <module>: Calling new VDW....No Scaling Applied
+2025-10-16 16:28:07 - INFO: step3.py, <module>:    Process run time options & convert step2_out.pdb.
+2025-10-16 16:28:07 - INFO: step3.py, <module>:    Prepare input for PB solver.
+2025-10-16 16:28:07 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 16:28:07 - INFO: step3.py, <module>:    Set up parallel envrionment and run PB solver.
+2025-10-16 16:28:07 - INFO: step3.py, <module>:    Running PBE solver in 1 threads
+2025-10-16 16:28:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+1A0600_001
+2025-10-16 16:28:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+2A0600_002
+2025-10-16 16:28:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI01A0600_003
+2025-10-16 16:28:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_004
+2025-10-16 16:28:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_005
+2025-10-16 16:28:13 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_006
+2025-10-16 16:28:14 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_007
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Time needed: 6 seconds.
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Post-processing of electrostatic potential.
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Processing ele pairwise interaction...
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Making atom connectivity ...
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Calculating vdw ...
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Calculating torsion energy ...
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Composing head3.lst ...
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Composing opp files ...
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 16:28:14 - INFO: step3.py, <module>:    Total time for step3 is 7 seconds.
+2025-10-16 17:11:43 - INFO: step3.py, <module>: Step 3. Energies calculation with PBE solver.
+2025-10-16 17:11:43 - INFO: step3.py, <module>: Calling new VDW....No Scaling Applied
+2025-10-16 17:11:43 - INFO: step3.py, <module>:    Process run time options & convert step2_out.pdb.
+2025-10-16 17:11:43 - INFO: step3.py, <module>:    Prepare input for PB solver.
+2025-10-16 17:11:43 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 17:11:43 - INFO: step3.py, <module>:    Set up parallel envrionment and run PB solver.
+2025-10-16 17:11:43 - INFO: step3.py, <module>:    Running PBE solver in 1 threads
+2025-10-16 17:11:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+1A0600_001 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+1A0600_001
+2025-10-16 17:11:44 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+2A0600_002 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+2A0600_002
+2025-10-16 17:11:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI01A0600_003 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI01A0600_003
+2025-10-16 17:11:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_004 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_004
+2025-10-16 17:11:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+aA0600_005 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_005
+2025-10-16 17:11:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_006 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_006
+2025-10-16 17:11:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer STI+bA0600_007 in /tmp/pbe_data.data.home.granepura.5-kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_007
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Time needed: 7 seconds.
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Post-processing of electrostatic potential.
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Processing ele pairwise interaction...
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Making atom connectivity ...
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Calculating vdw ...
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Calculating torsion energy ...
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Composing head3.lst ...
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Composing opp files ...
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-16 17:11:51 - INFO: step3.py, <module>:    Total time for step3 is 8 seconds.
+2026-03-30 03:40:31 - INFO: step3.py, <module>: Step 3. Energies calculation with PBE solver.
+2026-03-30 03:40:31 - INFO: step3.py, <module>: Calling new VDW....No Scaling Applied
+2026-03-30 03:40:31 - INFO: step3.py, <module>:    Process run time options & convert step2_out.pdb.
+2026-03-30 03:40:31 - INFO: step3.py, <module>:    Prepare input for PB solver.
+2026-03-30 03:40:31 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-03-30 03:40:31 - INFO: step3.py, <module>:    Set up parallel envrionment and run PB solver.
+2026-03-30 03:40:31 - INFO: step3.py, <module>:    Running PBE solver in 1 threads
+2026-03-30 03:40:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (1/7) STI+1A0600_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI+1A0600_001
+2026-03-30 03:40:34 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (2/7) STI+2A0600_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI+2A0600_002
+2026-03-30 03:40:37 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (3/7) STI01A0600_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI01A0600_003
+2026-03-30 03:40:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (4/7) STI+aA0600_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_004
+2026-03-30 03:40:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (5/7) STI+aA0600_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_005
+2026-03-30 03:40:46 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (6/7) STI+bA0600_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_006
+2026-03-30 03:40:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (7/7) STI+bA0600_007 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_007
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Time needed: 20 seconds.
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Post-processing of electrostatic potential.
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Processing ele pairwise interaction...
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Making atom connectivity ...
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Calculating vdw ...
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Calculating torsion energy ...
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Composing head3.lst ...
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Composing opp files ...
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-03-30 03:40:52 - INFO: step3.py, <module>:    Total time for step3 is 20 seconds.

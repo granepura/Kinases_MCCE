@@ -1,0 +1,52 @@
+INFO - step3.py: Step 3. Energies calculation with PBE solver.
+INFO - step3.py: Calling new VDW....No Scaling Applied
+INFO - step3.py:    Process run time options & convert step2_out.pdb.
+INFO - step3.py:    Prepare input for PB solver.
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Set up parallel envrionment and run PB solver.
+INFO - step3.py:    Running PBE solver in 1 threads
+Warning: VDW_RAD HOH-1 " O  " not defined in RADIUS parameter
+Warning: VDW_RAD HOH-1 " H1 " not defined in RADIUS parameter
+Warning: VDW_RAD HOH+1 " O  " not defined in RADIUS parameter
+Warning: VDW_RAD HOH+1 " H1 " not defined in RADIUS parameter
+Warning: VDW_RAD HOH+1 " H2 " not defined in RADIUS parameter
+Warning: VDW_RAD HOH+1 " H3 " not defined in RADIUS parameter
+Warning: VDW_RAD SO401 " HO1" not defined in RADIUS parameter
+Warning: VDW_RAD SO401 " HO2" not defined in RADIUS parameter
+Warning: VDW_RAD SO4-1 " HO1" not defined in RADIUS parameter
+Warning, parameter ('RADIUS', 'NIL+1', ' H62') not found, using default values as C
+Warning, parameter ('RADIUS', 'NIL+1', ' H62') not found, using default values as C
+Warning, parameter ('RADIUS', 'NIL+1', ' H62') not found, using default values as C
+Warning, parameter ('RADIUS', 'NIL+1', ' H62') not found, using default values as C
+Warning, parameter ('RADIUS', 'NIL+2', ' H64') not found, using default values as C
+Warning, parameter ('RADIUS', 'NIL+2', ' H64') not found, using default values as C
+Warning, parameter ('RADIUS', 'NIL+2', ' H64') not found, using default values as C
+Warning, parameter ('RADIUS', 'NIL+2', ' H64') not found, using default values as C
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (1/12) NIL01A0601_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.5MO4_NIL01A0601_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (2/12) NIL01A0601_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.5MO4_NIL01A0601_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (3/12) NIL01A0601_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.5MO4_NIL01A0601_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (4/12) NIL01A0601_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.5MO4_NIL01A0601_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (5/12) NIL+1A0601_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.5MO4_NIL+1A0601_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (6/12) NIL+1A0601_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.5MO4_NIL+1A0601_006
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (7/12) NIL+1A0601_007 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.5MO4_NIL+1A0601_007
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (8/12) NIL+1A0601_008 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.5MO4_NIL+1A0601_008
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (9/12) NIL+2A0601_009 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.5MO4_NIL+2A0601_009
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (10/12) NIL+2A0601_010 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.5MO4_NIL+2A0601_010
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (11/12) NIL+2A0601_011 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.5MO4_NIL+2A0601_011
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (12/12) NIL+2A0601_012 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.5MO4_NIL+2A0601_012
+INFO - step3.py:    Time needed: 34 seconds.
+INFO - step3.py:    Post-processing of electrostatic potential.
+INFO - step3.py:    Processing ele pairwise interaction...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Making atom connectivity ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Calculating vdw ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Calculating torsion energy ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Composing head3.lst ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Composing opp files ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Total time for step3 is 34 seconds.
+[SUCCESS]: Step 3 completed successfully.

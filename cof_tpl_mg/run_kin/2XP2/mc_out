@@ -1,0 +1,1070 @@
+Titration (1th) at pH =   7.40 Eh =   0.00:
+Identified 109 free residues from 271 residues.
+Doing annealing... 
+Annealing temperature = 2729.81
+Step          0, E_minimum=    1257.64, E_running =    1257.64 ,  E_running without entropy =    1257.64
+Step      50000, E_minimum=      47.49, E_running =      98.54 ,  E_running without entropy =      98.54
+Exit     100000, E_minimum =      33.95, E_running =     133.50 E_running without TS =     133.50
+The average running energy, corresponding to H =  115.215 kCal/mol, H without TS =  115.215
+Annealing temperature = 2459.63
+Step          0, E_minimum=     133.49, E_running =     133.49 ,  E_running without entropy =     133.49
+Step      50000, E_minimum=      25.02, E_running =     102.96 ,  E_running without entropy =     102.96
+Exit     100000, E_minimum =      25.02, E_running =     102.10 E_running without TS =     102.10
+The average running energy, corresponding to H =  105.615 kCal/mol, H without TS =  105.615
+Annealing temperature = 2189.44
+Step          0, E_minimum=     102.08, E_running =     102.08 ,  E_running without entropy =     102.08
+Step      50000, E_minimum=      31.53, E_running =      71.05 ,  E_running without entropy =      71.05
+Exit     100000, E_minimum =      18.81, E_running =     124.33 E_running without TS =     124.33
+The average running energy, corresponding to H =   93.654 kCal/mol, H without TS =   93.654
+Annealing temperature = 1919.26
+Step          0, E_minimum=     124.32, E_running =     124.32 ,  E_running without entropy =     124.32
+Step      50000, E_minimum=      12.95, E_running =     112.26 ,  E_running without entropy =     112.26
+Exit     100000, E_minimum =      12.95, E_running =      81.80 E_running without TS =      81.80
+The average running energy, corresponding to H =   77.915 kCal/mol, H without TS =   77.915
+Annealing temperature = 1649.07
+Step          0, E_minimum=      81.79, E_running =      81.79 ,  E_running without entropy =      81.79
+Step      50000, E_minimum=      -3.86, E_running =      77.82 ,  E_running without entropy =      77.82
+Exit     100000, E_minimum =      -3.86, E_running =      34.81 E_running without TS =      34.81
+The average running energy, corresponding to H =   61.970 kCal/mol, H without TS =   61.970
+Annealing temperature = 1378.89
+Step          0, E_minimum=      34.79, E_running =      34.79 ,  E_running without entropy =      34.79
+Step      50000, E_minimum=      -7.65, E_running =      29.94 ,  E_running without entropy =      29.94
+Exit     100000, E_minimum =      -7.65, E_running =      41.16 E_running without TS =      41.16
+The average running energy, corresponding to H =   42.292 kCal/mol, H without TS =   42.292
+Annealing temperature = 1108.70
+Step          0, E_minimum=      41.16, E_running =      41.16 ,  E_running without entropy =      41.16
+Step      50000, E_minimum=     -18.87, E_running =      34.79 ,  E_running without entropy =      34.79
+Exit     100000, E_minimum =     -24.55, E_running =      18.54 E_running without TS =      18.54
+The average running energy, corresponding to H =   19.210 kCal/mol, H without TS =   19.210
+Annealing temperature = 838.52
+Step          0, E_minimum=      18.54, E_running =      18.54 ,  E_running without entropy =      18.54
+Step      50000, E_minimum=     -40.57, E_running =     -16.82 ,  E_running without entropy =     -16.82
+Exit     100000, E_minimum =     -47.36, E_running =      29.52 E_running without TS =      29.52
+The average running energy, corresponding to H =   -3.975 kCal/mol, H without TS =   -3.975
+Annealing temperature = 568.33
+Step          0, E_minimum=      29.51, E_running =      29.51 ,  E_running without entropy =      29.51
+Step      50000, E_minimum=     -51.40, E_running =     -34.36 ,  E_running without entropy =     -34.36
+Exit     100000, E_minimum =     -51.40, E_running =     -36.70 E_running without TS =     -36.70
+The average running energy, corresponding to H =  -30.831 kCal/mol, H without TS =  -30.831
+Annealing temperature = 298.15
+Step          0, E_minimum=     -36.71, E_running =     -36.71 ,  E_running without entropy =     -36.71
+Step      50000, E_minimum=     -54.45, E_running =     -50.43 ,  E_running without entropy =     -50.43
+Exit     100000, E_minimum =     -54.80, E_running =     -46.35 E_running without TS =     -46.35
+The average running energy, corresponding to H =  -48.631 kCal/mol, H without TS =  -48.631
+Final annealing temperature = 298.15
+Step          0, E_minimum=     -46.35, E_running =     -46.35 ,  E_running without entropy =     -46.35
+Step      50000, E_minimum=     -55.52, E_running =     -50.02 ,  E_running without entropy =     -50.02
+Exit     100000, E_minimum =     -55.52, E_running =     -47.93 E_running without TS =     -47.93
+The average running energy, corresponding to H =  -48.752 kCal/mol, H without TS =  -48.752
+Done
+
+Doing equalibration ... 
+Step          0, E_minimum=     -47.93, E_running =     -47.93 ,  E_running without entropy =     -47.93
+Step      50000, E_minimum=     -54.85, E_running =     -48.87 ,  E_running without entropy =     -48.87
+Step     100000, E_minimum=     -55.22, E_running =     -47.19 ,  E_running without entropy =     -47.19
+Exit     150000, E_minimum =     -55.22, E_running =     -52.63 E_running without TS =     -52.63
+The average running energy, corresponding to H =  -48.606 kCal/mol, H without TS =  -48.606
+Done
+
+Reducing conflist ... 185 conformers are marked as fixed.
+
+74 free residues from 271 residues, after reduction.
+
+Doing Entropy sampling cycle 1...
+Step          0, E_minimum=      19.95, E_running =      19.95 ,  E_running without entropy =      19.95
+Exit      50000, E_minimum =     -55.09, E_running =     -42.09 E_running without TS =     -42.09
+The average running energy, corresponding to H =  -48.706 kCal/mol, H without TS =  -48.706
+Step          0, E_minimum=     -42.10, E_running =     -42.10 ,  E_running without entropy =     -42.10
+Step      50000, E_minimum=     -54.54, E_running =     -49.56 ,  E_running without entropy =     -49.56
+Step     100000, E_minimum=     -55.43, E_running =     -45.61 ,  E_running without entropy =     -45.61
+Step     150000, E_minimum=     -55.69, E_running =     -52.54 ,  E_running without entropy =     -52.54
+Step     200000, E_minimum=     -55.69, E_running =     -50.60 ,  E_running without entropy =     -50.60
+Step     250000, E_minimum=     -55.69, E_running =     -47.73 ,  E_running without entropy =     -47.73
+Step     300000, E_minimum=     -55.69, E_running =     -50.77 ,  E_running without entropy =     -50.77
+Step     350000, E_minimum=     -55.69, E_running =     -49.08 ,  E_running without entropy =     -49.08
+Exit     400000, E_minimum =     -55.69, E_running =     -50.03 E_running without TS =     -50.03
+The average running energy, corresponding to H =  -48.638 kCal/mol, H without TS =  -48.638
+Max delta =    0.811
+Doing Entropy sampling cycle 2...
+Step          0, E_minimum=      56.25, E_running =      56.25 ,  E_running without entropy =      35.86
+Exit      50000, E_minimum =     -38.42, E_running =     -32.16 E_running without TS =     -49.20
+The average running energy, corresponding to H =  -31.868 kCal/mol, H without TS =  -48.819
+Step          0, E_minimum=     -32.16, E_running =     -32.16 ,  E_running without entropy =     -49.20
+Step      50000, E_minimum=     -37.94, E_running =     -29.09 ,  E_running without entropy =     -45.81
+Step     100000, E_minimum=     -38.13, E_running =     -35.60 ,  E_running without entropy =     -52.63
+Step     150000, E_minimum=     -38.63, E_running =     -34.15 ,  E_running without entropy =     -51.15
+Step     200000, E_minimum=     -38.63, E_running =     -33.31 ,  E_running without entropy =     -49.43
+Step     250000, E_minimum=     -38.63, E_running =     -33.62 ,  E_running without entropy =     -50.00
+Step     300000, E_minimum=     -38.63, E_running =     -28.23 ,  E_running without entropy =     -45.98
+Step     350000, E_minimum=     -38.63, E_running =     -29.93 ,  E_running without entropy =     -46.72
+Exit     400000, E_minimum =     -38.63, E_running =     -33.14 E_running without TS =     -49.36
+The average running energy, corresponding to H =  -31.817 kCal/mol, H without TS =  -48.686
+Max delta =    0.172
+Done, exit at max entropy convergence 0.172 
+
+Doing annealing of MC  1 ...
+Annealing temperature = 2729.81
+Step          0, E_minimum=      33.77, E_running =      33.77 ,  E_running without entropy =      13.74
+Exit      50000, E_minimum =     -14.58, E_running =      24.01 E_running without TS =       5.70
+The average running energy, corresponding to H =   21.869 kCal/mol, H without TS =    2.480
+Annealing temperature = 2459.63
+Step          0, E_minimum=      24.01, E_running =      24.01 ,  E_running without entropy =       5.70
+Exit      50000, E_minimum =     -16.24, E_running =       0.64 E_running without TS =     -18.65
+The average running energy, corresponding to H =   19.319 kCal/mol, H without TS =    0.039
+Annealing temperature = 2189.44
+Step          0, E_minimum=       0.63, E_running =       0.63 ,  E_running without entropy =     -18.66
+Exit      50000, E_minimum =     -13.77, E_running =      20.30 E_running without TS =       1.86
+The average running energy, corresponding to H =   16.656 kCal/mol, H without TS =   -2.470
+Annealing temperature = 1919.26
+Step          0, E_minimum=      20.30, E_running =      20.30 ,  E_running without entropy =       1.86
+Exit      50000, E_minimum =     -19.54, E_running =      31.90 E_running without TS =      12.01
+The average running energy, corresponding to H =   13.545 kCal/mol, H without TS =   -5.501
+Annealing temperature = 1649.07
+Step          0, E_minimum=      31.89, E_running =      31.89 ,  E_running without entropy =      12.01
+Exit      50000, E_minimum =     -20.51, E_running =      -9.84 E_running without TS =     -28.51
+The average running energy, corresponding to H =   10.655 kCal/mol, H without TS =   -8.275
+Annealing temperature = 1378.89
+Step          0, E_minimum=      -9.83, E_running =      -9.83 ,  E_running without entropy =     -28.50
+Exit      50000, E_minimum =     -24.72, E_running =      22.74 E_running without TS =       3.90
+The average running energy, corresponding to H =    5.451 kCal/mol, H without TS =  -13.283
+Annealing temperature = 1108.70
+Step          0, E_minimum=      22.74, E_running =      22.74 ,  E_running without entropy =       3.91
+Exit      50000, E_minimum =     -24.50, E_running =       0.12 E_running without TS =     -18.28
+The average running energy, corresponding to H =   -0.770 kCal/mol, H without TS =  -19.209
+Annealing temperature = 838.52
+Step          0, E_minimum=       0.11, E_running =       0.11 ,  E_running without entropy =     -18.29
+Exit      50000, E_minimum =     -29.72, E_running =     -11.29 E_running without TS =     -30.07
+The average running energy, corresponding to H =   -9.396 kCal/mol, H without TS =  -27.513
+Annealing temperature = 568.33
+Step          0, E_minimum=     -11.29, E_running =     -11.29 ,  E_running without entropy =     -30.07
+Exit      50000, E_minimum =     -34.19, E_running =     -23.68 E_running without TS =     -40.74
+The average running energy, corresponding to H =  -21.085 kCal/mol, H without TS =  -38.604
+Annealing temperature = 298.15
+Step          0, E_minimum=     -23.68, E_running =     -23.68 ,  E_running without entropy =     -40.75
+Exit      50000, E_minimum =     -38.28, E_running =     -27.77 E_running without TS =     -44.36
+The average running energy, corresponding to H =  -31.541 kCal/mol, H without TS =  -48.667
+Final annealing temperature = 298.15
+Step          0, E_minimum=     -27.77, E_running =     -27.77 ,  E_running without entropy =     -44.35
+Exit      50000, E_minimum =     -38.07, E_running =     -33.38 E_running without TS =     -49.69
+The average running energy, corresponding to H =  -31.751 kCal/mol, H without TS =  -48.897
+
+Doing MC  1 ... 
+Step          0, E_minimum=     -33.38, E_running =     -33.38 ,  E_running without entropy =     -49.69
+Step      50000, E_minimum=     -37.98, E_running =     -33.90 ,  E_running without entropy =     -51.14
+Step     100000, E_minimum=     -38.20, E_running =     -33.18 ,  E_running without entropy =     -50.09
+Step     150000, E_minimum=     -38.20, E_running =     -32.81 ,  E_running without entropy =     -50.05
+Step     200000, E_minimum=     -38.20, E_running =     -27.50 ,  E_running without entropy =     -44.71
+Step     250000, E_minimum=     -38.20, E_running =     -31.01 ,  E_running without entropy =     -47.99
+Step     300000, E_minimum=     -38.20, E_running =     -28.03 ,  E_running without entropy =     -45.69
+Step     350000, E_minimum=     -38.35, E_running =     -36.56 ,  E_running without entropy =     -53.80
+Exit     400000, E_minimum =     -38.35, E_running =     -34.33 E_running without TS =     -51.23
+The average running energy, corresponding to H =  -31.655 kCal/mol, H without TS =  -48.757
+Done
+
+Doing annealing of MC  2 ...
+Annealing temperature = 2729.81
+Step          0, E_minimum=      37.97, E_running =      37.97 ,  E_running without entropy =      17.62
+Exit      50000, E_minimum =     -13.30, E_running =      18.86 E_running without TS =      -1.07
+The average running energy, corresponding to H =   21.352 kCal/mol, H without TS =    2.233
+Annealing temperature = 2459.63
+Step          0, E_minimum=      18.86, E_running =      18.86 ,  E_running without entropy =      -1.07
+Exit      50000, E_minimum =     -13.35, E_running =      25.03 E_running without TS =       6.36
+The average running energy, corresponding to H =   18.651 kCal/mol, H without TS =   -0.362
+Annealing temperature = 2189.44
+Step          0, E_minimum=      25.03, E_running =      25.03 ,  E_running without entropy =       6.36
+Exit      50000, E_minimum =     -17.54, E_running =       5.79 E_running without TS =     -11.85
+The average running energy, corresponding to H =   17.561 kCal/mol, H without TS =   -1.454
+Annealing temperature = 1919.26
+Step          0, E_minimum=       5.79, E_running =       5.79 ,  E_running without entropy =     -11.85
+Exit      50000, E_minimum =     -16.21, E_running =       1.59 E_running without TS =     -16.64
+The average running energy, corresponding to H =   12.958 kCal/mol, H without TS =   -5.798
+Annealing temperature = 1649.07
+Step          0, E_minimum=       1.59, E_running =       1.59 ,  E_running without entropy =     -16.64
+Exit      50000, E_minimum =     -25.33, E_running =      14.07 E_running without TS =      -3.84
+The average running energy, corresponding to H =   10.639 kCal/mol, H without TS =   -8.129
+Annealing temperature = 1378.89
+Step          0, E_minimum=      14.06, E_running =      14.06 ,  E_running without entropy =      -3.84
+Exit      50000, E_minimum =     -23.97, E_running =       2.79 E_running without TS =     -15.76
+The average running energy, corresponding to H =    3.785 kCal/mol, H without TS =  -14.684
+Annealing temperature = 1108.70
+Step          0, E_minimum=       2.79, E_running =       2.79 ,  E_running without entropy =     -15.75
+Exit      50000, E_minimum =     -27.94, E_running =       3.44 E_running without TS =     -13.65
+The average running energy, corresponding to H =   -1.859 kCal/mol, H without TS =  -20.160
+Annealing temperature = 838.52
+Step          0, E_minimum=       3.44, E_running =       3.44 ,  E_running without entropy =     -13.65
+Exit      50000, E_minimum =     -29.69, E_running =      -0.15 E_running without TS =     -18.19
+The average running energy, corresponding to H =   -9.815 kCal/mol, H without TS =  -27.753
+Annealing temperature = 568.33
+Step          0, E_minimum=      -0.15, E_running =      -0.15 ,  E_running without entropy =     -18.19
+Exit      50000, E_minimum =     -34.87, E_running =     -25.38 E_running without TS =     -42.57
+The average running energy, corresponding to H =  -20.597 kCal/mol, H without TS =  -38.119
+Annealing temperature = 298.15
+Step          0, E_minimum=     -25.39, E_running =     -25.39 ,  E_running without entropy =     -42.57
+Exit      50000, E_minimum =     -37.99, E_running =     -34.39 E_running without TS =     -50.92
+The average running energy, corresponding to H =  -31.868 kCal/mol, H without TS =  -48.753
+Final annealing temperature = 298.15
+Step          0, E_minimum=     -34.39, E_running =     -34.39 ,  E_running without entropy =     -50.92
+Exit      50000, E_minimum =     -37.72, E_running =     -30.84 E_running without TS =     -48.45
+The average running energy, corresponding to H =  -31.891 kCal/mol, H without TS =  -48.957
+
+Doing MC  2 ... 
+Step          0, E_minimum=     -30.84, E_running =     -30.84 ,  E_running without entropy =     -48.45
+Step      50000, E_minimum=     -38.03, E_running =     -35.66 ,  E_running without entropy =     -52.85
+Step     100000, E_minimum=     -38.03, E_running =     -33.43 ,  E_running without entropy =     -50.36
+Step     150000, E_minimum=     -38.42, E_running =     -30.17 ,  E_running without entropy =     -46.70
+Step     200000, E_minimum=     -38.42, E_running =     -34.36 ,  E_running without entropy =     -51.88
+Step     250000, E_minimum=     -38.42, E_running =     -31.72 ,  E_running without entropy =     -48.59
+Step     300000, E_minimum=     -38.42, E_running =     -30.73 ,  E_running without entropy =     -48.35
+Step     350000, E_minimum=     -38.53, E_running =     -32.62 ,  E_running without entropy =     -50.14
+Exit     400000, E_minimum =     -38.53, E_running =     -30.90 E_running without TS =     -48.09
+The average running energy, corresponding to H =  -31.770 kCal/mol, H without TS =  -48.804
+Done
+
+Doing annealing of MC  3 ...
+Annealing temperature = 2729.81
+Step          0, E_minimum=      57.76, E_running =      57.76 ,  E_running without entropy =      37.27
+Exit      50000, E_minimum =     -14.45, E_running =      25.61 E_running without TS =       6.18
+The average running energy, corresponding to H =   21.506 kCal/mol, H without TS =    2.173
+Annealing temperature = 2459.63
+Step          0, E_minimum=      25.62, E_running =      25.62 ,  E_running without entropy =       6.19
+Exit      50000, E_minimum =     -14.84, E_running =      17.49 E_running without TS =      -1.47
+The average running energy, corresponding to H =   18.164 kCal/mol, H without TS =   -1.050
+Annealing temperature = 2189.44
+Step          0, E_minimum=      17.48, E_running =      17.48 ,  E_running without entropy =      -1.47
+Exit      50000, E_minimum =     -15.09, E_running =      13.79 E_running without TS =      -5.75
+The average running energy, corresponding to H =   16.469 kCal/mol, H without TS =   -2.651
+Annealing temperature = 1919.26
+Step          0, E_minimum=      13.78, E_running =      13.78 ,  E_running without entropy =      -5.76
+Exit      50000, E_minimum =     -23.35, E_running =      17.54 E_running without TS =      -1.68
+The average running energy, corresponding to H =   13.619 kCal/mol, H without TS =   -5.311
+Annealing temperature = 1649.07
+Step          0, E_minimum=      17.54, E_running =      17.54 ,  E_running without entropy =      -1.68
+Exit      50000, E_minimum =     -22.78, E_running =      11.14 E_running without TS =      -8.02
+The average running energy, corresponding to H =    9.803 kCal/mol, H without TS =   -9.003
+Annealing temperature = 1378.89
+Step          0, E_minimum=      11.14, E_running =      11.14 ,  E_running without entropy =      -8.02
+Exit      50000, E_minimum =     -20.88, E_running =       3.81 E_running without TS =     -15.39
+The average running energy, corresponding to H =    5.078 kCal/mol, H without TS =  -13.559
+Annealing temperature = 1108.70
+Step          0, E_minimum=       3.81, E_running =       3.81 ,  E_running without entropy =     -15.38
+Exit      50000, E_minimum =     -28.56, E_running =      -5.84 E_running without TS =     -23.66
+The average running energy, corresponding to H =   -1.434 kCal/mol, H without TS =  -19.786
+Annealing temperature = 838.52
+Step          0, E_minimum=      -5.84, E_running =      -5.84 ,  E_running without entropy =     -23.66
+Exit      50000, E_minimum =     -31.12, E_running =     -11.53 E_running without TS =     -29.64
+The average running energy, corresponding to H =   -9.506 kCal/mol, H without TS =  -27.526
+Annealing temperature = 568.33
+Step          0, E_minimum=     -11.54, E_running =     -11.54 ,  E_running without entropy =     -29.65
+Exit      50000, E_minimum =     -35.21, E_running =     -27.59 E_running without TS =     -44.25
+The average running energy, corresponding to H =  -20.739 kCal/mol, H without TS =  -38.175
+Annealing temperature = 298.15
+Step          0, E_minimum=     -27.60, E_running =     -27.60 ,  E_running without entropy =     -44.26
+Exit      50000, E_minimum =     -38.19, E_running =     -30.49 E_running without TS =     -47.08
+The average running energy, corresponding to H =  -31.791 kCal/mol, H without TS =  -48.820
+Final annealing temperature = 298.15
+Step          0, E_minimum=     -30.49, E_running =     -30.49 ,  E_running without entropy =     -47.08
+Exit      50000, E_minimum =     -37.85, E_running =     -30.83 E_running without TS =     -47.44
+The average running energy, corresponding to H =  -31.807 kCal/mol, H without TS =  -48.822
+
+Doing MC  3 ... 
+Step          0, E_minimum=     -30.83, E_running =     -30.83 ,  E_running without entropy =     -47.44
+Step      50000, E_minimum=     -37.80, E_running =     -33.91 ,  E_running without entropy =     -50.50
+Step     100000, E_minimum=     -38.23, E_running =     -31.56 ,  E_running without entropy =     -48.16
+Step     150000, E_minimum=     -38.23, E_running =     -33.41 ,  E_running without entropy =     -50.28
+Step     200000, E_minimum=     -38.23, E_running =     -32.03 ,  E_running without entropy =     -49.55
+Step     250000, E_minimum=     -38.34, E_running =     -33.80 ,  E_running without entropy =     -50.39
+Step     300000, E_minimum=     -38.34, E_running =     -28.48 ,  E_running without entropy =     -46.48
+Step     350000, E_minimum=     -38.34, E_running =     -32.58 ,  E_running without entropy =     -49.75
+Exit     400000, E_minimum =     -38.34, E_running =     -32.35 E_running without TS =     -49.53
+The average running energy, corresponding to H =  -31.761 kCal/mol, H without TS =  -48.812
+Done
+
+Doing annealing of MC  4 ...
+Annealing temperature = 2729.81
+Step          0, E_minimum=      30.00, E_running =      30.00 ,  E_running without entropy =       9.42
+Exit      50000, E_minimum =     -14.54, E_running =      26.50 E_running without TS =       6.27
+The average running energy, corresponding to H =   21.064 kCal/mol, H without TS =    1.762
+Annealing temperature = 2459.63
+Step          0, E_minimum=      26.50, E_running =      26.50 ,  E_running without entropy =       6.27
+Exit      50000, E_minimum =     -14.62, E_running =       8.13 E_running without TS =     -11.83
+The average running energy, corresponding to H =   19.004 kCal/mol, H without TS =   -0.301
+Annealing temperature = 2189.44
+Step          0, E_minimum=       8.13, E_running =       8.13 ,  E_running without entropy =     -11.83
+Exit      50000, E_minimum =     -13.97, E_running =      23.12 E_running without TS =       3.10
+The average running energy, corresponding to H =   17.036 kCal/mol, H without TS =   -2.081
+Annealing temperature = 1919.26
+Step          0, E_minimum=      23.12, E_running =      23.12 ,  E_running without entropy =       3.10
+Exit      50000, E_minimum =     -14.92, E_running =      13.04 E_running without TS =      -5.16
+The average running energy, corresponding to H =   14.611 kCal/mol, H without TS =   -4.458
+Annealing temperature = 1649.07
+Step          0, E_minimum=      13.04, E_running =      13.04 ,  E_running without entropy =      -5.16
+Exit      50000, E_minimum =     -21.94, E_running =      16.38 E_running without TS =      -3.20
+The average running energy, corresponding to H =    9.657 kCal/mol, H without TS =   -9.179
+Annealing temperature = 1378.89
+Step          0, E_minimum=      16.38, E_running =      16.38 ,  E_running without entropy =      -3.20
+Exit      50000, E_minimum =     -25.38, E_running =      -0.84 E_running without TS =     -20.19
+The average running energy, corresponding to H =    4.934 kCal/mol, H without TS =  -13.729
+Annealing temperature = 1108.70
+Step          0, E_minimum=      -0.85, E_running =      -0.85 ,  E_running without entropy =     -20.20
+Exit      50000, E_minimum =     -28.10, E_running =      -2.39 E_running without TS =     -20.62
+The average running energy, corresponding to H =   -1.224 kCal/mol, H without TS =  -19.549
+Annealing temperature = 838.52
+Step          0, E_minimum=      -2.39, E_running =      -2.39 ,  E_running without entropy =     -20.62
+Exit      50000, E_minimum =     -32.25, E_running =     -18.68 E_running without TS =     -36.78
+The average running energy, corresponding to H =  -10.424 kCal/mol, H without TS =  -28.390
+Annealing temperature = 568.33
+Step          0, E_minimum=     -18.67, E_running =     -18.67 ,  E_running without entropy =     -36.78
+Exit      50000, E_minimum =     -35.24, E_running =     -17.32 E_running without TS =     -35.29
+The average running energy, corresponding to H =  -20.737 kCal/mol, H without TS =  -38.215
+Annealing temperature = 298.15
+Step          0, E_minimum=     -17.32, E_running =     -17.32 ,  E_running without entropy =     -35.29
+Exit      50000, E_minimum =     -38.10, E_running =     -33.93 E_running without TS =     -50.48
+The average running energy, corresponding to H =  -31.810 kCal/mol, H without TS =  -48.784
+Final annealing temperature = 298.15
+Step          0, E_minimum=     -33.93, E_running =     -33.93 ,  E_running without entropy =     -50.48
+Exit      50000, E_minimum =     -37.90, E_running =     -29.92 E_running without TS =     -47.54
+The average running energy, corresponding to H =  -32.163 kCal/mol, H without TS =  -49.192
+
+Doing MC  4 ... 
+Step          0, E_minimum=     -29.92, E_running =     -29.92 ,  E_running without entropy =     -47.54
+Step      50000, E_minimum=     -37.93, E_running =     -33.85 ,  E_running without entropy =     -50.81
+Step     100000, E_minimum=     -38.36, E_running =     -31.62 ,  E_running without entropy =     -48.81
+Step     150000, E_minimum=     -38.36, E_running =     -34.19 ,  E_running without entropy =     -51.38
+Step     200000, E_minimum=     -38.36, E_running =     -32.94 ,  E_running without entropy =     -49.55
+Step     250000, E_minimum=     -38.36, E_running =     -30.80 ,  E_running without entropy =     -47.41
+Step     300000, E_minimum=     -38.36, E_running =     -32.78 ,  E_running without entropy =     -49.97
+Step     350000, E_minimum=     -38.36, E_running =     -33.58 ,  E_running without entropy =     -51.12
+Exit     400000, E_minimum =     -38.36, E_running =     -32.00 E_running without TS =     -49.31
+The average running energy, corresponding to H =  -31.715 kCal/mol, H without TS =  -48.751
+Done
+
+Doing annealing of MC  5 ...
+Annealing temperature = 2729.81
+Step          0, E_minimum=      54.26, E_running =      54.26 ,  E_running without entropy =      34.88
+Exit      50000, E_minimum =     -14.06, E_running =      30.34 E_running without TS =      10.23
+The average running energy, corresponding to H =   21.605 kCal/mol, H without TS =    2.305
+Annealing temperature = 2459.63
+Step          0, E_minimum=      30.34, E_running =      30.34 ,  E_running without entropy =      10.22
+Exit      50000, E_minimum =     -15.10, E_running =      31.68 E_running without TS =      10.76
+The average running energy, corresponding to H =   19.276 kCal/mol, H without TS =   -0.027
+Annealing temperature = 2189.44
+Step          0, E_minimum=      31.68, E_running =      31.68 ,  E_running without entropy =      10.76
+Exit      50000, E_minimum =     -16.17, E_running =      10.98 E_running without TS =      -6.39
+The average running energy, corresponding to H =   16.471 kCal/mol, H without TS =   -2.701
+Annealing temperature = 1919.26
+Step          0, E_minimum=      10.98, E_running =      10.98 ,  E_running without entropy =      -6.39
+Exit      50000, E_minimum =     -17.73, E_running =      -2.77 E_running without TS =     -20.99
+The average running energy, corresponding to H =   13.318 kCal/mol, H without TS =   -5.652
+Annealing temperature = 1649.07
+Step          0, E_minimum=      -2.77, E_running =      -2.77 ,  E_running without entropy =     -20.99
+Exit      50000, E_minimum =     -23.43, E_running =       7.99 E_running without TS =     -10.93
+The average running energy, corresponding to H =    9.599 kCal/mol, H without TS =   -9.231
+Annealing temperature = 1378.89
+Step          0, E_minimum=       7.98, E_running =       7.98 ,  E_running without entropy =     -10.93
+Exit      50000, E_minimum =     -22.74, E_running =      -3.97 E_running without TS =     -20.67
+The average running energy, corresponding to H =    6.067 kCal/mol, H without TS =  -12.648
+Annealing temperature = 1108.70
+Step          0, E_minimum=      -3.97, E_running =      -3.97 ,  E_running without entropy =     -20.67
+Exit      50000, E_minimum =     -26.37, E_running =      -7.89 E_running without TS =     -26.12
+The average running energy, corresponding to H =   -1.404 kCal/mol, H without TS =  -19.769
+Annealing temperature = 838.52
+Step          0, E_minimum=      -7.89, E_running =      -7.89 ,  E_running without entropy =     -26.12
+Exit      50000, E_minimum =     -31.64, E_running =     -13.97 E_running without TS =     -31.78
+The average running energy, corresponding to H =   -9.494 kCal/mol, H without TS =  -27.485
+Annealing temperature = 568.33
+Step          0, E_minimum=     -13.98, E_running =     -13.98 ,  E_running without entropy =     -31.78
+Exit      50000, E_minimum =     -34.84, E_running =     -14.72 E_running without TS =     -32.77
+The average running energy, corresponding to H =  -20.530 kCal/mol, H without TS =  -38.044
+Annealing temperature = 298.15
+Step          0, E_minimum=     -14.72, E_running =     -14.72 ,  E_running without entropy =     -32.77
+Exit      50000, E_minimum =     -37.91, E_running =     -33.93 E_running without TS =     -49.88
+The average running energy, corresponding to H =  -31.730 kCal/mol, H without TS =  -48.719
+Final annealing temperature = 298.15
+Step          0, E_minimum=     -33.92, E_running =     -33.92 ,  E_running without entropy =     -49.88
+Exit      50000, E_minimum =     -37.62, E_running =     -31.52 E_running without TS =     -49.04
+The average running energy, corresponding to H =  -31.982 kCal/mol, H without TS =  -48.953
+
+Doing MC  5 ... 
+Step          0, E_minimum=     -31.51, E_running =     -31.51 ,  E_running without entropy =     -49.04
+Step      50000, E_minimum=     -38.17, E_running =     -33.72 ,  E_running without entropy =     -49.67
+Step     100000, E_minimum=     -38.35, E_running =     -36.11 ,  E_running without entropy =     -52.71
+Step     150000, E_minimum=     -38.85, E_running =     -31.70 ,  E_running without entropy =     -48.23
+Step     200000, E_minimum=     -38.85, E_running =     -29.97 ,  E_running without entropy =     -47.15
+Step     250000, E_minimum=     -38.85, E_running =     -33.86 ,  E_running without entropy =     -51.38
+Step     300000, E_minimum=     -38.85, E_running =     -33.44 ,  E_running without entropy =     -51.05
+Step     350000, E_minimum=     -38.85, E_running =     -31.64 ,  E_running without entropy =     -48.82
+Exit     400000, E_minimum =     -38.85, E_running =     -36.46 E_running without TS =     -52.42
+The average running energy, corresponding to H =  -31.729 kCal/mol, H without TS =  -48.766
+Done
+
+Doing annealing of MC  6 ...
+Annealing temperature = 2729.81
+Step          0, E_minimum=      45.18, E_running =      45.18 ,  E_running without entropy =      25.58
+Exit      50000, E_minimum =     -22.27, E_running =      25.14 E_running without TS =       4.59
+The average running energy, corresponding to H =   21.567 kCal/mol, H without TS =    2.201
+Annealing temperature = 2459.63
+Step          0, E_minimum=      25.14, E_running =      25.14 ,  E_running without entropy =       4.59
+Exit      50000, E_minimum =     -11.86, E_running =       6.07 E_running without TS =     -13.65
+The average running energy, corresponding to H =   19.043 kCal/mol, H without TS =   -0.136
+Annealing temperature = 2189.44
+Step          0, E_minimum=       6.07, E_running =       6.07 ,  E_running without entropy =     -13.65
+Exit      50000, E_minimum =     -12.94, E_running =      14.74 E_running without TS =      -3.30
+The average running energy, corresponding to H =   17.631 kCal/mol, H without TS =   -1.551
+Annealing temperature = 1919.26
+Step          0, E_minimum=      14.73, E_running =      14.73 ,  E_running without entropy =      -3.31
+Exit      50000, E_minimum =     -18.63, E_running =       2.84 E_running without TS =     -15.66
+The average running energy, corresponding to H =   13.961 kCal/mol, H without TS =   -5.083
+Annealing temperature = 1649.07
+Step          0, E_minimum=       2.83, E_running =       2.83 ,  E_running without entropy =     -15.67
+Exit      50000, E_minimum =     -19.14, E_running =      21.62 E_running without TS =       3.04
+The average running energy, corresponding to H =   10.121 kCal/mol, H without TS =   -8.714
+Annealing temperature = 1378.89
+Step          0, E_minimum=      21.63, E_running =      21.63 ,  E_running without entropy =       3.04
+Exit      50000, E_minimum =     -22.75, E_running =       9.87 E_running without TS =      -7.90
+The average running energy, corresponding to H =    5.499 kCal/mol, H without TS =  -13.275
+Annealing temperature = 1108.70
+Step          0, E_minimum=       9.88, E_running =       9.88 ,  E_running without entropy =      -7.90
+Exit      50000, E_minimum =     -25.59, E_running =       1.69 E_running without TS =     -16.56
+The average running energy, corresponding to H =   -1.399 kCal/mol, H without TS =  -19.730
+Annealing temperature = 838.52
+Step          0, E_minimum=       1.69, E_running =       1.69 ,  E_running without entropy =     -16.56
+Exit      50000, E_minimum =     -32.03, E_running =     -17.38 E_running without TS =     -35.33
+The average running energy, corresponding to H =   -9.794 kCal/mol, H without TS =  -27.868
+Annealing temperature = 568.33
+Step          0, E_minimum=     -17.39, E_running =     -17.39 ,  E_running without entropy =     -35.33
+Exit      50000, E_minimum =     -35.41, E_running =     -16.04 E_running without TS =     -33.13
+The average running energy, corresponding to H =  -20.878 kCal/mol, H without TS =  -38.358
+Annealing temperature = 298.15
+Step          0, E_minimum=     -16.03, E_running =     -16.03 ,  E_running without entropy =     -33.13
+Exit      50000, E_minimum =     -37.63, E_running =     -32.76 E_running without TS =     -49.78
+The average running energy, corresponding to H =  -31.637 kCal/mol, H without TS =  -48.724
+Final annealing temperature = 298.15
+Step          0, E_minimum=     -32.76, E_running =     -32.76 ,  E_running without entropy =     -49.78
+Exit      50000, E_minimum =     -38.11, E_running =     -32.06 E_running without TS =     -49.24
+The average running energy, corresponding to H =  -31.819 kCal/mol, H without TS =  -48.903
+
+Doing MC  6 ... 
+Step          0, E_minimum=     -32.07, E_running =     -32.07 ,  E_running without entropy =     -49.25
+Step      50000, E_minimum=     -38.17, E_running =     -29.65 ,  E_running without entropy =     -46.25
+Step     100000, E_minimum=     -38.17, E_running =     -33.44 ,  E_running without entropy =     -50.62
+Step     150000, E_minimum=     -38.17, E_running =     -27.29 ,  E_running without entropy =     -44.47
+Step     200000, E_minimum=     -38.36, E_running =     -29.90 ,  E_running without entropy =     -47.42
+Step     250000, E_minimum=     -38.36, E_running =     -31.12 ,  E_running without entropy =     -48.30
+Step     300000, E_minimum=     -38.37, E_running =     -28.84 ,  E_running without entropy =     -46.17
+Step     350000, E_minimum=     -38.37, E_running =     -32.52 ,  E_running without entropy =     -50.12
+Exit     400000, E_minimum =     -38.37, E_running =     -26.22 E_running without TS =     -44.23
+The average running energy, corresponding to H =  -31.840 kCal/mol, H without TS =  -48.889
+Done
+
+Conformer     flag   E_self   mc01   mc02   mc03   mc04   mc05   mc06      occ Sgm(n-1)
+ASN01A1093_001   t   -1.062  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASN01A1093_002   t   -2.984  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1094_001   t   -3.596  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASN01A1095_001   f   -3.223  0.589  0.597  0.593  0.603  0.595  0.592 Av=0.595 Sg=0.005
+ASN01A1095_002   f   -2.769  0.411  0.403  0.407  0.397  0.405  0.408 Av=0.405 Sg=0.005
+TYR01A1096_001   t   -9.600  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+TYR-1A1096_002   t    1.132  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+CYS01A1097_001   f   -1.875  0.262  0.266  0.270  0.249  0.266  0.270 Av=0.264 Sg=0.008
+CYS01A1097_002   f   -2.310  0.231  0.236  0.234  0.245  0.236  0.241 Av=0.237 Sg=0.005
+CYS01A1097_003   f   -2.391  0.246  0.236  0.233  0.238  0.233  0.246 Av=0.239 Sg=0.006
+CYS-1A1097_004   f   -1.004  0.261  0.262  0.263  0.268  0.264  0.243 Av=0.260 Sg=0.009
+PHE01A1098_001   t   -8.776  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1099_001   t   -1.222  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LYS01A1101_001   f   -4.687  0.008  0.009  0.005  0.006  0.009  0.008 Av=0.007 Sg=0.002
+LYS+1A1101_002   f   -7.063  0.992  0.991  0.995  0.994  0.991  0.992 Av=0.993 Sg=0.002
+THR01A1102_001   f   -3.592  0.277  0.277  0.289  0.299  0.286  0.278 Av=0.284 Sg=0.009
+THR01A1102_002   f   -3.007  0.005  0.004  0.006  0.005  0.008  0.006 Av=0.005 Sg=0.001
+THR01A1102_003   f   -4.634  0.718  0.719  0.705  0.696  0.707  0.716 Av=0.710 Sg=0.009
+SER01A1103_001   t   -2.346  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+SER01A1104_001   f    0.885  0.004  0.003  0.003  0.003  0.007  0.003 Av=0.004 Sg=0.002
+SER01A1104_002   f   -1.641  0.996  0.997  0.997  0.997  0.993  0.997 Av=0.996 Sg=0.002
+ILE01A1105_001   t   -6.209  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+SER01A1106_001   t   -1.926  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASP01A1107_001   t 1000.155  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1107_002   t   -5.375  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1107_003   t   -5.282  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1107_004   t   -5.832  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP-1A1107_005   t  -10.405  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1108_001   t   -9.017  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LYS01A1109_001   f   -7.552  0.116  0.112  0.107  0.113  0.111  0.114 Av=0.112 Sg=0.003
+LYS+1A1109_002   f   -8.530  0.884  0.888  0.893  0.887  0.889  0.886 Av=0.888 Sg=0.003
+GLU01A1110_001   t   -9.587  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1110_002   t   -4.846  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1110_003   t   -8.780  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1110_004   t   -4.674  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1110_005   t  -12.399  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+VAL01A1111_001   t   -6.359  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1112_001   t   -3.811  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ARG01A1113_001   t   -8.162  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1113_002   t   -8.620  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1113_003   t   -7.401  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1113_004   t   -8.097  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1113_005   t  -11.451  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LYS01A1114_001   f   -4.107  0.140  0.137  0.144  0.154  0.140  0.144 Av=0.143 Sg=0.006
+LYS+1A1114_002   f   -5.408  0.860  0.863  0.856  0.846  0.860  0.856 Av=0.857 Sg=0.006
+ASN01A1115_001   t   -3.539  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1116_001   t   -8.490  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+THR01A1117_001   t   -4.343  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1118_001   t   -4.949  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1119_001   t   -7.046  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ARG01A1120_001   t   -5.114  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1120_002   t   -5.585  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1120_003   t   -5.483  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1120_004   t   -5.457  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1120_005   t  -12.043  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1122_001   t   -8.899  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1126_001   t   -0.867  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PHE01A1127_001   t   -5.911  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1129_001   t   -2.419  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1129_002   t   -3.443  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1129_003   t   -3.022  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1129_004   t   -3.368  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1129_005   t   -6.844  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+VAL01A1130_001   t   -6.789  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+TYR01A1131_001   f  -10.050  0.011  0.006  0.010  0.007  0.006  0.004 Av=0.007 Sg=0.003
+TYR01A1131_002   f   -9.484  0.989  0.994  0.990  0.993  0.994  0.996 Av=0.993 Sg=0.003
+TYR-1A1131_003   t   -5.564  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1132_001   t   -3.540  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1132_002   t   -4.626  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1132_003   t   -3.342  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1132_004   t   -4.907  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1132_005   t   -6.577  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLN01A1134_001   f   -5.016  0.565  0.556  0.568  0.559  0.562  0.570 Av=0.563 Sg=0.005
+GLN01A1134_002   f   -4.970  0.435  0.444  0.432  0.441  0.438  0.430 Av=0.437 Sg=0.005
+VAL01A1135_001   t   -5.695  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+SER01A1136_001   t   -0.456  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1144_001   t   -3.538  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1145_001   t   -4.575  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLN01A1146_001   f   -3.299  0.453  0.441  0.446  0.436  0.442  0.444 Av=0.444 Sg=0.005
+GLN01A1146_002   f   -3.165  0.547  0.559  0.554  0.564  0.558  0.556 Av=0.556 Sg=0.005
+VAL01A1147_001   t   -8.286  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1148_001   t   -3.057  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+VAL01A1149_001   t   -7.781  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LYS01A1150_001   t   -5.676  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+LYS+1A1150_002   t   -6.890  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+THR01A1151_001   f   -4.815  0.055  0.042  0.044  0.045  0.041  0.041 Av=0.045 Sg=0.005
+THR01A1151_002   f   -6.369  0.945  0.958  0.956  0.955  0.959  0.959 Av=0.955 Sg=0.005
+LEU01A1152_001   t   -8.194  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1153_001   t   -6.017  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1154_001   f   -2.433  0.001  0.000  0.001  0.002  0.000  0.001 Av=0.001 Sg=0.001
+GLU01A1154_002   f   -3.367  0.002  0.000  0.003  0.002  0.001  0.001 Av=0.002 Sg=0.001
+GLU02A1154_003   f   -2.659  0.000  0.001  0.000  0.001  0.001  0.000 Av=0.001 Sg=0.000
+GLU02A1154_004   f   -3.555  0.002  0.002  0.001  0.003  0.004  0.002 Av=0.002 Sg=0.001
+GLU-1A1154_005   f   -7.269  0.995  0.997  0.995  0.993  0.993  0.996 Av=0.995 Sg=0.002
+VAL01A1155_001   t   -2.638  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+CYS01A1156_001   f   -4.459  0.182  0.193  0.196  0.196  0.186  0.199 Av=0.192 Sg=0.007
+CYS01A1156_002   f   -4.541  0.637  0.623  0.610  0.620  0.629  0.624 Av=0.624 Sg=0.009
+CYS01A1156_003   f   -3.663  0.181  0.185  0.194  0.184  0.185  0.177 Av=0.184 Sg=0.006
+CYS-1A1156_004   t    0.473  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+SER01A1157_001   f   -1.659  0.862  0.861  0.866  0.851  0.854  0.858 Av=0.859 Sg=0.005
+SER01A1157_002   t    1.638  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+SER01A1157_003   f   -4.319  0.138  0.139  0.134  0.149  0.146  0.142 Av=0.141 Sg=0.005
+GLU01A1158_001   t   -2.737  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1158_002   t   -3.429  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1158_003   t   -2.943  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1158_004   t   -3.424  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1158_005   t   -7.530  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLN01A1159_001   f   -3.124  0.033  0.037  0.043  0.031  0.030  0.037 Av=0.035 Sg=0.005
+GLN01A1159_002   f   -3.181  0.967  0.963  0.957  0.969  0.970  0.963 Av=0.965 Sg=0.005
+ASP01A1160_001   t   -4.612  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1160_002   t   -5.694  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1160_003   t   -0.053  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1160_004   t   -5.255  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP-1A1160_005   t  -11.201  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1161_001   f   -4.593  0.000  0.000  0.000  0.000  0.001  0.000 Av=0.000 Sg=0.000
+GLU01A1161_002   t   -4.727  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1161_003   t   -4.314  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1161_004   t   -4.509  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1161_005   f   -6.737  1.000  1.000  1.000  1.000  0.999  1.000 Av=1.000 Sg=0.000
+LEU01A1162_001   t   -6.014  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASP01A1163_001   t   -1.845  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1163_002   t   -3.689  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1163_003   f   -3.588  0.006  0.004  0.006  0.004  0.003  0.006 Av=0.005 Sg=0.001
+ASP02A1163_004   f   -4.264  0.003  0.004  0.003  0.002  0.002  0.005 Av=0.003 Sg=0.001
+ASP-1A1163_005   f   -6.242  0.992  0.992  0.991  0.994  0.996  0.989 Av=0.992 Sg=0.002
+PHE01A1164_001   t  -12.755  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1165_001   t   -6.796  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+MET01A1166_001   t   38.429  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1167_001   t   -4.366  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1167_002   f   -6.362  0.039  0.049  0.038  0.044  0.040  0.037 Av=0.041 Sg=0.005
+GLU02A1167_003   f   -5.264  0.008  0.012  0.010  0.009  0.013  0.008 Av=0.010 Sg=0.002
+GLU02A1167_004   f   -5.985  0.017  0.025  0.022  0.015  0.017  0.018 Av=0.019 Sg=0.004
+GLU-1A1167_005   f   -6.762  0.936  0.914  0.929  0.931  0.931  0.937 Av=0.930 Sg=0.008
+ALA01A1168_001   t   -2.527  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1169_001   t   -9.454  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1170_001   t   -8.452  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1171_001   t   -8.316  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+SER01A1172_001   f   -2.047  0.115  0.105  0.106  0.099  0.105  0.093 Av=0.104 Sg=0.008
+SER01A1172_002   f   -3.092  0.845  0.858  0.853  0.866  0.856  0.870 Av=0.858 Sg=0.009
+SER01A1172_003   f   -1.918  0.040  0.037  0.040  0.035  0.039  0.037 Av=0.038 Sg=0.002
+LYS01A1173_001   t   -7.123  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+LYS+1A1173_002   t  -11.108  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PHE01A1174_001   t   -8.308  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASN01A1175_001   f   -2.779  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASN01A1175_002   f   -1.706  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+HIS01A1176_001   f   -9.157  0.991  0.993  0.996  0.995  0.995  0.996 Av=0.995 Sg=0.002
+HIS01A1176_002   f   -5.913  0.009  0.007  0.004  0.005  0.005  0.004 Av=0.005 Sg=0.002
+HIS02A1176_003   t   -5.289  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+HIS02A1176_004   t   -6.115  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+HIS+1A1176_005   t    0.758  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+HIS+1A1176_006   t   -0.584  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLN01A1177_001   f   -2.337  0.430  0.433  0.430  0.442  0.427  0.427 Av=0.431 Sg=0.006
+GLN01A1177_002   f   -2.239  0.570  0.567  0.570  0.558  0.573  0.573 Av=0.569 Sg=0.006
+ASN01A1178_001   t   -8.145  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASN01A1178_002   t   -4.828  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ILE01A1179_001   t   -8.249  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+VAL01A1180_001   t   -7.526  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ARG01A1181_001   t   -7.261  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG01A1181_002   t   -6.066  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1181_003   t   -8.035  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1181_004   t   -7.444  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1181_005   t   -6.032  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1181_006   t   -7.901  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1181_007   t   -5.951  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1181_008   t  -14.924  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ARG+1A1181_009   t  -13.290  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+CYS01A1182_001   f   -4.500  0.350  0.335  0.335  0.347  0.356  0.356 Av=0.346 Sg=0.010
+CYS01A1182_002   f   -4.621  0.491  0.514  0.503  0.488  0.485  0.489 Av=0.495 Sg=0.011
+CYS01A1182_003   f   -4.451  0.159  0.151  0.162  0.166  0.159  0.154 Av=0.158 Sg=0.005
+CYS-1A1182_004   t   -1.071  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ILE01A1183_001   t   -8.140  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+VAL01A1185_001   t   -7.653  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+SER01A1186_001   t   -2.493  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+SER01A1186_002   t   -3.257  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+SER01A1186_003   t   -2.544  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+LEU01A1187_001   t   -6.673  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLN01A1188_001   f   -2.458  0.467  0.468  0.453  0.462  0.449  0.452 Av=0.458 Sg=0.008
+GLN01A1188_002   f   -2.675  0.533  0.532  0.547  0.538  0.551  0.548 Av=0.542 Sg=0.008
+SER01A1189_001   t   -2.528  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1190_001   t   -4.637  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1191_001   t   -4.376  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ARG01A1192_001   t   -7.951  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1192_002   t   -7.866  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1192_003   t   -8.089  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1192_004   t   -8.256  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1192_005   t  -13.593  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PHE01A1193_001   t   -9.321  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1194_001   t   -8.397  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1195_001   t   -9.420  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1196_001   t   -8.336  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1197_001   t   -2.004  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1197_002   t   -5.518  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1197_003   t   -5.663  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1197_004   t   -6.350  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1197_005   t   -5.429  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1198_001   t   -9.333  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+MET01A1199_001   t   -9.300  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1200_001   t   -1.948  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASP01A1203_001   t   -6.960  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1203_002   t   -7.299  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1203_003   t   -3.686  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1203_004   t   -5.537  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP-1A1203_005   t  -12.684  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1204_001   t   -7.944  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LYS01A1205_001   f   -6.992  0.106  0.109  0.097  0.101  0.105  0.103 Av=0.104 Sg=0.004
+LYS+1A1205_002   f   -7.229  0.894  0.891  0.903  0.899  0.895  0.897 Av=0.896 Sg=0.004
+SER01A1206_001   f   -1.983  0.011  0.009  0.007  0.009  0.013  0.010 Av=0.010 Sg=0.002
+SER01A1206_002   f   -0.796  0.562  0.541  0.548  0.532  0.548  0.557 Av=0.548 Sg=0.011
+SER01A1206_003   f   -0.331  0.147  0.139  0.144  0.161  0.133  0.150 Av=0.146 Sg=0.009
+SER01A1206_004   f   -2.099  0.088  0.093  0.089  0.086  0.100  0.086 Av=0.090 Sg=0.005
+SER01A1206_005   f   -2.132  0.020  0.024  0.024  0.027  0.023  0.027 Av=0.024 Sg=0.003
+SER01A1206_006   f   -2.596  0.172  0.194  0.187  0.186  0.184  0.171 Av=0.182 Sg=0.009
+PHE01A1207_001   t   -9.987  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1208_001   t  -11.625  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ARG01A1209_001   t   -9.327  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1209_002   t   -7.732  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1209_003   t   -9.351  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1209_004   t  -16.254  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1210_001   t   -4.459  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1210_002   t   -4.775  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1210_003   t   -4.160  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1210_004   t   -4.817  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1210_005   t   -7.995  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+THR01A1211_001   f   -4.673  0.759  0.775  0.779  0.764  0.768  0.772 Av=0.769 Sg=0.007
+THR01A1211_002   f   -3.963  0.241  0.225  0.221  0.236  0.232  0.228 Av=0.231 Sg=0.007
+ARG01A1212_001   t   -7.320  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1212_002   t  -11.090  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1212_003   t  -11.010  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1212_004   t  -11.031  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1212_005   t  -18.161  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1213_001   t   -5.796  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ARG01A1214_001   t   -6.380  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1214_002   t   -6.461  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1214_003   t   -6.483  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1214_004   t  -13.155  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1215_001   t  994.990  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+SER01A1216_001   f    0.466  0.008  0.009  0.009  0.012  0.009  0.006 Av=0.009 Sg=0.002
+SER01A1216_002   f   -0.810  0.992  0.991  0.991  0.988  0.991  0.994 Av=0.991 Sg=0.002
+GLN01A1217_001   t   81.530  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+SER01A1220_001   t   -0.435  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1221_001   t   -6.049  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1222_001   t   -1.807  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+MET01A1223_001   t   -9.108  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1224_001   t   -4.975  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASP01A1225_001   t   -0.629  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1225_002   t   -5.406  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1225_003   t   -5.094  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1225_004   t   -5.899  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP-1A1225_005   t  -10.128  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1226_001   t   -8.336  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1227_001   t   -9.082  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+HIS01A1228_001   f   -4.061  0.067  0.072  0.065  0.057  0.059  0.071 Av=0.065 Sg=0.006
+HIS01A1228_002   f   -3.647  0.036  0.038  0.032  0.033  0.037  0.035 Av=0.035 Sg=0.002
+HIS02A1228_003   f   -4.175  0.153  0.138  0.137  0.136  0.135  0.146 Av=0.141 Sg=0.007
+HIS02A1228_004   f   -4.164  0.128  0.126  0.131  0.118  0.129  0.135 Av=0.128 Sg=0.006
+HIS+1A1228_005   f   -3.839  0.326  0.346  0.356  0.364  0.339  0.321 Av=0.342 Sg=0.017
+HIS+1A1228_006   f   -3.800  0.290  0.280  0.278  0.292  0.302  0.292 Av=0.289 Sg=0.009
+VAL01A1229_001   t   -5.796  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1230_001   t   -2.657  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ARG01A1231_001   t   -7.528  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1231_002   t   -7.563  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1231_003   t   -7.508  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1231_004   t   -7.534  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1231_005   t  -13.618  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASP01A1232_001   t   -6.991  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1232_002   t   -8.081  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1232_003   t   -3.968  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1232_004   t   -7.638  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP-1A1232_005   t   -9.744  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1233_001   t   -9.718  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1234_001   t   -3.009  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+CYS01A1235_001   f   -2.568  0.132  0.118  0.145  0.135  0.134  0.125 Av=0.131 Sg=0.009
+CYS01A1235_002   f   -2.887  0.429  0.431  0.402  0.413  0.423  0.431 Av=0.421 Sg=0.012
+CYS01A1235_003   f   -3.008  0.418  0.432  0.435  0.431  0.416  0.424 Av=0.426 Sg=0.008
+CYS-1A1235_004   f   -2.174  0.022  0.019  0.018  0.021  0.027  0.020 Av=0.021 Sg=0.003
+CYS01A1237_001   f   -2.655  0.504  0.490  0.498  0.487  0.485  0.502 Av=0.494 Sg=0.008
+CYS01A1237_002   f   -3.284  0.303  0.316  0.304  0.306  0.321  0.305 Av=0.309 Sg=0.007
+CYS01A1237_003   f   -2.686  0.193  0.194  0.198  0.207  0.194  0.193 Av=0.197 Sg=0.006
+CYS-1A1237_004   t    5.863  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLN01A1238_001   f   -5.994  0.606  0.608  0.613  0.607  0.611  0.600 Av=0.607 Sg=0.005
+GLN01A1238_002   f   -5.613  0.394  0.392  0.387  0.393  0.389  0.400 Av=0.393 Sg=0.005
+TYR01A1239_001   t  -10.166  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+TYR-1A1239_002   t   -2.591  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+LEU01A1240_001   t   -7.977  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1241_001   t   -5.320  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1241_002   t   -2.572  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1241_003   f   -7.525  0.007  0.006  0.010  0.007  0.005  0.009 Av=0.007 Sg=0.002
+GLU02A1241_004   f   -6.464  0.001  0.000  0.001  0.002  0.001  0.001 Av=0.001 Sg=0.001
+GLU-1A1241_005   f  -11.077  0.993  0.993  0.989  0.991  0.994  0.990 Av=0.992 Sg=0.002
+GLU01A1242_001   t   -4.676  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1242_002   f   -5.464  0.001  0.002  0.002  0.004  0.002  0.001 Av=0.002 Sg=0.001
+GLU02A1242_003   t   -4.712  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1242_004   f   -5.639  0.002  0.001  0.002  0.003  0.004  0.001 Av=0.002 Sg=0.001
+GLU-1A1242_005   f   -8.947  0.997  0.998  0.997  0.994  0.994  0.998 Av=0.996 Sg=0.002
+ASN01A1243_001   f   -3.115  0.003  0.003  0.004  0.003  0.002  0.000 Av=0.003 Sg=0.001
+ASN01A1243_002   f   -4.838  0.997  0.997  0.996  0.997  0.998  1.000 Av=0.997 Sg=0.001
+HIS01A1244_001   f   -4.669  0.044  0.038  0.038  0.038  0.041  0.044 Av=0.040 Sg=0.003
+HIS01A1244_002   f   -4.792  0.047  0.039  0.042  0.049  0.039  0.037 Av=0.042 Sg=0.005
+HIS02A1244_003   f   -4.868  0.052  0.052  0.051  0.051  0.056  0.044 Av=0.051 Sg=0.004
+HIS02A1244_004   f   -4.781  0.050  0.053  0.053  0.057  0.062  0.053 Av=0.055 Sg=0.004
+HIS+1A1244_005   f   -5.411  0.288  0.294  0.312  0.298  0.298  0.316 Av=0.301 Sg=0.011
+HIS+1A1244_006   f   -5.454  0.519  0.523  0.503  0.507  0.504  0.506 Av=0.511 Sg=0.009
+PHE01A1245_001   t   -8.682  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1246_001   t   -9.040  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+HIS01A1247_001   t  -10.522  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+HIS02A1247_002   t   -1.768  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+HIS+1A1247_003   t    6.476  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG01A1248_001   t   -6.226  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1248_002   t   -6.203  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1248_003   t   -6.320  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1248_004   t  -11.826  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASP01A1249_001   f   -0.342  0.000  0.001  0.000  0.001  0.001  0.000 Av=0.001 Sg=0.000
+ASP01A1249_002   t   -1.658  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1249_003   f   -0.803  0.007  0.004  0.007  0.011  0.008  0.006 Av=0.007 Sg=0.002
+ASP02A1249_004   f   -2.291  0.003  0.003  0.003  0.004  0.002  0.002 Av=0.003 Sg=0.001
+ASP-1A1249_005   f   -2.976  0.990  0.992  0.991  0.984  0.989  0.992 Av=0.990 Sg=0.003
+ILE01A1250_001   t   -7.525  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1251_001   t   -2.198  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1252_001   t   -2.410  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ARG01A1253_001   t   -3.676  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1253_002   t   -4.356  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1253_003   t   -4.418  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1253_004   t   -3.866  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1253_005   t   -7.049  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASN01A1254_001   f   -5.679  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASN01A1254_002   f   -2.911  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+CYS01A1255_001   f   -4.217  0.225  0.215  0.223  0.205  0.222  0.200 Av=0.215 Sg=0.010
+CYS01A1255_002   f   -4.642  0.630  0.641  0.637  0.655  0.634  0.646 Av=0.640 Sg=0.009
+CYS01A1255_003   f   -3.971  0.145  0.144  0.140  0.140  0.144  0.154 Av=0.145 Sg=0.005
+CYS-1A1255_004   t    4.895  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+LEU01A1256_001   t   -9.282  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1257_001   t  -10.654  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+THR01A1258_001   t   -0.941  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+THR01A1258_002   f   -3.901  0.074  0.082  0.080  0.080  0.077  0.076 Av=0.078 Sg=0.003
+THR01A1258_003   f   -6.556  0.926  0.918  0.920  0.920  0.923  0.924 Av=0.922 Sg=0.003
+CYS01A1259_001   f   -3.731  0.159  0.142  0.157  0.140  0.155  0.155 Av=0.151 Sg=0.008
+CYS01A1259_002   f   -4.240  0.149  0.137  0.134  0.138  0.143  0.142 Av=0.140 Sg=0.005
+CYS01A1259_003   f   -4.431  0.380  0.381  0.413  0.385  0.377  0.384 Av=0.387 Sg=0.013
+CYS-1A1259_004   f   -3.684  0.313  0.339  0.296  0.336  0.324  0.320 Av=0.321 Sg=0.016
+PRO01A1260_001   t   -4.204  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1262_001   t   -2.803  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ARG01A1264_001   t   -8.969  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1264_002   t  -10.803  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1264_003   t  -10.873  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1264_004   t  -10.612  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1264_005   t  -10.279  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1264_006   t  -16.389  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+VAL01A1265_001   t   -5.006  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1266_001   t   -2.852  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LYS01A1267_001   t  -10.759  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+LYS+1A1267_002   t  -11.177  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1268_001   t   -8.311  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASP01A1270_001   t   -4.906  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1270_002   t   -5.282  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1270_003   t   -1.897  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1270_004   t   -3.618  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP-1A1270_005   t  -10.778  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PHE01A1271_001   t   -8.335  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+MET01A1273_001   t   -6.019  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1274_001   t   -2.834  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ARG01A1275_001   t  -13.983  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1275_002   t  -14.555  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1275_003   t  -12.974  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1275_004   t  -15.055  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1275_005   t  -14.530  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1275_006   t  -16.687  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASP01A1276_001   t   -2.442  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1276_002   t   -4.710  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1276_003   t   -3.592  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1276_004   t   -4.503  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP-1A1276_005   t   -7.470  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1277_001   t   -5.586  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+TYR01A1278_001   t   -8.692  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+TYR-1A1278_002   t   -4.384  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG01A1279_001   t   -5.662  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1279_002   t   -6.960  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1279_003   t   -6.895  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1279_004   t  -12.742  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1280_001   t   -1.375  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+MET01A1290_001   t   -1.886  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1291_001   t   -3.477  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1292_001   t   -3.933  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+VAL01A1293_001   t   -5.571  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LYS01A1294_001   f   -7.009  0.001  0.002  0.002  0.003  0.003  0.001 Av=0.002 Sg=0.001
+LYS+1A1294_002   f   -8.736  0.999  0.998  0.998  0.997  0.997  0.999 Av=0.998 Sg=0.001
+TRP01A1295_001   t  -13.000  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+MET01A1296_001   t   -9.478  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1297_001   t   -6.577  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1298_001   t   -4.567  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1299_001   t   -3.442  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1299_002   t   -5.325  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1299_003   t   -4.437  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1299_004   t   -5.385  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1299_005   t   -3.849  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1300_001   t   -2.998  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PHE01A1301_001   t  -12.632  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+MET01A1302_001   t   -4.620  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1303_001   f   -4.265  0.000  0.000  0.000  0.000  0.000  0.001 Av=0.000 Sg=0.000
+GLU01A1303_002   t   -4.967  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1303_003   t   -4.394  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1303_004   t   -4.969  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1303_005   f   -9.022  1.000  1.000  1.000  1.000  1.000  0.999 Av=1.000 Sg=0.000
+ILE01A1305_001   t   -5.838  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PHE01A1306_001   t   -8.253  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+THR01A1307_001   t   -3.931  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+THR01A1307_002   t    0.376  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+SER01A1308_001   t   -1.976  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LYS01A1309_001   f  -10.370  0.029  0.020  0.026  0.022  0.022  0.024 Av=0.024 Sg=0.003
+LYS+1A1309_002   f  -11.560  0.971  0.980  0.974  0.978  0.978  0.976 Av=0.976 Sg=0.003
+THR01A1310_001   t   -6.039  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+THR01A1310_002   t   -1.004  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1311_001   t   -5.775  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1311_002   t   -2.778  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1311_003   f   -8.525  0.004  0.007  0.004  0.005  0.004  0.009 Av=0.005 Sg=0.002
+ASP02A1311_004   t   -2.894  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP-1A1311_005   f  -13.213  0.996  0.993  0.996  0.995  0.996  0.991 Av=0.995 Sg=0.002
+THR01A1312_001   t   -5.740  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+TRP01A1313_001   t  -19.116  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+SER01A1314_001   f   -6.283  0.943  0.942  0.926  0.939  0.940  0.936 Av=0.938 Sg=0.006
+SER01A1314_002   f   -3.925  0.031  0.029  0.039  0.034  0.033  0.039 Av=0.034 Sg=0.004
+SER01A1314_003   f   -3.019  0.026  0.028  0.035  0.026  0.027  0.026 Av=0.028 Sg=0.004
+PHE01A1315_001   t  -10.563  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+VAL01A1317_001   t   -7.818  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1318_001   t   -9.238  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1319_001   t   -7.717  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+TRP01A1320_001   t  -16.161  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1321_001   t   -6.937  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1321_002   t   -5.036  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1321_003   t   -8.235  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1321_004   t   -8.444  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1321_005   t   -8.393  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1322_001   t   -9.249  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PHE01A1323_001   t   -8.926  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+SER01A1324_001   t   -4.604  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1325_001   t   -7.806  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+TYR01A1327_001   f   -5.738  0.974  0.978  0.979  0.971  0.977  0.980 Av=0.977 Sg=0.004
+TYR-1A1327_002   f   -1.545  0.026  0.022  0.021  0.029  0.023  0.020 Av=0.023 Sg=0.004
+MET01A1328_001   t   -4.214  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1329_001   t   -4.336  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+TYR01A1330_001   f   -6.364  0.079  0.089  0.088  0.083  0.093  0.086 Av=0.086 Sg=0.005
+TYR01A1330_002   f   -7.104  0.921  0.911  0.912  0.917  0.907  0.914 Av=0.914 Sg=0.005
+TYR-1A1330_003   t    5.282  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+PRO01A1331_001   t   -4.251  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+SER01A1332_001   f   -0.244  0.338  0.340  0.334  0.337  0.331  0.325 Av=0.334 Sg=0.005
+SER01A1332_002   f   -0.401  0.662  0.660  0.666  0.663  0.669  0.675 Av=0.666 Sg=0.005
+LYS01A1333_001   f   -6.863  0.007  0.007  0.005  0.007  0.010  0.007 Av=0.007 Sg=0.001
+LYS+1A1333_002   f   -9.193  0.993  0.993  0.995  0.993  0.990  0.993 Av=0.993 Sg=0.001
+SER01A1334_001   f   -0.526  0.176  0.167  0.174  0.163  0.165  0.168 Av=0.169 Sg=0.005
+SER01A1334_002   f   -2.078  0.063  0.059  0.056  0.058  0.061  0.049 Av=0.058 Sg=0.005
+SER01A1334_003   f   -3.634  0.690  0.695  0.693  0.716  0.709  0.714 Av=0.703 Sg=0.012
+SER01A1334_004   f   -0.990  0.071  0.079  0.077  0.062  0.064  0.068 Av=0.070 Sg=0.007
+ASN01A1335_001   f   -2.752  0.959  0.965  0.967  0.968  0.960  0.969 Av=0.965 Sg=0.004
+ASN01A1335_002   f   -2.117  0.041  0.035  0.033  0.032  0.040  0.031 Av=0.035 Sg=0.004
+GLN01A1336_001   f   -3.428  0.987  0.985  0.988  0.988  0.987  0.988 Av=0.987 Sg=0.001
+GLN01A1336_002   f   -3.221  0.013  0.015  0.012  0.012  0.013  0.012 Av=0.013 Sg=0.001
+GLU01A1337_001   t   -2.120  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1337_002   t   -6.600  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1337_003   t   -6.493  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1337_004   t   -7.037  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1337_005   t   -6.626  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1337_006   t   -0.236  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1337_007   t   -6.893  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1337_008   t   -6.808  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1337_009   f  -11.346  0.929  0.927  0.929  0.937  0.938  0.939 Av=0.933 Sg=0.005
+GLU-1A1337_010   f  -11.227  0.071  0.073  0.071  0.063  0.062  0.061 Av=0.067 Sg=0.005
+VAL01A1338_001   t   -7.297  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1339_001   t   -6.306  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1340_001   t   -3.381  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1340_002   t   -4.826  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1340_003   t   -4.262  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1340_004   t   -4.690  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1340_005   t   -8.022  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PHE01A1341_001   t  -11.240  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+VAL01A1342_001   t   -6.380  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+THR01A1343_001   f   -1.686  0.034  0.030  0.034  0.031  0.033  0.039 Av=0.034 Sg=0.003
+THR01A1343_002   f   -3.850  0.966  0.970  0.966  0.969  0.967  0.961 Av=0.966 Sg=0.003
+SER01A1344_001   f   -2.409  0.332  0.325  0.330  0.328  0.334  0.317 Av=0.328 Sg=0.006
+SER01A1344_002   f   -2.863  0.668  0.675  0.670  0.672  0.666  0.683 Av=0.672 Sg=0.006
+ARG01A1347_001   t  -11.040  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1347_002   t  -11.576  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1347_003   t   -9.594  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1347_004   t  -12.395  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1347_005   t  -20.686  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+MET01A1348_001   t   -6.361  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASP01A1349_001   t   -1.302  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1349_002   t   -2.476  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1349_003   t   -1.942  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1349_004   t   -2.400  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP-1A1349_005   t   -7.084  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1350_001   t   -3.796  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1351_001   t   -7.276  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LYS01A1352_001   f   -4.025  0.006  0.009  0.006  0.008  0.007  0.009 Av=0.007 Sg=0.001
+LYS+1A1352_002   f   -7.180  0.994  0.991  0.994  0.992  0.993  0.991 Av=0.993 Sg=0.001
+ASN01A1353_001   f   -4.679  0.884  0.871  0.888  0.886  0.890  0.891 Av=0.885 Sg=0.007
+ASN01A1353_002   f   -3.730  0.116  0.129  0.112  0.114  0.110  0.109 Av=0.115 Sg=0.007
+CYS01A1354_001   f   -3.069  0.082  0.091  0.087  0.103  0.101  0.097 Av=0.094 Sg=0.008
+CYS01A1354_002   f   -3.963  0.463  0.448  0.464  0.454  0.464  0.463 Av=0.459 Sg=0.006
+CYS01A1354_003   f   -4.080  0.455  0.461  0.450  0.443  0.435  0.440 Av=0.447 Sg=0.010
+CYS-1A1354_004   t    4.037  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+PRO01A1355_001   t   -5.696  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1357_001   t   -4.251  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+VAL01A1358_001   t   -5.249  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+TYR01A1359_001   f  -10.990  0.987  0.983  0.987  0.987  0.986  0.989 Av=0.986 Sg=0.002
+TYR01A1359_002   f   -8.456  0.013  0.017  0.013  0.013  0.014  0.011 Av=0.014 Sg=0.002
+TYR-1A1359_003   t    0.108  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG01A1360_001   t   -7.535  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1360_002   t   -7.731  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1360_003   t   -7.745  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1360_004   t  -14.256  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1361_001   t   -8.804  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+MET01A1362_001   t  -10.364  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+THR01A1363_001   t   -3.460  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLN01A1364_001   f   -4.735  0.678  0.697  0.680  0.701  0.706  0.682 Av=0.691 Sg=0.012
+GLN01A1364_002   f   -4.793  0.322  0.303  0.320  0.299  0.294  0.318 Av=0.309 Sg=0.012
+CYS01A1365_001   f   -4.980  0.286  0.274  0.293  0.288  0.288  0.280 Av=0.285 Sg=0.007
+CYS01A1365_002   f   -5.302  0.353  0.360  0.350  0.349  0.350  0.366 Av=0.355 Sg=0.007
+CYS01A1365_003   f   -4.839  0.361  0.367  0.357  0.363  0.362  0.354 Av=0.361 Sg=0.005
+CYS-1A1365_004   t   10.489  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+TRP01A1366_001   t  -17.354  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLN01A1367_001   f   -8.746  0.735  0.734  0.730  0.736  0.738  0.742 Av=0.736 Sg=0.004
+GLN01A1367_002   f   -7.675  0.265  0.266  0.270  0.264  0.262  0.258 Av=0.264 Sg=0.004
+HIS01A1368_001   f   -3.295  0.362  0.343  0.353  0.320  0.333  0.331 Av=0.340 Sg=0.015
+HIS01A1368_002   f   -2.471  0.337  0.341  0.328  0.353  0.350  0.335 Av=0.341 Sg=0.009
+HIS02A1368_003   f   -2.713  0.099  0.115  0.107  0.102  0.097  0.118 Av=0.107 Sg=0.009
+HIS02A1368_004   f   -3.172  0.102  0.102  0.113  0.111  0.120  0.116 Av=0.111 Sg=0.007
+HIS+1A1368_005   f   -2.130  0.043  0.040  0.039  0.048  0.041  0.038 Av=0.041 Sg=0.004
+HIS+1A1368_006   f   -2.658  0.056  0.058  0.060  0.066  0.059  0.062 Av=0.060 Sg=0.003
+GLN01A1369_001   f   -3.167  0.491  0.495  0.491  0.513  0.493  0.501 Av=0.497 Sg=0.008
+GLN01A1369_002   f   -2.889  0.509  0.505  0.509  0.487  0.507  0.499 Av=0.503 Sg=0.008
+PRO01A1370_001   t   -3.931  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1371_001   t 1000.365  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1371_002   t   -3.909  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1371_003   f   -4.248  0.001  0.000  0.001  0.000  0.000  0.001 Av=0.001 Sg=0.000
+GLU02A1371_004   f   -4.417  0.001  0.001  0.000  0.000  0.000  0.002 Av=0.001 Sg=0.001
+GLU-1A1371_005   f   -8.846  0.998  0.999  0.999  0.999  1.000  0.997 Av=0.999 Sg=0.001
+ASP01A1372_001   t   -2.675  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1372_002   t   -3.711  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1372_003   t   -2.351  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1372_004   t   -3.809  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP-1A1372_005   t   -7.798  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ARG01A1373_001   t  -15.455  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1373_002   t  -16.479  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1373_003   t  -13.191  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1373_004   t  -17.157  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1373_005   t  -16.017  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1373_006   t  -20.302  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1374_001   t   -6.351  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASN01A1375_001   t   -5.680  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PHE01A1376_001   t  -12.045  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1377_001   t   -1.342  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1378_001   t   -5.819  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1379_001   t   -8.970  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1380_001   t   -9.384  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1381_001   t   -3.587  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1381_002   f   -4.456  0.000  0.000  0.000  0.001  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1381_003   f   -4.032  0.000  0.001  0.001  0.001  0.001  0.000 Av=0.001 Sg=0.000
+GLU02A1381_004   f   -4.418  0.001  0.000  0.002  0.002  0.002  0.000 Av=0.001 Sg=0.001
+GLU-1A1381_005   f   -8.552  0.999  0.998  0.997  0.996  0.997  1.000 Av=0.998 Sg=0.001
+ARG01A1382_001   t   -5.702  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG02A1382_002   t   -5.917  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG03A1382_003   t   -6.126  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ARG+1A1382_004   t  -10.974  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1383_001   t   -9.799  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1384_001   t   -3.613  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1384_002   t   -5.468  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1384_003   t   -4.908  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1384_004   t   -5.222  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1384_005   t   -8.135  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+TYR01A1385_001   f   -5.480  0.998  0.998  0.998  0.998  0.997  0.998 Av=0.998 Sg=0.000
+TYR-1A1385_002   f   -2.186  0.002  0.002  0.002  0.002  0.003  0.002 Av=0.002 Sg=0.000
+CYS01A1386_001   f   -3.664  0.207  0.211  0.219  0.208  0.199  0.214 Av=0.210 Sg=0.007
+CYS01A1386_002   f   -4.510  0.683  0.680  0.667  0.678  0.696  0.661 Av=0.678 Sg=0.012
+CYS01A1386_003   f   -3.441  0.110  0.109  0.114  0.113  0.105  0.125 Av=0.113 Sg=0.007
+CYS-1A1386_004   t    4.005  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+THR01A1387_001   f   -5.012  0.626  0.617  0.617  0.623  0.627  0.626 Av=0.623 Sg=0.004
+THR01A1387_002   f   -4.890  0.374  0.383  0.383  0.377  0.373  0.374 Av=0.377 Sg=0.004
+GLN01A1388_001   f   -4.888  0.425  0.425  0.422  0.428  0.428  0.414 Av=0.424 Sg=0.005
+GLN01A1388_002   f   -4.895  0.575  0.575  0.578  0.572  0.572  0.586 Av=0.576 Sg=0.005
+ASP01A1389_001   t   -0.693  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1389_002   t   -5.456  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1389_003   t   -5.752  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1389_004   t   -6.388  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP-1A1389_005   t  -11.077  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1390_001   t   -3.500  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASP01A1391_001   t   -1.532  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP01A1391_002   t   -2.292  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1391_003   t   -1.720  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP02A1391_004   t   -2.282  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+ASP-1A1391_005   t   -7.213  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+VAL01A1392_001   t   -6.833  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1393_001   t   -9.558  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ASN01A1394_001   f   -3.480  0.642  0.650  0.642  0.642  0.634  0.642 Av=0.642 Sg=0.005
+ASN01A1394_002   f   -3.351  0.358  0.350  0.358  0.358  0.366  0.358 Av=0.358 Sg=0.005
+THR01A1395_001   t   -4.719  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ALA01A1396_001   t   -1.359  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+LEU01A1397_001   t   -7.573  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+PRO01A1398_001   t   -4.704  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+ILE01A1399_001   t   -8.881  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+GLU01A1400_001   t   -2.749  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU01A1400_002   t   -3.377  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1400_003   t   -2.373  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU02A1400_004   t   -2.965  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+GLU-1A1400_005   t   -5.315  1.000  1.000  1.000  1.000  1.000  1.000 Av=1.000 Sg=0.000
+TYR01A1401_001   f  996.263  0.533  0.536  0.534  0.515  0.522  0.524 Av=0.527 Sg=0.008
+TYR01A1401_002   f  995.900  0.467  0.464  0.466  0.485  0.478  0.476 Av=0.473 Sg=0.008
+TYR-1A1401_003   t 1002.915  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+VGH+aA9000_001   t   -7.613  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+VGH+1A9000_002   f  -21.597  1.000  0.998  1.000  0.999  1.000  1.000 Av=0.999 Sg=0.001
+VGH01A9000_003   f  -18.197  0.000  0.002  0.000  0.001  0.000  0.000 Av=0.001 Sg=0.001
+VGH+2A9000_004   t   -5.067  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+

@@ -1,0 +1,130 @@
+Preprocessing input pdb file, identifying ligands ...
+Done, writing to step0_out.pdb ...
+================================================================
+<<< MCCE Multi-Conformation Continuum Electrostatics >>>        
+ Marilyn Gunner's Lab at City College of New York, 2023         
+----------------------------------------------------------------
+Version:         4.0                                            
+MCCE Home:                                                      
+  Private (Dev): https://github.com/GunnerLab/MCCE4             
+  Public:        https://github.com/GunnerLab/MCCE4-Alpha       
+  Docs:          https://gunnerlab.github.io/mcce4_tutorial/    
+Support:         https://github.com/GunnerLab/MCCE4-Alpha/issues
+Developed by:    The Gunner Lab                                 
+                 https://gunnerlab.ccny.cuny.edu/               
+Citations:       If you publish data calculated with MCCE, please cite the papers in
+                 https://gunnerlab.github.io/mcce4_tutorial/docs/mcce/
+================================================================
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "./param" ... 
+   Done
+
+   Load linear free energy correction parameters from "./user_param/extra.tpl"...
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "step0_out.pdb"...
+   Done
+
+   Read name rule file "/home/granepura/MCCE4/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Done
+
+   Load pdb lines into data structure...
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " O   LEU A 254".
+   Done
+
+   Strip free cofactors with SAS >  -1%...
+        1 free cofactors were stripped off in this round
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 1.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Missing heavy atoms for GLU01 in "GLU A  42":   CG ,  CD ,  OE1,  OE2
+   Missing heavy atoms for LYS01 in "LYS A  92":   CG ,  CD ,  CE ,  NZ 
+   Missing heavy atoms for SER01 in "SER A 123":   OG 
+   Missing heavy atoms for ASP01 in "ASP A 210":   CG ,  OD1,  OD2
+   Missing heavy atoms for ASN01 in "ASN A 213":   CG ,  OD1,  ND2
+   Missing heavy atoms for ARG01 in "ARG A 215":   CG ,  CD ,  NE ,  CZ ,  NH1,  NH2
+   Missing heavy atoms for LEU01 in "LEU A 221":   CG ,  CD1,  CD2
+   Missing heavy atoms for ASP01 in "ASP B  10":   CG ,  OD1,  OD2
+   Missing heavy atoms for GLN01 in "GLN B  11":   CG ,  CD ,  OE1,  NE2
+   Missing heavy atoms for GLN01 in "GLN B  12":   CG ,  CD ,  OE1,  NE2
+   Missing heavy atoms for GLU01 in "GLU B  14":   CG ,  CD ,  OE1,  OE2
+   Missing heavy atoms for CYS01 in "CYS B  15":   SG 
+   Missing heavy atoms for VAL01 in "VAL B  16":   CG1,  CG2
+   Missing heavy atoms for GLU01 in "GLU B  21":   CG ,  CD ,  OE1,  OE2
+   Missing heavy atoms for TYR01 in "TYR B  24":   CG ,  CD1,  CD2,  CE1,  CE2,  CZ ,  OH 
+   Missing heavy atoms for LYS01 in "LYS B  26":   CG ,  CD ,  CE ,  NZ 
+   Missing heavy atoms for LYS01 in "LYS B  29":   CG ,  CD ,  CE ,  NZ 
+   Missing heavy atoms for ARG01 in "ARG B  31":   CG ,  CD ,  NE ,  CZ ,  NH1,  NH2
+   Missing heavy atoms for ASP01 in "ASP B  32":   CG ,  OD1,  OD2
+   Missing heavy atoms for LEU01 in "LEU B  33":   CG ,  CD1,  CD2
+   Missing heavy atoms for ASN01 in "ASN B  35":   CG ,  OD1,  ND2
+   Missing heavy atoms for ARG01 in "ARG B  38":   CG ,  CD ,  NE ,  CZ ,  NH1,  NH2
+   Missing heavy atoms for VAL01 in "VAL B  40":   CG1,  CG2
+   Missing heavy atoms for ARG01 in "ARG B  44":   CG ,  CD ,  NE ,  CZ ,  NH1,  NH2
+   Missing heavy atoms for ARG01 in "ARG B  46":   CG ,  CD ,  NE ,  CZ ,  NH1,  NH2
+   Missing heavy atoms for GLU01 in "GLU B  51":   CG ,  CD ,  OE1,  OE2
+   Missing heavy atoms for ARG01 in "ARG B  78":   CG ,  CD ,  NE ,  CZ ,  NH1,  NH2
+   Missing heavy atoms for CYS01 in "CYS B  83":   SG 
+   Missing heavy atoms for ARG01 in "ARG B  87":   CG ,  CD ,  NE ,  CZ ,  NH1,  NH2
+   Missing heavy atoms for THR01 in "THR B  88":   OG1,  CG2
+   Missing heavy atoms for ARG01 in "ARG B  90":   CG ,  CD ,  NE ,  CZ ,  NH1,  NH2
+   Missing heavy atoms for THR01 in "THR B  92":   OG1,  CG2
+   Missing heavy atoms for LYS01 in "LYS B  93":   CG ,  CD ,  CE ,  NZ 
+   Missing heavy atoms for THR01 in "THR B  95":   OG1,  CG2
+   Missing heavy atoms for LYS01 in "LYS B 111":   CG ,  CD ,  CE ,  NZ 
+   Missing heavy atoms for LEU01 in "LEU B 183":   CG ,  CD1,  CD2
+   Missing heavy atoms for GLN01 in "GLN B 260":   CG ,  CD ,  OE1,  NE2
+   Missing heavy atoms for GLU01 in "GLU B 304":   CG ,  CD ,  OE1,  OE2
+   Missing heavy atoms for ARG01 in "ARG B 305":   CG ,  CD ,  NE ,  CZ ,  NH1,  NH2
+
+
+   Missing heavy atoms detected.
+   Ignore warning messages if they are in the terminal residues
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Done.
+
+   4 TORSION parameters were guessed and recorded in file debug.log.
+   Modify and put them into a param file to have the full control.
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Not doing "Step 2. Make multi side chain conformers"
+
+Not doing "Step 3. Compute energy lookup table"
+
+Not doing "Step 4. Monte Carlo Sampling"
+
+Not doing "Step 6. Hydrogen Bond Network Analysis"
+

@@ -1,0 +1,214 @@
+================================================================
+<<< MCCE Multi-Conformation Continuum Electrostatics >>>        
+ Marilyn Gunner's Lab at City College of New York, 2023         
+----------------------------------------------------------------
+Version:         4.0                                            
+MCCE Home:                                                      
+  Private (Dev): https://github.com/GunnerLab/MCCE4             
+  Public:        https://github.com/GunnerLab/MCCE4-Alpha       
+  Docs:          https://gunnerlab.github.io/mcce4_tutorial/    
+Support:         https://github.com/GunnerLab/MCCE4-Alpha/issues
+Developed by:    The Gunner Lab                                 
+                 https://gunnerlab.ccny.cuny.edu/               
+Citations:       If you publish data calculated with MCCE, please cite the papers in
+                 https://gunnerlab.github.io/mcce4_tutorial/docs/mcce/
+================================================================
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "./param" ... 
+   Done
+
+   Load linear free energy correction parameters from "/home/schowdhury/MCCE4-Alpha/extra.tpl"...
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Not doing "Step 1. Test and format structral file"
+
+Not doing "Step 2. Make multi side chain conformers"
+
+Not doing "Step 3. Compute energy lookup table"
+
+Step 4. Monte Carlo Sampling
+   Load conformer list from file "head3.lst" ...
+   Scaling factors:
+   VDW0  = 1.000:
+   VDW1  = 1.000:
+   VDW   = 1.000:
+   TORS  = 0.125:
+   ELE   = 1.000:
+   DSOLV = 1.000:
+   Done
+
+   Load pairwise interactions ...
+   Done
+
+   Verify self consistancy of conformer flag ...
+   TRP01A0235_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   MET01A0237_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ARG+1A0239_006 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ILE01A0242_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   THR01A0243_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   MET01A0244_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0248_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   GLN01A0252_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0256_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0260_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   TRP01A0261_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   SER01A0265_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0266_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   THR01A0267_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0268_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0269_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0270_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0273_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   MET01A0278_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0280_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PHE01A0283_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0284_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0287_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0288_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0289_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   MET01A0290_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ILE01A0293_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PRO01A0296_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0298_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0299_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0301_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0302_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0304_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ARG+1A0307_004 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PRO01A0309_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PRO01A0310_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PHE01A0311_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ILE01A0313_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ILE01A0314_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PHE01A0317_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   MET01A0318_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   THR01A0319_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0323_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0324_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0327_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ARG+1A0328_004 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ASN01A0331_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ARG+1A0332_004 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0335_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ASN01A0336_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0337_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0338_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0339_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0340_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0341_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   MET01A0343_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0344_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ILE01A0347_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0350_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   MET01A0351_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0354_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PHE01A0359_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ILE01A0360_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ARG+1A0362_004 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0364_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0365_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0366_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ARG+1A0367_005 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0370_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0371_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0376_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0377_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0379_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0380_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PHE01A0382_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0384_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ARG+1A0386_006 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0387_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   MET01A0388_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0395_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0397_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0399_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PHE01A0401_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PRO01A0402_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ILE01A0403_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   TRP01A0405_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   THR01A0406_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0407_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PRO01A0408_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0411_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0412_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PHE01A0416_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ILE01A0418_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0422_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   TRP01A0423_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0424_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PHE01A0425_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0427_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0428_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0429_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   TRP01A0430_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ILE01A0432_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0433_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   MET01A0437_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   SER01A0438_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PRO01A0439_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PRO01A0441_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ILE01A0443_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0445_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0448_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0451_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0452_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ARG+1A0457_004 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   MET01A0458_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ARG+1A0460_004 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PRO01A0461_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PRO01A0465_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   VAL01A0468_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   LEU01A0471_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   MET01A0472_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ARG+1A0473_005 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0474_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   TRP01A0476_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   TRP01A0478_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PRO01A0480_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ARG+1A0483_006 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PRO01A0484_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PHE01A0486_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0487_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ILE01A0489_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ALA01A0492_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PHE01A0493_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   MET01A0496_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   PHE01A0497_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   SER01A0500_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   ILE01A0502_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   Conformer flags updated due to self consistancy.
+
+   Do titration at 1 points...
+   Detailed progress is in file "mc_out"
+   Monte Carlo set up time: 0 seconds.
+   Titration  1:    20 seconds, biggest stdev of conformer occ = 0.022
+   Done
+
+   Fit titration curves to get pKa/Em ...
+   MFE: didn't specify mfe point, do mfe at pKa or Em 
+   Done
+
+   Total time on MC: 21 seconds
+
+   Output files:
+      mc_out          : MC progress and convergence.
+      fort.38         : Occupancy table.
+      entropy.out     : Entropy correction table
+      pK.out          : pKa or Em from titration curve fitting.
+      sum_crg.out     : Summary of residue charges.
+Step 4 Done.
+
+Not doing "Step 6. Hydrogen Bond Network Analysis"
+
+Saved full pKa/Em output as pK_extended.out and trimmed version as pK.out
+[SUCCESS]: Step 4 completed successfully.

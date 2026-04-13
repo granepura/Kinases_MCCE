@@ -1,0 +1,150 @@
+Preprocessing input pdb file, identifying ligands ...
+Done, writing to step0_out.pdb ...
+===========================================================
+<<< MCCE Multi-Conformation Continuum Electrostatics >>>   
+ Marilyn Gunner's Lab at City College of New York, 2023    
+-----------------------------------------------------------
+Version:        2.7.1                                      
+MCCE Home Page: https://gunnerlab.github.io/Stable-MCCE/quick/
+Support:        mgunner@ccny.cuny.edu                   
+Developed by:   Junjun Mao, Yifan Song, Marilyn Gunner     
+Reference MCCE: If you publish data calculated with MCCE,  
+                you need to cite papers suggested in MCCE  
+                Home Page.                                 
+===========================================================
+
+Last Updates:                                              
+   02/26/2023: vdw calculated by vdw_pw.py after step3.
+   06/04/2018: Removed dependency on gdbm
+   06/04/2018: Clear text energy table in step 3 and 4 
+===========================================================
+
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "./param" ... 
+   Done
+
+   Load linear free energy correction parameters from "/home/granepura/MCCE4/extra.tpl"...
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "step0_out.pdb"...
+   Done
+
+   Read name rule file "/home/granepura/MCCE4/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Error! premcce_confname(): Can't get conformer list of this residue EMH
+   Creating temporary parameter file for unrecognized residue...
+   Trying labeling again...
+   Done
+
+   Load pdb lines into data structure...
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C4  EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C5  EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C6  EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C7  EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C8  EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C10 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C13 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C15 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C17 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C21 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C22 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C24 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C26 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C28 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N19 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C18 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C3  EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C1  EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C2  EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N9  EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C14 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C16 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " O20 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C12 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C11 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C23 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N25 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C29 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C27 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C30 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N31 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C32 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C34 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " O36 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C35 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C33 EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H21A EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H21B EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H22A EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H22B EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H24A EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H24B EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H28A EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H23A EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H29A EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H27A EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H30A EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H32A EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H34A EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H35A EMH A 901".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H33A EMH A 901".
+   Done
+
+   Strip free cofactors with SAS >  -1%...
+   Warning! assign_vdw_param(): missing parameter(s), default value is used and saved in debug.log.
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 0.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Missing heavy atoms for EMHBK in "EMH A 901":   C4 ,  C5 ,  C6 ,  C7 ,  C8 ,  C10,  C13,  C15,  C17,  C21,  C22,  C24,  C26,  C28,  N19,  C18,  C3 ,  C1 ,  C2 ,  N9 ,  C14,  C16,  O20,  C12,  C11,  C23,  N25,  C29,  C27,  C30,  N31,  C32,  C34,  O36,  C35,  C33
+
+
+   Missing heavy atoms detected.
+   Ignore warning messages if they are in the terminal residues
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Error! get_connect12(): Error in CONNECT parameter, refer to debug log file: debug.log for detail
+   Errors were detected when making connectivity.
+   Done.
+
+   Error! get_connect12(): Error in CONNECT parameter, refer to debug log file: debug.log for detail
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Not doing "Step 2. Make multi side chain conformers"
+
+Not doing "Step 3. Compute energy lookup table"
+
+Not doing "Step 4. Monte Carlo Sampling"
+
+Not doing "Step 6. Hydrogen Bond Network Analysis"
+

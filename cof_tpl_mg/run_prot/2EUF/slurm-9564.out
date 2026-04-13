@@ -1,0 +1,26 @@
+Final input PDB file: prot_new_center.pdb
+Running STEP1 ...
+STEP1 completed SUCCESSFULLY in 00h:00m:01s.
+Running STEP2 ...
+[Step2.py Error]: Output not found: step2_out.pdb.
+STEP2 FAILED after 00h:00m:01s!
+STEP3 SKIPPED — step2_out.pdb was not created recently.
+Running custom stepC script "vdw0_update2zero.py" (between STEP3 and STEP4)...
+Traceback (most recent call last):
+  File "/home/granepura/5-kinases/vdw0_update2zero.py", line 18, in <module>
+    shutil.copyfile("head3.lst", "BK_head3.lst")
+  File "/home/granepura/miniconda3/envs/mcce4/lib/python3.10/shutil.py", line 254, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: 'head3.lst'
+vdw0_update2zero.py FAILED after 00h:00m:00s!
+STEP4 SKIPPED — head3.lst was not created recently.
+Temporary PBE data will be stored in:                             /tmp
+Full path of the working directory is:                            /home/granepura/5-kinases/cof_tpl_mg/run_prot/2EUF
+Subdirectories matching this pattern will be removed from temp dir: granepura.5-kinases.cof_tpl_mg.run_prot.2EUF
+STEP_CLEAN: cleaning matching pbe_data folders in /tmp...
+STEP_CLEAN: no matching /tmp pbe_data folders found.
+Script complete.
+Total runtime: 00h:00m:02s
+Timing report written to mcce_timing.log
+
+>>> Caught termination signal. Running STEP_CLEAN before exiting...

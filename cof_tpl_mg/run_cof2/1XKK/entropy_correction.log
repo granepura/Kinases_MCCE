@@ -1,0 +1,67 @@
+SHANNON ENTROPY CORRECTION LOG
+================================================================================
+Applied to non-amino acid residues only
+
+METHOD:
+-------
+Corrects for bias when charge states have different numbers of conformers.
+Conformers are grouped by their NUMERIC CHARGE VALUE (e.g., all neutral
+states with charge=0 are in one group, regardless of state designation).
+Charge states with more conformers are penalized using Shannon entropy
+to account for the entropic cost of the conformational distribution.
+
+PROCEDURE:
+1. Group conformers by NUMERIC charge value (e.g., charge=0, charge=-1)
+2. Convert probabilities to free energies: ΔG/RT = -ln(P_i/P_ref)
+3. Normalize probabilities within each charge group
+4. Calculate Shannon entropy for each group: E_TS/RT = -Σ(P_i * ln(P_i))
+5. Add entropy penalty: ΔG_corrected/RT = ΔG_original/RT + E_TS/RT
+6. Convert back to probabilities: P_i = exp(-ΔG_corrected/RT) / Z
+
+CONSTANTS:
+R = 0.001987 kcal·K⁻¹·mol⁻¹
+T = 298.0 K
+RT = 0.592 kcal/mol
+
+PENALTIES (Shannon entropy):
+N=1: Entropy = 0.000 → No penalty (0.000 kcal/mol)
+N=2 (equal probs): Entropy = 0.693 → Penalty = 0.410 kcal/mol
+N=3 (equal probs): Entropy = 1.099 → Penalty = 0.651 kcal/mol
+N=4 (equal probs): Entropy = 1.386 → Penalty = 0.821 kcal/mol
+Note: Actual penalties depend on the probability distribution within each group
+
+Amino acids excluded from correction:
+ACE, ALA, ARG, ASN, ASP, CTG, CTR, CYD, CYS, GLN, GLU, HIS, ILE, LEU, LYS, MET, NME, NTG, NTR, PHE, PRO, SER, THR, TRP, TYR, VAL
+
+================================================================================
+NON-AMINO ACID RESIDUES PROCESSED:
+================================================================================
+
+Residue: FMMA0091 (Type: FMM)
+  Conformers:
+    - FMM01A0091_001 (charge group: FMM_charge0.0)
+    - FMM01A0091_002 (charge group: FMM_charge0.0)
+    - FMM01A0091_003 (charge group: FMM_charge0.0)
+    - FMM+1A0091_004 (charge group: FMM_charge1.0)
+    - FMM+aA0091_005 (charge group: FMM_charge2.0)
+
+================================================================================
+ENTROPY PENALTIES APPLIED:
+================================================================================
+
+Total penalties applied: 1
+
+Residue: FMMA0091 (FMM)
+  pH 7.4, Charge Group: FMM_charge0.0
+    Number of conformers (N): 3
+    Shannon entropy: 1.0986
+    Energy penalty: 0.6505 kcal/mol
+
+================================================================================
+SUMMARY:
+================================================================================
+
+Total residues processed: 1
+Non-amino acid residues corrected: 1
+Amino acid residues (unchanged): 0
+Charge groups with penalties (N>1): 1

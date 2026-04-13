@@ -1,0 +1,41 @@
+INFO - step3.py: Step 3. Energies calculation with PBE solver.
+INFO - step3.py: Calling new VDW....No Scaling Applied
+INFO - step3.py:    Process run time options & convert step2_out.pdb.
+INFO - step3.py:    Prepare input for PB solver.
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Set up parallel envrionment and run PB solver.
+INFO - step3.py:    Running PBE solver in 1 threads
+Warning: VDW_RAD HOH-1 " O  " not defined in RADIUS parameter
+Warning: VDW_RAD HOH-1 " H1 " not defined in RADIUS parameter
+Warning: VDW_RAD HOH+1 " O  " not defined in RADIUS parameter
+Warning: VDW_RAD HOH+1 " H1 " not defined in RADIUS parameter
+Warning: VDW_RAD HOH+1 " H2 " not defined in RADIUS parameter
+Warning: VDW_RAD HOH+1 " H3 " not defined in RADIUS parameter
+Warning: VDW_RAD SO401 " HO1" not defined in RADIUS parameter
+Warning: VDW_RAD SO401 " HO2" not defined in RADIUS parameter
+Warning: VDW_RAD SO4-1 " HO1" not defined in RADIUS parameter
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (1/7) STI+1A0600_001 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI+1A0600_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (2/7) STI+2A0600_002 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI+2A0600_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (3/7) STI01A0600_003 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI01A0600_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (4/7) STI+aA0600_004 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (5/7) STI+aA0600_005 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI+aA0600_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (6/7) STI+bA0600_006 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_006
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (7/7) STI+bA0600_007 in /tmp/pbe_data.data.home.schowdhury.Project_kinases.cof_tpl_mg.run_cof2.2HYY_STI+bA0600_007
+INFO - step3.py:    Time needed: 20 seconds.
+INFO - step3.py:    Post-processing of electrostatic potential.
+INFO - step3.py:    Processing ele pairwise interaction...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Making atom connectivity ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Calculating vdw ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Calculating torsion energy ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Composing head3.lst ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Composing opp files ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Total time for step3 is 20 seconds.
+Warning: Atom "" bond to " N48STI0600A006" was not found
+Warning: Atom "" bond to " N48STI0600A007" was not found
+[SUCCESS]: Step 3 completed successfully.

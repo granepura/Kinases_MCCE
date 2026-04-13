@@ -1,0 +1,80 @@
+Titration (1th) at pH =   7.40 Eh =   0.00:
+Identified 1 free residues from 1 residues.
+Doing annealing... 
+Annealing temperature = 2729.81
+Step          0, E_minimum=       0.06, E_running =       0.06 ,  E_running without entropy =       0.06
+Exit      50000, E_minimum =       0.06, E_running =       5.17 E_running without TS =       5.17
+The average running energy, corresponding to H =    1.458 kCal/mol, H without TS =    1.458
+Annealing temperature = 2459.63
+Step          0, E_minimum=       5.17, E_running =       5.17 ,  E_running without entropy =       5.17
+Exit      50000, E_minimum =       0.06, E_running =       0.06 E_running without TS =       0.06
+The average running energy, corresponding to H =    1.401 kCal/mol, H without TS =    1.401
+Annealing temperature = 2189.44
+Step          0, E_minimum=       0.06, E_running =       0.06 ,  E_running without entropy =       0.06
+Exit      50000, E_minimum =       0.06, E_running =       0.06 E_running without TS =       0.06
+The average running energy, corresponding to H =    1.316 kCal/mol, H without TS =    1.316
+Annealing temperature = 1919.26
+Step          0, E_minimum=       0.06, E_running =       0.06 ,  E_running without entropy =       0.06
+Exit      50000, E_minimum =       0.06, E_running =       0.06 E_running without TS =       0.06
+The average running energy, corresponding to H =    1.225 kCal/mol, H without TS =    1.225
+Annealing temperature = 1649.07
+Step          0, E_minimum=       0.06, E_running =       0.06 ,  E_running without entropy =       0.06
+Exit      50000, E_minimum =       0.06, E_running =       1.40 E_running without TS =       1.40
+The average running energy, corresponding to H =    1.106 kCal/mol, H without TS =    1.106
+Annealing temperature = 1378.89
+Step          0, E_minimum=       1.40, E_running =       1.40 ,  E_running without entropy =       1.40
+Exit      50000, E_minimum =       0.06, E_running =       1.40 E_running without TS =       1.40
+The average running energy, corresponding to H =    0.960 kCal/mol, H without TS =    0.960
+Annealing temperature = 1108.70
+Step          0, E_minimum=       1.40, E_running =       1.40 ,  E_running without entropy =       1.40
+Exit      50000, E_minimum =       0.06, E_running =       1.40 E_running without TS =       1.40
+The average running energy, corresponding to H =    0.807 kCal/mol, H without TS =    0.807
+Annealing temperature = 838.52
+Step          0, E_minimum=       1.40, E_running =       1.40 ,  E_running without entropy =       1.40
+Exit      50000, E_minimum =       0.06, E_running =       1.40 E_running without TS =       1.40
+The average running energy, corresponding to H =    0.621 kCal/mol, H without TS =    0.621
+Annealing temperature = 568.33
+Step          0, E_minimum=       1.40, E_running =       1.40 ,  E_running without entropy =       1.40
+Exit      50000, E_minimum =       0.06, E_running =       0.06 E_running without TS =       0.06
+The average running energy, corresponding to H =    0.417 kCal/mol, H without TS =    0.417
+Annealing temperature = 298.15
+Step          0, E_minimum=       0.06, E_running =       0.06 ,  E_running without entropy =       0.06
+Exit      50000, E_minimum =       0.06, E_running =       0.06 E_running without TS =       0.06
+The average running energy, corresponding to H =    0.184 kCal/mol, H without TS =    0.184
+Final annealing temperature = 298.15
+Step          0, E_minimum=       0.06, E_running =       0.06 ,  E_running without entropy =       0.06
+Exit      50000, E_minimum =       0.06, E_running =       0.06 E_running without TS =       0.06
+The average running energy, corresponding to H =    0.185 kCal/mol, H without TS =    0.185
+Done
+
+Doing equalibration ... 
+Step          0, E_minimum=       0.06, E_running =       0.06 ,  E_running without entropy =       0.06
+Exit      50000, E_minimum =       0.06, E_running =       0.06 E_running without TS =       0.06
+The average running energy, corresponding to H =    0.182 kCal/mol, H without TS =    0.182
+Done
+
+Reducing conflist ... 1 conformers are marked as fixed.
+
+1 free residues from 1 residues, after reduction.
+
+2 <= 1000000 microstates, will use analytical solution
+
+Max delta =    0.184
+Done, exit at max entropy convergence 0.184 
+
+2 <= 1000000 microstates, will use analytical solution
+
+Conformer     flag   E_self   mc01   mc02   mc03   mc04   mc05   mc06      occ Sgm(n-1)
+NIL01A0601_001   f    0.242  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.907 Sg=0.000
+NIL01A0601_002   t    0.242  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+NIL01A0601_003   t    0.242  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+NIL01A0601_004   t    0.242  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+NIL+1A0601_005   f    1.588  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.093 Sg=0.000
+NIL+1A0601_006   t    1.588  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+NIL+1A0601_007   t    1.588 -21.740  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+NIL+1A0601_008   t    1.588  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+NIL+2A0601_009   t    5.357  5.173  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+NIL+2A0601_010   t    5.357  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+NIL+2A0601_011   t    5.357  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+NIL+2A0601_012   t    5.357  0.000  0.000  0.000  0.000  0.000  0.000 Av=0.000 Sg=0.000
+

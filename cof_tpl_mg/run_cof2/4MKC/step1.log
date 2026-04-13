@@ -1,0 +1,199 @@
+Preprocessing input pdb file, identifying ligands ...
+Done, writing to step0_out.pdb ...
+===========================================================
+<<< MCCE Multi-Conformation Continuum Electrostatics >>>   
+ Marilyn Gunner's Lab at City College of New York, 2023    
+-----------------------------------------------------------
+Version:        2.7.1                                      
+MCCE Home Page: https://gunnerlab.github.io/Stable-MCCE/quick/
+Support:        mgunner@ccny.cuny.edu                   
+Developed by:   Junjun Mao, Yifan Song, Marilyn Gunner     
+Reference MCCE: If you publish data calculated with MCCE,  
+                you need to cite papers suggested in MCCE  
+                Home Page.                                 
+===========================================================
+
+Last Updates:                                              
+   02/26/2023: vdw calculated by vdw_pw.py after step3.
+   06/04/2018: Removed dependency on gdbm
+   06/04/2018: Clear text energy table in step 3 and 4 
+===========================================================
+
+Step 0. Initialize enviroment
+   Load run control file "run.prm"...
+   Done
+
+   Tentatively load local param file "new.tpl"...   No such file, ignore.
+   Done
+
+   Load parameters from directory "./param" ... 
+   Done
+
+   Load linear free energy correction parameters from "/home/granepura/MCCE4/extra.tpl"...
+   File loaded.
+   Done
+
+Step 0 Done.
+
+Step 1. Test and format structral file
+   Read pdb file "step0_out.pdb"...
+   Done
+
+   Read name rule file "/home/granepura/MCCE4/name.txt"...
+   Done
+
+   Rename residue and atom names...
+   Done
+
+   Label backbone, sidechain and altLoc conformers...
+   Error! premcce_confname(): Can't get conformer list of this residue 4MK
+   Creating temporary parameter file for unrecognized residue...
+   Trying labeling again...
+   Done
+
+   Load pdb lines into data structure...
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C1  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C2  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C3  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " O4  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C5  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C6  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C7  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C8  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C9  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C10 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N11 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C12 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C13 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C14 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C15 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C16 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C17 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N18 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C19 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N20 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C21 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C22 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "CL1  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C24 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N25 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C26 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C27 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C28 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C29 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C30 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C31 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " S32 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " O33 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " O34 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C35 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C36 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C37 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N38 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H10A 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "HN11 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H12A 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H13A 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H15A 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H15B 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "HN18 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "HN25 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H36A 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H36B 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H37A 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H37B 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C1  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C2  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C3  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " O4  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C5  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C6  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C7  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C8  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C9  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C10 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N11 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C12 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C13 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C14 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C15 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C16 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C17 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N18 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C19 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N20 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C21 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C22 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "CL1  4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C24 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N25 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C26 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C27 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C28 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C29 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C30 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C31 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " S32 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " O33 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " O34 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C35 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C36 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " C37 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, " N38 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H10A 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "HN11 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H12A 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H13A 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H15A 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H15B 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "HN18 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "HN25 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H36A 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H36B 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H37A 4MK A 1503".
+   Warning: load_pdb(): "Duplicate backbone atom ignored, "H37B 4MK A 1503".
+   Done
+
+   Strip free cofactors with SAS >  -1%...
+   Warning! assign_vdw_param(): missing parameter(s), default value is used and saved in debug.log.
+        0 free cofactors were stripped off in this round
+   Total deleted cofactors = 0.
+   Done
+
+   Check missing heavy atoms and complete altLoc conformers...
+   Missing heavy atoms for 4MKBK in "4MK A1503":   C1 ,  C2 ,  C3 ,  O4 ,  C5 ,  C6 ,  C7 ,  C8 ,  C9 ,  C10,  N11,  C12,  C13,  C14,  C15,  C16,  C17,  N18,  C19,  N20,  C21,  C22, CL1 ,  C24,  N25,  C26,  C27,  C28,  C29,  C30,  C31,  S32,  O33,  O34,  C35,  C36,  C37,  N38,  C1 ,  C2 ,  C3 ,  O4 ,  C5 149
+
+
+   Missing heavy atoms detected.
+   Ignore warning messages if they are in the terminal residues
+   Done
+
+   Find distance clash (<2.000)...
+   No clash found.
+   Done
+
+   Make connectivity network ...
+   Error! get_connect12(): Error in CONNECT parameter, refer to debug log file: debug.log for detail
+   Errors were detected when making connectivity.
+   Done.
+
+   Error! get_connect12(): Error in CONNECT parameter, refer to debug log file: debug.log for detail
+   Total time for step1 (premcce) is 0 seconds.
+
+   Output files:
+      step1_out.pdb         will be the input of step 2.
+      head1.lst             rotamer making control file for step 2
+      acc.atm               atom solvent accessible surface
+      acc.res               residue solvent accessible surface
+      head1.lst             rotamer making instruction, used in step2
+
+Step 1 Done.
+
+Not doing "Step 2. Make multi side chain conformers"
+
+Not doing "Step 3. Compute energy lookup table"
+
+Not doing "Step 4. Monte Carlo Sampling"
+
+Not doing "Step 6. Hydrogen Bond Network Analysis"
+
