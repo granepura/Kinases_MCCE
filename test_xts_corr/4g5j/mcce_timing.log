@@ -1,0 +1,20 @@
+MCCE Timing Report
+====================================
+MCCE_HOME: /home/granepura/MCCE4
+EXTRA: ./user_param/extra.tpl
+USER_PARAM: ./user_param
+====================================
+
+Optional Features Enabled:
+====================================
+
+Run started at: Wed Oct 15 04:06:04 PM EDT 2025
+STEP1 : 00h:00m:01s   - Success: step1_out.pdb updated.
+STEP2 : 00h:00m:28s   - Success: step2_out.pdb updated.
+STEP3 : 00h:31m:02s   - Success: head3.lst and energies directory created.
+STEP4 : 00h:08m:07s   - Success: sum_crg.out created.
+STEP_CLEAN: skipped.  - No pbe_data dirs matching this run. (granepura.5-kinases.testing_4lzt_entropycorr)
+
+Run ended at: Wed Oct 15 04:45:42 PM EDT 2025
+Total script runtime: 00h:39m:38s
+STEP_CLEAN: skipped.  - No matching tmp dirs at cancel.

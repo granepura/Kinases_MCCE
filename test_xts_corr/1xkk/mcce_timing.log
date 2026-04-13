@@ -1,0 +1,22 @@
+MCCE Timing Report
+====================================
+MCCE_HOME: /home/granepura/MCCE4
+EXTRA: ./user_param/extra.tpl
+USER_PARAM: ./user_param
+====================================
+
+Optional Features Enabled:
+ - Custom Script After Step3 (stepC)
+====================================
+
+Run started at: Wed Oct 15 06:32:38 PM EDT 2025
+STEP1 : skipped.      - Skipped (flag f): step not run.
+STEP2 : skipped.      - Skipped (flag f): step not run.
+STEP3 : skipped.      - Skipped (flag f): step not run.
+STEPC : 00h:00m:00s   - Success: "vdw0_update2zero.py" executed.
+STEP4 : 00h:07m:00s   - Success: sum_crg.out created.
+STEP_CLEAN: skipped.  - No pbe_data dirs matching this run. (granepura.5-kinases.testing_entropycorr.1xkk)
+
+Run ended at: Wed Oct 15 06:39:38 PM EDT 2025
+Total script runtime: 00h:07m:00s
+STEP_CLEAN: skipped.  - No matching tmp dirs at cancel.

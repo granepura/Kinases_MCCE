@@ -1,0 +1,36 @@
+ENTROPY CORRECTION LOG
+================================================================================
+Applied to non-amino acid residues only
+Formula: E_TS = -RT Σ(P_i ln P_i)
+R = 0.001987 kcal·K⁻¹·mol⁻¹
+T = 298.0 K
+RT = 0.592 kcal/mol
+
+Amino acids excluded from correction:
+ACE, ALA, ARG, ASN, ASP, CTG, CTR, CYD, CYS, GLN, GLU, HIS, ILE, LEU, LYS, MET, NME, NTG, NTR, PHE, PRO, SER, THR, TRP, TYR, VAL
+
+================================================================================
+NON-AMINO ACID RESIDUES PROCESSED:
+================================================================================
+
+Residue: 0WNA1101 (Type: 0WN)
+  Conformers:
+    - 0WN+1A1101_001 (charge group: 0WN+1)
+    - 0WN01A1101_002 (charge group: 0WN01)
+    - 0WN+aA1101_003 (charge group: 0WN+a)
+
+================================================================================
+ENTROPY CORRECTIONS APPLIED:
+================================================================================
+
+No significant entropy corrections applied.
+(All charge state groups had single conformers or zero population)
+
+================================================================================
+SUMMARY:
+================================================================================
+
+Total residues processed: 297
+Non-amino acid residues: 1
+Amino acid residues (unchanged): 296
+Significant entropy corrections: 0

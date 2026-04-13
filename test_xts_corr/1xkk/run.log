@@ -1,0 +1,690 @@
+2025-10-15 17:57:52 - INFO: step3.py, <module>: Step 3. Energies calculation with PBE solver.
+2025-10-15 17:57:52 - INFO: step3.py, <module>: Calling new VDW....No Scaling Applied
+2025-10-15 17:57:52 - INFO: step3.py, <module>:    Process run time options & convert step2_out.pdb.
+2025-10-15 17:57:52 - INFO: step3.py, <module>:    Prepare input for PB solver.
+2025-10-15 17:57:53 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 17:57:53 - INFO: step3.py, <module>:    Set up parallel envrionment and run PB solver.
+2025-10-15 17:57:53 - INFO: step3.py, <module>:    Running PBE solver in 1 threads
+2025-10-15 17:57:53 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer FMM01A0091_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_FMM01A0091_001
+2025-10-15 17:57:56 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer FMM01A0091_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_FMM01A0091_002
+2025-10-15 17:57:59 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer FMM01A0091_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_FMM01A0091_003
+2025-10-15 17:58:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer FMM+1A0091_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_FMM+1A0091_004
+2025-10-15 17:58:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer FMM+1A0091_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_FMM+1A0091_005
+2025-10-15 17:58:08 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer FMM+aA0091_006 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_FMM+aA0091_006
+2025-10-15 17:58:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer FMM+aA0091_007 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_FMM+aA0091_007
+2025-10-15 17:58:13 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer NTR01A0702_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_NTR01A0702_001
+2025-10-15 17:58:16 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer NTR+1A0702_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_NTR+1A0702_002
+2025-10-15 17:58:19 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0702_001...
+2025-10-15 17:58:19 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0703_001...
+2025-10-15 17:58:19 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0704_001...
+2025-10-15 17:58:19 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0705_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0705_001
+2025-10-15 17:58:22 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0705_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0705_002
+2025-10-15 17:58:25 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0705_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0705_003
+2025-10-15 17:58:27 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0705_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0705_004
+2025-10-15 17:58:30 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0706_001...
+2025-10-15 17:58:30 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0707_001...
+2025-10-15 17:58:30 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0708_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0708_001
+2025-10-15 17:58:33 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0708_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0708_002
+2025-10-15 17:58:36 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0709_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0709_001
+2025-10-15 17:58:39 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0709_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0709_002
+2025-10-15 17:58:41 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0709_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0709_003
+2025-10-15 17:58:44 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0709_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0709_004
+2025-10-15 17:58:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0709_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0709_005
+2025-10-15 17:58:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0710_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0710_001
+2025-10-15 17:58:53 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0710_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0710_002
+2025-10-15 17:58:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0711_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0711_001
+2025-10-15 17:58:58 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0711_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0711_002
+2025-10-15 17:59:01 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0711_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0711_003
+2025-10-15 17:59:04 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0711_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0711_004
+2025-10-15 17:59:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0711_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0711_005
+2025-10-15 17:59:09 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PHE01A0712_001...
+2025-10-15 17:59:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0713_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0713_001
+2025-10-15 17:59:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0713_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0713_002
+2025-10-15 17:59:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0714_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0714_001
+2025-10-15 17:59:18 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0714_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0714_002
+2025-10-15 17:59:21 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0715_001...
+2025-10-15 17:59:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0716_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0716_001
+2025-10-15 17:59:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0716_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0716_002
+2025-10-15 17:59:27 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0717_001...
+2025-10-15 17:59:27 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0718_001...
+2025-10-15 17:59:27 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0720_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0720_001
+2025-10-15 17:59:29 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0722_001...
+2025-10-15 17:59:29 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PHE01A0723_001...
+2025-10-15 17:59:29 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0725_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0725_001
+2025-10-15 17:59:32 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0725_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0725_002
+2025-10-15 17:59:35 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0726_001...
+2025-10-15 17:59:35 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0727_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0727_001
+2025-10-15 17:59:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0727_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0727_002
+2025-10-15 17:59:41 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A0727_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A0727_003
+2025-10-15 17:59:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0728_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0728_001
+2025-10-15 17:59:46 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0728_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0728_002
+2025-10-15 17:59:49 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0730_001...
+2025-10-15 17:59:49 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer TRP01A0731_001...
+2025-10-15 17:59:49 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0732_001...
+2025-10-15 17:59:49 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0733_001...
+2025-10-15 17:59:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR01A0733_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR01A0733_001
+2025-10-15 17:59:52 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR01A0733_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR01A0733_002
+2025-10-15 17:59:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR02A0733_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR02A0733_003
+2025-10-15 17:59:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR02A0733_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR02A0733_004
+2025-10-15 18:00:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR-1A0733_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR-1A0733_005
+2025-10-15 18:00:03 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer NTR01A0738_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_NTR01A0738_001
+2025-10-15 18:00:06 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer NTR+1A0738_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_NTR+1A0738_002
+2025-10-15 18:00:08 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0738_001...
+2025-10-15 18:00:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0739_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0739_001
+2025-10-15 18:00:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0739_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0739_002
+2025-10-15 18:00:14 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0740_001...
+2025-10-15 18:00:14 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0741_001...
+2025-10-15 18:00:14 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0742_001...
+2025-10-15 18:00:14 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0743_001...
+2025-10-15 18:00:14 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0744_001...
+2025-10-15 18:00:14 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0745_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0745_001
+2025-10-15 18:00:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0745_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0745_002
+2025-10-15 18:00:20 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0746_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0746_001
+2025-10-15 18:00:23 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0746_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0746_002
+2025-10-15 18:00:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0746_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0746_003
+2025-10-15 18:00:28 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0746_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0746_004
+2025-10-15 18:00:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0746_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0746_005
+2025-10-15 18:00:34 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0747_001...
+2025-10-15 18:00:34 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0748_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0748_001
+2025-10-15 18:00:37 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0748_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0748_002
+2025-10-15 18:00:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0748_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0748_003
+2025-10-15 18:00:42 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0748_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0748_004
+2025-10-15 18:00:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0748_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0748_005
+2025-10-15 18:00:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0748_006 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0748_006
+2025-10-15 18:00:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0749_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0749_001
+2025-10-15 18:00:54 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0749_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0749_002
+2025-10-15 18:00:56 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0749_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0749_003
+2025-10-15 18:00:59 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0749_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0749_004
+2025-10-15 18:01:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0749_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0749_005
+2025-10-15 18:01:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR01A0749_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR01A0749_001
+2025-10-15 18:01:08 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR01A0749_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR01A0749_002
+2025-10-15 18:01:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR02A0749_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR02A0749_003
+2025-10-15 18:01:13 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR02A0749_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR02A0749_004
+2025-10-15 18:01:16 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR-1A0749_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR-1A0749_005
+2025-10-15 18:01:19 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer NTR01A0754_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_NTR01A0754_001
+2025-10-15 18:01:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer NTR+1A0754_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_NTR+1A0754_002
+2025-10-15 18:01:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0754_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0754_001
+2025-10-15 18:01:27 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0754_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0754_002
+2025-10-15 18:01:30 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0755_001...
+2025-10-15 18:01:30 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0756_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0756_001
+2025-10-15 18:01:33 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0756_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0756_002
+2025-10-15 18:01:35 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0757_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0757_001
+2025-10-15 18:01:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0757_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0757_002
+2025-10-15 18:01:41 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0758_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0758_001
+2025-10-15 18:01:44 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0758_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0758_002
+2025-10-15 18:01:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0758_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0758_003
+2025-10-15 18:01:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0758_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0758_004
+2025-10-15 18:01:52 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0758_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0758_005
+2025-10-15 18:01:55 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0759_001...
+2025-10-15 18:01:55 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0760_001...
+2025-10-15 18:01:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0761_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0761_001
+2025-10-15 18:01:58 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0761_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0761_002
+2025-10-15 18:02:01 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0761_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0761_003
+2025-10-15 18:02:04 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0761_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0761_004
+2025-10-15 18:02:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0761_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0761_005
+2025-10-15 18:02:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0762_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0762_001
+2025-10-15 18:02:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0762_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0762_002
+2025-10-15 18:02:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0762_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0762_003
+2025-10-15 18:02:18 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0762_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0762_004
+2025-10-15 18:02:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0762_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0762_005
+2025-10-15 18:02:24 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0763_001...
+2025-10-15 18:02:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0764_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0764_001
+2025-10-15 18:02:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A0764_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A0764_002
+2025-10-15 18:02:29 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0765_001...
+2025-10-15 18:02:29 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer MET01A0766_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_MET01A0766_001
+2025-10-15 18:02:32 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0767_001...
+2025-10-15 18:02:32 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0768_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0768_001
+2025-10-15 18:02:35 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0769_001...
+2025-10-15 18:02:35 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0770_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0770_001
+2025-10-15 18:02:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0770_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0770_002
+2025-10-15 18:02:41 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0770_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0770_003
+2025-10-15 18:02:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0770_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0770_004
+2025-10-15 18:02:46 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0770_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0770_005
+2025-10-15 18:02:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0771_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0771_001
+2025-10-15 18:02:52 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0772_001...
+2025-10-15 18:02:52 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS01A0773_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS01A0773_001
+2025-10-15 18:02:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS01A0773_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS01A0773_002
+2025-10-15 18:02:58 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS02A0773_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS02A0773_003
+2025-10-15 18:03:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS02A0773_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS02A0773_004
+2025-10-15 18:03:03 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS+1A0773_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS+1A0773_005
+2025-10-15 18:03:06 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS+1A0773_006 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS+1A0773_006
+2025-10-15 18:03:09 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0774_001...
+2025-10-15 18:03:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0775_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0775_001
+2025-10-15 18:03:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0775_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0775_002
+2025-10-15 18:03:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0775_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0775_003
+2025-10-15 18:03:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS-1A0775_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS-1A0775_004
+2025-10-15 18:03:20 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0776_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0776_001
+2025-10-15 18:03:23 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0776_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0776_002
+2025-10-15 18:03:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0776_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0776_003
+2025-10-15 18:03:29 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0776_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0776_004
+2025-10-15 18:03:32 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0777_001...
+2025-10-15 18:03:32 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0778_001...
+2025-10-15 18:03:32 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0780_001...
+2025-10-15 18:03:32 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0781_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0781_001
+2025-10-15 18:03:34 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0781_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0781_002
+2025-10-15 18:03:37 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0781_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0781_003
+2025-10-15 18:03:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS-1A0781_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS-1A0781_004
+2025-10-15 18:03:43 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0782_001...
+2025-10-15 18:03:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0783_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0783_001
+2025-10-15 18:03:46 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0783_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0783_002
+2025-10-15 18:03:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0783_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0783_003
+2025-10-15 18:03:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0784_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0784_001
+2025-10-15 18:03:54 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0784_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0784_002
+2025-10-15 18:03:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0785_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0785_001
+2025-10-15 18:04:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0785_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0785_002
+2025-10-15 18:04:03 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0786_001...
+2025-10-15 18:04:03 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0787_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0787_001
+2025-10-15 18:04:06 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0787_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0787_002
+2025-10-15 18:04:08 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0788_001...
+2025-10-15 18:04:08 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0789_001...
+2025-10-15 18:04:08 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0790_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0790_001
+2025-10-15 18:04:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0790_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0790_002
+2025-10-15 18:04:14 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0790_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0790_003
+2025-10-15 18:04:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0791_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0791_001
+2025-10-15 18:04:20 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0792_001...
+2025-10-15 18:04:20 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer MET01A0793_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_MET01A0793_001
+2025-10-15 18:04:23 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0794_001...
+2025-10-15 18:04:23 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PHE01A0795_001...
+2025-10-15 18:04:23 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0797_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0797_001
+2025-10-15 18:04:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0797_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0797_002
+2025-10-15 18:04:28 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0797_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0797_003
+2025-10-15 18:04:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS-1A0797_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS-1A0797_004
+2025-10-15 18:04:34 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0798_001...
+2025-10-15 18:04:34 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0799_001...
+2025-10-15 18:04:34 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0800_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0800_001
+2025-10-15 18:04:37 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0800_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0800_002
+2025-10-15 18:04:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0800_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0800_003
+2025-10-15 18:04:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0800_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0800_004
+2025-10-15 18:04:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0800_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0800_005
+2025-10-15 18:04:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0801_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0801_001
+2025-10-15 18:04:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A0801_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A0801_002
+2025-10-15 18:04:54 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0802_001...
+2025-10-15 18:04:54 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0803_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0803_001
+2025-10-15 18:04:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0803_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0803_002
+2025-10-15 18:05:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0803_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0803_003
+2025-10-15 18:05:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0803_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0803_004
+2025-10-15 18:05:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0804_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0804_001
+2025-10-15 18:05:08 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0804_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0804_002
+2025-10-15 18:05:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0804_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0804_003
+2025-10-15 18:05:14 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0804_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0804_004
+2025-10-15 18:05:16 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0804_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0804_005
+2025-10-15 18:05:19 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS01A0805_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS01A0805_001
+2025-10-15 18:05:22 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS02A0805_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS02A0805_002
+2025-10-15 18:05:25 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS+1A0805_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS+1A0805_003
+2025-10-15 18:05:28 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0806_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0806_001
+2025-10-15 18:05:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0806_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0806_002
+2025-10-15 18:05:33 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0807_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0807_001
+2025-10-15 18:05:36 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0807_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0807_002
+2025-10-15 18:05:39 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0807_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0807_003
+2025-10-15 18:05:42 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0807_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0807_004
+2025-10-15 18:05:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0807_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0807_005
+2025-10-15 18:05:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0808_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0808_001
+2025-10-15 18:05:50 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0809_001...
+2025-10-15 18:05:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0811_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0811_001
+2025-10-15 18:05:53 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0811_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0811_002
+2025-10-15 18:05:56 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0812_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0812_001
+2025-10-15 18:05:59 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0812_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0812_002
+2025-10-15 18:06:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0813_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0813_001
+2025-10-15 18:06:04 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0813_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0813_002
+2025-10-15 18:06:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A0813_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A0813_003
+2025-10-15 18:06:10 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0814_001...
+2025-10-15 18:06:10 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0815_001...
+2025-10-15 18:06:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0816_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0816_001
+2025-10-15 18:06:13 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0816_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0816_002
+2025-10-15 18:06:16 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer TRP01A0817_001...
+2025-10-15 18:06:16 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0818_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0818_001
+2025-10-15 18:06:19 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0818_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0818_002
+2025-10-15 18:06:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0818_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0818_003
+2025-10-15 18:06:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS-1A0818_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS-1A0818_004
+2025-10-15 18:06:27 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0819_001...
+2025-10-15 18:06:27 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0820_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0820_001
+2025-10-15 18:06:30 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0821_001...
+2025-10-15 18:06:30 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0822_001...
+2025-10-15 18:06:30 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0823_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0823_001
+2025-10-15 18:06:33 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0823_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0823_002
+2025-10-15 18:06:36 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer MET01A0825_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_MET01A0825_001
+2025-10-15 18:06:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0826_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0826_001
+2025-10-15 18:06:41 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0826_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0826_002
+2025-10-15 18:06:44 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0827_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0827_001
+2025-10-15 18:06:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A0827_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A0827_002
+2025-10-15 18:06:50 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0828_001...
+2025-10-15 18:06:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0829_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0829_001
+2025-10-15 18:06:52 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0829_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0829_002
+2025-10-15 18:06:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0829_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0829_003
+2025-10-15 18:06:58 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0829_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0829_004
+2025-10-15 18:07:01 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0829_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0829_005
+2025-10-15 18:07:04 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0830_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0830_001
+2025-10-15 18:07:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0830_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0830_002
+2025-10-15 18:07:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0830_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0830_003
+2025-10-15 18:07:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0830_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0830_004
+2025-10-15 18:07:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0830_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0830_005
+2025-10-15 18:07:18 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0831_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0831_001
+2025-10-15 18:07:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0831_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0831_002
+2025-10-15 18:07:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0831_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0831_003
+2025-10-15 18:07:27 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0831_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0831_004
+2025-10-15 18:07:29 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0832_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0832_001
+2025-10-15 18:07:32 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0832_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0832_002
+2025-10-15 18:07:35 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0832_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0832_003
+2025-10-15 18:07:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0832_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0832_004
+2025-10-15 18:07:41 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0833_001...
+2025-10-15 18:07:41 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0834_001...
+2025-10-15 18:07:41 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS01A0835_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS01A0835_001
+2025-10-15 18:07:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS02A0835_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS02A0835_002
+2025-10-15 18:07:46 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS+1A0835_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS+1A0835_003
+2025-10-15 18:07:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0836_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0836_001
+2025-10-15 18:07:52 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0836_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0836_002
+2025-10-15 18:07:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0836_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0836_003
+2025-10-15 18:07:58 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0836_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0836_004
+2025-10-15 18:08:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0836_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0836_005
+2025-10-15 18:08:03 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0837_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0837_001
+2025-10-15 18:08:06 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0837_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0837_002
+2025-10-15 18:08:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0837_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0837_003
+2025-10-15 18:08:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0837_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0837_004
+2025-10-15 18:08:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0837_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0837_005
+2025-10-15 18:08:17 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0838_001...
+2025-10-15 18:08:17 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0839_001...
+2025-10-15 18:08:17 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0840_001...
+2025-10-15 18:08:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0841_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0841_001
+2025-10-15 18:08:20 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0841_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0841_002
+2025-10-15 18:08:23 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0841_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0841_003
+2025-10-15 18:08:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0841_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0841_004
+2025-10-15 18:08:29 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0841_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0841_005
+2025-10-15 18:08:32 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0841_006 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0841_006
+2025-10-15 18:08:34 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0841_007 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0841_007
+2025-10-15 18:08:37 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0841_008 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0841_008
+2025-10-15 18:08:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0841_009 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0841_009
+2025-10-15 18:08:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0841_010 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0841_010
+2025-10-15 18:08:46 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0842_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0842_001
+2025-10-15 18:08:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0842_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0842_002
+2025-10-15 18:08:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0842_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0842_003
+2025-10-15 18:08:54 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0842_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0842_004
+2025-10-15 18:08:57 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0843_001...
+2025-10-15 18:08:57 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0844_001...
+2025-10-15 18:08:57 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0845_001...
+2025-10-15 18:08:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0846_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0846_001
+2025-10-15 18:09:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0846_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0846_002
+2025-10-15 18:09:03 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0846_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0846_003
+2025-10-15 18:09:06 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0846_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0846_004
+2025-10-15 18:09:08 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0847_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0847_001
+2025-10-15 18:09:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0847_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0847_002
+2025-10-15 18:09:14 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0848_001...
+2025-10-15 18:09:14 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0849_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0849_001
+2025-10-15 18:09:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0849_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0849_002
+2025-10-15 18:09:20 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS01A0850_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS01A0850_001
+2025-10-15 18:09:23 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS01A0850_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS01A0850_002
+2025-10-15 18:09:25 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS02A0850_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS02A0850_003
+2025-10-15 18:09:28 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS02A0850_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS02A0850_004
+2025-10-15 18:09:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS+1A0850_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS+1A0850_005
+2025-10-15 18:09:34 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS+1A0850_006 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS+1A0850_006
+2025-10-15 18:09:37 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0851_001...
+2025-10-15 18:09:37 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0852_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0852_001
+2025-10-15 18:09:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0852_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0852_002
+2025-10-15 18:09:42 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0853_001...
+2025-10-15 18:09:42 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0854_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0854_001
+2025-10-15 18:09:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0854_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0854_002
+2025-10-15 18:09:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0855_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0855_001
+2025-10-15 18:09:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0855_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0855_002
+2025-10-15 18:09:54 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0855_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0855_003
+2025-10-15 18:09:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0855_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0855_004
+2025-10-15 18:09:59 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0855_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0855_005
+2025-10-15 18:10:02 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PHE01A0856_001...
+2025-10-15 18:10:02 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0858_001...
+2025-10-15 18:10:02 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0859_001...
+2025-10-15 18:10:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0860_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0860_001
+2025-10-15 18:10:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0860_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0860_002
+2025-10-15 18:10:08 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0861_001...
+2025-10-15 18:10:08 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0862_001...
+2025-10-15 18:10:08 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0864_001...
+2025-10-15 18:10:08 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0865_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0865_001
+2025-10-15 18:10:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0865_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0865_002
+2025-10-15 18:10:14 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0865_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0865_003
+2025-10-15 18:10:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0865_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0865_004
+2025-10-15 18:10:19 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0865_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0865_005
+2025-10-15 18:10:22 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0866_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0866_001
+2025-10-15 18:10:25 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0866_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0866_002
+2025-10-15 18:10:28 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0866_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0866_003
+2025-10-15 18:10:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0866_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0866_004
+2025-10-15 18:10:33 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0866_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0866_005
+2025-10-15 18:10:36 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0867_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0867_001
+2025-10-15 18:10:39 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0867_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0867_002
+2025-10-15 18:10:42 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR01A0867_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR01A0867_001
+2025-10-15 18:10:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR01A0867_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR01A0867_002
+2025-10-15 18:10:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR02A0867_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR02A0867_003
+2025-10-15 18:10:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR02A0867_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR02A0867_004
+2025-10-15 18:10:53 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR-1A0867_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR-1A0867_005
+2025-10-15 18:10:56 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer NTR01A0876_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_NTR01A0876_001
+2025-10-15 18:10:58 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer NTR+1A0876_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_NTR+1A0876_002
+2025-10-15 18:11:01 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0876_001...
+2025-10-15 18:11:01 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0877_001...
+2025-10-15 18:11:01 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0878_001...
+2025-10-15 18:11:01 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0879_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0879_001
+2025-10-15 18:11:04 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0879_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0879_002
+2025-10-15 18:11:07 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer TRP01A0880_001...
+2025-10-15 18:11:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer MET01A0881_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_MET01A0881_001
+2025-10-15 18:11:10 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0882_001...
+2025-10-15 18:11:10 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0883_001...
+2025-10-15 18:11:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0884_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0884_001
+2025-10-15 18:11:13 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0884_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0884_002
+2025-10-15 18:11:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0884_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0884_003
+2025-10-15 18:11:18 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0884_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0884_004
+2025-10-15 18:11:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0884_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0884_005
+2025-10-15 18:11:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0884_006 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0884_006
+2025-10-15 18:11:27 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0884_007 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0884_007
+2025-10-15 18:11:30 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0884_008 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0884_008
+2025-10-15 18:11:32 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0884_009 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0884_009
+2025-10-15 18:11:35 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0884_010 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0884_010
+2025-10-15 18:11:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0885_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0885_001
+2025-10-15 18:11:41 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0885_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0885_002
+2025-10-15 18:11:44 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0885_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0885_003
+2025-10-15 18:11:47 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0886_001...
+2025-10-15 18:11:47 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0887_001...
+2025-10-15 18:11:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS01A0888_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS01A0888_001
+2025-10-15 18:11:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS01A0888_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS01A0888_002
+2025-10-15 18:11:52 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS02A0888_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS02A0888_003
+2025-10-15 18:11:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS02A0888_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS02A0888_004
+2025-10-15 18:11:58 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS+1A0888_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS+1A0888_005
+2025-10-15 18:12:01 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS+1A0888_006 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS+1A0888_006
+2025-10-15 18:12:03 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0889_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0889_001
+2025-10-15 18:12:06 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0889_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0889_002
+2025-10-15 18:12:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0889_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0889_003
+2025-10-15 18:12:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0889_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0889_004
+2025-10-15 18:12:15 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0890_001...
+2025-10-15 18:12:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0891_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0891_001
+2025-10-15 18:12:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A0891_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A0891_002
+2025-10-15 18:12:20 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0892_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0892_001
+2025-10-15 18:12:23 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS01A0893_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS01A0893_001
+2025-10-15 18:12:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS01A0893_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS01A0893_002
+2025-10-15 18:12:29 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS02A0893_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS02A0893_003
+2025-10-15 18:12:32 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS02A0893_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS02A0893_004
+2025-10-15 18:12:34 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS+1A0893_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS+1A0893_005
+2025-10-15 18:12:37 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer HIS+1A0893_006 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_HIS+1A0893_006
+2025-10-15 18:12:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0894_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0894_001
+2025-10-15 18:12:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0894_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0894_002
+2025-10-15 18:12:46 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0895_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0895_001
+2025-10-15 18:12:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0896_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0896_001
+2025-10-15 18:12:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0896_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0896_002
+2025-10-15 18:12:54 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0896_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0896_003
+2025-10-15 18:12:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0896_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0896_004
+2025-10-15 18:13:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0896_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0896_005
+2025-10-15 18:13:03 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0897_001...
+2025-10-15 18:13:03 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer TRP01A0898_001...
+2025-10-15 18:13:03 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0899_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0899_001
+2025-10-15 18:13:06 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0899_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0899_002
+2025-10-15 18:13:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0900_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0900_001
+2025-10-15 18:13:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0900_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0900_002
+2025-10-15 18:13:14 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A0900_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A0900_003
+2025-10-15 18:13:17 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0902_001...
+2025-10-15 18:13:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0903_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0903_001
+2025-10-15 18:13:20 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0903_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0903_002
+2025-10-15 18:13:23 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0903_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0903_003
+2025-10-15 18:13:25 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0904_001...
+2025-10-15 18:13:25 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer TRP01A0905_001...
+2025-10-15 18:13:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0906_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0906_001
+2025-10-15 18:13:28 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0906_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0906_002
+2025-10-15 18:13:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0906_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0906_003
+2025-10-15 18:13:34 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0906_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0906_004
+2025-10-15 18:13:37 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0906_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0906_005
+2025-10-15 18:13:40 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0907_001...
+2025-10-15 18:13:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer MET01A0908_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_MET01A0908_001
+2025-10-15 18:13:42 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0909_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0909_001
+2025-10-15 18:13:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0909_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0909_002
+2025-10-15 18:13:48 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PHE01A0910_001...
+2025-10-15 18:13:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0912_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0912_001
+2025-10-15 18:13:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0913_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0913_001
+2025-10-15 18:13:54 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0913_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0913_002
+2025-10-15 18:13:56 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0914_001...
+2025-10-15 18:13:56 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0915_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0915_001
+2025-10-15 18:13:59 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A0915_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A0915_002
+2025-10-15 18:14:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0916_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0916_001
+2025-10-15 18:14:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0916_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0916_002
+2025-10-15 18:14:08 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0916_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0916_003
+2025-10-15 18:14:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0916_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0916_004
+2025-10-15 18:14:13 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0916_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0916_005
+2025-10-15 18:14:16 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0918_001...
+2025-10-15 18:14:16 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0919_001...
+2025-10-15 18:14:16 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0920_001...
+2025-10-15 18:14:16 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0921_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0921_001
+2025-10-15 18:14:19 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0921_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0921_002
+2025-10-15 18:14:22 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0922_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0922_001
+2025-10-15 18:14:25 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0922_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0922_002
+2025-10-15 18:14:28 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0922_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0922_003
+2025-10-15 18:14:30 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0922_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0922_004
+2025-10-15 18:14:33 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0922_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0922_005
+2025-10-15 18:14:36 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0923_001...
+2025-10-15 18:14:36 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0924_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0924_001
+2025-10-15 18:14:39 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0925_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0925_001
+2025-10-15 18:14:42 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0925_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0925_002
+2025-10-15 18:14:44 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0926_001...
+2025-10-15 18:14:45 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0927_001...
+2025-10-15 18:14:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0928_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0928_001
+2025-10-15 18:14:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0928_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0928_002
+2025-10-15 18:14:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0928_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0928_003
+2025-10-15 18:14:53 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0928_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0928_004
+2025-10-15 18:14:56 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0928_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0928_005
+2025-10-15 18:14:59 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0929_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0929_001
+2025-10-15 18:15:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0929_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0929_002
+2025-10-15 18:15:04 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0931_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0931_001
+2025-10-15 18:15:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0931_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0931_002
+2025-10-15 18:15:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0931_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0931_003
+2025-10-15 18:15:13 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0931_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0931_004
+2025-10-15 18:15:16 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0931_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0931_005
+2025-10-15 18:15:18 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0932_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0932_001
+2025-10-15 18:15:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0932_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0932_002
+2025-10-15 18:15:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0932_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0932_003
+2025-10-15 18:15:27 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0932_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0932_004
+2025-10-15 18:15:30 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0932_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0932_005
+2025-10-15 18:15:33 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0933_001...
+2025-10-15 18:15:33 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0934_001...
+2025-10-15 18:15:33 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0935_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0935_001
+2025-10-15 18:15:35 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0935_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0935_002
+2025-10-15 18:15:38 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0936_001...
+2025-10-15 18:15:38 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0937_001...
+2025-10-15 18:15:38 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0938_001...
+2025-10-15 18:15:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0939_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0939_001
+2025-10-15 18:15:41 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0939_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0939_002
+2025-10-15 18:15:44 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0939_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0939_003
+2025-10-15 18:15:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS-1A0939_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS-1A0939_004
+2025-10-15 18:15:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0940_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0940_001
+2025-10-15 18:15:52 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer THR01A0940_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_THR01A0940_002
+2025-10-15 18:15:55 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0941_001...
+2025-10-15 18:15:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0942_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0942_001
+2025-10-15 18:15:58 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0942_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0942_002
+2025-10-15 18:16:01 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0942_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0942_003
+2025-10-15 18:16:04 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0942_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0942_004
+2025-10-15 18:16:06 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0942_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0942_005
+2025-10-15 18:16:09 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0943_001...
+2025-10-15 18:16:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0944_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0944_001
+2025-10-15 18:16:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0944_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0944_002
+2025-10-15 18:16:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A0944_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A0944_003
+2025-10-15 18:16:18 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer MET01A0945_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_MET01A0945_001
+2025-10-15 18:16:21 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0946_001...
+2025-10-15 18:16:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer MET01A0947_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_MET01A0947_001
+2025-10-15 18:16:23 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0948_001...
+2025-10-15 18:16:23 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0949_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0949_001
+2025-10-15 18:16:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0949_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0949_002
+2025-10-15 18:16:29 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0950_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0950_001
+2025-10-15 18:16:32 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0950_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0950_002
+2025-10-15 18:16:35 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS01A0950_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS01A0950_003
+2025-10-15 18:16:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CYS-1A0950_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CYS-1A0950_004
+2025-10-15 18:16:40 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer TRP01A0951_001...
+2025-10-15 18:16:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer MET01A0952_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_MET01A0952_001
+2025-10-15 18:16:43 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0953_001...
+2025-10-15 18:16:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0954_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0954_001
+2025-10-15 18:16:46 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0954_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0954_002
+2025-10-15 18:16:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0954_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0954_003
+2025-10-15 18:16:52 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0954_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0954_004
+2025-10-15 18:16:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0954_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0954_005
+2025-10-15 18:16:57 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0955_001...
+2025-10-15 18:16:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0956_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0956_001
+2025-10-15 18:17:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0956_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0956_002
+2025-10-15 18:17:03 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0956_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0956_003
+2025-10-15 18:17:06 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0956_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0956_004
+2025-10-15 18:17:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0956_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0956_005
+2025-10-15 18:17:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0957_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0957_001
+2025-10-15 18:17:14 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0957_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0957_002
+2025-10-15 18:17:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0957_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0957_003
+2025-10-15 18:17:20 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0957_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0957_004
+2025-10-15 18:17:23 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0958_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0958_001
+2025-10-15 18:17:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0958_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0958_002
+2025-10-15 18:17:29 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0958_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0958_003
+2025-10-15 18:17:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0958_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0958_004
+2025-10-15 18:17:34 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0958_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0958_005
+2025-10-15 18:17:37 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0958_006 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0958_006
+2025-10-15 18:17:40 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0959_001...
+2025-10-15 18:17:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0960_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0960_001
+2025-10-15 18:17:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0960_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0960_002
+2025-10-15 18:17:46 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PHE01A0961_001...
+2025-10-15 18:17:46 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0962_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0962_001
+2025-10-15 18:17:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0962_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0962_002
+2025-10-15 18:17:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0962_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0962_003
+2025-10-15 18:17:54 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0962_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0962_004
+2025-10-15 18:17:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0962_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0962_005
+2025-10-15 18:18:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0962_006 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0962_006
+2025-10-15 18:18:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0963_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0963_001
+2025-10-15 18:18:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0963_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0963_002
+2025-10-15 18:18:08 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0963_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0963_003
+2025-10-15 18:18:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0963_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0963_004
+2025-10-15 18:18:14 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0963_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0963_005
+2025-10-15 18:18:16 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0964_001...
+2025-10-15 18:18:16 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0965_001...
+2025-10-15 18:18:16 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0966_001...
+2025-10-15 18:18:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0967_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0967_001
+2025-10-15 18:18:19 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0967_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0967_002
+2025-10-15 18:18:22 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0967_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0967_003
+2025-10-15 18:18:25 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0967_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0967_004
+2025-10-15 18:18:28 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0967_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0967_005
+2025-10-15 18:18:31 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PHE01A0968_001...
+2025-10-15 18:18:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0969_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0969_001
+2025-10-15 18:18:33 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0969_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0969_002
+2025-10-15 18:18:36 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0969_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0969_003
+2025-10-15 18:18:39 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS01A0970_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS01A0970_001
+2025-10-15 18:18:42 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer LYS+1A0970_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_LYS+1A0970_002
+2025-10-15 18:18:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer MET01A0971_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_MET01A0971_001
+2025-10-15 18:18:48 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A0972_001...
+2025-10-15 18:18:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0973_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0973_001
+2025-10-15 18:18:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0973_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0973_002
+2025-10-15 18:18:53 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0973_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0973_003
+2025-10-15 18:18:56 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0973_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0973_004
+2025-10-15 18:18:59 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0974_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0974_001
+2025-10-15 18:19:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0974_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0974_002
+2025-10-15 18:19:04 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0974_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0974_003
+2025-10-15 18:19:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0974_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0974_004
+2025-10-15 18:19:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0974_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0974_005
+2025-10-15 18:19:13 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PRO01A0975_001...
+2025-10-15 18:19:13 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0976_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0976_001
+2025-10-15 18:19:16 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0976_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0976_002
+2025-10-15 18:19:19 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0977_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0977_001
+2025-10-15 18:19:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0977_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0977_002
+2025-10-15 18:19:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0977_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0977_003
+2025-10-15 18:19:27 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0977_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0977_004
+2025-10-15 18:19:30 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0978_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0978_001
+2025-10-15 18:19:33 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0978_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0978_002
+2025-10-15 18:19:35 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0978_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0978_003
+2025-10-15 18:19:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A0978_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A0978_004
+2025-10-15 18:19:41 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A0978_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A0978_005
+2025-10-15 18:19:44 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A0979_001...
+2025-10-15 18:19:44 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A0980_001...
+2025-10-15 18:19:44 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A0981_001...
+2025-10-15 18:19:44 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0982_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0982_001
+2025-10-15 18:19:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLN01A0982_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLN01A0982_002
+2025-10-15 18:19:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0984_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0984_001
+2025-10-15 18:19:52 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A0984_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A0984_002
+2025-10-15 18:19:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0984_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0984_003
+2025-10-15 18:19:58 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A0984_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A0984_004
+2025-10-15 18:20:01 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A0984_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A0984_005
+2025-10-15 18:20:04 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0985_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0985_001
+2025-10-15 18:20:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A0985_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A0985_002
+2025-10-15 18:20:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0985_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0985_003
+2025-10-15 18:20:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A0985_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A0985_004
+2025-10-15 18:20:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A0985_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A0985_005
+2025-10-15 18:20:18 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0986_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0986_001
+2025-10-15 18:20:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0986_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0986_002
+2025-10-15 18:20:23 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0986_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0986_003
+2025-10-15 18:20:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0986_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0986_004
+2025-10-15 18:20:29 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0986_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0986_005
+2025-10-15 18:20:32 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer MET01A0987_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_MET01A0987_001
+2025-10-15 18:20:35 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR01A0987_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR01A0987_001
+2025-10-15 18:20:37 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR01A0987_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR01A0987_002
+2025-10-15 18:20:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR02A0987_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR02A0987_003
+2025-10-15 18:20:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR02A0987_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR02A0987_004
+2025-10-15 18:20:46 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR-1A0987_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR-1A0987_005
+2025-10-15 18:20:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer NTR01A0995_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_NTR01A0995_001
+2025-10-15 18:20:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer NTR+1A0995_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_NTR+1A0995_002
+2025-10-15 18:20:54 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0995_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0995_001
+2025-10-15 18:20:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0995_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0995_002
+2025-10-15 18:21:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0995_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0995_003
+2025-10-15 18:21:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0995_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0995_004
+2025-10-15 18:21:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer SER01A0995_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_SER01A0995_005
+2025-10-15 18:21:08 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASN01A0996_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASN01A0996_001
+2025-10-15 18:21:11 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer PHE01A0997_001...
+2025-10-15 18:21:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0998_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0998_001
+2025-10-15 18:21:14 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A0998_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A0998_002
+2025-10-15 18:21:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A0998_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A0998_003
+2025-10-15 18:21:19 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG01A0999_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG01A0999_001
+2025-10-15 18:21:22 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG02A0999_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG02A0999_002
+2025-10-15 18:21:25 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0999_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0999_003
+2025-10-15 18:21:28 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG03A0999_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG03A0999_004
+2025-10-15 18:21:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ARG+1A0999_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ARG+1A0999_005
+2025-10-15 18:21:33 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A1000_001...
+2025-10-15 18:21:33 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A1001_001...
+2025-10-15 18:21:33 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer MET01A1002_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_MET01A1002_001
+2025-10-15 18:21:36 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A1003_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A1003_001
+2025-10-15 18:21:39 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A1003_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A1003_002
+2025-10-15 18:21:42 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A1003_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A1003_003
+2025-10-15 18:21:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A1003_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A1003_004
+2025-10-15 18:21:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A1003_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A1003_005
+2025-10-15 18:21:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A1004_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A1004_001
+2025-10-15 18:21:53 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A1004_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A1004_002
+2025-10-15 18:21:56 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A1004_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A1004_003
+2025-10-15 18:21:59 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A1004_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A1004_004
+2025-10-15 18:22:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A1004_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A1004_005
+2025-10-15 18:22:04 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR01A1004_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR01A1004_001
+2025-10-15 18:22:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR01A1004_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR01A1004_002
+2025-10-15 18:22:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR02A1004_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR02A1004_003
+2025-10-15 18:22:13 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR02A1004_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR02A1004_004
+2025-10-15 18:22:16 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR-1A1004_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR-1A1004_005
+2025-10-15 18:22:18 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer NTR01A1010_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_NTR01A1010_001
+2025-10-15 18:22:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer NTR+1A1010_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_NTR+1A1010_002
+2025-10-15 18:22:24 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A1010_001...
+2025-10-15 18:22:24 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer VAL01A1011_001...
+2025-10-15 18:22:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A1012_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A1012_001
+2025-10-15 18:22:27 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A1012_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A1012_002
+2025-10-15 18:22:30 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A1012_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A1012_003
+2025-10-15 18:22:32 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A1012_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A1012_004
+2025-10-15 18:22:35 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A1012_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A1012_005
+2025-10-15 18:22:38 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ALA01A1013_001...
+2025-10-15 18:22:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A1014_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A1014_001
+2025-10-15 18:22:41 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP01A1014_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP01A1014_002
+2025-10-15 18:22:44 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A1014_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A1014_003
+2025-10-15 18:22:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP02A1014_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP02A1014_004
+2025-10-15 18:22:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer ASP-1A1014_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_ASP-1A1014_005
+2025-10-15 18:22:52 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A1015_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A1015_001
+2025-10-15 18:22:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU01A1015_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU01A1015_002
+2025-10-15 18:22:58 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A1015_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A1015_003
+2025-10-15 18:23:01 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU02A1015_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU02A1015_004
+2025-10-15 18:23:03 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer GLU-1A1015_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_GLU-1A1015_005
+2025-10-15 18:23:06 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A1016_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A1016_001
+2025-10-15 18:23:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR01A1016_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR01A1016_002
+2025-10-15 18:23:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer TYR-1A1016_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_TYR-1A1016_003
+2025-10-15 18:23:15 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer LEU01A1017_001...
+2025-10-15 18:23:15 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer ILE01A1018_001...
+2025-10-15 18:23:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR01A1018_001 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR01A1018_001
+2025-10-15 18:23:18 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR01A1018_002 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR01A1018_002
+2025-10-15 18:23:20 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR02A1018_003 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR02A1018_003
+2025-10-15 18:23:23 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR02A1018_004 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR02A1018_004
+2025-10-15 18:23:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling ngpb to calculate conformer CTR-1A1018_005 in /tmp/pbe_data.data.home.granepura.5-kinases.testing_entropycorr.1xkk_CTR-1A1018_005
+2025-10-15 18:23:29 - INFO: step3.py, <module>:    Time needed: 1536 seconds.
+2025-10-15 18:23:29 - INFO: step3.py, <module>:    Post-processing of electrostatic potential.
+2025-10-15 18:23:29 - INFO: step3.py, <module>:    Processing ele pairwise interaction...
+2025-10-15 18:23:31 - INFO: step3.py, <module>:    Time needed: 2 seconds.
+2025-10-15 18:23:31 - INFO: step3.py, <module>:    Making atom connectivity ...
+2025-10-15 18:23:32 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 18:23:32 - INFO: step3.py, <module>:    Calculating vdw ...
+2025-10-15 18:23:41 - INFO: step3.py, <module>:    Time needed: 9 seconds.
+2025-10-15 18:23:41 - INFO: step3.py, <module>:    Calculating torsion energy ...
+2025-10-15 18:23:42 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 18:23:42 - INFO: step3.py, <module>:    Composing head3.lst ...
+2025-10-15 18:23:42 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 18:23:42 - INFO: step3.py, <module>:    Composing opp files ...
+2025-10-15 18:23:42 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2025-10-15 18:23:42 - INFO: step3.py, <module>:    Total time for step3 is 1550 seconds.

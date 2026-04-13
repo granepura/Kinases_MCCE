@@ -1,0 +1,136 @@
+BOLTZMANN ENTROPY CORRECTION LOG
+================================================================================
+Applied to ALL residues (including amino acids)
+
+METHOD:
+-------
+Corrects for bias when charge states have different numbers of conformers.
+Charge states with more conformers are penalized to account for the
+entropic cost of selecting a specific conformer.
+
+PROCEDURE:
+1. Convert probabilities to free energies: ΔG/RT = -ln(P)
+2. Add entropy penalty: ΔG_corrected/RT = ΔG_original/RT + ln(N)
+   where N = number of conformers in that charge state
+3. Convert back to probabilities: P_i = exp(-ΔG_corrected/RT) / Z
+
+CONSTANTS:
+R = 0.001987 kcal·K⁻¹·mol⁻¹
+T = 298.0 K
+RT = 0.592 kcal/mol
+
+PENALTIES:
+N=1: ln(1) = 0.000 → No penalty (0.000 kcal/mol)
+N=2: ln(2) = 0.693 → Penalty = 0.410 kcal/mol
+N=3: ln(3) = 1.099 → Penalty = 0.651 kcal/mol
+N=4: ln(4) = 1.386 → Penalty = 0.821 kcal/mol
+
+Amino acids excluded from correction:
+(None - all residues corrected)
+
+================================================================================
+ALL RESIDUES PROCESSED:
+================================================================================
+
+Residue: GLUA0292 (Type: GLU)
+  Conformers:
+    - GLU01A0292_001 (charge group: GLU01)
+    - GLU01A0292_002 (charge group: GLU01)
+    - GLU02A0292_003 (charge group: GLU02)
+    - GLU02A0292_004 (charge group: GLU02)
+    - GLU-1A0292_005 (charge group: GLU-1)
+
+================================================================================
+ENTROPY PENALTIES APPLIED:
+================================================================================
+
+Total penalties applied: 16
+
+Residue: GLUA0292 (GLU)
+  pH 0.0, Charge Group: GLU01
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 0.0, Charge Group: GLU02
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 1.0, Charge Group: GLU01
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 1.0, Charge Group: GLU02
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 2.0, Charge Group: GLU01
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 2.0, Charge Group: GLU02
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 3.0, Charge Group: GLU01
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 3.0, Charge Group: GLU02
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 4.0, Charge Group: GLU01
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 4.0, Charge Group: GLU02
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 5.0, Charge Group: GLU01
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 5.0, Charge Group: GLU02
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 6.0, Charge Group: GLU01
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 6.0, Charge Group: GLU02
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 7.0, Charge Group: GLU01
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+  pH 7.0, Charge Group: GLU02
+    Number of conformers (N): 2
+    Entropy penalty (ln N): 0.6931
+    Energy penalty: 0.4104 kcal/mol
+
+================================================================================
+SUMMARY:
+================================================================================
+
+Total residues processed: 1
+All residues corrected (including amino acids): 1
+Charge groups with penalties (N>1): 2

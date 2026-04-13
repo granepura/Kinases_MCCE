@@ -1,0 +1,136 @@
+ENTROPY CORRECTION LOG
+================================================================================
+Applied to non-amino acid residues only
+Formula: E_TS = -RT Σ(P_i ln P_i)
+R = 0.001987 kcal·K⁻¹·mol⁻¹
+T = 298.0 K
+RT = 0.592 kcal/mol
+
+Amino acids excluded from correction:
+ACE, ALA, ARG, ASN, ASP, CTG, CTR, CYD, CYS, GLN, GLU, HIS, ILE, LEU, LYS, MET, NME, NTG, NTR, PHE, PRO, SER, THR, TRP, TYR, VAL
+
+================================================================================
+NON-AMINO ACID RESIDUES PROCESSED:
+================================================================================
+
+Residue: FMMA0091 (Type: FMM)
+  Conformers:
+    - FMM01A0091_001 (charge group: FMM01)
+    - FMM01A0091_002 (charge group: FMM01)
+    - FMM01A0091_003 (charge group: FMM01)
+    - FMM+1A0091_004 (charge group: FMM+1)
+    - FMM+1A0091_005 (charge group: FMM+1)
+    - FMM+aA0091_006 (charge group: FMM+a)
+    - FMM+aA0091_007 (charge group: FMM+a)
+
+================================================================================
+ENTROPY CORRECTIONS APPLIED:
+================================================================================
+
+Total corrections applied: 24
+
+Residue: FMMA0091 (FMM)
+  pH 0.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.6219 kcal/mol
+
+  pH 1.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.6156 kcal/mol
+
+  pH 2.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.6087 kcal/mol
+
+  pH 3.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.6106 kcal/mol
+
+  pH 4.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.6092 kcal/mol
+
+  pH 4.0, Charge Group: FMM+1
+    Number of conformers: 2
+    E_TS correction: 0.3330 kcal/mol
+
+  pH 5.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.6094 kcal/mol
+
+  pH 5.0, Charge Group: FMM+1
+    Number of conformers: 2
+    E_TS correction: 0.3005 kcal/mol
+
+  pH 6.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.6120 kcal/mol
+
+  pH 6.0, Charge Group: FMM+1
+    Number of conformers: 2
+    E_TS correction: 0.3394 kcal/mol
+
+  pH 7.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.6159 kcal/mol
+
+  pH 7.0, Charge Group: FMM+1
+    Number of conformers: 2
+    E_TS correction: 0.3483 kcal/mol
+
+  pH 8.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.6150 kcal/mol
+
+  pH 8.0, Charge Group: FMM+1
+    Number of conformers: 2
+    E_TS correction: 0.3614 kcal/mol
+
+  pH 9.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.6126 kcal/mol
+
+  pH 9.0, Charge Group: FMM+1
+    Number of conformers: 2
+    E_TS correction: 0.3662 kcal/mol
+
+  pH 10.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.6060 kcal/mol
+
+  pH 10.0, Charge Group: FMM+1
+    Number of conformers: 2
+    E_TS correction: 0.3726 kcal/mol
+
+  pH 11.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.6068 kcal/mol
+
+  pH 11.0, Charge Group: FMM+1
+    Number of conformers: 2
+    E_TS correction: 0.4012 kcal/mol
+
+  pH 12.0, Charge Group: FMM01
+    Number of conformers: 3
+    E_TS correction: 0.5659 kcal/mol
+
+  pH 12.0, Charge Group: FMM+1
+    Number of conformers: 2
+    E_TS correction: 0.4002 kcal/mol
+
+  pH 13.0, Charge Group: FMM+1
+    Number of conformers: 2
+    E_TS correction: 0.3800 kcal/mol
+
+  pH 14.0, Charge Group: FMM+1
+    Number of conformers: 2
+    E_TS correction: 0.3698 kcal/mol
+
+================================================================================
+SUMMARY:
+================================================================================
+
+Total residues processed: 287
+Non-amino acid residues: 1
+Amino acid residues (unchanged): 286
+Significant entropy corrections: 24
