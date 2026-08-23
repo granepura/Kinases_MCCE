@@ -12,7 +12,7 @@ Ranepura, Chowdhury, Rosenzweig, Rustenburg, López-Ríos de Castro, Mao, Choder
 The protonation and tautomeric states of a ligand and its target are first-order determinants of
 binding affinity, yet most structure-based modeling workflows assign them heuristically and hold
 them fixed. This project uses **MCCE4** (Multi-Conformer Continuum Electrostatics) to compute the
-full Boltzmann distribution of protonation and tautomer states — for both partners simultaneously —
+full Boltzmann distribution of protonation and tautomer states, for both partners simultaneously
 across **37 co-crystal structures spanning 18 FDA-approved inhibitors and 9 kinase domains**.
 
 For every complex, three matched calculations are compared at pH 7.4:
@@ -42,7 +42,7 @@ electrostatic environments. Desolvation does not simply drive ligands toward neu
 pockets stabilize the +1 form instead.
 
 **The protein's net charge is buffered.**
-Across all 37 complexes, the holo − apo protein charge difference is < |0.2| except for three EGFR
+Across all 37 complexes, the holo and apoprotein charge difference is < |0.2| except for three EGFR
 structures (two afatinib complexes lose 0.5–0.75 protons from Asp837; osimertinib-bound 4ZAU loses
 1.05 protons across a network including Asp837, Glu711/736, and His805/893). This stability is not
 the result of compensating shifts at different sites: the per-residue distributions themselves are
@@ -146,11 +146,6 @@ Run with `python3 <script>`. There are no command-line arguments — configurati
 of the run tree before use. Requires `numpy`, `matplotlib`, `pandas`, and `seaborn`; the Figure 4
 structural overlay additionally requires PyMOL.
 
-Figure 4 classifies residues in two tiers by |q_holo − q_apo| (strong ≥ 0.5, affected 0.2–0.5);
-Figure 3 flags outliers at 15% deviation from y = x; the ECDF bootstrap uses 2000 resamples.
-The `_28pdb` script variants restrict the analysis to the 27-PDB subset matching the Excel tables
-rather than the full 37 — check which N a reported number came from.
-
 ---
 
 ## Related resources
@@ -166,3 +161,4 @@ CA286801 (S.S.); NIH R35GM152017 and P30CA008748 (J.D.C.).
 ## Contact
 
 Gehan A. Ranepura — granepura@gc.cuny.edu
+Sukrit Singh - sukrit.singh@choderalab.org
