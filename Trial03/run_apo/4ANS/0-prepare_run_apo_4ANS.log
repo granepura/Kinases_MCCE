@@ -1,0 +1,10 @@
+prepared_by  : 0-prepare_run_apo.py
+prepared_at  : 2026-09-22 11:38:52
+source_dir   : /data/home/granepura/5-Kinases/Kinases_MCCE/Trial03/run_holo/4ANS
+step2_out.pdb: a relative symlink to apo_step2_out.pdb -- that is what step3
+               reads here.  apo's stepB (install_apo_step2_out.py) re-checks the
+               pair and resets the link if needed, inside the step3 job.
+note         : apo reuses holo's step2 conformers.  step1/step2 are OFF in
+               run_apo/submit_mcce4_s3s4.sh, so the pocket is NOT repacked --
+               side chains stay in their holo positions, which is what isolates
+               the ligand's electrostatic contribution.

@@ -1,0 +1,15 @@
+
+============================================================
+pro_batch run: 2026-09-22 11:39:48
+Command: /home/granepura/MCCE4/MCCE_bin/pro_batch kin-pdb -custom submit_mcce4_s3s4.sh -job-name T3_apo_s3s4 --skip-prerun
+============================================================
+
+Found 22 new or missing runs to launch: 2EUF, 2HYY, 2ITY, 2YFX, 3AOX, 3CS9, 3LXK, 3PYY, 3UE4, 3WZE, 3ZOS, 4AGD, 4ANS, 4ASD, 4G5J, 4G5P, 4LMN, 4MKC, 4WKQ, 5AAA, 5AAB, 5L2I
+
+Found 15 existing runs with errors ('e'): 1XKK, 2ITO, 2ITZ, 2WGJ, 2XP2, 3UG2, 3WZD, 4AG8, 4AGC, 4AN2, 4ANQ, 4I22, 4ZAU, 5AAC, 5MO4
+Would you like to re-run these error cases? (y/n): y
+
+Launching 37 runs via Slurm (max 15 concurrent, nice 1000)...
+  Log file: pro_batch_T3_apo_s3s4.log
+Backgrounding — you can continue using this terminal.
+

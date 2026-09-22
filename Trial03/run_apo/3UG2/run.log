@@ -1,0 +1,24 @@
+2026-09-22 11:38:38 - INFO: step3.py, <module>: Step 3. Energies calculation with PBE solver.
+2026-09-22 11:38:38 - INFO: step3.py, <module>: Calling new VDW....No Scaling Applied
+2026-09-22 11:38:38 - INFO: step3.py, <module>:    Process run time options & convert step2_out.pdb.
+2026-09-22 11:38:38 - INFO: step3.py, <module>:    Prepare input for PB solver.
+2026-09-22 11:38:38 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 11:38:38 - INFO: step3.py, <module>:    Set up parallel envrionment and run PB solver.
+2026-09-22 11:38:38 - INFO: step3.py, <module>:    Running PBE solver in 5 threads
+2026-09-22 11:38:38 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (5/677) IRE+3A0001_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_IRE+3A0001_005
+2026-09-22 11:38:38 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (2/677) IRE01A0001_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_IRE01A0001_002
+2026-09-22 11:38:38 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (3/677) IRE+1A0001_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_IRE+1A0001_003
+2026-09-22 11:38:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (1/677) IRE+aA0001_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_IRE+aA0001_001
+2026-09-22 11:38:38 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (4/677) IRE+2A0001_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_IRE+2A0001_004
+2026-09-22 11:38:45 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (6/677) GLU01A0697_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_GLU01A0697_001
+2026-09-22 11:38:45 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (7/677) GLU01A0697_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_GLU01A0697_002
+2026-09-22 11:38:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (8/677) GLU02A0697_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_GLU02A0697_003
+2026-09-22 11:38:45 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (9/677) GLU02A0697_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_GLU02A0697_004
+2026-09-22 11:38:45 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (10/677) GLU-1A0697_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_GLU-1A0697_005
+2026-09-22 11:38:51 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (11/677) ALA01A0698_001...
+2026-09-22 11:38:51 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (12/677) PRO01A0699_001...
+2026-09-22 11:38:51 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (13/677) ASN01A0700_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_ASN01A0700_001
+2026-09-22 11:38:51 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (14/677) ASN01A0700_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_ASN01A0700_002
+2026-09-22 11:38:51 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (15/677) ASN01A0700_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_ASN01A0700_003
+2026-09-22 11:38:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (16/677) GLN01A0701_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_GLN01A0701_001
+2026-09-22 11:38:51 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (17/677) GLN01A0701_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.3UG2_GLN01A0701_002
