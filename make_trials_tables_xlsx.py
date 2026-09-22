@@ -65,7 +65,16 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import column_index_from_string, get_column_letter
 
-UPTO3 = "0.###;-0.###;0"   # up to 3 decimals; full precision kept in the cell
+# Excel's Number format with 3 decimal places.  Display only: the cell keeps the
+# full-precision value, so a whole number shows as "1.000" and nothing is
+# rounded in the data.  ("0.###" would drop the padding but Excel prints its
+# decimal point regardless, giving "1." on whole numbers.)
+UPTO3 = "0.000"
+
+
+def r3(formula):
+    """Formulas are stored unrounded; the number format does the rounding."""
+    return formula if formula.startswith("=") else f"={formula}"
 RT_KCAL = 0.5925          # kcal/mol, as used in SI.3.Conf of the published workbook
 TREES = {"inhib": "run_inhib", "holo": "run_holo", "apo": "run_apo"}
 LEGACY = {"run_holo": "run_kin", "run_apo": "run_prot2", "run_inhib": "run_cof2"}
@@ -511,14 +520,14 @@ def sheet_si_table2(wb, conf, index, trials, n):
                 ws.cell(i, 1).value = pdb
                 ws.cell(i, 2).value = rec["inhibitor"]
                 ws.cell(i, 3).value = ctype
-                ws.cell(i, 4).value = f"='Per-Trial Conf'!$D{src}"
-                ws.cell(i, 8).value = f"=AVERAGE({rng(5, src)})"
-                ws.cell(i, 9).value = (
-                    f"=IF(COUNT({rng(5, src)})>1,"
+                ws.cell(i, 4).value = r3(f"'Per-Trial Conf'!$D{src}")
+                ws.cell(i, 8).value = r3(f"AVERAGE({rng(5, src)})")
+                ws.cell(i, 9).value = r3(
+                    f"IF(COUNT({rng(5, src)})>1,"
                     f"STDEV({rng(5, src)})/SQRT(COUNT({rng(5, src)})),0)")
-                ws.cell(i, 10).value = f"=AVERAGE({rng(5 + n, src)})"
-                ws.cell(i, 11).value = (
-                    f"=IF(COUNT({rng(5 + n, src)})>1,"
+                ws.cell(i, 10).value = r3(f"AVERAGE({rng(5 + n, src)})")
+                ws.cell(i, 11).value = r3(
+                    f"IF(COUNT({rng(5 + n, src)})>1,"
                     f"STDEV({rng(5 + n, src)})/SQRT(COUNT({rng(5 + n, src)})),0)")
                 for c in range(1, len(head) + 1):
                     ws.cell(i, c).font = F_BODY
@@ -537,12 +546,12 @@ def sheet_si_table2(wb, conf, index, trials, n):
             ws.cell(i, 3).value = "SUM"
             for c in (6, 7, 8, 10):
                 L = get_column_letter(c)
-                ws.cell(i, c).value = f"=SUM({L}{first_row}:{L}{last})"
+                ws.cell(i, c).value = r3(f"SUM({L}{first_row}:{L}{last})")
             ws.cell(i + 1, 3).value = "ensemble charge"
             for c in (7, 8, 10):
                 L = get_column_letter(c)
-                ws.cell(i + 1, c).value = (
-                    f"=SUMPRODUCT($D{first_row}:$D{last},{L}{first_row}:{L}{last})")
+                ws.cell(i + 1, c).value = r3(
+                    f"SUMPRODUCT($D{first_row}:$D{last},{L}{first_row}:{L}{last})")
             for rr in (i, i + 1):
                 for c in range(1, len(head) + 1):
                     ws.cell(rr, c).font = F_BOLD
