@@ -1,6 +1,6 @@
 # Fig3 (inhibitor charge, bound vs in solution): how the statistics were computed
 
-Written: 2026-09-22 13:10:44
+Written: 2026-09-22 19:21:16
 Script : plot_trials_inhibitors_xts_Fig3.py
 
 ## Replicates
