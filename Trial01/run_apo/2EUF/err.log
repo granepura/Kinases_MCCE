@@ -1,0 +1,52 @@
+[2026-09-22 09:30:39 - CRITICAL]: step3.py, pbe: Delphi run failed for conformer THR01B0182_004: list index out of range
+Traceback (most recent call last):
+  File "/home/granepura/MCCE4/bin/step3.py", line 758, in pbe
+    rxn0, rxn = pbs_delphi.run(bound, run_options)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 439, in run
+    self.collect_phi(depth, bound.single_bnd_xyzrcp)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 224, in collect_phi
+    phi = float(lines[12+counter][19:30])
+IndexError: list index out of range
+[2026-09-22 09:30:40 - CRITICAL]: step3.py, pbe: Delphi run failed for conformer THR01B0182_004: [Errno 2] No such file or directory: 'fort.10'
+Traceback (most recent call last):
+  File "/home/granepura/MCCE4/bin/step3.py", line 758, in pbe
+    rxn0, rxn = pbs_delphi.run(bound, run_options)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 332, in run
+    with open("fort.10", "w") as fh:
+FileNotFoundError: [Errno 2] No such file or directory: 'fort.10'
+[2026-09-22 09:30:42 - CRITICAL]: step3.py, pbe: Delphi run failed for conformer THR01B0182_005: list index out of range
+Traceback (most recent call last):
+  File "/home/granepura/MCCE4/bin/step3.py", line 758, in pbe
+    rxn0, rxn = pbs_delphi.run(bound, run_options)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 439, in run
+    self.collect_phi(depth, bound.single_bnd_xyzrcp)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 224, in collect_phi
+    phi = float(lines[12+counter][19:30])
+IndexError: list index out of range
+[2026-09-22 09:30:44 - CRITICAL]: step3.py, pbe: Delphi run failed for conformer TYR01B0185_001: [Errno 2] No such file or directory: 'fort.13'
+Traceback (most recent call last):
+  File "/home/granepura/MCCE4/bin/step3.py", line 758, in pbe
+    rxn0, rxn = pbs_delphi.run(bound, run_options)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 281, in run
+    self.write_fort13(bound.float_bnd_xyzrcp)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 207, in write_fort13
+    with open("fort.13", "wb") as fh:
+FileNotFoundError: [Errno 2] No such file or directory: 'fort.13'
+[2026-09-22 09:30:46 - CRITICAL]: step3.py, pbe: Delphi run failed for conformer TYR01B0185_002: [Errno 2] No such file or directory: 'fort.13'
+Traceback (most recent call last):
+  File "/home/granepura/MCCE4/bin/step3.py", line 758, in pbe
+    rxn0, rxn = pbs_delphi.run(bound, run_options)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 281, in run
+    self.write_fort13(bound.float_bnd_xyzrcp)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 207, in write_fort13
+    with open("fort.13", "wb") as fh:
+FileNotFoundError: [Errno 2] No such file or directory: 'fort.13'
+[2026-09-22 09:35:03 - CRITICAL]: step3.py, pbe: Delphi run failed for conformer ARG03B0215_003: [Errno 2] No such file or directory: 'fort.13'
+Traceback (most recent call last):
+  File "/home/granepura/MCCE4/bin/step3.py", line 758, in pbe
+    rxn0, rxn = pbs_delphi.run(bound, run_options)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 281, in run
+    self.write_fort13(bound.float_bnd_xyzrcp)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 207, in write_fort13
+    with open("fort.13", "wb") as fh:
+FileNotFoundError: [Errno 2] No such file or directory: 'fort.13'
