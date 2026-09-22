@@ -40,8 +40,11 @@ USAGE:
 ======
   ./make_trials_tables_xlsx.py                  # every Trial*/ here
   ./make_trials_tables_xlsx.py --glob 'Trial0[12]'
-  ./make_trials_tables_xlsx.py --out mytables.xlsx
+  ./make_trials_tables_xlsx.py --outdir tables_v2
   ./make_trials_tables_xlsx.py --root /path/to/Kinases_MCCE
+
+The workbook is written into tables_Trials/ (--outdir), next to the
+plots_Trials_* directories the two plot_trials_*.py scripts produce.
 
 NOTE: openpyxl writes formulas without cached values, so the computed columns
 read as blank until the file is opened in Excel (or recalculated with
@@ -166,6 +169,79 @@ def gather(root, trials, manifest):
     return rows, incomplete
 
 
+def read_fort38(path):
+    """xts_fort.38 -> {conformer: occupancy at the single pH}."""
+    out = {}
+    if not os.path.isfile(path):
+        return out
+    for line in open(path):
+        f = line.split()
+        if len(f) >= 2 and not line.lower().startswith(" ph"):
+            try:
+                out[f[0]] = float(f[1])
+            except ValueError:
+                pass
+    return out
+
+
+def read_head3_charges(path):
+    """head3.lst -> {conformer: charge}."""
+    out = {}
+    if not os.path.isfile(path):
+        return out
+    for i, line in enumerate(open(path)):
+        if i == 0 or not line.strip():
+            continue
+        try:
+            out[line[6:20].strip()] = float(line[28:34])
+        except ValueError:
+            pass
+    return out
+
+
+def gather_conformers(root, trials, manifest):
+    """
+    Per PDB, the ligand's conformer TYPES (e.g. FMM+1, FMM01) with their
+    occupancy in solution and bound, per trial.
+
+    Types rather than individual rotamers: step2 is stochastic, so the number of
+    rotamers inside a type varies between trials (FMM01 x2/x3/x2) and rotamers
+    cannot be matched one-to-one.  The type -- the protonation/tautomer state --
+    is stable, and it is what the original SI.3.Conf's "MCCE Conf Name" column
+    lists.  Occupancies of the rotamers in a type are summed within each trial
+    before averaging across trials.
+    """
+    out = {}
+    for pdb in sorted(manifest):
+        inhibitor, code, kinase = manifest[pdb]
+        types = {}
+        for t in trials:
+            td = os.path.join(root, t)
+            for which, tree in (("soln", "inhib"), ("bound", "holo")):
+                d = os.path.join(tree_dir(td, tree), pdb)
+                occ = read_fort38(os.path.join(d, "xts_fort.38"))
+                crg = read_head3_charges(os.path.join(d, "head3.lst"))
+                lig = sorted(k for k in occ if k[:3] == code)
+                if not lig:
+                    continue
+                resid = lig[0][5:10]          # first copy only, as in Table 1
+                for name in lig:
+                    if name[5:10] != resid:
+                        continue
+                    ctype = name[:5]
+                    rec = types.setdefault(ctype, {"charge": crg.get(name),
+                                                   "soln": {}, "bound": {},
+                                                   "nrot": {}})
+                    rec[which][t] = rec[which].get(t, 0.0) + occ[name]
+                    if which == "soln":
+                        rec["nrot"][t] = rec["nrot"].get(t, 0) + 1
+                    if rec["charge"] is None:
+                        rec["charge"] = crg.get(name)
+        if types:
+            out[pdb] = {"inhibitor": inhibitor, "kinase": kinase, "types": types}
+    return out
+
+
 # ----------------------------------------------------------------- sheets
 QUANTITIES = [("nconf", "Ligand #conf", "0.0"),
               ("crg_soln", "Ligand crg soln", "0.00"),
@@ -228,16 +304,26 @@ def sheet_table1(wb, rows, trials, n):
                 "the mean (SD/√n). See the Methods sheet.")
     ws["A2"].font = F_NOTE
 
-    group = ["", "", "", "Ligand", "Ligand", "Ligand", "Ligand", "Ligand", "Ligand",
-             "Apo-kinase", "Apo-kinase", "Holo-kinase", "Holo-kinase", "Holo-Apo", "Holo-Apo"]
+    # One group label per column, so each "± SEM" sits under the same group as the
+    # value it belongs to.  GROUPS also drives the merges below.
+    GROUPS = [("", 3), ("Ligand", 7), ("Apo-kinase", 2),
+              ("Holo-kinase", 2), ("Holo-Apo", 2)]
+    group = [label for label, span in GROUPS for _ in range(span)]
     head = ["PDBID", "Ligand", "Kinase", "#conf", "crg soln", "± SEM", "crg bound", "± SEM",
             "∆crg", "± SEM", "charge", "± SEM", "charge", "± SEM", "∆crg", "± SEM"]
+    assert len(group) == len(head), f"group row {len(group)} != header row {len(head)}"
     ws.append([]); ws.append(group); ws.append(head)
     for c in range(1, len(head) + 1):
         for r in (4, 5):
             ws.cell(r, c).font = F_BOLD
             ws.cell(r, c).alignment = Alignment(horizontal="center")
         ws.cell(5, c).border = UNDER
+    # merge each group across its columns so the spans are unambiguous
+    col = 1
+    for label, span in GROUPS:
+        if label and span > 1:
+            ws.merge_cells(start_row=4, start_column=col, end_row=4, end_column=col + span - 1)
+        col += span
 
     # source column for each quantity on Per-Trial Data
     first_col = {key: 4 + i * n for i, (key, _t, _f) in enumerate(QUANTITIES)}
@@ -292,6 +378,147 @@ def sheet_table1(wb, rows, trials, n):
     for c, w in zip("ABC", (10, 14, 9)):
         ws.column_dimensions[c].width = w
     for c in range(4, len(head) + 1):
+        ws.column_dimensions[get_column_letter(c)].width = 9
+    ws.freeze_panes = "A6"
+
+
+def sheet_conf_raw(wb, conf, trials):
+    """Per-trial occupancies per ligand conformer type -- the raw layer for SI-Table2."""
+    ws = wb.create_sheet("Per-Trial Conf")
+    n = len(trials)
+    top = ["", "", "", ""] + ["P(i) soln"] + [""] * (n - 1) \
+          + ["P(i) bound"] + [""] * (n - 1) + ["# rotamers"] + [""] * (n - 1)
+    sub = ["PDBID", "Ligand", "Conf type", "charge"] + \
+          [t.replace("Trial", "T") for _ in range(3) for t in trials]
+    ws.append(top); ws.append(sub)
+    index = {}
+    r = 3
+    for pdb in sorted(conf):
+        rec = conf[pdb]
+        for ctype in sorted(rec["types"]):
+            d = rec["types"][ctype]
+            ws.append([pdb, rec["inhibitor"], ctype, d["charge"]]
+                      + [d["soln"].get(t) for t in trials]
+                      + [d["bound"].get(t) for t in trials]
+                      + [d["nrot"].get(t) for t in trials])
+            index.setdefault(pdb, []).append((ctype, r))
+            r += 1
+    ncol = 4 + 3 * n
+    for c in range(1, ncol + 1):
+        ws.cell(1, c).font = F_BOLD
+        ws.cell(1, c).alignment = Alignment(horizontal="center")
+        ws.cell(2, c).font = F_BOLD
+        ws.cell(2, c).border = UNDER
+        ws.cell(2, c).alignment = Alignment(horizontal="center")
+    for rr in range(3, r):
+        for c in range(1, ncol + 1):
+            ws.cell(rr, c).font = F_BODY
+            if c == 4:
+                ws.cell(rr, c).number_format = "0.000"
+            elif 5 <= c <= 4 + 2 * n:
+                ws.cell(rr, c).number_format = "0.000"
+    for col in range(3):
+        first = 5 + col * n
+        if n > 1:
+            ws.merge_cells(start_row=1, start_column=first, end_row=1, end_column=first + n - 1)
+    ws.freeze_panes = "E3"
+    for c, w in zip("ABCD", (10, 14, 11, 9)):
+        ws.column_dimensions[c].width = w
+    for c in range(5, ncol + 1):
+        ws.column_dimensions[get_column_letter(c)].width = 8
+    note = ws.cell(r + 1, 1)
+    note.value = ("Occupancy at pH 7.4 from xts_fort.38, summed over the rotamers of each "
+                  "conformer type, per trial. Charge from head3.lst. Types rather than "
+                  "individual rotamers because step2 is stochastic: the rotamer count inside "
+                  "a type varies between trials, so rotamers cannot be matched one-to-one.")
+    note.font = F_NOTE
+    return index, n
+
+
+def sheet_si_table2(wb, conf, index, trials, n):
+    """SI-Table2: ligand conformer populations, laid out like the original SI.3.Conf."""
+    ws = wb.create_sheet("SI-Table2")
+    ws["A1"] = "SI-Table2: ligand conformer populations at pH 7.4, mean of the trials"
+    ws["A1"].font = F_BOLD
+    ws["A2"] = ("One row per conformer type (protonation / tautomer state); the rotamers of a "
+                "type are summed within each trial, then averaged. ± columns are SEM (SD/√n).")
+    ws["A2"].font = F_NOTE
+
+    GROUPS = [("", 5), ("P(i) soln", 2), ("P(i) bound", 2)]
+    group = [label for label, span in GROUPS for _ in range(span)]
+    head = ["PDBID", "Ligand", "Conf type", "charge", "# rot",
+            "mean", "± SEM", "mean", "± SEM"]
+    assert len(group) == len(head)
+    ws.append([]); ws.append(group); ws.append(head)
+    for c in range(1, len(head) + 1):
+        for rr in (4, 5):
+            ws.cell(rr, c).font = F_BOLD
+            ws.cell(rr, c).alignment = Alignment(horizontal="center")
+        ws.cell(5, c).border = UNDER
+    col = 1
+    for label, span in GROUPS:
+        if label and span > 1:
+            ws.merge_cells(start_row=4, start_column=col, end_row=4, end_column=col + span - 1)
+        col += span
+
+    def rng(first_col, src_row):
+        a = get_column_letter(first_col)
+        b = get_column_letter(first_col + n - 1)
+        return f"'Per-Trial Conf'!${a}{src_row}:${b}{src_row}"
+
+    by_kinase = {}
+    for pdb in conf:
+        by_kinase.setdefault(conf[pdb]["kinase"] or "(unassigned)", []).append(pdb)
+
+    i = 6
+    for kinase in sorted(by_kinase):
+        for c in range(1, len(head) + 1):
+            ws.cell(i, c).fill = GREY
+        ws.cell(i, 2).value = kinase
+        ws.cell(i, 2).font = F_BOLD
+        i += 1
+        for pdb in sorted(by_kinase[kinase]):
+            rec = conf[pdb]
+            first_row = i
+            for ctype, src in index[pdb]:
+                ws.cell(i, 1).value = pdb
+                ws.cell(i, 2).value = rec["inhibitor"]
+                ws.cell(i, 3).value = ctype
+                ws.cell(i, 4).value = f"='Per-Trial Conf'!$D{src}"
+                ws.cell(i, 5).value = f"=AVERAGE({rng(5 + 2 * n, src)})"
+                for col_out, first in ((6, 5), (8, 5 + n)):
+                    ws.cell(i, col_out).value = f"=AVERAGE({rng(first, src)})"
+                    ws.cell(i, col_out + 1).value = (
+                        f"=IF(COUNT({rng(first, src)})>1,"
+                        f"STDEV({rng(first, src)})/SQRT(COUNT({rng(first, src)})),0)")
+                for c in range(1, len(head) + 1):
+                    ws.cell(i, c).font = F_BODY
+                    if c == 5:
+                        ws.cell(i, c).number_format = "0.0"
+                    elif c >= 4:
+                        ws.cell(i, c).number_format = "0.000"
+                i += 1
+            last = i - 1
+            ws.cell(i, 3).value = "SUM"
+            ws.cell(i, 6).value = f"=SUM(F{first_row}:F{last})"
+            ws.cell(i, 8).value = f"=SUM(H{first_row}:H{last})"
+            ws.cell(i + 1, 3).value = "ensemble charge"
+            ws.cell(i + 1, 6).value = f"=SUMPRODUCT($D{first_row}:$D{last},F{first_row}:F{last})"
+            ws.cell(i + 1, 8).value = f"=SUMPRODUCT($D{first_row}:$D{last},H{first_row}:H{last})"
+            for rr in (i, i + 1):
+                for c in range(1, len(head) + 1):
+                    ws.cell(rr, c).font = F_BOLD
+                    if c >= 4:
+                        ws.cell(rr, c).number_format = "0.000"
+            i += 3
+    note = ws.cell(i, 1)
+    note.value = ("SUM should be 1.000 within rounding. 'ensemble charge' is Σ charge × P(i) — "
+                  "it reproduces the ligand charge in Table 1 (crg soln / crg bound) and is a "
+                  "check that the conformer populations and the residue charge agree.")
+    note.font = F_NOTE
+    for c, w in zip("ABCDE", (10, 14, 11, 9, 7)):
+        ws.column_dimensions[c].width = w
+    for c in range(6, len(head) + 1):
         ws.column_dimensions[get_column_letter(c)].width = 9
     ws.freeze_panes = "A6"
 
@@ -391,8 +618,11 @@ def main():
         description="Build the Trials workbook from whatever Trial*/ directories exist.")
     ap.add_argument("--root", help="directory holding Trial*/ (default: this script's)")
     ap.add_argument("--glob", default="Trial*", help="which trials to include (default: Trial*)")
+    ap.add_argument("--outdir", default="tables_Trials",
+                    help="directory for the workbook, alongside the plots_Trials_* "
+                         "directories (default: %(default)s)")
     ap.add_argument("--out", default="kinase_project-trials-tables.xlsx",
-                    help="output workbook (default: %(default)s)")
+                    help="workbook filename inside --outdir (default: %(default)s)")
     ap.add_argument("--values-copy", action="store_true",
                     help="also write a *_values.xlsx with the numbers baked in, for previewing "
                          "without Excel")
@@ -431,6 +661,14 @@ def main():
     wb.remove(wb.active)
     _, n = sheet_raw(wb, rows, trials)
     sheet_table1(wb, rows, trials, n)
+    conf = gather_conformers(root, trials, manifest)
+    if conf:
+        idx, _ = sheet_conf_raw(wb, conf, trials)
+        sheet_si_table2(wb, conf, idx, trials, n)
+        print(f"  conformer types: {sum(len(v['types']) for v in conf.values())} "
+              f"across {len(conf)} ligands")
+    else:
+        print(f"  {YELLOW}[SKIP] no xts_fort.38 found -- SI-Table2 omitted{RESET}")
     sheet_methods(wb, trials, seeds, n, incomplete)
 
     got = sheet_from_table(
@@ -476,14 +714,27 @@ def main():
     for c, w in zip("ABCD", (34, 20, 10, 62)):
         rp.column_dimensions[c].width = w
 
-    out = os.path.join(root, args.out) if not os.path.isabs(args.out) else args.out
+    if os.path.isabs(args.out):
+        out = args.out                      # an absolute --out wins outright
+    else:
+        outdir = args.outdir if os.path.isabs(args.outdir) \
+            else os.path.join(root, args.outdir)
+        os.makedirs(outdir, exist_ok=True)
+        out = os.path.join(outdir, os.path.basename(args.out))
     wb.save(out)
-    print(f"{GREEN}  wrote {out}{RESET}")
+    print(f"{GREEN}  wrote {os.path.relpath(out, root)}{RESET}")
     print(f"  sheets: {', '.join(wb.sheetnames)}")
 
     if args.values_copy:
         vals = out.replace(".xlsx", "_values.xlsx")
         vb = Workbook(); vb.remove(vb.active)
+
+        def mean_sem(values):
+            v = [x for x in values if x is not None]
+            if not v:
+                return None, None
+            return st.fmean(v), (st.stdev(v) / len(v) ** 0.5 if len(v) > 1 else 0.0)
+
         vs = vb.create_sheet("Table 1 (Trials) values")
         vs.append(["PDBID", "Ligand", "Kinase", "#conf",
                    "crg soln", "sem", "crg bound", "sem", "dcrg", "sem",
@@ -492,10 +743,7 @@ def main():
             vs.cell(1, c).font = F_BOLD
         for r in rows:
             def ms(key):
-                v = [r["per"][t][key] for t in trials if r["per"][t][key] is not None]
-                if not v:
-                    return None, None
-                return st.fmean(v), (st.stdev(v) / len(v) ** 0.5 if len(v) > 1 else 0.0)
+                return mean_sem([r["per"][t][key] for t in trials])
             cs, cse = ms("crg_soln"); cb, cbe = ms("crg_bound")
             an, ane = ms("apo_net"); hn, hne = ms("holo_net")
             nc, _ = ms("nconf")
@@ -510,8 +758,45 @@ def main():
                 vs.cell(rr, c).font = F_BODY
                 if c >= 5:
                     vs.cell(rr, c).number_format = "0.000" if c % 2 == 0 else "0.00"
+        if conf:
+            cs2 = vb.create_sheet("SI-Table2 values")
+            cs2.append(["PDBID", "Ligand", "Kinase", "Conf type", "charge", "# rot",
+                        "P(i) soln", "sem", "P(i) bound", "sem"])
+            for c in range(1, 11):
+                cs2.cell(1, c).font = F_BOLD
+            for pdb in sorted(conf):
+                rec = conf[pdb]
+                ens_s = ens_b = 0.0
+                for ctype in sorted(rec["types"]):
+                    d = rec["types"][ctype]
+                    sm, sse = mean_sem([d["soln"].get(t) for t in trials])
+                    bm, bse = mean_sem([d["bound"].get(t) for t in trials])
+                    nr, _ = mean_sem([d["nrot"].get(t) for t in trials])
+                    crg = d["charge"]
+                    cs2.append([pdb, rec["inhibitor"], rec["kinase"], ctype, crg, nr,
+                                sm, sse, bm, bse])
+                    if crg is not None:
+                        ens_s += crg * (sm or 0.0)
+                        ens_b += crg * (bm or 0.0)
+                cs2.append([pdb, rec["inhibitor"], rec["kinase"], "ensemble charge",
+                            None, None, ens_s, None, ens_b, None])
+                for c in range(1, 11):
+                    cs2.cell(cs2.max_row, c).font = F_BOLD
+            for rr in range(2, cs2.max_row + 1):
+                for c in range(1, 11):
+                    cell = cs2.cell(rr, c)
+                    if cell.font is not F_BOLD:
+                        cell.font = F_BODY
+                    if c >= 5:
+                        cell.number_format = "0.0" if c == 6 else "0.000"
+            for c, w in zip("ABCD", (10, 14, 9, 11)):
+                cs2.column_dimensions[c].width = w
+            for c in range(5, 11):
+                cs2.column_dimensions[get_column_letter(c)].width = 10
+
         vb.save(vals)
-        print(f"{GREEN}  wrote {vals}{RESET}  (static values, no formulas)")
+        print(f"{GREEN}  wrote {os.path.relpath(vals, root)}{RESET}  (static values, "
+              f"no formulas; {', '.join(vb.sheetnames)})")
 
 
 if __name__ == "__main__":
