@@ -280,8 +280,7 @@ IPECE_SC LYS    NZ    1.0
 #accessible is over the number defined in the following line (<=256 char)
 #0.05     cut off water if % SAS exceeds this number         (H2O_SASCUTOFF)
 #-------------------Floating cofactor names start from this column, space separated
-FLOATING COFACTOR   HOH SO4 NO3 ZN CA NA CL DOD VO4
-
+FLOATING COFACTOR   CA CL DOD HOH K MN NA NO3 PO4 SO4 VO4 ZN
 
 #-------|-----|----|----|----|----|----|----|----|
 #EBUILD  RES         A list of atoms to copy for rebuilding
@@ -2029,4 +2028,104 @@ VDW_EPS  _CL-1 CL   0.71  #Jensen & Jorgensen J. Chem. Theory. Comput. 2006
 VDW_RAD  _ZN+2 ZN   1.82
 VDW_EPS  _ZN+2 ZN   0.17
 
+VDW_RAD  PO401  P     1.91
+VDW_EPS  PO401  P     0.11
+VDW_RAD  PO401  O1    1.66
+VDW_EPS  PO401  O1    0.21
+VDW_RAD  PO401  O2    1.66
+VDW_EPS  PO401  O2    0.21
+VDW_RAD  PO401  O3    1.66
+VDW_EPS  PO401  O3    0.21
+VDW_RAD  PO401  O4    1.66
+VDW_EPS  PO401  O4    0.21
+TORSION  PO401  HO1  O1   P    O2   f        0.0         3      0.00
+TORSION  PO401  HO2  O2   P    O1   f        0.0         3      0.00
+TORSION  PO401  HO3  O3   P    O1   f        0.0         3      0.00
+TORSION  PO4-2  HO1  O1   P    O2   f        0.0         3      0.00
+TORSION  PO4-1  HO1  O1   P    O2   f        0.0         3      0.00
+TORSION  PO4-1  HO2  O2   P    O1   f        0.0         3      0.00
+VDW_RAD  PO401  HO1   1.49
+VDW_EPS  PO401  HO1   0.02
+VDW_RAD  PO401  HO2   1.49
+VDW_EPS  PO401  HO2   0.02
+VDW_RAD  PO401  HO3   1.49
+VDW_EPS  PO401  HO3   0.02
+VDW_RAD  PO4-3  P     1.91
+VDW_EPS  PO4-3  P     0.11
+VDW_RAD  PO4-3  O1    1.66
+VDW_EPS  PO4-3  O1    0.21
+VDW_RAD  PO4-3  O2    1.66
+VDW_EPS  PO4-3  O2    0.21
+VDW_RAD  PO4-3  O3    1.66
+VDW_EPS  PO4-3  O3    0.21
+VDW_RAD  PO4-3  O4    1.66
+VDW_EPS  PO4-3  O4    0.21
+VDW_RAD  PO4-2  P     1.91
+VDW_EPS  PO4-2  P     0.11
+VDW_RAD  PO4-2  O1    1.66
+VDW_EPS  PO4-2  O1    0.21
+VDW_RAD  PO4-2  HO1   1.49
+VDW_EPS  PO4-2  HO1   0.02
+VDW_RAD  PO4-2  O2    1.66
+VDW_EPS  PO4-2  O2    0.21
+VDW_RAD  PO4-2  O3    1.66
+VDW_EPS  PO4-2  O3    0.21
+VDW_RAD  PO4-2  O4    1.66
+VDW_EPS  PO4-2  O4    0.21
+VDW_RAD  PO4-1  P     1.91
+VDW_EPS  PO4-1  P     0.11
+VDW_RAD  PO4-1  O1    1.66
+VDW_EPS  PO4-1  O1    0.21
+VDW_RAD  PO4-1  HO1   1.49
+VDW_EPS  PO4-1  HO1   0.02
+VDW_RAD  PO4-1  O2    1.66
+VDW_EPS  PO4-1  O2    0.21
+VDW_RAD  PO4-1  HO2   1.49
+VDW_EPS  PO4-1  HO2   0.02
+VDW_RAD  PO4-1  O3    1.66
+VDW_EPS  PO4-1  O3    0.21
+VDW_RAD  PO4-1  O4    1.66
+VDW_EPS  PO4-1  O4    0.21
 
+VDW_RAD  SO401  S     2.00
+VDW_EPS  SO401  S     0.25
+VDW_RAD  SO401  O1    1.66
+VDW_EPS  SO401  O1    0.21
+VDW_RAD  SO401  O2    1.66
+VDW_EPS  SO401  O2    0.21
+VDW_RAD  SO401  O3    1.66
+VDW_EPS  SO401  O3    0.21
+VDW_RAD  SO401  O4    1.66
+VDW_EPS  SO401  O4    0.21
+VDW_RAD  SO401  HO1   1.49
+VDW_EPS  SO401  HO1   0.02
+VDW_RAD  SO401  HO2   1.49
+VDW_EPS  SO401  HO2   0.02
+
+TORSION  SO401  HO1  O1   S    O2   f        0.0         3      0.00
+TORSION  SO401  HO2  O2   S    O1   f        0.0         3      0.00
+TORSION  SO4-1  HO1  O1   S    O2   f        0.0         3      0.00
+
+VDW_RAD  SO4-2  S     2.00
+VDW_EPS  SO4-2  S     0.25
+VDW_RAD  SO4-2  O1    1.66
+VDW_EPS  SO4-2  O1    0.21
+VDW_RAD  SO4-2  O2    1.66
+VDW_EPS  SO4-2  O2    0.21
+VDW_RAD  SO4-2  O3    1.66
+VDW_EPS  SO4-2  O3    0.21
+VDW_RAD  SO4-2  O4    1.66
+VDW_EPS  SO4-2  O4    0.21
+
+VDW_RAD  SO4-1  S     2.00
+VDW_EPS  SO4-1  S     0.25
+VDW_RAD  SO4-1  O1    1.66
+VDW_EPS  SO4-1  O1    0.21
+VDW_RAD  SO4-1  HO1   1.49
+VDW_EPS  SO4-1  HO1   0.02
+VDW_RAD  SO4-1  O2    1.66
+VDW_EPS  SO4-1  O2    0.21
+VDW_RAD  SO4-1  O3    1.66
+VDW_EPS  SO4-1  O3    0.21
+VDW_RAD  SO4-1  O4    1.66
+VDW_EPS  SO4-1  O4    0.21

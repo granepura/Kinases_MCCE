@@ -1210,3 +1210,28 @@ INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (1122/1
 INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (1123/1130) GLU02B0304_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_apo.2EUF_GLU02B0304_003
 INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (1124/1130) GLU02B0304_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_apo.2EUF_GLU02B0304_004
 INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (1125/1130) GLU-1B0304_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_apo.2EUF_GLU-1B0304_005
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (1126/1130) ARG01B0305_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_apo.2EUF_ARG01B0305_001
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (1127/1130) ARG02B0305_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_apo.2EUF_ARG02B0305_002
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (1128/1130) ARG03B0305_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_apo.2EUF_ARG03B0305_003
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (1129/1130) ARG03B0305_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_apo.2EUF_ARG03B0305_004
+INFO - step3.py: ForkPoolWorker-1: Calling delphi to calculate conformer (1130/1130) ARG+1B0305_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_apo.2EUF_ARG+1B0305_005
+INFO - step3.py:    Time needed: 5035 seconds.
+INFO - step3.py:    Post-processing of electrostatic potential.
+INFO - step3.py:    Processing ele pairwise interaction...
+INFO - step3.py:    Time needed: 3 seconds.
+INFO - step3.py:    Making atom connectivity ...
+INFO - step3.py:    Time needed: 2 seconds.
+INFO - step3.py:    Calculating vdw ...
+INFO - step3.py:    Time needed: 9 seconds.
+INFO - step3.py:    Calculating torsion energy ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Composing head3.lst ...
+INFO - step3.py:    Time needed: 0 seconds.
+INFO - step3.py:    Composing opp files ...
+INFO - step3.py:    Time needed: 1 seconds.
+INFO - step3.py:    Total time for step3 is 5052 seconds.
+Warning: Ligand atom bond to " N  LEU0008A000" was not found
+Warning: Ligand atom bond to " N  PHE0127A000" was not found
+Warning: Ligand atom bond to " N  ASP0010B000" was not found
+Warning: Ligand atom bond to " N  ALA0259B000" was not found
+[WARNING]:  head.lst suggests a partial step 3 run; Check the log to see what went wrong.

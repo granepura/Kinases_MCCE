@@ -35,3 +35,18 @@ Total runtime: 00h:18m:01s
 Timing report written to mcce_timing.log
 
 >>> Caught termination signal. Running STEP_CLEAN before exiting...
+STEP3 completed SUCCESSFULLY in 01h:24m:12s.
+Running custom stepC script "prune_kin-inhib_head3.py" (between STEP3 and STEP4)...
+prune_kin-inhib_head3.py completed SUCCESSFULLY in 00h:00m:00s.
+Running STEP4 ...
+STEP4 completed SUCCESSFULLY in 00h:00m:44s.
+Temporary PBE data will be stored in:                             /tmp
+Full path of the working directory is:                            /data/home/granepura/5-Kinases/Kinases_MCCE/Trial01/run_apo/2EUF
+Subdirectories matching this pattern will be removed from temp dir: home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_apo.2EUF
+STEP_CLEAN: cleaning matching pbe_data folders in /tmp...
+STEP_CLEAN: no matching /tmp pbe_data folders found.
+Script complete.
+Total runtime: 01h:24m:56s
+Timing report written to mcce_timing.log
+
+>>> Caught termination signal. Running STEP_CLEAN before exiting...
