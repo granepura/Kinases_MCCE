@@ -1,0 +1,30 @@
+Mode: Correcting non-amino acids only
+============================================================
+SHANNON ENTROPY CORRECTION FOR fort.38
+============================================================
+Input file: fort.38
+Charge file: head3.lst
+
+Method: Penalizing charge states using Shannon entropy
+Grouping: By numeric charge value (e.g., all charge=0 together)
+Penalty: ΔG += -RT × Σ(P_i × ln(P_i)) within each charge group
+
+Read charges for 582 conformers from head3.lst
+Processing 582 conformers at 1 pH values
+Applying entropy correction to NILA0600 (type: NIL)
+
+Corrected 1 non-amino acid residues
+Wrote corrected file to: xts_fort.38
+Wrote log file to: entropy_correction.log
+
+Generating xts_sum_crg.out...
+Wrote sum_crg file to: xts_sum_crg.out
+
+============================================================
+COMPLETE!
+============================================================
+
+Generated files:
+  - xts_fort.38 (corrected probabilities)
+  - xts_sum_crg.out (corrected charge summary)
+  - entropy_correction.log (detailed correction log)
