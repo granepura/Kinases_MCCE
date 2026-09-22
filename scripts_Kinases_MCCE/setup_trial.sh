@@ -24,9 +24,19 @@ source "$SCRIPT_DIR/trial_config.sh"
 
 GREEN='\033[0;32m'; YELLOW='\033[1;33m'; CYAN='\033[0;36m'; RED='\033[0;31m'; RESET='\033[0m'
 
-N="${1:-}"; FORCE=0
-[[ "${2:-}" == "--force" ]] && FORCE=1
-[[ "$N" =~ ^[0-9]+$ ]] || { echo "Usage: $0 <trial-number> [--force]"; exit 1; }
+N="${1:-}"; FORCE=0; RUNBOOK_ONLY=0
+case "${2:-}" in
+    --force)   FORCE=1 ;;
+    --runbook) RUNBOOK_ONLY=1 ;;   # rewrite RUNBOOK.md only, touch nothing else
+    "")        ;;
+    *) echo "Unknown option: $2"; exit 1 ;;
+esac
+[[ "$N" =~ ^[0-9]+$ ]] || {
+    echo "Usage: $0 <trial-number> [--force | --runbook]"
+    echo "  --force    (re)generate scripts and PDB folders"
+    echo "  --runbook  rewrite RUNBOOK.md only, leaving submit scripts untouched"
+    exit 1
+}
 
 TRIAL=$(trial_dir "$N")
 TAG=$(printf "T%02d" "$N")
@@ -35,9 +45,112 @@ SEED=$(trial_seed "$N")
 echo -e "${CYAN}=== setup_trial.sh  ->  $TRIAL ===${RESET}"
 
 for src in "$MASTER_KIN_PDB" "$MASTER_COF_PDB" "$MASTER_INHIB_LST" "$MASTER_SUBMIT_TPL" \
-           "$PRUNE" "$VARIANTS" "$INSTALL" "$PREPARE" "$XTSRUN"; do
+           "$PRUNE" "$VARIANTS" "$INSTALL" "$PREPARE" "$XTSRUN" "$FIG3" "$FIG4A"; do
     [[ -e "$src" ]] || { echo -e "${RED}[FATAL] missing master: $src${RESET}"; exit 1; }
 done
+
+# ---------------------------------------------------------------- runbook
+# Every trial runs the same seven steps, so this is the same document each time
+# apart from the trial number, the seed and the script fingerprints.  The why
+# lives in CLAUDE.md; this file is the order of operations plus the provenance
+# of what was actually run.
+write_runbook() {
+{
+    echo "# Trial$(printf '%02d' "$N") runbook"
+    echo
+    echo "Written: $(date '+%Y-%m-%d %H:%M:%S')"
+    echo "MONTE_SEED: $([[ $USE_EXPLICIT_SEED -eq 1 ]] && echo "$SEED (explicit)" || echo '-1 (time-based)')"
+    cat <<BODY
+
+Every trial is built and run the same way -- only the seed and the job names
+differ.  The numbered scripts sit here at the trial root and work the rest out
+for themselves; the pro_batch launches are run from inside each run directory.
+Invariants and the reasoning behind them are in ../CLAUDE.md.
+
+## Order of operations
+
+Job names match the #SBATCH --job-name in each submit script so a trial's jobs are distinguishable in squeue.
+--skip-prerun is used throughout: pro_batch's pre-run check is not needed here,
+the PDBs are already curated.
+
+To start a tree from scratch, clear it first (this deletes all results in it):
+       rm -rf 1* 2* 3* 4* 5* meta_bench pro_batch_* book.txt
+
+1. inhib, steps 1-4   (shortest; independent of holo/apo, so a good first check)
+       cd run_inhib
+       pro_batch cof-pdb -custom submit_mcce4.sh -job-name ${TAG}_inhib --skip-prerun
+       cat */mcce_timing.log | grep STEP4 | wc -l        # 37 when done
+
+2. holo, steps 1-2
+       cd run_holo
+       pro_batch kin-pdb -custom submit_mcce4_s1s2.sh -job-name ${TAG}_holo_s1s2 --skip-prerun
+       cat */mcce_timing.log | grep STEP2 | wc -l        # 37 when done
+   stepB = make_holo_apo_step2_out.py: splits the finished step2_out.pdb into
+   holo_step2_out.pdb (exact copy) and apo_step2_out.pdb (inhibitor deleted).
+
+3. seed run_apo from run_holo
+       ./0-prepare_run_apo.py                 # --dry-run | --keep | 1XKK 2ITZ
+   Copies each whole run_holo/<PDBID>, skipping holo's step2_out.pdb and any
+   step3/4 products, then links step2_out.pdb -> apo_step2_out.pdb.
+   Needs only step 2, so it can run while holo's step3/4 is still going.
+
+4. holo, steps 3-4
+       cd run_holo
+       pro_batch kin-pdb -custom submit_mcce4_s3s4.sh -job-name ${TAG}_holo_s3s4 --skip-prerun
+       cat */mcce_timing.log | grep STEP4 | wc -l        # 37 when done
+
+5. apo, steps 3-4
+       cd run_apo
+       pro_batch kin-pdb -custom submit_mcce4_s3s4.sh -job-name ${TAG}_apo_s3s4 --skip-prerun
+       cat */mcce_timing.log | grep STEP4 | wc -l        # 37 when done
+   stepB = install_apo_step2_out.py: re-checks the step2 pair and the link.
+
+   Steps 4 and 5 are independent of each other; run them concurrently.
+   Status:  pro_batch --check -job-name <name>     (r pending, c done, e error)
+
+6. entropy correction -- step4 does NOT do this
+       ./1-run_xts_corr.py                    # --dry-run | -t run_inhib | --force
+   Runs xts_corr.py in all three trees, producing xts_sum_crg.out (plus
+   xts_fort.38, entropy_correction.log).  Every figure reads xts_sum_crg.out, so
+   this must be done in all three trees or corrected numbers would be compared
+   against uncorrected ones.  It prints one line per structure and lists the
+   cause of any failure.
+
+7. figures
+       ./2-plot_sumcrg_inhibitors_xts_Fig3.py    # inhibitor: bound vs in solution
+       ./3-plot_sumcrg_comparison_xts_Fig4A.py   # per residue: holo vs apo
+   Add --title to draw titles on the PNGs.  Both write PNGs and a CSV carrying
+   the trial name, into plots_Fig3_inhibitors_xts/ and
+   plots_Fig4A_holo_vs_apo_xts/.  They only read the runs; nothing is modified.
+
+## Checking one structure
+
+       cat run_holo/1XKK/mcce_timing.log     per-step wall time, success/failure
+       cat run_holo/1XKK/stepB.log           the holo/apo step2 split
+       cat run_apo/1XKK/stepB.log            the pair check + the step2_out link
+       cat run_holo/1XKK/stepC.log           the head3.lst edit
+       ls  run_holo/1XKK/pK.out              exists => step4 finished
+
+BODY
+    echo '## Provenance -- sha256 of the scripts this trial was set up with'
+    echo '```'
+    sha256sum "$TRIAL"/[0-3]-*.py "$VARIANTS" "$INSTALL" "$PRUNE" \
+              "$SCRIPT_DIR/trial_config.sh" 2>/dev/null \
+        | sed "s|$ROOT/||"
+    echo '```'
+    echo
+    echo "Re-check these before comparing trials: the canonical scripts in"
+    echo "scripts_Kinases_MCCE/ change over time, and a trial's copies are the"
+    echo "record of what it actually ran."
+} > "$TRIAL/RUNBOOK.md"
+}
+
+if [[ $RUNBOOK_ONLY -eq 1 ]]; then
+    [[ -d "$TRIAL" ]] || { echo -e "${RED}[FATAL] $TRIAL does not exist${RESET}"; exit 1; }
+    write_runbook
+    echo -e "${GREEN}[GEN]${RESET} RUNBOOK.md  (only; nothing else touched)"
+    exit 0
+fi
 
 if [[ -d "$TRIAL" && $FORCE -eq 0 ]]; then
     echo -e "${RED}[FATAL] $TRIAL already exists. Re-run with --force to overwrite its scripts.${RESET}"
@@ -66,12 +179,18 @@ hook_line() {   # hook_line STEPB|STEPC <script path>
 # at a real script that someone could switch on by accident.
 gen_submit() {
     local out=$1 job=$2 s1=$3 s2=$4 s3=$5 s4=$6 center=$7 stepb=$8 stepc=$9
+    local cpus=${10:-$CPUS_DEFAULT}
+    # SLURM's stdout file follows the script's own name, so an s3s4 job cannot
+    # overwrite the s1s2 log it inherited from the template.
+    local logname="$(basename "$out" .sh).log"
     local fb="f" fc="f"
     [[ $stepb != "-" ]] && fb="t"
     [[ $stepc != "-" ]] && fc="t"
 
     local -a sedargs=(
         -e "s|^#SBATCH --job-name=.*|#SBATCH --job-name=${job}|"
+        -e "s|^#SBATCH -o .*|#SBATCH -o ${logname}|"
+        -e "s|^CPUS=[0-9]*|CPUS=${cpus}|"
         -e "s|^step1=\"[tf]\"|step1=\"${s1}\"|"
         -e "s|^step2=\"[tf]\"|step2=\"${s2}\"|"
         -e "s|^step3=\"[tf]\"|step3=\"${s3}\"|"
@@ -80,8 +199,19 @@ gen_submit() {
         -e "s|^stepB=\"[tf]\"|stepB=\"${fb}\"|"
         -e "s|^stepC=\"[tf]\"|stepC=\"${fc}\"|"
     )
-    [[ $fb == "t" ]] && sedargs+=( -e "s|^STEPB=.*|$(hook_line STEPB "$stepb")|" )
-    [[ $fc == "t" ]] && sedargs+=( -e "s|^STEPC=.*|$(hook_line STEPC "$stepc")|" )
+    # Always rewrite both hook lines: a real path when the hook runs, the
+    # template's placeholder when it does not.  That way an unused STEPB never
+    # points at a real script, whatever the template happened to contain.
+    if [[ $fb == "t" ]]; then
+        sedargs+=( -e "s|^STEPB=.*|$(hook_line STEPB "$stepb")|" )
+    else
+        sedargs+=( -e "s|^STEPB=.*|STEPB=\"/path/to/stepB_script.py\"  # Optional StepB: Python script to run between step2 and step3.|" )
+    fi
+    if [[ $fc == "t" ]]; then
+        sedargs+=( -e "s|^STEPC=.*|$(hook_line STEPC "$stepc")|" )
+    else
+        sedargs+=( -e "s|^STEPC=.*|STEPC=\"/path/to/stepC_script.py\"  # Optional StepC: Python script to run between step3 and step4.|" )
+    fi
 
     # STEP4 is patched only where step4 actually runs: leaving the template's
     # command alone in the step1-2 script keeps an unused seed out of it.
@@ -98,6 +228,8 @@ gen_submit() {
     local bad=0
     grep -q "^#SBATCH --job-name=${job}$"  "$out" || bad=1
     grep -q "^step3=\"${s3}\""             "$out" || bad=1
+    grep -q "^#SBATCH -o ${logname}$"      "$out" || bad=1
+    grep -q "^CPUS=${cpus} "                "$out" || bad=1
     grep -q "^stepB=\"${fb}\""             "$out" || bad=1
     grep -q "^stepC=\"${fc}\""             "$out" || bad=1
     [[ $fb == "t" ]] && { grep -q "^STEPB=\"${stepb}\"" "$out" || bad=1; }
@@ -110,8 +242,8 @@ gen_submit() {
     local bname="-" cname="-"
     [[ $fb == "t" ]] && bname=$(basename "$stepb")
     [[ $fc == "t" ]] && cname=$(basename "$stepc")
-    printf "${GREEN}[GEN]${RESET} %-28s job=%-16s steps=%s%s%s%s center=%s\n" \
-        "${out#$TRIAL/}" "$job" "$s1" "$s2" "$s3" "$s4" "$center"
+    printf "${GREEN}[GEN]${RESET} %-28s job=%-16s steps=%s%s%s%s center=%s cpus=%s\n" \
+        "${out#$TRIAL/}" "$job" "$s1" "$s2" "$s3" "$s4" "$center" "$cpus"
     printf "      stepB=%-26s stepC=%s\n" "$bname" "$cname"
 }
 
@@ -127,16 +259,22 @@ mkdir -p "$TRIAL/run_inhib/cof-pdb"
 cp "$MASTER_COF_PDB"/*.pdb "$TRIAL/run_inhib/cof-pdb/"
 echo -e "${GREEN}[PDB]${RESET} kin-pdb -> run_holo, run_apo ($(ls "$TRIAL/run_holo/kin-pdb"/*.pdb | wc -l) files); cof-pdb -> run_inhib ($(ls "$TRIAL/run_inhib/cof-pdb"/*.pdb | wc -l) files)"
 
-cp "$MASTER_INHIB_LST" "$TRIAL/pdb_inhibitor.lst"
+# Symlinked, not copied: one list at the repo root is the single source of
+# truth, so trials cannot drift apart on the kinase/inhibitor mapping.
+ln -sfn "$(realpath --relative-to="$TRIAL" "$MASTER_INHIB_LST")" "$TRIAL/pdb_inhibitor.lst"
 
 # Copied, not symlinked: the trial keeps the versions it was run with, the same
 # way it keeps its own generated submit scripts.  Both numbered scripts sit at
 # the trial root so they read as one sequence: 0- then 1-.
 cp "$PREPARE" "$TRIAL/0-prepare_run_apo.py"
 cp "$XTSRUN"  "$TRIAL/1-run_xts_corr.py"
-chmod +x "$TRIAL/0-prepare_run_apo.py" "$TRIAL/1-run_xts_corr.py"
-echo -e "${GREEN}[GEN]${RESET} 0-prepare_run_apo.py  (from ${PREPARE#$ROOT/})"
-echo -e "${GREEN}[GEN]${RESET} 1-run_xts_corr.py     (from ${XTSRUN#$ROOT/})"
+cp "$FIG3"    "$TRIAL/2-plot_sumcrg_inhibitors_xts_Fig3.py"
+cp "$FIG4A"   "$TRIAL/3-plot_sumcrg_comparison_xts_Fig4A.py"
+chmod +x "$TRIAL"/[0-3]-*.py
+echo -e "${GREEN}[GEN]${RESET} 0-prepare_run_apo.py                   (from ${PREPARE#$ROOT/})"
+echo -e "${GREEN}[GEN]${RESET} 1-run_xts_corr.py                      (from ${XTSRUN#$ROOT/})"
+echo -e "${GREEN}[GEN]${RESET} 2-plot_sumcrg_inhibitors_xts_Fig3.py   (from ${FIG3#$ROOT/})"
+echo -e "${GREEN}[GEN]${RESET} 3-plot_sumcrg_comparison_xts_Fig4A.py  (from ${FIG4A#$ROOT/})"
 
 # stepB does a different job in each tree, so each script names its own:
 #   holo s1s2 -> make_holo_apo_step2_out.py  split step2_out.pdb into the
@@ -144,121 +282,15 @@ echo -e "${GREEN}[GEN]${RESET} 1-run_xts_corr.py     (from ${XTSRUN#$ROOT/})"
 #   apo  s3s4 -> install_apo_step2_out.py    check the pair, point step2_out.pdb
 #                                            at apo_step2_out.pdb
 # stepC (prune_kin-inhib_head3.py) runs everywhere step4 does.  "-" = hook off.
-#                out                                  job              1 2 3 4  ctr  stepB      stepC
-gen_submit "$TRIAL/run_holo/submit_mcce4_s1s2.sh"  "${TAG}_holo_s1s2"  t t f f  t    "$VARIANTS" "-"
-gen_submit "$TRIAL/run_holo/submit_mcce4_s3s4.sh"  "${TAG}_holo_s3s4"  f f t t  f    "-"        "$PRUNE"
-gen_submit "$TRIAL/run_apo/submit_mcce4_s3s4.sh"   "${TAG}_apo_s3s4"   f f t t  f    "$INSTALL"  "$PRUNE"
-gen_submit "$TRIAL/run_inhib/submit_mcce4.sh"      "${TAG}_inhib"      t t t t  t    "-"        "$PRUNE"
+#                out                                  job              1 2 3 4  ctr  stepB       stepC      cpus
+gen_submit "$TRIAL/run_holo/submit_mcce4_s1s2.sh"  "${TAG}_holo_s1s2"  t t f f  t    "$VARIANTS" "-"        $CPUS_DEFAULT
+gen_submit "$TRIAL/run_holo/submit_mcce4_s3s4.sh"  "${TAG}_holo_s3s4"  f f t t  f    "-"         "$PRUNE"   $CPUS_S34
+gen_submit "$TRIAL/run_apo/submit_mcce4_s3s4.sh"   "${TAG}_apo_s3s4"   f f t t  f    "$INSTALL"  "$PRUNE"   $CPUS_S34
+gen_submit "$TRIAL/run_inhib/submit_mcce4.sh"      "${TAG}_inhib"      t t t t  t    "-"         "$PRUNE"   $CPUS_DEFAULT
 
-# ---------------------------------------------------------------- runbook
-{
-    echo "# Trial$(printf '%02d' "$N") runbook"
-    echo
-    echo "Created: $(date '+%Y-%m-%d %H:%M:%S')"
-    echo "MONTE_SEED: $([[ $USE_EXPLICIT_SEED -eq 1 ]] && echo "$SEED (explicit)" || echo '-1 (time-based)')"
-    echo
-    echo '## Shared scripts (sha256 at setup time -- re-check before comparing trials)'
-    echo '```'
-    sha256sum "$TRIAL/0-prepare_run_apo.py" "$TRIAL/1-run_xts_corr.py" \
-              "$VARIANTS" "$INSTALL" "$PRUNE" \
-              "$SCRIPT_DIR/trial_config.sh" 2>/dev/null
-    echo '```'
-    cat <<BODY
 
-## Order of operations
 
-1. holo, steps 1-2 -- builds the conformers and the coordinate frame everything else inherits
-       cd run_holo
-       pro_batch kin-pdb -custom submit_mcce4_s1s2.sh -job-name holo_s1s2 -j 15
-   stepB here is make_holo_apo_step2_out.py: step3/step4 are off, so it runs last
-   and splits the finished step2_out.pdb into holo_step2_out.pdb (exact copy) and
-   apo_step2_out.pdb (inhibitor deleted).  Check each structure's stepB.log.
-
-2. Seed apo from holo (needs only holo's split step2 variants, so it can run as
-   soon as holo's steps 1-2 finish -- no need to wait for holo's step3/4).
-   Copies each whole run_holo/<PDBID> to run_apo/<PDBID> -- every file steps 1-2
-   left, plus both step2 variants -- replacing any that is already there, and
-   skipping holo's step2_out.pdb and any step3/4 products.  It then links
-   step2_out.pdb -> apo_step2_out.pdb, resetting the link if one exists.
-       ./0-prepare_run_apo.py
-       ./0-prepare_run_apo.py --dry-run   # inspect without writing
-       ./0-prepare_run_apo.py 1XKK 2ITZ   # re-seed just these
-
-3. holo, steps 3-4
-       cd run_holo
-       pro_batch kin-pdb -custom submit_mcce4_s3s4.sh -job-name holo_s3s4 -j 15
-
-4. apo, steps 3-4
-       cd run_apo
-       pro_batch kin-pdb -custom submit_mcce4_s3s4.sh -job-name apo_s3s4 -j 15
-
-5. inhib, steps 1-4 (independent: starts from cof-pdb, not carved from holo)
-       cd run_inhib
-       pro_batch cof-pdb -custom submit_mcce4.sh -job-name inhib -j 15
-
-6. entropy-correct all three trees, once their step4 has finished
-       cd $TRIAL
-       ./1-run_xts_corr.py                # xts_fort.38 + xts_sum_crg.out per structure
-       ./1-run_xts_corr.py --dry-run
-   Every published figure reads xts_sum_crg.out, and step4 does NOT produce it --
-   xts_corr.py is a separate pass.  Run it in all three trees or you would be
-   comparing corrected numbers against uncorrected ones.
-
-Steps 3 and 5 are independent of each other and of step 4; run them concurrently.
-Check progress with:  pro_batch --check -job-name <name>
-
-## The step2 chain
-
-The ligand is deleted once, in the holo job, and both trees then share the same
-two files.  Only step2_out.pdb differs between them:
-
-    run_holo/<ID>/step2_out.pdb          what steps 1-2 produced = holo
-         |  holo stepB: make_holo_apo_step2_out.py
-         +-> holo_step2_out.pdb          exact copy of it
-         +-> apo_step2_out.pdb           same file, inhibitor deleted
-
-    0-prepare_run_apo.py copies the whole directory across, then:
-
-    run_apo/<ID>/holo_step2_out.pdb      copied, for reference and the pair check
-    run_apo/<ID>/apo_step2_out.pdb       copied -- the apo structure
-    run_apo/<ID>/step2_out.pdb  ->  apo_step2_out.pdb   (relative symlink)
-
-Deleting the ligand is the ONLY difference between the two structures -- step1
-and step2 are off in run_apo, so the pocket is never repacked.  The code comes
-from pdb_inhibitor.lst keyed on the directory name and is matched on the
-residue-name columns 18-20, so other heteroatoms stay (2ITZ keeps its _CL).
-
-apo's stepB is install_apo_step2_out.py.  It rewrites nothing in the normal
-case: it checks that apo_step2_out.pdb holds none of this structure's inhibitor,
-that it is exactly holo_step2_out.pdb minus those lines, and that step2_out.pdb
-points at it -- resetting the link if it is missing, a plain file, or pointing
-elsewhere.  That check runs immediately before the ~8 minutes of step3 that
-depend on it.
-
-driver_mcce4.sh logs a stepB failure without aborting the run, so when the pair
-does not check out the script REMOVES step2_out.pdb.  step3 with step2="f" only
-runs when that file exists, so the structure ends without a pK.out and
-pro_batch --check flags it, instead of step3 computing something unvouched-for.
-Check stepB.log and mcce_timing.log.
-
-## Why stepC runs in all three
-
-prune_kin-inhib_head3.py does two independent edits: the inhibitor conformer
-pruning AND forcing ARG positive (neutral ARG -> FL=t).  apo has no inhibitor but
-does have ARG, so skipping stepC there would give holo and apo different ARG
-treatments and invalidate the comparison.  inhib has no ARG and gets only the
-inhibitor edits.  All three therefore run stepC="t".
-
-## Frames
-
-run_holo and run_apo share one coordinate frame: apo reuses holo's step2_out.pdb
-and its submit script has step1/step2 off, so nothing re-centers it.
-run_inhib is built from cof-pdb through its own step1/step2 and therefore sits in
-its own centered frame.  That is fine for pKa/charge -- it is an isolated-ligand
-reference state -- but do not compare its coordinates to holo's.
-BODY
-} > "$TRIAL/RUNBOOK.md"
-
+write_runbook
 echo -e "${GREEN}[GEN]${RESET} RUNBOOK.md"
 echo -e "\n${CYAN}Layout:${RESET}"
 find "$TRIAL" -maxdepth 2 -not -path '*/kin-pdb/*' -not -path '*/cof-pdb/*' | sed "s|$TRIAL|Trial$(printf '%02d' "$N")|" | sort

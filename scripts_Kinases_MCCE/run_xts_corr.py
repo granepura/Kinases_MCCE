@@ -49,12 +49,20 @@ Each structure's console output is kept next to the results as xts_corr.log.
 import argparse
 import os
 import re
+import shutil
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-TOOL = "/home/granepura/MCCE4-Tools/mcce4_tools/xts_corr.py"
+# Where xts_corr.py lives.  Searched in order so a fresh clone works without
+# editing anything: --tool, $XTS_CORR, next to the mcce executable, $MCCE_HOME,
+# then the usual MCCE4 install layouts.
+TOOL_CANDIDATES = (
+    "~/MCCE4-Tools/mcce4_tools/xts_corr.py",
+    "~/MCCE4/bin/xts_corr.py",
+    "~/MCCE4/MCCE_bin/xts_corr.py",
+)
 TREES = ("run_holo", "run_apo", "run_inhib")
 LEGACY = {"run_holo": "run_kin", "run_apo": "run_prot2", "run_inhib": "run_cof2"}
 SRC, HEAD3 = "fort.38", "head3.lst"
@@ -66,6 +74,42 @@ GREEN, YELLOW, CYAN, RED, RESET = (
     ("\033[0;32m", "\033[1;33m", "\033[0;36m", "\033[0;31m", "\033[0m")
     if sys.stdout.isatty() else ("", "", "", "", "")
 )
+
+
+def find_tool(explicit):
+    """Locate xts_corr.py, or exit with a message saying where we looked."""
+    tried = []
+    if explicit:
+        p = Path(explicit).expanduser()
+        return p if p.is_file() else sys.exit(f"ERROR: xts_corr.py not found at {p}")
+    env = os.environ.get("XTS_CORR")
+    if env:
+        p = Path(env).expanduser()
+        if p.is_file():
+            return p
+        tried.append(str(p))
+    hit = shutil.which("xts_corr.py")
+    if hit:
+        return Path(hit)
+    tried.append("xts_corr.py on $PATH")
+    mcce = shutil.which("mcce")
+    roots = []
+    if mcce:
+        roots += [Path(mcce).resolve().parent, Path(mcce).resolve().parent.parent / "bin"]
+    if os.environ.get("MCCE_HOME"):
+        roots.append(Path(os.environ["MCCE_HOME"]) / "bin")
+    for r in roots:
+        p = r / "xts_corr.py"
+        tried.append(str(p))
+        if p.is_file():
+            return p
+    for c in TOOL_CANDIDATES:
+        p = Path(c).expanduser()
+        tried.append(str(p))
+        if p.is_file():
+            return p
+    sys.exit("ERROR: xts_corr.py not found.  Pass --tool /path/to/xts_corr.py or "
+             "set $XTS_CORR.\nLooked in:\n  " + "\n  ".join(tried))
 
 
 def find_trial(explicit):
@@ -148,8 +192,9 @@ def main():
     ap.add_argument("-t", "--tree", action="append", dest="trees",
                     help=f"limit to one tree (repeatable); default: {', '.join(TREES)}")
     ap.add_argument("--trial", help="trial directory (default: this script's)")
-    ap.add_argument("--tool", default=os.environ.get("XTS_CORR", TOOL),
-                    help=f"path to xts_corr.py (default: {TOOL})")
+    ap.add_argument("--tool",
+                    help="path to xts_corr.py (default: found via $XTS_CORR, "
+                         "$PATH, the mcce install, then ~/MCCE4-Tools)")
     ap.add_argument("--all", action="store_true",
                     help="pass --all to xts_corr.py (correct amino acids too)")
     ap.add_argument("--force", action="store_true",
@@ -159,9 +204,7 @@ def main():
     args = ap.parse_args()
 
     trial = find_trial(args.trial)
-    tool = Path(args.tool).expanduser()
-    if not tool.is_file():
-        sys.exit(f"ERROR: xts_corr.py not found at {tool} (use --tool or $XTS_CORR).")
+    tool = find_tool(args.tool)
 
     wanted = args.trees or list(TREES)
     trees = []

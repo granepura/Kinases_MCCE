@@ -2,7 +2,7 @@
 
 # Parameter/Options for SLURM (Simple Linux Utility for Resource Management)
 #SBATCH --job-name=T02_holo_s3s4
-#SBATCH -o submit_mcce4.log
+#SBATCH -o submit_mcce4_s3s4.log
 #SBATCH -e submit_mcce4.err       # DO NOT change the extension of this file
 #SBATCH --nodes=1
 #SBATCH --mem=12G                 # Adjust memory if needed
@@ -26,7 +26,7 @@ input_pdb="prot.pdb"               # PATH to input PDB if you have soft-linked y
 USER_PARAM="./user_param"          # PATH to "user_param" directory containing additonal topology files (local files). This directory must be called "user_param" (default: MCCE_HOME/param)
 EXTRA="./user_param/extra.tpl"     # PATH to an different "extra.tpl" file (local file). (default: MCCE_HOME/extra.tpl)
 TMP="/tmp"                         # PATH to temporary directory for storing PBE calculation files during step3
-CPUS=1                             # Number of CPU cores to use for parallelizable MCCE calculations
+CPUS=5                             # Number of CPU cores to use for parallelizable MCCE calculations
 EPS=4                              # Protein dielectric constant
 
 # Step control flags

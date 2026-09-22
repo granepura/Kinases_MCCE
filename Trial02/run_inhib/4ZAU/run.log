@@ -1,0 +1,35 @@
+2026-09-22 10:24:43 - INFO: step3.py, <module>: Step 3. Energies calculation with PBE solver.
+2026-09-22 10:24:43 - INFO: step3.py, <module>: Calling new VDW....No Scaling Applied
+2026-09-22 10:24:43 - INFO: step3.py, <module>:    Process run time options & convert step2_out.pdb.
+2026-09-22 10:24:43 - INFO: step3.py, <module>:    Prepare input for PB solver.
+2026-09-22 10:24:43 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:24:43 - INFO: step3.py, <module>:    Set up parallel envrionment and run PB solver.
+2026-09-22 10:24:43 - INFO: step3.py, <module>:    Running PBE solver in 1 threads
+2026-09-22 10:24:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (1/13) YY301A1101_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY301A1101_001
+2026-09-22 10:24:46 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (2/13) YY3+1A1101_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY3+1A1101_002
+2026-09-22 10:24:49 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (3/13) YY3+2A1101_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY3+2A1101_003
+2026-09-22 10:24:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (4/13) YY3+3A1101_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY3+3A1101_004
+2026-09-22 10:24:54 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (5/13) YY3+3A1101_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY3+3A1101_005
+2026-09-22 10:24:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (6/13) YY3+3A1101_006 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY3+3A1101_006
+2026-09-22 10:24:59 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (7/13) YY3+4A1101_007 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY3+4A1101_007
+2026-09-22 10:25:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (8/13) YY3+4A1101_008 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY3+4A1101_008
+2026-09-22 10:25:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (9/13) YY3+4A1101_009 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY3+4A1101_009
+2026-09-22 10:25:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (10/13) YY3+aA1101_010 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY3+aA1101_010
+2026-09-22 10:25:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (11/13) YY3+aA1101_011 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY3+aA1101_011
+2026-09-22 10:25:13 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (12/13) YY3+aA1101_012 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY3+aA1101_012
+2026-09-22 10:25:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (13/13) YY3+bA1101_013 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4ZAU_YY3+bA1101_013
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Time needed: 34 seconds.
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Post-processing of electrostatic potential.
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Processing ele pairwise interaction...
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Making atom connectivity ...
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Calculating vdw ...
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Calculating torsion energy ...
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Composing head3.lst ...
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Composing opp files ...
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:18 - INFO: step3.py, <module>:    Total time for step3 is 34 seconds.

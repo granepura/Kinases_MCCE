@@ -1,0 +1,25 @@
+2026-09-22 10:25:59 - INFO: step3.py, <module>: Step 3. Energies calculation with PBE solver.
+2026-09-22 10:25:59 - INFO: step3.py, <module>: Calling new VDW....No Scaling Applied
+2026-09-22 10:25:59 - INFO: step3.py, <module>:    Process run time options & convert step2_out.pdb.
+2026-09-22 10:26:00 - INFO: step3.py, <module>:    Prepare input for PB solver.
+2026-09-22 10:26:00 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:26:00 - INFO: step3.py, <module>:    Set up parallel envrionment and run PB solver.
+2026-09-22 10:26:00 - INFO: step3.py, <module>:    Running PBE solver in 1 threads
+2026-09-22 10:26:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (1/3) EUI01A0503_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4LMN_EUI01A0503_001
+2026-09-22 10:26:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (2/3) EUI02A0503_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4LMN_EUI02A0503_002
+2026-09-22 10:26:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (3/3) EUI+1A0503_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_inhib.4LMN_EUI+1A0503_003
+2026-09-22 10:26:07 - INFO: step3.py, <module>:    Time needed: 7 seconds.
+2026-09-22 10:26:07 - INFO: step3.py, <module>:    Post-processing of electrostatic potential.
+2026-09-22 10:26:07 - INFO: step3.py, <module>:    Processing ele pairwise interaction...
+2026-09-22 10:26:07 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:26:07 - INFO: step3.py, <module>:    Making atom connectivity ...
+2026-09-22 10:26:07 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:26:07 - INFO: step3.py, <module>:    Calculating vdw ...
+2026-09-22 10:26:08 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:26:08 - INFO: step3.py, <module>:    Calculating torsion energy ...
+2026-09-22 10:26:08 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:26:08 - INFO: step3.py, <module>:    Composing head3.lst ...
+2026-09-22 10:26:08 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:26:08 - INFO: step3.py, <module>:    Composing opp files ...
+2026-09-22 10:26:08 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:26:08 - INFO: step3.py, <module>:    Total time for step3 is 8 seconds.

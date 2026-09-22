@@ -47,7 +47,7 @@ USAGE:
 ======
   Via submit_mcce4.sh (no arguments; cwd is the run directory):
       stepC="t"
-      STEPC="/data/home/granepura/5-Kinases/Kinases_MCCE/cof_tpl_GR/run_cof2/prune_kin-inhib_head3.py"
+      STEPC="<repo>/scripts_Kinases_MCCE/prune_kin-inhib_head3.py"
   The driver runs it as `$PYEX $STEPC > stepC.log`.
 
   Manually:

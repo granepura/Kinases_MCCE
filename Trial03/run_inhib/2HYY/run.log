@@ -1,0 +1,27 @@
+2026-09-22 10:25:42 - INFO: step3.py, <module>: Step 3. Energies calculation with PBE solver.
+2026-09-22 10:25:42 - INFO: step3.py, <module>: Calling new VDW....No Scaling Applied
+2026-09-22 10:25:42 - INFO: step3.py, <module>:    Process run time options & convert step2_out.pdb.
+2026-09-22 10:25:42 - INFO: step3.py, <module>:    Prepare input for PB solver.
+2026-09-22 10:25:42 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:42 - INFO: step3.py, <module>:    Set up parallel envrionment and run PB solver.
+2026-09-22 10:25:42 - INFO: step3.py, <module>:    Running PBE solver in 1 threads
+2026-09-22 10:25:42 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (1/5) STI+1A0600_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_inhib.2HYY_STI+1A0600_001
+2026-09-22 10:25:44 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (2/5) STI+2A0600_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_inhib.2HYY_STI+2A0600_002
+2026-09-22 10:25:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (3/5) STI01A0600_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_inhib.2HYY_STI01A0600_003
+2026-09-22 10:25:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (4/5) STI+aA0600_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_inhib.2HYY_STI+aA0600_004
+2026-09-22 10:25:52 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (5/5) STI+bA0600_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_inhib.2HYY_STI+bA0600_005
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Time needed: 13 seconds.
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Post-processing of electrostatic potential.
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Processing ele pairwise interaction...
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Making atom connectivity ...
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Calculating vdw ...
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Calculating torsion energy ...
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Composing head3.lst ...
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Composing opp files ...
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 10:25:55 - INFO: step3.py, <module>:    Total time for step3 is 13 seconds.

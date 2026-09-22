@@ -1,98 +1,90 @@
 # Trial02 runbook
 
-Created: 2026-09-22 06:21:43
+Written: 2026-09-22 10:16:58
 MONTE_SEED: 1002 (explicit)
 
-## Shared scripts (sha256 at setup time -- re-check before comparing trials)
-```
-d6b540a22d945744fb738e81e9123a1eccde634e9117b16e9d5527a7cd5b21e9  /data/home/granepura/5-Kinases/Kinases_MCCE/Trial02/1-prepare_run_apo.py
-a5375382a8c4a95b0ad22198ab5795d2a041ae524f6df9b0d67101feeacf5297  /data/home/granepura/5-Kinases/Kinases_MCCE/scripts_Kinases_MCCE/make_holo_apo_step2_out.py
-0f8759a3df86fb8dab62fd89240706eb6d4ae70ea978555dd2c509ce1af3f684  /data/home/granepura/5-Kinases/Kinases_MCCE/scripts_Kinases_MCCE/install_apo_step2_out.py
-3fe26e3b6ae1414d71702e2f4266fdca95285ac19fbdea76c018a56b4d91dfa1  /data/home/granepura/5-Kinases/Kinases_MCCE/scripts_Kinases_MCCE/prune_kin-inhib_head3.py
-90bfc2c015ab74f4f51672ed0abe537c8ab016692565b1e2d06d9fdf655dc068  /home/granepura/5-Kinases/Kinases_MCCE/scripts_Kinases_MCCE/trial_config.sh
-```
+Every trial is built and run the same way -- only the seed and the job names
+differ.  The numbered scripts sit here at the trial root and work the rest out
+for themselves; the pro_batch launches are run from inside each run directory.
+Invariants and the reasoning behind them are in ../CLAUDE.md.
 
 ## Order of operations
 
-1. holo, steps 1-2 -- builds the conformers and the coordinate frame everything else inherits
-       cd run_holo
-       pro_batch kin-pdb -custom submit_mcce4_s1s2.sh -job-name holo_s1s2 -j 15
-   stepB here is make_holo_apo_step2_out.py: step3/step4 are off, so it runs last
-   and splits the finished step2_out.pdb into holo_step2_out.pdb (exact copy) and
-   apo_step2_out.pdb (inhibitor deleted).  Check each structure's stepB.log.
+Job names match the #SBATCH --job-name in each submit script so a trial's jobs are distinguishable in squeue.
+--skip-prerun is used throughout: pro_batch's pre-run check is not needed here,
+the PDBs are already curated.
 
-2. Seed apo from holo (needs only holo's step2_out.pdb, so it can run as soon as
-   holo's steps 1-2 finish -- no need to wait for holo's step3/4).  Copies each
-   whole run_holo/<PDBID> to run_apo/<PDBID> -- every file steps 1-2 left, plus
-   both step2 variants -- replacing any that is already there, and skipping
-   holo's step2_out.pdb and any step3/4 products.  It then links
-   step2_out.pdb -> apo_step2_out.pdb, resetting the link if one exists.
-       cd /data/home/granepura/5-Kinases/Kinases_MCCE/Trial02
-       ./1-prepare_run_apo.py
-       ./1-prepare_run_apo.py --dry-run   # inspect without writing
-       ./1-prepare_run_apo.py 1XKK 2ITZ   # re-seed just these
+To start a tree from scratch, clear it first (this deletes all results in it):
+       rm -rf 1* 2* 3* 4* 5* meta_bench pro_batch_* book.txt
 
-3. holo, steps 3-4
-       cd run_holo
-       pro_batch kin-pdb -custom submit_mcce4_s3s4.sh -job-name holo_s3s4 -j 15
-
-4. apo, steps 3-4
-       cd run_apo
-       pro_batch kin-pdb -custom submit_mcce4_s3s4.sh -job-name apo_s3s4 -j 15
-
-5. inhib, steps 1-4 (independent: starts from cof-pdb, not carved from holo)
+1. inhib, steps 1-4   (shortest; independent of holo/apo, so a good first check)
        cd run_inhib
-       pro_batch cof-pdb -custom submit_mcce4.sh -job-name inhib -j 15
+       pro_batch cof-pdb -custom submit_mcce4.sh -job-name T02_inhib --skip-prerun
+       cat */mcce_timing.log | grep STEP4 | wc -l        # 37 when done
 
-Steps 3 and 5 are independent of each other and of step 4; run them concurrently.
-Check progress with:  pro_batch --check -job-name <name>
+2. holo, steps 1-2
+       cd run_holo
+       pro_batch kin-pdb -custom submit_mcce4_s1s2.sh -job-name T02_holo_s1s2 --skip-prerun
+       cat */mcce_timing.log | grep STEP2 | wc -l        # 37 when done
+   stepB = make_holo_apo_step2_out.py: splits the finished step2_out.pdb into
+   holo_step2_out.pdb (exact copy) and apo_step2_out.pdb (inhibitor deleted).
 
-## The step2 chain
+3. seed run_apo from run_holo
+       ./0-prepare_run_apo.py                 # --dry-run | --keep | 1XKK 2ITZ
+   Copies each whole run_holo/<PDBID>, skipping holo's step2_out.pdb and any
+   step3/4 products, then links step2_out.pdb -> apo_step2_out.pdb.
+   Needs only step 2, so it can run while holo's step3/4 is still going.
 
-The ligand is deleted once, in the holo job, and both trees then share the same
-two files.  Only step2_out.pdb differs between them:
+4. holo, steps 3-4
+       cd run_holo
+       pro_batch kin-pdb -custom submit_mcce4_s3s4.sh -job-name T02_holo_s3s4 --skip-prerun
+       cat */mcce_timing.log | grep STEP4 | wc -l        # 37 when done
 
-    run_holo/<ID>/step2_out.pdb          what steps 1-2 produced = holo
-         |  holo stepB: make_holo_apo_step2_out.py
-         +-> holo_step2_out.pdb          exact copy of it
-         +-> apo_step2_out.pdb           same file, inhibitor deleted
+5. apo, steps 3-4
+       cd run_apo
+       pro_batch kin-pdb -custom submit_mcce4_s3s4.sh -job-name T02_apo_s3s4 --skip-prerun
+       cat */mcce_timing.log | grep STEP4 | wc -l        # 37 when done
+   stepB = install_apo_step2_out.py: re-checks the step2 pair and the link.
 
-    1-prepare_run_apo.py copies the whole directory across, then:
+   Steps 4 and 5 are independent of each other; run them concurrently.
+   Status:  pro_batch --check -job-name <name>     (r pending, c done, e error)
 
-    run_apo/<ID>/holo_step2_out.pdb      copied, for reference and the pair check
-    run_apo/<ID>/apo_step2_out.pdb       copied -- the apo structure
-    run_apo/<ID>/step2_out.pdb  ->  apo_step2_out.pdb   (relative symlink)
+6. entropy correction -- step4 does NOT do this
+       ./1-run_xts_corr.py                    # --dry-run | -t run_inhib | --force
+   Runs xts_corr.py in all three trees, producing xts_sum_crg.out (plus
+   xts_fort.38, entropy_correction.log).  Every figure reads xts_sum_crg.out, so
+   this must be done in all three trees or corrected numbers would be compared
+   against uncorrected ones.  It prints one line per structure and lists the
+   cause of any failure.
 
-Deleting the ligand is the ONLY difference between the two structures -- step1
-and step2 are off in run_apo, so the pocket is never repacked.  The code comes
-from pdb_inhibitor.lst keyed on the directory name and is matched on the
-residue-name columns 18-20, so other heteroatoms stay (2ITZ keeps its _CL).
+7. figures
+       ./2-plot_sumcrg_inhibitors_xts_Fig3.py    # inhibitor: bound vs in solution
+       ./3-plot_sumcrg_comparison_xts_Fig4A.py   # per residue: holo vs apo
+   Add --title to draw titles on the PNGs.  Both write PNGs and a CSV carrying
+   the trial name, into plots_Fig3_inhibitors_xts/ and
+   plots_Fig4A_holo_vs_apo_xts/.  They only read the runs; nothing is modified.
 
-apo's stepB is install_apo_step2_out.py.  It rewrites nothing in the normal
-case: it checks that apo_step2_out.pdb holds none of this structure's inhibitor,
-that it is exactly holo_step2_out.pdb minus those lines, and that step2_out.pdb
-points at it -- resetting the link if it is missing, a plain file, or pointing
-elsewhere.  That check runs immediately before the ~8 minutes of step3 that
-depend on it.
+## Checking one structure
 
-driver_mcce4.sh logs a stepB failure without aborting the run, so when the pair
-does not check out the script REMOVES step2_out.pdb.  step3 with step2="f" only
-runs when that file exists, so the structure ends without a pK.out and
-pro_batch --check flags it, instead of step3 computing something unvouched-for.
-Check stepB.log and mcce_timing.log.
+       cat run_holo/1XKK/mcce_timing.log     per-step wall time, success/failure
+       cat run_holo/1XKK/stepB.log           the holo/apo step2 split
+       cat run_apo/1XKK/stepB.log            the pair check + the step2_out link
+       cat run_holo/1XKK/stepC.log           the head3.lst edit
+       ls  run_holo/1XKK/pK.out              exists => step4 finished
 
-## Why stepC runs in all three
+## Provenance -- sha256 of the scripts this trial was set up with
+```
+b0bd5af5096f42443e47d6a800cf1e4ca31eb8676e983f522284529bf20053f0  Trial02/0-prepare_run_apo.py
+d6b540a22d945744fb738e81e9123a1eccde634e9117b16e9d5527a7cd5b21e9  Trial02/1-prepare_run_apo.py
+f84e4ee956556962d3871dcc75fc4c2801fb49a5eff24c488c3529f8efec4211  Trial02/1-run_xts_corr.py
+7f68dae8a59b8ad6d5f2bde0de08fb8579bff201583a5c76c07589820a6ec756  Trial02/2-plot_sumcrg_inhibitors_xts_Fig3.py
+39de2252d15ceb296c82a74d262c38aa85c9deb3e8e38c0558428ed27bdb8bf5  Trial02/3-plot_sumcrg_comparison_xts_Fig4A.py
+9c194507b76496d0ce1fb459c58c6a472eb57c77d91037bdece8e8c22a0a7221  scripts_Kinases_MCCE/make_holo_apo_step2_out.py
+aaa5edb2e42dd35390d57a0abd7f3d1919a2e8d2c472e6164c574083a2461667  scripts_Kinases_MCCE/install_apo_step2_out.py
+ea0b66ebc7e127eeca4c1ba2b26787d527e98e903cef1d4fd290dd8ebc1a9489  scripts_Kinases_MCCE/prune_kin-inhib_head3.py
+2078a22d08fed503785d3e384a6981105ac4bb87cef83143ea473a2869eca4fa  scripts_Kinases_MCCE/trial_config.sh
+```
 
-prune_kin-inhib_head3.py does two independent edits: the inhibitor conformer
-pruning AND forcing ARG positive (neutral ARG -> FL=t).  apo has no inhibitor but
-does have ARG, so skipping stepC there would give holo and apo different ARG
-treatments and invalidate the comparison.  inhib has no ARG and gets only the
-inhibitor edits.  All three therefore run stepC="t".
-
-## Frames
-
-run_holo and run_apo share one coordinate frame: apo reuses holo's step2_out.pdb
-and its submit script has step1/step2 off, so nothing re-centers it.
-run_inhib is built from cof-pdb through its own step1/step2 and therefore sits in
-its own centered frame.  That is fine for pKa/charge -- it is an isolated-ligand
-reference state -- but do not compare its coordinates to holo's.
+Re-check these before comparing trials: the canonical scripts in
+scripts_Kinases_MCCE/ change over time, and a trial's copies are the
+record of what it actually ran.

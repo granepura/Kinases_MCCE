@@ -51,7 +51,7 @@ USAGE:
 ======
   Via submit_mcce4_s3s4.sh in run_apo (no arguments; cwd is the run directory):
       stepB="t"
-      STEPB="/data/home/granepura/5-Kinases/Kinases_MCCE/scripts_Kinases_MCCE/install_apo_step2_out.py"
+      STEPB="<repo>/scripts_Kinases_MCCE/install_apo_step2_out.py"
   The driver runs it as `$PYEX $STEPB > stepB.log`.
 
   Manually:

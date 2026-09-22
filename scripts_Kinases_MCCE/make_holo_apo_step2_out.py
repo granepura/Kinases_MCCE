@@ -57,7 +57,7 @@ USAGE:
 ======
   Via submit_mcce4_s1s2.sh (no arguments; cwd is the run directory):
       stepB="t"
-      STEPB="/data/home/granepura/5-Kinases/Kinases_MCCE/scripts_Kinases_MCCE/make_holo_apo_step2_out.py"
+      STEPB="<repo>/scripts_Kinases_MCCE/make_holo_apo_step2_out.py"
 
   Manually:
       ./make_holo_apo_step2_out.py                # split ./step2_out.pdb

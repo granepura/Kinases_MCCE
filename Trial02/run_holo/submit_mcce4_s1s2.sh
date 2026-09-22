@@ -2,7 +2,7 @@
 
 # Parameter/Options for SLURM (Simple Linux Utility for Resource Management)
 #SBATCH --job-name=T02_holo_s1s2
-#SBATCH -o submit_mcce4.log
+#SBATCH -o submit_mcce4_s1s2.log
 #SBATCH -e submit_mcce4.err       # DO NOT change the extension of this file
 #SBATCH --nodes=1
 #SBATCH --mem=12G                 # Adjust memory if needed

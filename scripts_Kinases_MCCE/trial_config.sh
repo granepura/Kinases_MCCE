@@ -2,8 +2,10 @@
 # Shared configuration for the kinase MCCE trials.
 # Sourced by setup_trial.sh and derive_apo.sh.  Edit here, not in the scripts.
 
-ROOT="/data/home/granepura/5-Kinases/Kinases_MCCE"
-SCRIPTS="$ROOT/scripts_Kinases_MCCE"
+# Derived from this file's own location, so the repo works wherever it is
+# cloned.  Override with KINASES_ROOT=... if you relocate scripts_Kinases_MCCE.
+SCRIPTS="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="${KINASES_ROOT:-$(cd "$SCRIPTS/.." && pwd)}"
 
 # The canonical stepC script.  submit_mcce4*.sh points STEPC at THIS path in
 # every trial, so all trials share one implementation instead of drifting copies.
@@ -24,11 +26,30 @@ PREPARE="$SCRIPTS/prepare_run_apo.py"
 # into each trial as 1-run_xts_corr.py.
 XTSRUN="$SCRIPTS/run_xts_corr.py"
 
-# Masters copied into a trial at setup (read-only sources, never run in place)
-MASTER_KIN_PDB="$ROOT/cof_tpl_GR/run_kin/kin-pdb"        # holo PDBs        (37)
-MASTER_COF_PDB="$ROOT/cof_tpl_GR/run_cof2/cof-pdb"       # ligand-only PDBs (37)
-MASTER_INHIB_LST="$ROOT/cof_tpl_GR/pdb_inhibitor.lst"    # PDB -> inhibitor code
-MASTER_SUBMIT_TPL="$ROOT/cof_tpl_GR/run_kin/submit_mcce4_s1s2.sh"  # SBATCH/env template
+# Figure scripts, copied into each trial as 2- and 3-.  They read
+# xts_sum_crg.out and write per-trial PNGs + CSVs; they never touch the runs.
+FIG3="$SCRIPTS/plot_sumcrg_inhibitors_xts_Fig3.py"
+FIG4A="$SCRIPTS/plot_sumcrg_comparison_xts_Fig4A.py"
+
+# CPUs for step3's PBE solver.  Only the step3-4 scripts benefit -- step1/2 and
+# the tiny ligand-only runs are single-threaded anyway.
+CPUS_S34=5
+CPUS_DEFAULT=1
+
+# Masters at the repo root, shared by every trial (read-only sources, never run
+# in place).  They used to live in cof_tpl_GR, which has been removed.
+MASTER_KIN_PDB="$ROOT/kin-pdb"            # holo PDBs        (37)
+MASTER_COF_PDB="$ROOT/cof-pdb"            # ligand-only PDBs (37)
+
+# One list for all trials: symlinked into each trial rather than copied, so a
+# change to the kinase/inhibitor mapping cannot leave trials disagreeing.
+MASTER_INHIB_LST="$ROOT/pdb_inhibitor.lst"   # PDB -> inhibitor code -> kinase
+
+# SBATCH/env template, kept in the repo so a fresh clone can scaffold a trial
+# without depending on an existing one.  It is Trial01's step1-2 script with the
+# job name, seed, CPUS and hooks neutralised; gen_submit patches all of those
+# per output script.
+MASTER_SUBMIT_TPL="$SCRIPTS/submit_mcce4_template.sh"
 
 # MCCE step commands.  $PYEX/$MCBIN/$EPS/$CPUS/$TMP are expanded inside the
 # submit script at run time, so they stay single-quoted here.
