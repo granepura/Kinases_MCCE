@@ -1,6 +1,6 @@
 # Fig4A (per-residue charge, holo vs apo): how the statistics were computed
 
-Written: 2026-09-22 13:05:15
+Written: 2026-09-22 13:11:05
 Script : plot_trials_comparison_xts_Fig4A.py
 
 ## Replicates
