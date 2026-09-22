@@ -521,9 +521,7 @@ def sheet_si_table2(wb, conf, index, trials, n):
                     f"STDEV({rng(5 + n, src)})/SQRT(COUNT({rng(5 + n, src)})),0)")
                 for c in range(1, len(head) + 1):
                     ws.cell(i, c).font = F_BODY
-                    if c in (6, 7):
-                        ws.cell(i, c).number_format = "0.00000"
-                    elif c >= 4:
+                    if c >= 4:                       # every numeric column
                         ws.cell(i, c).number_format = "0.000"
                 i += 1
             last = i - 1
@@ -547,9 +545,7 @@ def sheet_si_table2(wb, conf, index, trials, n):
             for rr in (i, i + 1):
                 for c in range(1, len(head) + 1):
                     ws.cell(rr, c).font = F_BOLD
-                    if c in (6, 7):
-                        ws.cell(rr, c).number_format = "0.00000"
-                    elif c >= 4:
+                    if c >= 4:
                         ws.cell(rr, c).number_format = "0.000"
             i += 3
     note = ws.cell(i, 1)
@@ -563,8 +559,7 @@ def sheet_si_table2(wb, conf, index, trials, n):
         ws.column_dimensions[c].width = w
     for c in range(5, len(head) + 1):
         ws.column_dimensions[get_column_letter(c)].width = 10
-    for c in ("F", "G"):
-        ws.column_dimensions[c].width = 15
+    ws.column_dimensions["F"].width = 15      # "Boltzmann Factor" header is the widest
     ws.freeze_panes = f"A{FIRST_DATA}"
 
 
@@ -843,7 +838,7 @@ def main():
                     if cell.font is not F_BOLD:
                         cell.font = F_BODY
                     if c >= 5:
-                        cell.number_format = "0.00000" if c in (7, 8) else "0.000"
+                        cell.number_format = "0.000"
             for c, w in zip("ABCD", (10, 14, 9, 11)):
                 cs2.column_dimensions[c].width = w
             for c in range(5, 13):
