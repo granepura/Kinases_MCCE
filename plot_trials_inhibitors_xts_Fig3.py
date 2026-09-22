@@ -22,59 +22,44 @@ import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
 from matplotlib.patches import Patch
 
-# === Config (trial-aware) ===
-# The trial is this script's own directory, so TrialNN/2-...py needs no paths.
-# Every output carries the trial name so figures and CSVs stay traceable once
-# they are copied out of the trial.
+# === Config (across trials) ===
+# Aggregates the per-trial Fig3 CSVs written by TrialNN/2-plot_..._Fig3.py.
+# Each point is one PDB's inhibitor: x = charge in solution (run_inhib),
+# y = charge bound (run_holo), averaged over the trials, with error bars.
 import argparse
+import glob
+import statistics as _st
+from collections import defaultdict
 
 _ap = argparse.ArgumentParser(
-    description="Fig3: inhibitor charge, protein-bound (run_holo) vs in solution "
-                "(run_inhib), for one trial.")
-_ap.add_argument("--trial", help="trial directory (default: this script's directory)")
-_ap.add_argument("--x", default="run_inhib", help="x-axis tree (default: run_inhib)")
-_ap.add_argument("--y", default="run_holo", help="y-axis tree (default: run_holo)")
+    description="Fig3 across trials: mean inhibitor charge with error bars from "
+                "the replicate trials.")
+_ap.add_argument("--root", help="directory holding Trial*/ (default: this script's)")
+_ap.add_argument("--glob", default="Trial*", help="which trials to include (default: Trial*)")
+_ap.add_argument("--err", choices=["sem", "sd", "range"], default="sem",
+                 help="error bars: sem = SD/sqrt(n) on the mean (default), "
+                      "sd = spread of trials, range = min..max")
 _ap.add_argument("--threshold", type=float, default=0.15,
                  help="outlier threshold on |y-x| (default: 0.15)")
 _ap.add_argument("--title", action="store_true",
-                 help="draw the figure title on the PNGs (default: off, so the "
-                      "caption can supply it in the manuscript)")
+                 help="draw the figure title on the PNGs (default: off)")
 _args = _ap.parse_args()
 
-TRIAL = os.path.abspath(_args.trial) if _args.trial \
-        else os.path.dirname(os.path.abspath(__file__))
-TRIAL_NAME = os.path.basename(TRIAL.rstrip("/"))
+ROOT = os.path.abspath(_args.root) if _args.root \
+       else os.path.dirname(os.path.abspath(__file__))
+LABEL = "Trials"
 
-_LEGACY = {"run_holo": "run_kin", "run_apo": "run_prot2", "run_inhib": "run_cof2"}
-
-def _tree(name):
-    """
-    Accept the current tree names, falling back to the legacy ones on disk:
-    run_holo was run_kin, run_apo was run_prot2, run_inhib was run_cof2.
-    Returns (path, name_on_disk) so a legacy directory can be reported.
-    """
-    for n in (name, _LEGACY.get(name, name)):
-        p = os.path.join(TRIAL, n)
-        if os.path.isdir(p):
-            return p, n
-    return os.path.join(TRIAL, name), name
-
-dir1, _disk1 = _tree(_args.x)
-dir2, _disk2 = _tree(_args.y)
-lst_file = os.path.join(TRIAL, "pdb_inhibitor.lst")
-plot_dir = os.path.join(TRIAL, f"plots_Fig3_inhibitors_xts")
-log_file = os.path.join(plot_dir, f"{TRIAL_NAME}_Fig3_inhibitors.log")
-
-# Outlier threshold: points with |y-x| > threshold are outliers
+plot_dir = os.path.join(ROOT, "plots_Trials_Fig3_inhibitors_xts")
+log_file = os.path.join(plot_dir, f"{LABEL}_Fig3_inhibitors.log")
 outlier_threshold = _args.threshold
 
 os.makedirs(plot_dir, exist_ok=True)
-fig_path = os.path.join(plot_dir, f"{TRIAL_NAME}_inhibitors_all_runs.png")
-csv_path = os.path.join(plot_dir, f"{TRIAL_NAME}_inhibitors_all_runs.csv")
+fig_path = os.path.join(plot_dir, f"{LABEL}_inhibitors_all_runs.png")
+csv_path = os.path.join(plot_dir, f"{LABEL}_inhibitors_all_runs.csv")
 
-# Axis labels
-x_label = _args.x   # the CURRENT name, even when the data sits in a legacy directory
-y_label = _args.y   # the CURRENT name, even when the data sits in a legacy directory
+x_label = "run_inhib"
+y_label = "run_holo"
+lst_file = os.path.join(ROOT, "pdb_inhibitor.lst")
 
 # === Helper function to print and log simultaneously ===
 log_handle = None
@@ -89,16 +74,12 @@ def print_log(message=""):
 # === Start Logging ===
 log_handle = open(log_file, "w")
 print_log("="*80)
-print_log(f"Fig3  inhibitor charge  |  TRIAL: {TRIAL_NAME}")
+print_log(f"Fig3 ACROSS TRIALS  |  mean +/- {_args.err.upper()}")
 print_log("="*80)
-print_log(f"  trial   : {TRIAL}")
-print_log(f"  x ({os.path.basename(dir1)}) : {dir1}")
-print_log(f"  y ({os.path.basename(dir2)}) : {dir2}")
+print_log(f"  root    : {ROOT}")
+print_log(f"  x       : {x_label} (inhibitor in solution)")
+print_log(f"  y       : {y_label} (inhibitor bound)")
 print_log(f"  outputs : {plot_dir}")
-for _want, _got in ((_args.x, _disk1), (_args.y, _disk2)):
-    if _want != _got:
-        print_log(f"  NOTE    : reading legacy directory '{_got}/' as '{_want}' "
-                  f"(run_kin=run_holo, run_prot2=run_apo, run_cof2=run_inhib)")
 
 # === Load inhibitor mapping (COLUMN-BASED) ===
 inhibitor_map = {}
@@ -161,83 +142,86 @@ def spearman_rho(x, y):
         return np.nan
     return np.corrcoef(rx, ry)[0, 1]
 
-# === Collect data with verbose output ===
+# === Collect the per-trial CSVs and average them ===
 print_log()
 print_log("="*80)
-print_log("PROCESSING PDB DIRECTORIES")
+print_log("READING PER-TRIAL Fig3 CSVs")
 print_log("="*80)
 print_log()
 
-points = []  # (x, y, pdb, res, inhibitor)
-stats = {
-    'total': len(inhibitor_map),
-    'files_found': 0,
-    'files_missing': 0,
-    'residues_found': 0,
-    'pdbs_with_data': 0,
-    'pdbs_without_data': 0
-}
+csv_glob = os.path.join(ROOT, _args.glob,
+                        "plots_Fig3_inhibitors_xts", "*_inhibitors_all_runs.csv")
+trial_files = sorted(glob.glob(csv_glob))
+if not trial_files:
+    sys.exit(f"ERROR: no per-trial CSVs matched {csv_glob}\n"
+             f"       Run TrialNN/2-plot_sumcrg_inhibitors_xts_Fig3.py first.")
 
-for idx, (pdb, (inhibitor, icode)) in enumerate(sorted(inhibitor_map.items()), 1):
-    print_log(f"[{idx:2d}/{len(inhibitor_map)}] {pdb:<25s} │ {inhibitor:<15s} │ Code: {icode}")
+# (pdb, residue, inhibitor) -> {trial: (x, y)}
+per_point = defaultdict(dict)
+for f in trial_files:
+    n = 0
+    with open(f, newline="") as fh:
+        for r in csv.DictReader(fh):
+            per_point[(r["pdb"], r["residue"], r["inhibitor"])][r["trial"]] = (
+                float(r["x(run_inhib)"]), float(r["y(run_holo)"]))
+            n += 1
+    print_log(f"  {os.path.relpath(f, ROOT)}  ->  {n} points")
 
-    f1 = os.path.join(dir1, pdb, "xts_sum_crg.out")
-    f2 = os.path.join(dir2, pdb, "xts_sum_crg.out")
+trials = sorted({tr for v in per_point.values() for tr in v})
+print_log(f"\n  trials found: {', '.join(trials)}  (n = {len(trials)})")
+if len(trials) < 2:
+    print_log("  WARNING: fewer than 2 trials -- error bars will all be zero.")
 
-    # Check file existence
-    f1_exists = os.path.isfile(f1)
-    f2_exists = os.path.isfile(f2)
+def _stats(vals):
+    """mean, sd, sem, lo, hi for one quantity across trials."""
+    m = _st.fmean(vals)
+    sd = _st.stdev(vals) if len(vals) > 1 else 0.0
+    sem = sd / (len(vals) ** 0.5) if len(vals) > 1 else 0.0
+    return m, sd, sem, min(vals), max(vals)
 
-    if not f1_exists:
-        print_log(f"      ├─ ❌ Missing: {x_label}/xts_sum_crg.out")
-    if not f2_exists:
-        print_log(f"      ├─ ❌ Missing: {y_label}/xts_sum_crg.out")
+points = []          # (mean_x, mean_y, pdb, residue, inhibitor)  -- as per trial
+agg = {}             # pdb -> dict of statistics
+dropped = []
+print_log()
+print_log("="*80)
+print_log("AVERAGING")
+print_log("="*80)
+print_log()
 
-    if not (f1_exists and f2_exists):
-        stats['files_missing'] += 1
-        print_log(f"      └─ ⚠️  SKIPPED (files missing)")
-        print_log()
+for (pdb, res, inh), by_trial in sorted(per_point.items()):
+    if len(by_trial) != len(trials):
+        missing = sorted(set(trials) - set(by_trial))
+        print_log(f"  [SKIP]  {pdb:5s} {inh:<13s} missing from {', '.join(missing)}")
+        dropped.append(pdb)
         continue
+    xs = [by_trial[tr][0] for tr in trials]
+    ys = [by_trial[tr][1] for tr in trials]
+    ds = [y - x for x, y in zip(xs, ys)]          # paired within each trial
+    xm, xsd, xsem, xlo, xhi = _stats(xs)
+    ym, ysd, ysem, ylo, yhi = _stats(ys)
+    dm, dsd, dsem, dlo, dhi = _stats(ds)
+    points.append((xm, ym, pdb, res, inh))
+    agg[pdb] = dict(residue=res, inhibitor=inh, n=len(trials),
+                    x=xs, y=ys, d=ds,
+                    xm=xm, xsd=xsd, xsem=xsem, xlo=xlo, xhi=xhi,
+                    ym=ym, ysd=ysd, ysem=ysem, ylo=ylo, yhi=yhi,
+                    dm=dm, dsd=dsd, dsem=dsem, dlo=dlo, dhi=dhi)
+    flag = "  <-- varies" if (yhi - ylo) > 1e-9 or (xhi - xlo) > 1e-9 else ""
+    print_log(f"  {pdb:5s} {inh:<13s} x={xm:5.2f}+/-{xsem:.3f}   "
+              f"y={ym:5.2f}+/-{ysem:.3f}   d={dm:+.2f}+/-{dsem:.3f}{flag}")
 
-    stats['files_found'] += 1
+def _err(pdb, axis):
+    """The half-length of the error bar, per --err."""
+    a = agg[pdb]
+    if _args.err == "sd":
+        return a[f"{axis}sd"]
+    if _args.err == "range":
+        return (a[f"{axis}hi"] - a[f"{axis}lo"]) / 2.0
+    return a[f"{axis}sem"]
 
-    # Parse files
-    ch1, ch2 = parse_sum_crg(f1), parse_sum_crg(f2)
-    shared = set(ch1.keys()) & set(ch2.keys())
-
-    # Find matching residues
-    # sorted(): `shared` is a set, so unsorted iteration made the "first" match
-    # non-deterministic between runs.  3ZOS carries two Ponatinib copies
-    # (0LI+A1000_ buried, 0LI+A1004_ surface) and different trials were picking
-    # different ones.  Sorting fixes the choice; see the note in the log.
-    matches = sorted(((res, ch1[res], ch2[res]) for res in shared
-                      if res[:3] == icode), key=lambda m: m[0])
-
-    if matches:
-        stats['pdbs_with_data'] += 1
-        stats['residues_found'] += 1  # Count only 1 per PDB since we only plot 1 per PDB
-        print_log(f"      ├─ ✅ Found {len(matches)} residue(s) matching '{icode}':")
-        for res, val1, val2 in matches:
-            print_log(f"      │    • {res}: {x_label}={val1:.4f}, {y_label}={val2:.4f}")
-        
-        # Only use the FIRST matching residue per PDB for plotting
-        first_res, first_val1, first_val2 = matches[0]
-        points.append((first_val1, first_val2, pdb, first_res, inhibitor))
-        
-        if len(matches) > 1:
-            print_log(f"      │    ⚠️  Multiple matches found - using first residue: {first_res}")
-        
-        print_log(f"      └─ ✓ Data collected (1 point per PDB)")
-        print_log()
-    else:
-        stats['pdbs_without_data'] += 1
-        print_log(f"      ├─ ⚠️  No residues matching '{icode}' in shared residues")
-        print_log(f"      │    Total shared residues: {len(shared)}")
-        # Show a sample of what residues ARE present
-        sample = sorted(list(shared))[:5]
-        print_log(f"      │    Sample residues: {', '.join(sample)}")
-        print_log(f"      └─ ⚠️  NO DATA COLLECTED")
-        print_log()
+stats = {'total': len(per_point), 'files_found': len(points),
+         'files_missing': len(dropped), 'residues_found': len(points),
+         'pdbs_with_data': len(points), 'pdbs_without_data': len(dropped)}
 
 # === Summary ===
 print_log("="*80)
@@ -313,6 +297,12 @@ for inh in unique_inhibitors:
             edge_color = 'black'
             edge_width = 0.8
         
+        _pdb = points[idx][2]
+        ax.errorbar([x_val], [y_val],
+                    xerr=[[_err(_pdb, "x")], [_err(_pdb, "x")]],
+                    yerr=[[_err(_pdb, "y")], [_err(_pdb, "y")]],
+                    fmt="none", ecolor="0.35", elinewidth=1.1, capsize=3,
+                    capthick=1.1, zorder=2)
         ax.scatter([x_val], [y_val],
                   color=inhibitor_colors[inh], s=80, edgecolor=edge_color, 
                   linewidth=edge_width, alpha=0.85, zorder=3)
@@ -372,7 +362,7 @@ stats_text = (
 ax.set_xlabel("Inhibitor Charge in Solution", fontweight="bold", fontsize=11)
 ax.set_ylabel("Inhibitor Bound Charge", fontweight="bold", fontsize=11)
 if _args.title:
-    ax.set_title(f"MCCE Inhibitor Charge (Protein Bound vs Solution) -- {TRIAL_NAME}",
+    ax.set_title(f"MCCE Inhibitor Charge (Protein Bound vs Solution) -- {LABEL}",
                  fontweight="bold", fontsize=12)
 
 # Grid styling (darker major gridlines)
@@ -420,10 +410,22 @@ print_log(f"   N = {N} (1 point per PDB), Fitted: {n_fitted}, Outliers: {n_outli
 # === Save combined table ===
 with open(csv_path, "w", newline="") as fh:
     w = csv.writer(fh)
-    w.writerow(["trial", "pdb", "residue", "inhibitor",
-                f"x({x_label})", f"y({y_label})", "diff(y-x)"])
+    w.writerow(["pdb", "residue", "inhibitor", "n_trials",
+                f"x_mean({x_label})", "x_sd", "x_sem", "x_min", "x_max",
+                f"y_mean({y_label})", "y_sd", "y_sem", "y_min", "y_max",
+                "diff_mean(y-x)", "diff_sd", "diff_sem", "diff_min", "diff_max",
+                "per_trial_x", "per_trial_y"])
     for x, y, pdb_u, res, inh in points:
-        w.writerow([TRIAL_NAME, pdb_u, res, inh, f"{x:.6f}", f"{y:.6f}", f"{y - x:.6f}"])
+        a = agg[pdb_u]
+        w.writerow([pdb_u, res, inh, a["n"],
+                    f"{a['xm']:.6f}", f"{a['xsd']:.6f}", f"{a['xsem']:.6f}",
+                    f"{a['xlo']:.6f}", f"{a['xhi']:.6f}",
+                    f"{a['ym']:.6f}", f"{a['ysd']:.6f}", f"{a['ysem']:.6f}",
+                    f"{a['ylo']:.6f}", f"{a['yhi']:.6f}",
+                    f"{a['dm']:.6f}", f"{a['dsd']:.6f}", f"{a['dsem']:.6f}",
+                    f"{a['dlo']:.6f}", f"{a['dhi']:.6f}",
+                    ";".join(f"{v:.2f}" for v in a["x"]),
+                    ";".join(f"{v:.2f}" for v in a["y"])])
 
 print_log(f"✅ Combined data saved: {csv_path}")
 
@@ -444,8 +446,8 @@ for inh in unique_inhibitors:
     
     # Safe filename
     safe_inh_name = inh.replace("/", "_").replace(" ", "_")
-    inh_fig_path = os.path.join(plot_dir, f"{TRIAL_NAME}_inhibitor_{safe_inh_name}.png")
-    inh_csv_path = os.path.join(plot_dir, f"{TRIAL_NAME}_inhibitor_{safe_inh_name}.csv")
+    inh_fig_path = os.path.join(plot_dir, f"{LABEL}_inhibitor_{safe_inh_name}.png")
+    inh_csv_path = os.path.join(plot_dir, f"{LABEL}_inhibitor_{safe_inh_name}.csv")
     
     # Extract data
     X_inh = np.array([p[0] for p in inh_points], dtype=float)
@@ -611,7 +613,7 @@ for inh in unique_inhibitors:
     ax.set_xlabel("Inhibitor Solution Charge", fontweight="bold", fontsize=16)
     ax.set_ylabel("Inhibitor Bound Charge",    fontweight="bold", fontsize=16)
     if _args.title:
-        ax.set_title(f"MCCE {inh} Charge (Protein Bound vs Solution) -- {TRIAL_NAME}",
+        ax.set_title(f"MCCE {inh} Charge (Protein Bound vs Solution) -- {LABEL}",
                      fontweight="bold", fontsize=12)
     
     # Grid
@@ -658,10 +660,15 @@ for inh in unique_inhibitors:
     # Save individual CSV
     with open(inh_csv_path, "w", newline="") as fh:
         w = csv.writer(fh)
-        w.writerow(["trial", "pdb", "residue", "inhibitor",
-                    f"x({x_label})", f"y({y_label})", "diff(y-x)"])
+        w.writerow(["pdb", "residue", "inhibitor", "n_trials",
+                    f"x_mean({x_label})", "x_sem", f"y_mean({y_label})", "y_sem",
+                    "diff_mean(y-x)", "diff_sem"])
         for x, y, pdb_u, res, inh_name in inh_points:
-            w.writerow([TRIAL_NAME, pdb_u, res, inh_name, f"{x:.6f}", f"{y:.6f}", f"{y - x:.6f}"])
+            a = agg[pdb_u]
+            w.writerow([pdb_u, res, inh_name, a["n"],
+                        f"{a['xm']:.6f}", f"{a['xsem']:.6f}",
+                        f"{a['ym']:.6f}", f"{a['ysem']:.6f}",
+                        f"{a['dm']:.6f}", f"{a['dsem']:.6f}"])
     
     print_log(f"    ✅ Plot: {inh_fig_path}")
     print_log(f"       N = {N_inh} (1 point per PDB), Fitted: {n_fitted_inh}, Outliers: {n_outliers_inh}")

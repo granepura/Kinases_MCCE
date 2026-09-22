@@ -1,0 +1,164 @@
+================================================================================
+Fig3 ACROSS TRIALS  |  mean +/- SEM
+================================================================================
+  root    : /data/home/granepura/5-Kinases/Kinases_MCCE
+  x       : run_inhib (inhibitor in solution)
+  y       : run_holo (inhibitor bound)
+  outputs : /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts
+================================================================================
+LOADED 37 PDB ENTRIES from /data/home/granepura/5-Kinases/Kinases_MCCE/pdb_inhibitor.lst
+================================================================================
+
+================================================================================
+READING PER-TRIAL Fig3 CSVs
+================================================================================
+
+  Trial01/plots_Fig3_inhibitors_xts/Trial01_inhibitors_all_runs.csv  ->  37 points
+  Trial02/plots_Fig3_inhibitors_xts/Trial02_inhibitors_all_runs.csv  ->  37 points
+  Trial03/plots_Fig3_inhibitors_xts/Trial03_inhibitors_all_runs.csv  ->  37 points
+
+  trials found: Trial01, Trial02, Trial03  (n = 3)
+
+================================================================================
+AVERAGING
+================================================================================
+
+  1XKK  Lapatinib     x= 0.95+/-0.000   y= 0.52+/-0.003   d=-0.43+/-0.003  <-- varies
+  2EUF  Palbociclib   x= 0.98+/-0.000   y= 1.00+/-0.000   d=+0.02+/-0.000
+  2HYY  Imatinib      x= 0.97+/-0.000   y= 1.00+/-0.000   d=+0.03+/-0.000
+  2ITO  Gefitinib     x= 0.30+/-0.000   y= 0.76+/-0.023   d=+0.46+/-0.023  <-- varies
+  2ITY  Gefitinib     x= 0.30+/-0.000   y= 0.33+/-0.015   d=+0.03+/-0.015  <-- varies
+  2ITZ  Gefitinib     x= 0.30+/-0.000   y= 0.65+/-0.007   d=+0.35+/-0.007  <-- varies
+  2WGJ  Crizotinib    x= 1.61+/-0.000   y= 0.97+/-0.003   d=-0.64+/-0.003  <-- varies
+  2XP2  Crizotinib    x= 1.61+/-0.000   y= 1.00+/-0.000   d=-0.61+/-0.000
+  2YFX  Crizotinib    x= 1.61+/-0.000   y= 1.00+/-0.000   d=-0.61+/-0.000
+  3AOX  Alectinib     x= 0.56+/-0.000   y= 0.83+/-0.037   d=+0.27+/-0.037  <-- varies
+  3CS9  Nilotinib     x= 0.09+/-0.000   y= 0.32+/-0.143   d=+0.23+/-0.143  <-- varies
+  3LXK  Tofacitinib   x= 0.03+/-0.000   y= 0.05+/-0.012   d=+0.02+/-0.012  <-- varies
+  3PYY  Imatinib      x= 0.97+/-0.000   y= 1.00+/-0.000   d=+0.03+/-0.000
+  3UE4  Bosutinib     x= 0.94+/-0.000   y= 0.96+/-0.003   d=+0.02+/-0.003  <-- varies
+  3UG2  Gefitinib     x= 0.30+/-0.000   y= 0.01+/-0.003   d=-0.29+/-0.003  <-- varies
+  3WZD  Lenvatinib    x= 0.00+/-0.000   y= 0.00+/-0.000   d=+0.00+/-0.000
+  3WZE  Sorafenib     x= 0.00+/-0.000   y= 0.00+/-0.000   d=+0.00+/-0.000
+  3ZOS  Ponatinib     x= 0.96+/-0.000   y= 1.00+/-0.000   d=+0.04+/-0.000
+  4AG8  Axitinib      x= 0.00+/-0.000   y= 0.00+/-0.000   d=+0.00+/-0.000
+  4AGC  Axitinib      x= 0.00+/-0.000   y= 0.00+/-0.000   d=+0.00+/-0.000
+  4AGD  Sunitinib     x= 0.99+/-0.000   y= 0.89+/-0.003   d=-0.10+/-0.003  <-- varies
+  4AN2  Cobimetinib   x= 0.99+/-0.000   y= 0.25+/-0.022   d=-0.74+/-0.022  <-- varies
+  4ANQ  Crizotinib    x= 1.61+/-0.000   y= 1.00+/-0.000   d=-0.61+/-0.000
+  4ANS  Crizotinib    x= 1.61+/-0.000   y= 1.00+/-0.000   d=-0.61+/-0.000
+  4ASD  Sorafenib     x= 0.00+/-0.000   y= 0.00+/-0.000   d=+0.00+/-0.000
+  4G5J  Afatinib      x= 0.99+/-0.000   y= 0.95+/-0.000   d=-0.04+/-0.000
+  4G5P  Afatinib      x= 0.99+/-0.000   y= 0.96+/-0.000   d=-0.03+/-0.000
+  4I22  Gefitinib     x= 0.30+/-0.000   y= 0.48+/-0.021   d=+0.18+/-0.021  <-- varies
+  4LMN  Cobimetinib   x= 0.99+/-0.000   y= 0.52+/-0.012   d=-0.47+/-0.012  <-- varies
+  4MKC  Ceritinib     x= 1.00+/-0.000   y= 1.00+/-0.000   d=+0.00+/-0.000
+  4WKQ  Gefitinib     x= 0.30+/-0.000   y= 0.47+/-0.009   d=+0.17+/-0.009  <-- varies
+  4ZAU  Osimertinib   x= 0.98+/-0.000   y= 0.99+/-0.000   d=+0.01+/-0.000
+  5AAA  Crizotinib    x= 1.61+/-0.000   y= 1.00+/-0.000   d=-0.61+/-0.000
+  5AAB  Crizotinib    x= 1.61+/-0.000   y= 1.00+/-0.000   d=-0.61+/-0.000
+  5AAC  Crizotinib    x= 1.61+/-0.000   y= 1.00+/-0.000   d=-0.61+/-0.000
+  5L2I  Palbociclib   x= 0.98+/-0.000   y= 0.99+/-0.000   d=+0.01+/-0.000
+  5MO4  Nilotinib     x= 0.09+/-0.000   y= 0.31+/-0.084   d=+0.22+/-0.084  <-- varies
+================================================================================
+SUMMARY
+================================================================================
+  Total PDB entries:           37
+  Files found (both dirs):     37
+  Files missing:               0
+  PDBs with matching data:     37
+  PDBs without matching data:  0
+  Total residue data points:   37
+  Points actually plotted:     37
+
+  Outlier threshold:           ±0.15 (15%)
+================================================================================
+
+
+================================================================================
+CREATING COMBINED PLOT (ALL INHIBITORS)
+================================================================================
+✅ Combined plot saved: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitors_all_runs.png
+   N = 37 (1 point per PDB), Fitted: 18, Outliers: 19
+✅ Combined data saved: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitors_all_runs.csv
+
+================================================================================
+CREATING INDIVIDUAL INHIBITOR PLOTS
+================================================================================
+  Plotting Afatinib (2 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Afatinib.png
+       N = 2 (1 point per PDB), Fitted: 2, Outliers: 0
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Afatinib.csv
+  Plotting Alectinib (1 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Alectinib.png
+       N = 1 (1 point per PDB), Fitted: 0, Outliers: 1
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Alectinib.csv
+  Plotting Axitinib (2 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Axitinib.png
+       N = 2 (1 point per PDB), Fitted: 2, Outliers: 0
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Axitinib.csv
+  Plotting Bosutinib (1 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Bosutinib.png
+       N = 1 (1 point per PDB), Fitted: 1, Outliers: 0
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Bosutinib.csv
+  Plotting Ceritinib (1 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Ceritinib.png
+       N = 1 (1 point per PDB), Fitted: 1, Outliers: 0
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Ceritinib.csv
+  Plotting Cobimetinib (2 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Cobimetinib.png
+       N = 2 (1 point per PDB), Fitted: 0, Outliers: 2
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Cobimetinib.csv
+  Plotting Crizotinib (8 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Crizotinib.png
+       N = 8 (1 point per PDB), Fitted: 0, Outliers: 8
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Crizotinib.csv
+  Plotting Gefitinib (6 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Gefitinib.png
+       N = 6 (1 point per PDB), Fitted: 1, Outliers: 5
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Gefitinib.csv
+  Plotting Imatinib (2 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Imatinib.png
+       N = 2 (1 point per PDB), Fitted: 2, Outliers: 0
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Imatinib.csv
+  Plotting Lapatinib (1 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Lapatinib.png
+       N = 1 (1 point per PDB), Fitted: 0, Outliers: 1
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Lapatinib.csv
+  Plotting Lenvatinib (1 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Lenvatinib.png
+       N = 1 (1 point per PDB), Fitted: 1, Outliers: 0
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Lenvatinib.csv
+  Plotting Nilotinib (2 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Nilotinib.png
+       N = 2 (1 point per PDB), Fitted: 0, Outliers: 2
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Nilotinib.csv
+  Plotting Osimertinib (1 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Osimertinib.png
+       N = 1 (1 point per PDB), Fitted: 1, Outliers: 0
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Osimertinib.csv
+  Plotting Palbociclib (2 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Palbociclib.png
+       N = 2 (1 point per PDB), Fitted: 2, Outliers: 0
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Palbociclib.csv
+  Plotting Ponatinib (1 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Ponatinib.png
+       N = 1 (1 point per PDB), Fitted: 1, Outliers: 0
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Ponatinib.csv
+  Plotting Sorafenib (2 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Sorafenib.png
+       N = 2 (1 point per PDB), Fitted: 2, Outliers: 0
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Sorafenib.csv
+  Plotting Sunitinib (1 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Sunitinib.png
+       N = 1 (1 point per PDB), Fitted: 1, Outliers: 0
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Sunitinib.csv
+  Plotting Tofacitinib (1 points)...
+    ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Tofacitinib.png
+       N = 1 (1 point per PDB), Fitted: 1, Outliers: 0
+    ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Tofacitinib.csv
+
+================================================================================
+ALL PLOTS COMPLETED
+================================================================================
+✅ Log saved: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_Fig3_inhibitors.log

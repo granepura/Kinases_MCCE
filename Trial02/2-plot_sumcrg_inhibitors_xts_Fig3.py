@@ -206,7 +206,12 @@ for idx, (pdb, (inhibitor, icode)) in enumerate(sorted(inhibitor_map.items()), 1
     shared = set(ch1.keys()) & set(ch2.keys())
 
     # Find matching residues
-    matches = [(res, ch1[res], ch2[res]) for res in shared if res[:3] == icode]
+    # sorted(): `shared` is a set, so unsorted iteration made the "first" match
+    # non-deterministic between runs.  3ZOS carries two Ponatinib copies
+    # (0LI+A1000_ buried, 0LI+A1004_ surface) and different trials were picking
+    # different ones.  Sorting fixes the choice; see the note in the log.
+    matches = sorted(((res, ch1[res], ch2[res]) for res in shared
+                      if res[:3] == icode), key=lambda m: m[0])
 
     if matches:
         stats['pdbs_with_data'] += 1
