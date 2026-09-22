@@ -54,6 +54,7 @@ with the numbers baked in, for previewing.
 
 import argparse
 import glob
+import math
 import os
 import re
 import statistics as st
@@ -439,7 +440,16 @@ def sheet_conf_raw(wb, conf, trials):
 
 
 def sheet_si_table2(wb, conf, index, trials, n):
-    """SI-Table2: ligand conformer populations, laid out like the original SI.3.Conf."""
+    """
+    SI-Table2: ligand conformer populations, in the column order of SI.3.Conf of
+    kinase_project-final-tables.xlsx --
+
+        conf type | charge | energy | Boltzmann Factor | Stat Mech | P(i) soln | P(i) bound
+
+    with the one difference that P(i) soln and P(i) bound are each a mean over
+    the trials plus its SEM.  energy / Boltzmann / Stat Mech are derived from the
+    mean P(i) soln, exactly as in the original.
+    """
     ws = wb.create_sheet("SI-Table2")
     ws["A1"] = "SI-Table2: ligand conformer populations at pH 7.4, mean of the trials"
     ws["A1"].font = F_BOLD
@@ -451,14 +461,16 @@ def sheet_si_table2(wb, conf, index, trials, n):
     ws["B3"] = RT_KCAL
     ws["B3"].font = F_BODY
     ws["B3"].number_format = "0.0000"
-    ws["C3"] = "energy = -RT·ln(P) ; Boltzmann = exp(-energy/RT) ; Stat Mech = Boltzmann / ΣBoltzmann"
+    ws["C3"] = ("energy = -RT·ln(P(i) soln) ; Boltzmann = exp(-energy/RT) ; "
+                "Stat Mech = Boltzmann / ΣBoltzmann")
     ws["C3"].font = F_NOTE
 
-    GROUPS = [("", 5), ("P(i) soln", 2), ("from P(i) soln", 3), ("P(i) bound", 2)]
+    GROUPS = [("", 4), ("from P(i) soln", 3), ("P(i) soln", 2), ("P(i) bound", 2)]
     group = [label for label, span in GROUPS for _ in range(span)]
-    head = ["PDBID", "Ligand", "Conf type", "charge", "# rot",
-            "mean", "± SEM", "energy", "Boltzmann Factor", "Stat Mech", "mean", "± SEM"]
-    assert len(group) == len(head)
+    head = ["PDBID", "Ligand", "Conf type",
+            "charge", "energy", "Boltzmann Factor", "Stat Mech",
+            "mean", "± SEM", "mean", "± SEM"]
+    assert len(group) == len(head), f"{len(group)} group labels vs {len(head)} columns"
     GROUP_ROW, HEAD_ROW, FIRST_DATA = 5, 6, 7      # row 4 stays blank
     for c, (g, h) in enumerate(zip(group, head), 1):
         ws.cell(GROUP_ROW, c).value = g
@@ -490,8 +502,8 @@ def sheet_si_table2(wb, conf, index, trials, n):
         ws.cell(i, 2).value = kinase
         ws.cell(i, 2).font = F_BOLD
         i += 1
-        for pdb in sorted(by_kinase[kinase],
-                          key=lambda x: (conf[x]["inhibitor"], x)):
+        # within a kinase, order by inhibitor then PDB, as Table 1 does
+        for pdb in sorted(by_kinase[kinase], key=lambda x: (conf[x]["inhibitor"], x)):
             rec = conf[pdb]
             first_row = i
             for ctype, src in index[pdb]:
@@ -499,61 +511,59 @@ def sheet_si_table2(wb, conf, index, trials, n):
                 ws.cell(i, 2).value = rec["inhibitor"]
                 ws.cell(i, 3).value = ctype
                 ws.cell(i, 4).value = f"='Per-Trial Conf'!$D{src}"
-                ws.cell(i, 5).value = f"=AVERAGE({rng(5 + 2 * n, src)})"
-                for col_out, first in ((6, 5), (11, 5 + n)):
-                    ws.cell(i, col_out).value = f"=AVERAGE({rng(first, src)})"
-                    ws.cell(i, col_out + 1).value = (
-                        f"=IF(COUNT({rng(first, src)})>1,"
-                        f"STDEV({rng(first, src)})/SQRT(COUNT({rng(first, src)})),0)")
+                ws.cell(i, 8).value = f"=AVERAGE({rng(5, src)})"
+                ws.cell(i, 9).value = (
+                    f"=IF(COUNT({rng(5, src)})>1,"
+                    f"STDEV({rng(5, src)})/SQRT(COUNT({rng(5, src)})),0)")
+                ws.cell(i, 10).value = f"=AVERAGE({rng(5 + n, src)})"
+                ws.cell(i, 11).value = (
+                    f"=IF(COUNT({rng(5 + n, src)})>1,"
+                    f"STDEV({rng(5 + n, src)})/SQRT(COUNT({rng(5 + n, src)})),0)")
                 for c in range(1, len(head) + 1):
                     ws.cell(i, c).font = F_BODY
-                    if c == 5:
-                        ws.cell(i, c).number_format = "0.0"
-                    elif c == 8:
-                        ws.cell(i, c).number_format = "0.000"
-                    elif c in (9, 10):
+                    if c in (6, 7):
                         ws.cell(i, c).number_format = "0.00000"
                     elif c >= 4:
                         ws.cell(i, c).number_format = "0.000"
                 i += 1
             last = i - 1
-            # energy / Boltzmann / Stat Mech, from the mean solution occupancy.
-            # A conformer with P rounded to 0.000 in xts_fort.38 has no defined
+            # energy / Boltzmann / Stat Mech from the mean solution occupancy.
+            # A conformer whose P rounds to 0.000 in xts_fort.38 has no defined
             # energy, so those cells stay blank rather than showing a fake value.
             for rr in range(first_row, last + 1):
-                ws.cell(rr, 8).value = f'=IF(F{rr}>0,-$B$3*LN(F{rr}),"")'
-                ws.cell(rr, 9).value = f'=IF(H{rr}="","",EXP(-H{rr}/$B$3))'
-                ws.cell(rr, 10).value = (
-                    f'=IF(I{rr}="","",I{rr}/SUM(I${first_row}:I${last}))')
+                ws.cell(rr, 5).value = f'=IF(H{rr}>0,-$B$3*LN(H{rr}),"")'
+                ws.cell(rr, 6).value = f'=IF(E{rr}="","",EXP(-E{rr}/$B$3))'
+                ws.cell(rr, 7).value = (
+                    f'=IF(F{rr}="","",F{rr}/SUM(F${first_row}:F${last}))')
             ws.cell(i, 3).value = "SUM"
-            ws.cell(i, 6).value = f"=SUM(F{first_row}:F{last})"
-            ws.cell(i, 9).value = f"=SUM(I{first_row}:I{last})"
-            ws.cell(i, 10).value = f"=SUM(J{first_row}:J{last})"
-            ws.cell(i, 11).value = f"=SUM(K{first_row}:K{last})"
+            for c in (6, 7, 8, 10):
+                L = get_column_letter(c)
+                ws.cell(i, c).value = f"=SUM({L}{first_row}:{L}{last})"
             ws.cell(i + 1, 3).value = "ensemble charge"
-            ws.cell(i + 1, 6).value = f"=SUMPRODUCT($D{first_row}:$D{last},F{first_row}:F{last})"
-            ws.cell(i + 1, 11).value = f"=SUMPRODUCT($D{first_row}:$D{last},K{first_row}:K{last})"
+            for c in (7, 8, 10):
+                L = get_column_letter(c)
+                ws.cell(i + 1, c).value = (
+                    f"=SUMPRODUCT($D{first_row}:$D{last},{L}{first_row}:{L}{last})")
             for rr in (i, i + 1):
                 for c in range(1, len(head) + 1):
                     ws.cell(rr, c).font = F_BOLD
-                    if c in (9, 10):
+                    if c in (6, 7):
                         ws.cell(rr, c).number_format = "0.00000"
                     elif c >= 4:
                         ws.cell(rr, c).number_format = "0.000"
             i += 3
     note = ws.cell(i, 1)
-    note.value = ("SUM should be 1.000 within rounding. energy/Boltzmann/Stat Mech are derived "
-                  "from the mean P(i) soln, reproducing the round trip in the original SI.3.Conf; "
-                  "a conformer whose occupancy rounds to 0.000 in xts_fort.38 has no defined "
-                  "energy and is left blank. 'ensemble charge' is Σ charge × P(i) — "
-                  "it reproduces the ligand charge in Table 1 (crg soln / crg bound) and is a "
-                  "check that the conformer populations and the residue charge agree.")
+    note.value = ("SUM should be 1.000 within rounding. 'ensemble charge' is Σ charge × P — "
+                  "computed from Stat Mech, from P(i) soln and from P(i) bound; the P(i) soln "
+                  "value reproduces the ligand charge in Table 1 (crg soln) and the P(i) bound "
+                  "value reproduces crg bound, so the conformer populations and the residue "
+                  "charges are checked against each other.")
     note.font = F_NOTE
-    for c, w in zip("ABCDE", (10, 14, 11, 9, 7)):
+    for c, w in zip("ABCD", (10, 14, 11, 9)):
         ws.column_dimensions[c].width = w
-    for c in range(6, len(head) + 1):
-        ws.column_dimensions[get_column_letter(c)].width = 9
-    for c in ("I", "J"):
+    for c in range(5, len(head) + 1):
+        ws.column_dimensions[get_column_letter(c)].width = 10
+    for c in ("F", "G"):
         ws.column_dimensions[c].width = 15
     ws.freeze_panes = f"A{FIRST_DATA}"
 
@@ -795,39 +805,49 @@ def main():
                     vs.cell(rr, c).number_format = "0.000" if c % 2 == 0 else "0.00"
         if conf:
             cs2 = vb.create_sheet("SI-Table2 values")
-            cs2.append(["PDBID", "Ligand", "Kinase", "Conf type", "charge", "# rot",
+            cs2.append(["PDBID", "Ligand", "Kinase", "Conf type", "charge",
+                        "energy", "Boltzmann Factor", "Stat Mech",
                         "P(i) soln", "sem", "P(i) bound", "sem"])
-            for c in range(1, 11):
+            for c in range(1, 13):
                 cs2.cell(1, c).font = F_BOLD
-            for pdb in sorted(conf):
+            for pdb in sorted(conf, key=lambda x: (conf[x]["kinase"],
+                                                   conf[x]["inhibitor"], x)):
                 rec = conf[pdb]
-                ens_s = ens_b = 0.0
+                block, ens_s, ens_b, ens_sm = [], 0.0, 0.0, 0.0
                 for ctype in sorted(rec["types"]):
                     d = rec["types"][ctype]
                     sm, sse = mean_sem([d["soln"].get(t) for t in trials])
                     bm, bse = mean_sem([d["bound"].get(t) for t in trials])
-                    nr, _ = mean_sem([d["nrot"].get(t) for t in trials])
                     crg = d["charge"]
-                    cs2.append([pdb, rec["inhibitor"], rec["kinase"], ctype, crg, nr,
-                                sm, sse, bm, bse])
+                    energy = (-RT_KCAL * math.log(sm)) if sm else None
+                    boltz = math.exp(-energy / RT_KCAL) if energy is not None else None
+                    block.append([pdb, rec["inhibitor"], rec["kinase"], ctype, crg,
+                                  energy, boltz, None, sm, sse, bm, bse])
                     if crg is not None:
                         ens_s += crg * (sm or 0.0)
                         ens_b += crg * (bm or 0.0)
+                zsum = sum(r[6] for r in block if r[6] is not None)
+                for r in block:
+                    if r[6] is not None and zsum:
+                        r[7] = r[6] / zsum                      # Stat Mech
+                        if r[4] is not None:
+                            ens_sm += r[4] * r[7]
+                    cs2.append(r)
                 cs2.append([pdb, rec["inhibitor"], rec["kinase"], "ensemble charge",
-                            None, None, ens_s, None, ens_b, None])
-                for c in range(1, 11):
+                            None, None, None, ens_sm, ens_s, None, ens_b, None])
+                for c in range(1, 13):
                     cs2.cell(cs2.max_row, c).font = F_BOLD
             for rr in range(2, cs2.max_row + 1):
-                for c in range(1, 11):
+                for c in range(1, 13):
                     cell = cs2.cell(rr, c)
                     if cell.font is not F_BOLD:
                         cell.font = F_BODY
                     if c >= 5:
-                        cell.number_format = "0.0" if c == 6 else "0.000"
+                        cell.number_format = "0.00000" if c in (7, 8) else "0.000"
             for c, w in zip("ABCD", (10, 14, 9, 11)):
                 cs2.column_dimensions[c].width = w
-            for c in range(5, 11):
-                cs2.column_dimensions[get_column_letter(c)].width = 10
+            for c in range(5, 13):
+                cs2.column_dimensions[get_column_letter(c)].width = 11
 
         vb.save(vals)
         print(f"{GREEN}  wrote {os.path.relpath(vals, root)}{RESET}  (static values, "
