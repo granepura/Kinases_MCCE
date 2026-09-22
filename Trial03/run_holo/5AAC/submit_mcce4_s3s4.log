@@ -19,3 +19,18 @@ Final input PDB file: prot.pdb
 STEP1 SKIPPED (flag was f).
 STEP2 SKIPPED (flag was f).
 Running STEP3 ...
+STEP3 completed SUCCESSFULLY in 00h:08m:04s.
+Running custom stepC script "prune_kin-inhib_head3.py" (between STEP3 and STEP4)...
+prune_kin-inhib_head3.py completed SUCCESSFULLY in 00h:00m:00s.
+Running STEP4 ...
+STEP4 completed SUCCESSFULLY in 00h:00m:13s.
+Temporary PBE data will be stored in:                             /tmp
+Full path of the working directory is:                            /data/home/granepura/5-Kinases/Kinases_MCCE/Trial03/run_holo/5AAC
+Subdirectories matching this pattern will be removed from temp dir: home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.5AAC
+STEP_CLEAN: cleaning matching pbe_data folders in /tmp...
+STEP_CLEAN: no matching /tmp pbe_data folders found.
+Script complete.
+Total runtime: 00h:08m:17s
+Timing report written to mcce_timing.log
+
+>>> Caught termination signal. Running STEP_CLEAN before exiting...

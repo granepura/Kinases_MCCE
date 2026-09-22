@@ -6,10 +6,12 @@ USER_PARAM: N/A
 ====================================
 
 Optional Features Enabled:
+ - Custom Script After Step2 (stepB)
  - Custom Script After Step3 (stepC)
 ====================================
 
-Run started at: Tue Sep 22 11:38:38 AM UTC 2026
+Run started at: Tue Sep 22 11:48:02 AM UTC 2026
 STEP1 : skipped.      - Skipped (flag f): step not run.
 STEP2 : skipped.      - Skipped (flag f): step not run.
+STEPB : 00h:00m:00s   - Success: "install_apo_step2_out.py" executed.
 STEP3 : Running STEP3 ...

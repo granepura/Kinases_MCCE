@@ -12,4 +12,11 @@ Optional Features Enabled:
 Run started at: Tue Sep 22 11:38:38 AM UTC 2026
 STEP1 : skipped.      - Skipped (flag f): step not run.
 STEP2 : skipped.      - Skipped (flag f): step not run.
-STEP3 : Running STEP3 ...
+STEP3 : 00h:08m:06s   - Success: head3.lst and energies directory created.
+STEPC : 00h:00m:00s   - Success: "prune_kin-inhib_head3.py" executed.
+STEP4 : 00h:00m:14s   - Success: sum_crg.out created.
+STEP_CLEAN: skipped.  - No pbe_data dirs matching this run. (home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.1XKK)
+
+Run ended at: Tue Sep 22 11:46:58 AM UTC 2026
+Total script runtime: 00h:08m:20s
+STEP_CLEAN: skipped.  - No matching tmp dirs at cancel.
