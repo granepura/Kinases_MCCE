@@ -1,0 +1,23 @@
+============================================================
+MCCE4 SUBMIT SHELL JOB ENVIRONMENT (startup diagnostics)
+------------------------------------------------------------
+Date:             Tue Sep 22 12:19:46 PM UTC 2026
+Host:             aurora
+User:             granepura
+
+Apptainer:        /home/granepura/miniconda3/envs/mc4/bin//apptainer
+Config File:      /home/granepura/.apptainer/apptainer.conf
+MCCE_HOME:        /home/granepura/MCCE4
+MCBIN:            /home/granepura/MCCE4/bin
+Driver:           /home/granepura/MCCE4/bin/driver_mcce4.sh
+PYEX, PYENV:      /home/granepura/miniconda3/envs/mc4/bin/python3
+PATH:             /home/granepura/miniconda3/envs/mc4/bin/:/home/granepura/MCCE4/bin:/home/granepura/MCCE4/MCCE_bin:/home/granepura/miniconda3/envs/mc4/bin:/home/granepura/.local/bin:/home/granepura/Marwell/Marwell_scripts:/home/granepura/MCCE4-Tools/mcce4_tools:/home/granepura/.local/bin:/home/granepura/miniconda3/envs/mc4/bin:/home/granepura/miniconda3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+============================================================
+
+Skipping protein centering. Using original file: prot.pdb
+Final input PDB file: prot.pdb
+STEP1 SKIPPED (flag was f).
+STEP2 SKIPPED (flag was f).
+Running custom stepB script "install_apo_step2_out.py" (between STEP2 and STEP3)...
+install_apo_step2_out.py completed SUCCESSFULLY in 00h:00m:00s.
+Running STEP3 ...

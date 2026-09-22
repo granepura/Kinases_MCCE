@@ -6,19 +6,17 @@ USER_PARAM: N/A
 ====================================
 
 Optional Features Enabled:
- - Center Protein Structure (center)
- - Custom Script After Step2 (stepB)
+ - Custom Script After Step3 (stepC)
 ====================================
 
-Run started at: Tue Sep 22 10:36:30 AM UTC 2026
-CENTER: 00h:00m:00s   - Success: Structure centered to 'prot_center.pdb'.
-STEP1 : 00h:00m:00s   - Success: step1_out.pdb created.
-STEP2 : 00h:00m:25s   - Success: step2_out.pdb updated.
-STEPB : 00h:00m:00s   - Success: "make_holo_apo_step2_out.py" executed.
-STEP3 : skipped.      - Skipped (flag f): step not run.
-STEP4 : skipped.      - Skipped (flag f): step not run.
+Run started at: Tue Sep 22 12:11:38 PM UTC 2026
+STEP1 : skipped.      - Skipped (flag f): step not run.
+STEP2 : skipped.      - Skipped (flag f): step not run.
+STEP3 : 00h:07m:52s   - Success: head3.lst and energies directory created.
+STEPC : 00h:00m:00s   - Success: "prune_kin-inhib_head3.py" executed.
+STEP4 : 00h:00m:13s   - Success: sum_crg.out created.
 STEP_CLEAN: skipped.  - No pbe_data dirs matching this run. (home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.4ANS)
 
-Run ended at: Tue Sep 22 10:36:55 AM UTC 2026
-Total script runtime: 00h:00m:25s
+Run ended at: Tue Sep 22 12:19:43 PM UTC 2026
+Total script runtime: 00h:08m:05s
 STEP_CLEAN: skipped.  - No matching tmp dirs at cancel.

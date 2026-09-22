@@ -14,4 +14,11 @@ Run started at: Tue Sep 22 11:47:06 AM UTC 2026
 STEP1 : skipped.      - Skipped (flag f): step not run.
 STEP2 : skipped.      - Skipped (flag f): step not run.
 STEPB : 00h:00m:00s   - Success: "install_apo_step2_out.py" executed.
-STEP3 : Running STEP3 ...
+STEP3 : 00h:08m:50s   - Success: head3.lst and energies directory created.
+STEPC : 00h:00m:00s   - Success: "prune_kin-inhib_head3.py" executed.
+STEP4 : 00h:00m:21s   - Success: sum_crg.out created.
+STEP_CLEAN: skipped.  - No pbe_data dirs matching this run. (home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_apo.2ITZ)
+
+Run ended at: Tue Sep 22 11:56:17 AM UTC 2026
+Total script runtime: 00h:09m:11s
+STEP_CLEAN: skipped.  - No matching tmp dirs at cancel.

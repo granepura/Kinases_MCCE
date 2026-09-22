@@ -1,0 +1,36 @@
+============================================================
+MCCE4 SUBMIT SHELL JOB ENVIRONMENT (startup diagnostics)
+------------------------------------------------------------
+Date:             Tue Sep 22 11:55:52 AM UTC 2026
+Host:             aurora
+User:             granepura
+
+Apptainer:        /home/granepura/miniconda3/envs/mc4/bin//apptainer
+Config File:      /home/granepura/.apptainer/apptainer.conf
+MCCE_HOME:        /home/granepura/MCCE4
+MCBIN:            /home/granepura/MCCE4/bin
+Driver:           /home/granepura/MCCE4/bin/driver_mcce4.sh
+PYEX, PYENV:      /home/granepura/miniconda3/envs/mc4/bin/python3
+PATH:             /home/granepura/miniconda3/envs/mc4/bin/:/home/granepura/MCCE4/bin:/home/granepura/MCCE4/MCCE_bin:/home/granepura/miniconda3/envs/mc4/bin:/home/granepura/.local/bin:/home/granepura/Marwell/Marwell_scripts:/home/granepura/MCCE4-Tools/mcce4_tools:/home/granepura/.local/bin:/home/granepura/miniconda3/envs/mc4/bin:/home/granepura/miniconda3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+============================================================
+
+Skipping protein centering. Using original file: prot.pdb
+Final input PDB file: prot.pdb
+STEP1 SKIPPED (flag was f).
+STEP2 SKIPPED (flag was f).
+Running STEP3 ...
+STEP3 completed SUCCESSFULLY in 00h:08m:24s.
+Running custom stepC script "prune_kin-inhib_head3.py" (between STEP3 and STEP4)...
+prune_kin-inhib_head3.py completed SUCCESSFULLY in 00h:00m:00s.
+Running STEP4 ...
+STEP4 completed SUCCESSFULLY in 00h:00m:19s.
+Temporary PBE data will be stored in:                             /tmp
+Full path of the working directory is:                            /data/home/granepura/5-Kinases/Kinases_MCCE/Trial03/run_holo/4ASD
+Subdirectories matching this pattern will be removed from temp dir: home.granepura.5-Kinases.Kinases_MCCE.Trial03.run_holo.4ASD
+STEP_CLEAN: cleaning matching pbe_data folders in /tmp...
+STEP_CLEAN: no matching /tmp pbe_data folders found.
+Script complete.
+Total runtime: 00h:08m:43s
+Timing report written to mcce_timing.log
+
+>>> Caught termination signal. Running STEP_CLEAN before exiting...
