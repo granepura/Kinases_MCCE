@@ -27,7 +27,6 @@ PROCESSING PDB DIRECTORIES
 [ 2/37] 2EUF                      │ Palbociclib     │ Code: LQQ
       ├─ ✅ Found 160 shared residues
       │    • Top residues: GLU:34, ASP:33, LYS:33
-      │    • Outliers: strong=0 (|Δq|≥0.5), affected=1 (0.2≤|Δq|<0.5)
       └─ ✅ Plot saved: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig4A_holo_vs_apo_xts/Trials_Fig4A_2EUF_Palbociclib.png
 
 [ 3/37] 2HYY                      │ Imatinib        │ Code: STI
@@ -160,7 +159,6 @@ PROCESSING PDB DIRECTORIES
 [28/37] 4I22                      │ Gefitinib       │ Code: IRE
       ├─ ✅ Found 103 shared residues
       │    • Top residues: ASP:21, LYS:21, GLU:19
-      │    • Outliers: strong=0 (|Δq|≥0.5), affected=1 (0.2≤|Δq|<0.5)
       └─ ✅ Plot saved: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig4A_holo_vs_apo_xts/Trials_Fig4A_4I22_Gefitinib.png
 
 [29/37] 4LMN                      │ Cobimetinib     │ Code: EUI
@@ -219,20 +217,18 @@ CREATING COMBINED PLOT
 OUTLIER TABLE  (strong: |Δq| ≥ 0.5 e;  affected: 0.2 ≤ |Δq| < 0.5 e)
 ================================================================================
   Strong outliers (|Δq|≥0.5):      1
-  Affected (0.2≤|Δq|<0.5):         6
+  Affected (0.2≤|Δq|<0.5):         4
   Outlier table written to:    /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig4A_holo_vs_apo_xts/Trials_Fig4A_outliers_holo_vs_apo.tsv
   Methods record written to:   /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig4A_holo_vs_apo_xts/Trials_Fig4A_METHODS.md
   Reproducibility table:       /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig4A_holo_vs_apo_xts/Trials_Fig4A_reproducibility.tsv
   Statistics CSV written to:   /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig4A_holo_vs_apo_xts/Trials_Fig4A_holo_vs_apo_points.csv  (3668 residues)
   Tier      PDB      Inhib        Residue             Apo     Holo       Δq
   -------------------------------------------------------------------------
-  strong    4MKC     Ceritinib    LYS1205           0.660    0.150   -0.510
-  affected  1XKK     Lapatinib    LYS745            0.907    0.550   -0.357
-  affected  1XKK     Lapatinib    CYS775           -0.287    0.000   +0.287
-  affected  2EUF     Palbociclib  LYS43             0.900    0.673   -0.227
+  strong    4MKC     Ceritinib    LYS1205           0.663    0.153   -0.510
+  affected  1XKK     Lapatinib    LYS745            0.887    0.490   -0.397
+  affected  1XKK     Lapatinib    CYS775           -0.263    0.000   +0.263
   affected  3UE4     Bosutinib    GLU286           -0.307   -0.557   -0.250
-  affected  4AN2     Cobimetinib  CYS207           -0.733   -0.970   -0.237
-  affected  4I22     Gefitinib    HIS850            0.780    0.550   -0.230
+  affected  4AN2     Cobimetinib  CYS207           -0.740   -0.970   -0.230
 
 ================================================================================
 SUMMARY
@@ -244,6 +240,6 @@ SUMMARY
   Plots created:               37
   Total residues processed:    3668
   Strong outliers:             1  (|Δq| ≥ 0.5)
-  Affected residues:           6  (0.2 ≤ |Δq| < 0.5)
+  Affected residues:           4  (0.2 ≤ |Δq| < 0.5)
 ================================================================================
 ✅ All done! Check '/data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig4A_holo_vs_apo_xts' for plots and '/data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig4A_holo_vs_apo_xts/Trials_Fig4A_holo_vs_apo.log' for log.

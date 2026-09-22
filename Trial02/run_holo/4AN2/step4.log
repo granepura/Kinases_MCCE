@@ -141,6 +141,7 @@ Step 4. Monte Carlo Sampling
    PRO01A0232_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ARG+1A0234_004 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A0235_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   THR01A0238_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    VAL01A0242_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ILE01A0246_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    TRP01A0247_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
@@ -169,7 +170,6 @@ Step 4. Monte Carlo Sampling
    PRO01A0323_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A0325_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    PRO01A0326_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
-   SER01A0327_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ALA01A0328_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    VAL01A0329_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    PHE01A0330_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
@@ -197,6 +197,8 @@ Step 4. Monte Carlo Sampling
    ALA01A0372_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    TRP01A0374_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A0375_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   SER01A0377_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   THR01A0378_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ILE01A0379_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A0381_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    Conformer flags updated due to self consistancy.
@@ -204,14 +206,14 @@ Step 4. Monte Carlo Sampling
    Do titration at 1 points...
    Detailed progress is in file "mc_out"
    Monte Carlo set up time: 0 seconds.
-   Titration  1:    13 seconds, biggest stdev of conformer occ = 0.020
+   Titration  1:    13 seconds, biggest stdev of conformer occ = 0.027
    Done
 
    Fit titration curves to get pKa/Em ...
    MFE: didn't specify mfe point, do mfe at pKa or Em 
    Done
 
-   Total time on MC: 14 seconds
+   Total time on MC: 13 seconds
 
    Output files:
       mc_out          : MC progress and convergence.

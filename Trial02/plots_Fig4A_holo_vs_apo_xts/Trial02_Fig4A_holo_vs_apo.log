@@ -16,7 +16,7 @@ PROCESSING PDB DIRECTORIES
 [ 1/37] 1XKK                      │ Lapatinib       │ Code: FMM
       ├─ ✅ Found 98 shared residues
       │    • Top residues: LYS:21, GLU:20, ASP:17
-      │    • Outliers: strong=0 (|Δq|≥0.5), affected=2 (0.2≤|Δq|<0.5)
+      │    • Outliers: strong=0 (|Δq|≥0.5), affected=1 (0.2≤|Δq|<0.5)
       └─ ✅ Plot saved: /data/home/granepura/5-Kinases/Kinases_MCCE/Trial02/plots_Fig4A_holo_vs_apo_xts/Trial02_Fig4A_1XKK_Lapatinib.png
 
 [ 2/37] 2EUF                      │ Palbociclib     │ Code: LQQ
@@ -47,6 +47,7 @@ PROCESSING PDB DIRECTORIES
 [ 7/37] 2WGJ                      │ Crizotinib      │ Code: VGH
       ├─ ✅ Found 89 shared residues
       │    • Top residues: LYS:20, ASP:14, GLU:14
+      │    • Outliers: strong=0 (|Δq|≥0.5), affected=1 (0.2≤|Δq|<0.5)
       └─ ✅ Plot saved: /data/home/granepura/5-Kinases/Kinases_MCCE/Trial02/plots_Fig4A_holo_vs_apo_xts/Trial02_Fig4A_2WGJ_Crizotinib.png
 
 [ 8/37] 2XP2                      │ Crizotinib      │ Code: VGH
@@ -123,7 +124,7 @@ PROCESSING PDB DIRECTORIES
 [22/37] 4AN2                      │ Cobimetinib     │ Code: EUI
       ├─ ✅ Found 89 shared residues
       │    • Top residues: GLU:21, LYS:19, ASP:15
-      │    • Outliers: strong=0 (|Δq|≥0.5), affected=2 (0.2≤|Δq|<0.5)
+      │    • Outliers: strong=0 (|Δq|≥0.5), affected=1 (0.2≤|Δq|<0.5)
       └─ ✅ Plot saved: /data/home/granepura/5-Kinases/Kinases_MCCE/Trial02/plots_Fig4A_holo_vs_apo_xts/Trial02_Fig4A_4AN2_Cobimetinib.png
 
 [23/37] 4ANQ                      │ Crizotinib      │ Code: VGH
@@ -154,7 +155,7 @@ PROCESSING PDB DIRECTORIES
 [28/37] 4I22                      │ Gefitinib       │ Code: IRE
       ├─ ✅ Found 103 shared residues
       │    • Top residues: ASP:21, LYS:21, GLU:19
-      │    • Outliers: strong=0 (|Δq|≥0.5), affected=1 (0.2≤|Δq|<0.5)
+      │    • Outliers: strong=0 (|Δq|≥0.5), affected=2 (0.2≤|Δq|<0.5)
       └─ ✅ Plot saved: /data/home/granepura/5-Kinases/Kinases_MCCE/Trial02/plots_Fig4A_holo_vs_apo_xts/Trial02_Fig4A_4I22_Gefitinib.png
 
 [29/37] 4LMN                      │ Cobimetinib     │ Code: EUI
@@ -219,12 +220,12 @@ OUTLIER TABLE  (strong: |Δq| ≥ 0.5 e;  affected: 0.2 ≤ |Δq| < 0.5 e)
   Tier      PDB      Inhib        Residue             Apo     Holo       Δq
   -------------------------------------------------------------------------
   strong    4MKC     Ceritinib    LYS1205           0.660    0.150   -0.510
-  affected  1XKK     Lapatinib    LYS745            0.930    0.580   -0.350
-  affected  1XKK     Lapatinib    CYS775           -0.270    0.000   +0.270
-  affected  3UE4     Bosutinib    GLU286           -0.310   -0.580   -0.270
-  affected  4AN2     Cobimetinib  CYS207           -0.720   -0.970   -0.250
-  affected  4AN2     Cobimetinib  LYS192            0.990    0.790   -0.200
-  affected  4I22     Gefitinib    HIS850            0.780    0.560   -0.220
+  affected  1XKK     Lapatinib    LYS745            0.870    0.490   -0.380
+  affected  2WGJ     Crizotinib   HIS1094           0.540    0.340   -0.200
+  affected  3UE4     Bosutinib    GLU286           -0.310   -0.560   -0.250
+  affected  4AN2     Cobimetinib  CYS207           -0.750   -0.970   -0.220
+  affected  4I22     Gefitinib    HIS850            0.790    0.520   -0.270
+  affected  4I22     Gefitinib    HIS773            0.150    0.360   +0.210
 
 ================================================================================
 SUMMARY

@@ -1,6 +1,6 @@
 # Fig4A (per-residue charge, holo vs apo): how the statistics were computed
 
-Written: 2026-09-22 19:21:06
+Written: 2026-09-22 23:34:08
 Script : plot_trials_comparison_xts_Fig4A.py
 
 ## Replicates
@@ -45,8 +45,8 @@ are 2 degrees of freedom, so a 95% CI would be mean +/- 4.30 x SEM.
 
 | Category | N | % |
 |---|---|---|
-| identical | 3165 | 86.3 |
-| scattered | 502 | 13.7 |
+| identical | 3179 | 86.7 |
+| scattered | 488 | 13.3 |
 | two-state | 1 | 0.0 |
 
 Total points: 3668

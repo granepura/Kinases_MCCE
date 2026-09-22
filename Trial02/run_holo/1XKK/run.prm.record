@@ -1,4 +1,4 @@
-#STEP1: 2026/0922, 10:34:10
+#STEP1: 2026/0922, 20:48:55
 step0_out.pdb           (INPDB)
 t                       (DO_PREMCCE)
 /home/granepura/MCCE4    (MCCE_HOME)
@@ -13,7 +13,7 @@ t                       (IGNORE_INPUT_H)
 f                       (DO_ROTAMERS)
 f                       (DO_ENERGY)
 f                       (DO_MONTE)
-#STEP2: 2026/0922, 10:34:10
+#STEP2: 2026/0922, 20:48:55
 t                       (DO_ROTAMERS)
 t                       (MS_GOLD_OUT)
 /home/granepura/MCCE4    (MCCE_HOME)
@@ -59,7 +59,7 @@ f                       (PACK)
 f                       (DO_PREMCCE)
 f                       (DO_ENERGY)
 f                       (DO_MONTE)
-#STEP3: 2026/0922, 10:40:25
+#STEP3: 2026/0922, 22:15:46
 step2_out.pdb           (inputpdb)
 1                       (start)
 99999                   (end)
@@ -77,7 +77,7 @@ False                   (refresh)
 /home/granepura/MCCE4    (MCCE_HOME)
 /home/granepura/MCCE4/extra.tpl    (EXTRA)
 t                       (DO_ENERGY)
-#STEP4: 2026/0922, 10:48:25
+#STEP4: 2026/0922, 22:23:49
 /home/granepura/MCCE4    (MCCE_HOME)
 t                       (DO_MONTE)
 /home/granepura/MCCE4/extra.tpl    (EXTRA)

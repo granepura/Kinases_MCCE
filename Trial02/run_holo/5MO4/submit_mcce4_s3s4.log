@@ -1,7 +1,7 @@
 ============================================================
 MCCE4 SUBMIT SHELL JOB ENVIRONMENT (startup diagnostics)
 ------------------------------------------------------------
-Date:             Tue Sep 22 10:40:26 AM UTC 2026
+Date:             Tue Sep 22 10:24:10 PM UTC 2026
 Host:             aurora
 User:             granepura
 
@@ -19,18 +19,18 @@ Final input PDB file: prot.pdb
 STEP1 SKIPPED (flag was f).
 STEP2 SKIPPED (flag was f).
 Running STEP3 ...
-STEP3 completed SUCCESSFULLY in 00h:14m:45s.
+STEP3 completed SUCCESSFULLY in 00h:14m:21s.
 Running custom stepC script "prune_kin-inhib_head3.py" (between STEP3 and STEP4)...
 prune_kin-inhib_head3.py completed SUCCESSFULLY in 00h:00m:00s.
 Running STEP4 ...
-STEP4 completed SUCCESSFULLY in 00h:00m:39s.
+STEP4 completed SUCCESSFULLY in 00h:00m:35s.
 Temporary PBE data will be stored in:                             /tmp
 Full path of the working directory is:                            /data/home/granepura/5-Kinases/Kinases_MCCE/Trial02/run_holo/5MO4
 Subdirectories matching this pattern will be removed from temp dir: home.granepura.5-Kinases.Kinases_MCCE.Trial02.run_holo.5MO4
 STEP_CLEAN: cleaning matching pbe_data folders in /tmp...
 STEP_CLEAN: no matching /tmp pbe_data folders found.
 Script complete.
-Total runtime: 00h:15m:24s
+Total runtime: 00h:14m:56s
 Timing report written to mcce_timing.log
 
 >>> Caught termination signal. Running STEP_CLEAN before exiting...

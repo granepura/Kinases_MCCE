@@ -1,6 +1,6 @@
 # Fig3 (inhibitor charge, bound vs in solution): how the statistics were computed
 
-Written: 2026-09-22 19:21:16
+Written: 2026-09-22 23:33:51
 Script : plot_trials_inhibitors_xts_Fig3.py
 
 ## Replicates
@@ -40,9 +40,9 @@ are 2 degrees of freedom, so a 95% CI would be mean +/- 4.30 x SEM.
 
 | Category | N | % |
 |---|---|---|
-| identical | 21 | 56.8 |
-| scattered | 15 | 40.5 |
-| two-state | 1 | 2.7 |
+| identical | 22 | 59.5 |
+| scattered | 13 | 35.1 |
+| two-state | 2 | 5.4 |
 
 Total points: 37
 

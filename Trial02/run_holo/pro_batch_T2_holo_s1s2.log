@@ -1,6 +1,6 @@
 
 ============================================================
-pro_batch run: 2026-09-22 10:34:09
+pro_batch run: 2026-09-22 20:48:23
 Command: /home/granepura/MCCE4/MCCE_bin/pro_batch kin-pdb -custom submit_mcce4_s1s2.sh -job-name T2_holo_s1s2 --skip-prerun
 ============================================================
 
@@ -11,83 +11,85 @@ Launching 37 runs via Slurm (max 15 concurrent, nice 1000)...
 Backgrounding — you can continue using this terminal.
 
   Skipping prerun for 4AGC
-  -> Submitted 4AGC (Slurm job 4990, nice 1000, 1 total)
+  -> Submitted 4AGC (Slurm job 5234, nice 1000, 1 total)
   Skipping prerun for 4ANQ
-  -> Submitted 4ANQ (Slurm job 4991, nice 1000, 2 total)
+  -> Submitted 4ANQ (Slurm job 5235, nice 1000, 2 total)
   Skipping prerun for 4I22
-  -> Submitted 4I22 (Slurm job 4992, nice 1000, 3 total)
+  -> Submitted 4I22 (Slurm job 5236, nice 1000, 3 total)
   Skipping prerun for 5AAC
-  -> Submitted 5AAC (Slurm job 4993, nice 1000, 4 total)
+  -> Submitted 5AAC (Slurm job 5237, nice 1000, 4 total)
   Skipping prerun for 3UG2
-  -> Submitted 3UG2 (Slurm job 4994, nice 1000, 5 total)
+  -> Submitted 3UG2 (Slurm job 5238, nice 1000, 5 total)
   Skipping prerun for 2ITZ
-  -> Submitted 2ITZ (Slurm job 4995, nice 1000, 6 total)
+  -> Submitted 2ITZ (Slurm job 5239, nice 1000, 6 total)
   Skipping prerun for 1XKK
-  -> Submitted 1XKK (Slurm job 4996, nice 1000, 7 total)
+  -> Submitted 1XKK (Slurm job 5240, nice 1000, 7 total)
   Skipping prerun for 3WZD
-  -> Submitted 3WZD (Slurm job 4997, nice 1000, 8 total)
+  -> Submitted 3WZD (Slurm job 5241, nice 1000, 8 total)
   Skipping prerun for 4ZAU
-  -> Submitted 4ZAU (Slurm job 4998, nice 1000, 9 total)
+  -> Submitted 4ZAU (Slurm job 5242, nice 1000, 9 total)
   Skipping prerun for 4AN2
-  -> Submitted 4AN2 (Slurm job 4999, nice 1000, 10 total)
+  -> Submitted 4AN2 (Slurm job 5243, nice 1000, 10 total)
   Skipping prerun for 2XP2
-  -> Submitted 2XP2 (Slurm job 5000, nice 1000, 11 total)
+  -> Submitted 2XP2 (Slurm job 5244, nice 1000, 11 total)
   Skipping prerun for 2ITO
-  -> Submitted 2ITO (Slurm job 5001, nice 1000, 12 total)
+  -> Submitted 2ITO (Slurm job 5245, nice 1000, 12 total)
   Skipping prerun for 2WGJ
-  -> Submitted 2WGJ (Slurm job 5002, nice 1000, 13 total)
+  -> Submitted 2WGJ (Slurm job 5246, nice 1000, 13 total)
   Skipping prerun for 5MO4
-  -> Submitted 5MO4 (Slurm job 5003, nice 1000, 14 total)
+  -> Submitted 5MO4 (Slurm job 5247, nice 1000, 14 total)
   Skipping prerun for 4AG8
-  -> Submitted 4AG8 (Slurm job 5004, nice 1000, 15 total)
+  -> Submitted 4AG8 (Slurm job 5248, nice 1000, 15 total)
   Skipping prerun for 2ITY
   ... 15/15 Slurm slots occupied, waiting 30.0s...
-  -> Submitted 2ITY (Slurm job 5020, nice 1000, 16 total)
-  Skipping prerun for 2HYY
-  -> Submitted 2HYY (Slurm job 5021, nice 1000, 17 total)
-  Skipping prerun for 3UE4
-  -> Submitted 3UE4 (Slurm job 5022, nice 1000, 18 total)
-  Skipping prerun for 4G5P
-  -> Submitted 4G5P (Slurm job 5023, nice 1000, 19 total)
-  Skipping prerun for 4MKC
-  -> Submitted 4MKC (Slurm job 5024, nice 1000, 20 total)
-  Skipping prerun for 5AAB
-  -> Submitted 5AAB (Slurm job 5025, nice 1000, 21 total)
-  Skipping prerun for 5AAA
-  -> Submitted 5AAA (Slurm job 5026, nice 1000, 22 total)
-  Skipping prerun for 4AGD
   ... 15/15 Slurm slots occupied, waiting 30.0s...
-  -> Submitted 4AGD (Slurm job 5027, nice 1000, 23 total)
+  -> Submitted 2ITY (Slurm job 5262, nice 1000, 16 total)
+  Skipping prerun for 2HYY
+  -> Submitted 2HYY (Slurm job 5263, nice 1000, 17 total)
+  Skipping prerun for 3UE4
+  -> Submitted 3UE4 (Slurm job 5264, nice 1000, 18 total)
+  Skipping prerun for 4G5P
+  -> Submitted 4G5P (Slurm job 5265, nice 1000, 19 total)
+  Skipping prerun for 4MKC
+  -> Submitted 4MKC (Slurm job 5266, nice 1000, 20 total)
+  Skipping prerun for 5AAB
+  -> Submitted 5AAB (Slurm job 5267, nice 1000, 21 total)
+  Skipping prerun for 5AAA
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  -> Submitted 5AAA (Slurm job 5270, nice 1000, 22 total)
+  Skipping prerun for 4AGD
+  -> Submitted 4AGD (Slurm job 5271, nice 1000, 23 total)
   Skipping prerun for 4ASD
-  -> Submitted 4ASD (Slurm job 5028, nice 1000, 24 total)
+  -> Submitted 4ASD (Slurm job 5272, nice 1000, 24 total)
   Skipping prerun for 3PYY
-  -> Submitted 3PYY (Slurm job 5029, nice 1000, 25 total)
+  -> Submitted 3PYY (Slurm job 5273, nice 1000, 25 total)
   Skipping prerun for 2EUF
-  -> Submitted 2EUF (Slurm job 5030, nice 1000, 26 total)
+  -> Submitted 2EUF (Slurm job 5274, nice 1000, 26 total)
   Skipping prerun for 5L2I
-  -> Submitted 5L2I (Slurm job 5031, nice 1000, 27 total)
+  -> Submitted 5L2I (Slurm job 5275, nice 1000, 27 total)
   Skipping prerun for 4G5J
-  -> Submitted 4G5J (Slurm job 5032, nice 1000, 28 total)
+  -> Submitted 4G5J (Slurm job 5276, nice 1000, 28 total)
   Skipping prerun for 3WZE
-  -> Submitted 3WZE (Slurm job 5033, nice 1000, 29 total)
+  -> Submitted 3WZE (Slurm job 5277, nice 1000, 29 total)
   Skipping prerun for 3LXK
-  -> Submitted 3LXK (Slurm job 5034, nice 1000, 30 total)
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  -> Submitted 3LXK (Slurm job 5278, nice 1000, 30 total)
   Skipping prerun for 4ANS
   ... 15/15 Slurm slots occupied, waiting 30.0s...
-  -> Submitted 4ANS (Slurm job 5049, nice 1000, 31 total)
+  -> Submitted 4ANS (Slurm job 5286, nice 1000, 31 total)
   Skipping prerun for 2YFX
-  -> Submitted 2YFX (Slurm job 5050, nice 1000, 32 total)
+  -> Submitted 2YFX (Slurm job 5287, nice 1000, 32 total)
   Skipping prerun for 3ZOS
-  -> Submitted 3ZOS (Slurm job 5051, nice 1000, 33 total)
+  -> Submitted 3ZOS (Slurm job 5288, nice 1000, 33 total)
   Skipping prerun for 4LMN
-  -> Submitted 4LMN (Slurm job 5052, nice 1000, 34 total)
+  -> Submitted 4LMN (Slurm job 5289, nice 1000, 34 total)
   Skipping prerun for 3AOX
-  -> Submitted 3AOX (Slurm job 5053, nice 1000, 35 total)
-  Skipping prerun for 3CS9
   ... 15/15 Slurm slots occupied, waiting 30.0s...
-  -> Submitted 3CS9 (Slurm job 5055, nice 1000, 36 total)
+  -> Submitted 3AOX (Slurm job 5290, nice 1000, 35 total)
+  Skipping prerun for 3CS9
+  -> Submitted 3CS9 (Slurm job 5291, nice 1000, 36 total)
   Skipping prerun for 4WKQ
-  -> Submitted 4WKQ (Slurm job 5056, nice 1000, 37 total)
+  -> Submitted 4WKQ (Slurm job 5292, nice 1000, 37 total)
 
 =============================================
 Slurm Summary: 37 jobs submitted
@@ -98,4 +100,4 @@ Slurm Summary: 37 jobs submitted
   Check status  : pro_batch <input_path> --check -job-name T2_holo_s1s2
   Stop batch    : pro_batch --stop -job-name T2_holo_s1s2
 =============================================
-  Finished: 2026-09-22 10:36:09
+  Finished: 2026-09-22 20:51:24

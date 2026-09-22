@@ -38,7 +38,8 @@ WHERE THE NUMBERS COME FROM:
 
 USAGE:
 ======
-  ./make_trials_tables_xlsx.py                  # every Trial*/ here
+  ./make_trials_tables_xlsx.py                  # every Trial*/ here, both files
+  ./make_trials_tables_xlsx.py --no-values-copy # workbook only
   ./make_trials_tables_xlsx.py --glob 'Trial0[12]'
   ./make_trials_tables_xlsx.py --outdir tables_v2
   ./make_trials_tables_xlsx.py --root /path/to/Kinases_MCCE
@@ -46,10 +47,10 @@ USAGE:
 The workbook is written into tables_Trials/ (--outdir), next to the
 plots_Trials_* directories the two plot_trials_*.py scripts produce.
 
-NOTE: openpyxl writes formulas without cached values, so the computed columns
-read as blank until the file is opened in Excel (or recalculated with
-LibreOffice), which fills them in.  --values-copy also writes a static copy
-with the numbers baked in, for previewing.
+Two files are written by default: the workbook itself, and a *_values.xlsx with
+the numbers baked in.  The second exists because openpyxl writes formulas
+without cached values, so the main workbook's computed columns read as blank
+until Excel opens it (or LibreOffice recalculates it).  --no-values-copy skips it.
 """
 
 import argparse
@@ -673,9 +674,13 @@ def main():
                          "directories (default: %(default)s)")
     ap.add_argument("--out", default="kinase_project-trials-tables.xlsx",
                     help="workbook filename inside --outdir (default: %(default)s)")
-    ap.add_argument("--values-copy", action="store_true",
-                    help="also write a *_values.xlsx with the numbers baked in, for previewing "
-                         "without Excel")
+    # The values copy is written by default: openpyxl leaves formula cells with no
+    # cached value, so without it the main workbook previews as blank until Excel
+    # opens it.  --values-copy is still accepted so older commands keep working.
+    ap.add_argument("--values-copy", dest="values_copy", action="store_true",
+                    default=True, help=argparse.SUPPRESS)
+    ap.add_argument("--no-values-copy", dest="values_copy", action="store_false",
+                    help="skip the static *_values.xlsx preview copy (written by default)")
     args = ap.parse_args()
 
     root = os.path.abspath(args.root) if args.root \

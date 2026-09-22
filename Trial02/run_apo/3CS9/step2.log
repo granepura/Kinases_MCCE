@@ -489,10 +489,10 @@ Step 2. Make multi side chain conformers
    Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
    Done
 
-       57 conformers deleted in this cycle at    2.000    2.000    2.000
+       58 conformers deleted in this cycle at    2.000    2.000    2.000
 
    Optimizing hydroxyl and water...
-   Total number of atoms 8161
+   Total number of atoms 8186
    Done. Time spent = 14
 
 
@@ -501,7 +501,7 @@ Step 2. Make multi side chain conformers
 
    Skip writing full rotamer file step2_out.full.
    Delete duplicate conformers ...
-      9 conformers deleted in this cycle at    2.000    2.000    2.000
+      13 conformers deleted in this cycle at    2.000    2.000    2.000
    Done. Time spent = 1
 
 
@@ -524,5 +524,5 @@ Not doing "Step 4. Monte Carlo Sampling"
 
 Not doing "Step 6. Hydrogen Bond Network Analysis"
 
-[Step2.py Info]: Updated r_bound from 0.0 to 1.0 for 2533 hydrogen atoms
+[Step2.py Info]: Updated r_bound from 0.0 to 1.0 for 2517 hydrogen atoms
 [SUCCESS]: Step 2 completed successfully.

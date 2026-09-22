@@ -465,7 +465,7 @@ Step 2. Make multi side chain conformers
    Warning! assign_vdw_param(): missing parameter(s), default value is used and saved in debug.log.
    Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
    Pruning rotamers...1 rotamers deleted.
-   Done. Time spent = 0
+   Done. Time spent = 1
 
 
    Tuning exposed rotamers...
@@ -483,7 +483,7 @@ Step 2. Make multi side chain conformers
       Estimated time on AMD 1.6GHz is 5 seconds.
       Actual time is 2
    Repacking in progress, see progress.log for details...
-   Done. Time spent = 3
+   Done. Time spent = 2
 
 
    Skip writing heavy atome rotamer pdb file hvrot.pdb
@@ -503,10 +503,10 @@ Step 2. Make multi side chain conformers
    Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
    Done
 
-       74 conformers deleted in this cycle at    2.000    2.000    2.000
+       66 conformers deleted in this cycle at    2.000    2.000    2.000
 
    Optimizing hydroxyl and water...
-   Total number of atoms 8632
+   Total number of atoms 8734
    Done. Time spent = 15
 
 
@@ -515,14 +515,14 @@ Step 2. Make multi side chain conformers
 
    Skip writing full rotamer file step2_out.full.
    Delete duplicate conformers ...
-      7 conformers deleted in this cycle at    2.000    2.000    2.000
-   Done. Time spent = 2
+      11 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 1
 
 
    Write output...
    Done
 
-   Total time for step2 (rotamer making) is 26 seconds.
+   Total time for step2 (rotamer making) is 25 seconds.
 
    Output files:
       step2_out.pdb   : mcce pdb file, the input of step 3
@@ -538,5 +538,5 @@ Not doing "Step 4. Monte Carlo Sampling"
 
 Not doing "Step 6. Hydrogen Bond Network Analysis"
 
-[Step2.py Info]: Updated r_bound from 0.0 to 1.0 for 2774 hydrogen atoms
+[Step2.py Info]: Updated r_bound from 0.0 to 1.0 for 2782 hydrogen atoms
 [SUCCESS]: Step 2 completed successfully.

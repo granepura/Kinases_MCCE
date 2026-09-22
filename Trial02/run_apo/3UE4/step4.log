@@ -71,6 +71,7 @@ Step 4. Monte Carlo Sampling
    VAL01A0268_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ALA01A0269_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    VAL01A0270_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   THR01A0272_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A0273_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    MET01A0278_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    VAL01A0280_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
@@ -133,6 +134,7 @@ Step 4. Monte Carlo Sampling
    LEU01A0387_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    MET01A0388_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    THR01A0389_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   THR01A0394_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ALA01A0395_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ALA01A0397_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ALA01A0399_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
@@ -188,13 +190,14 @@ Step 4. Monte Carlo Sampling
    PHE01A0493_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    MET01A0496_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    PHE01A0497_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   SER01A0500_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ILE01A0502_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    Conformer flags updated due to self consistancy.
 
    Do titration at 1 points...
    Detailed progress is in file "mc_out"
    Monte Carlo set up time: 0 seconds.
-   Titration  1:    12 seconds, biggest stdev of conformer occ = 0.020
+   Titration  1:    12 seconds, biggest stdev of conformer occ = 0.034
    Done
 
    Fit titration curves to get pKa/Em ...
