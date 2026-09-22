@@ -64,6 +64,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import column_index_from_string, get_column_letter
 
+RT_KCAL = 0.5925          # kcal/mol, as used in SI.3.Conf of the published workbook
 TREES = {"inhib": "run_inhib", "holo": "run_holo", "apo": "run_apo"}
 LEGACY = {"run_holo": "run_kin", "run_apo": "run_prot2", "run_inhib": "run_cof2"}
 PDBID_RE = re.compile(r"^[0-9][A-Za-z0-9]{3}$")
@@ -345,7 +346,9 @@ def sheet_table1(wb, rows, trials, n):
         ws.cell(i, 2).value = kinase
         ws.cell(i, 2).font = F_BOLD
         i += 1
-        for r in sorted(by_kinase[kinase], key=lambda x: x["pdb"]):
+        # within a kinase, order by inhibitor then PDB -- as Table 1 of
+        # kinase_project-final-tables.xlsx does
+        for r in sorted(by_kinase[kinase], key=lambda x: (x["inhibitor"], x["pdb"])):
             p = r["pdb"]
             ws.cell(i, 1).value = p
             ws.cell(i, 2).value = r["inhibitor"]
@@ -443,22 +446,32 @@ def sheet_si_table2(wb, conf, index, trials, n):
     ws["A2"] = ("One row per conformer type (protonation / tautomer state); the rotamers of a "
                 "type are summed within each trial, then averaged. ± columns are SEM (SD/√n).")
     ws["A2"].font = F_NOTE
+    ws["A3"] = "RT (kcal/mol)"
+    ws["A3"].font = F_BOLD
+    ws["B3"] = RT_KCAL
+    ws["B3"].font = F_BODY
+    ws["B3"].number_format = "0.0000"
+    ws["C3"] = "energy = -RT·ln(P) ; Boltzmann = exp(-energy/RT) ; Stat Mech = Boltzmann / ΣBoltzmann"
+    ws["C3"].font = F_NOTE
 
-    GROUPS = [("", 5), ("P(i) soln", 2), ("P(i) bound", 2)]
+    GROUPS = [("", 5), ("P(i) soln", 2), ("from P(i) soln", 3), ("P(i) bound", 2)]
     group = [label for label, span in GROUPS for _ in range(span)]
     head = ["PDBID", "Ligand", "Conf type", "charge", "# rot",
-            "mean", "± SEM", "mean", "± SEM"]
+            "mean", "± SEM", "energy", "Boltzmann Factor", "Stat Mech", "mean", "± SEM"]
     assert len(group) == len(head)
-    ws.append([]); ws.append(group); ws.append(head)
-    for c in range(1, len(head) + 1):
-        for rr in (4, 5):
+    GROUP_ROW, HEAD_ROW, FIRST_DATA = 5, 6, 7      # row 4 stays blank
+    for c, (g, h) in enumerate(zip(group, head), 1):
+        ws.cell(GROUP_ROW, c).value = g
+        ws.cell(HEAD_ROW, c).value = h
+        for rr in (GROUP_ROW, HEAD_ROW):
             ws.cell(rr, c).font = F_BOLD
             ws.cell(rr, c).alignment = Alignment(horizontal="center")
-        ws.cell(5, c).border = UNDER
+        ws.cell(HEAD_ROW, c).border = UNDER
     col = 1
     for label, span in GROUPS:
         if label and span > 1:
-            ws.merge_cells(start_row=4, start_column=col, end_row=4, end_column=col + span - 1)
+            ws.merge_cells(start_row=GROUP_ROW, start_column=col,
+                           end_row=GROUP_ROW, end_column=col + span - 1)
         col += span
 
     def rng(first_col, src_row):
@@ -470,14 +483,15 @@ def sheet_si_table2(wb, conf, index, trials, n):
     for pdb in conf:
         by_kinase.setdefault(conf[pdb]["kinase"] or "(unassigned)", []).append(pdb)
 
-    i = 6
+    i = FIRST_DATA
     for kinase in sorted(by_kinase):
         for c in range(1, len(head) + 1):
             ws.cell(i, c).fill = GREY
         ws.cell(i, 2).value = kinase
         ws.cell(i, 2).font = F_BOLD
         i += 1
-        for pdb in sorted(by_kinase[kinase]):
+        for pdb in sorted(by_kinase[kinase],
+                          key=lambda x: (conf[x]["inhibitor"], x)):
             rec = conf[pdb]
             first_row = i
             for ctype, src in index[pdb]:
@@ -486,7 +500,7 @@ def sheet_si_table2(wb, conf, index, trials, n):
                 ws.cell(i, 3).value = ctype
                 ws.cell(i, 4).value = f"='Per-Trial Conf'!$D{src}"
                 ws.cell(i, 5).value = f"=AVERAGE({rng(5 + 2 * n, src)})"
-                for col_out, first in ((6, 5), (8, 5 + n)):
+                for col_out, first in ((6, 5), (11, 5 + n)):
                     ws.cell(i, col_out).value = f"=AVERAGE({rng(first, src)})"
                     ws.cell(i, col_out + 1).value = (
                         f"=IF(COUNT({rng(first, src)})>1,"
@@ -495,24 +509,43 @@ def sheet_si_table2(wb, conf, index, trials, n):
                     ws.cell(i, c).font = F_BODY
                     if c == 5:
                         ws.cell(i, c).number_format = "0.0"
+                    elif c == 8:
+                        ws.cell(i, c).number_format = "0.000"
+                    elif c in (9, 10):
+                        ws.cell(i, c).number_format = "0.00000"
                     elif c >= 4:
                         ws.cell(i, c).number_format = "0.000"
                 i += 1
             last = i - 1
+            # energy / Boltzmann / Stat Mech, from the mean solution occupancy.
+            # A conformer with P rounded to 0.000 in xts_fort.38 has no defined
+            # energy, so those cells stay blank rather than showing a fake value.
+            for rr in range(first_row, last + 1):
+                ws.cell(rr, 8).value = f'=IF(F{rr}>0,-$B$3*LN(F{rr}),"")'
+                ws.cell(rr, 9).value = f'=IF(H{rr}="","",EXP(-H{rr}/$B$3))'
+                ws.cell(rr, 10).value = (
+                    f'=IF(I{rr}="","",I{rr}/SUM(I${first_row}:I${last}))')
             ws.cell(i, 3).value = "SUM"
             ws.cell(i, 6).value = f"=SUM(F{first_row}:F{last})"
-            ws.cell(i, 8).value = f"=SUM(H{first_row}:H{last})"
+            ws.cell(i, 9).value = f"=SUM(I{first_row}:I{last})"
+            ws.cell(i, 10).value = f"=SUM(J{first_row}:J{last})"
+            ws.cell(i, 11).value = f"=SUM(K{first_row}:K{last})"
             ws.cell(i + 1, 3).value = "ensemble charge"
             ws.cell(i + 1, 6).value = f"=SUMPRODUCT($D{first_row}:$D{last},F{first_row}:F{last})"
-            ws.cell(i + 1, 8).value = f"=SUMPRODUCT($D{first_row}:$D{last},H{first_row}:H{last})"
+            ws.cell(i + 1, 11).value = f"=SUMPRODUCT($D{first_row}:$D{last},K{first_row}:K{last})"
             for rr in (i, i + 1):
                 for c in range(1, len(head) + 1):
                     ws.cell(rr, c).font = F_BOLD
-                    if c >= 4:
+                    if c in (9, 10):
+                        ws.cell(rr, c).number_format = "0.00000"
+                    elif c >= 4:
                         ws.cell(rr, c).number_format = "0.000"
             i += 3
     note = ws.cell(i, 1)
-    note.value = ("SUM should be 1.000 within rounding. 'ensemble charge' is Σ charge × P(i) — "
+    note.value = ("SUM should be 1.000 within rounding. energy/Boltzmann/Stat Mech are derived "
+                  "from the mean P(i) soln, reproducing the round trip in the original SI.3.Conf; "
+                  "a conformer whose occupancy rounds to 0.000 in xts_fort.38 has no defined "
+                  "energy and is left blank. 'ensemble charge' is Σ charge × P(i) — "
                   "it reproduces the ligand charge in Table 1 (crg soln / crg bound) and is a "
                   "check that the conformer populations and the residue charge agree.")
     note.font = F_NOTE
@@ -520,7 +553,9 @@ def sheet_si_table2(wb, conf, index, trials, n):
         ws.column_dimensions[c].width = w
     for c in range(6, len(head) + 1):
         ws.column_dimensions[get_column_letter(c)].width = 9
-    ws.freeze_panes = "A6"
+    for c in ("I", "J"):
+        ws.column_dimensions[c].width = 15
+    ws.freeze_panes = f"A{FIRST_DATA}"
 
 
 def sheet_methods(wb, trials, seeds, n, incomplete):
