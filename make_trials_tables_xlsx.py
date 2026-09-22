@@ -65,6 +65,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import column_index_from_string, get_column_letter
 
+UPTO3 = "0.###;-0.###;0"   # up to 3 decimals; full precision kept in the cell
 RT_KCAL = 0.5925          # kcal/mol, as used in SI.3.Conf of the published workbook
 TREES = {"inhib": "run_inhib", "holo": "run_holo", "apo": "run_apo"}
 LEGACY = {"run_holo": "run_kin", "run_apo": "run_prot2", "run_inhib": "run_cof2"}
@@ -522,7 +523,7 @@ def sheet_si_table2(wb, conf, index, trials, n):
                 for c in range(1, len(head) + 1):
                     ws.cell(i, c).font = F_BODY
                     if c >= 4:                       # every numeric column
-                        ws.cell(i, c).number_format = "0.000"
+                        ws.cell(i, c).number_format = UPTO3
                 i += 1
             last = i - 1
             # energy / Boltzmann / Stat Mech from the mean solution occupancy.
@@ -546,7 +547,7 @@ def sheet_si_table2(wb, conf, index, trials, n):
                 for c in range(1, len(head) + 1):
                     ws.cell(rr, c).font = F_BOLD
                     if c >= 4:
-                        ws.cell(rr, c).number_format = "0.000"
+                        ws.cell(rr, c).number_format = UPTO3
             i += 3
     note = ws.cell(i, 1)
     note.value = ("SUM should be 1.000 within rounding. 'ensemble charge' is Σ charge × P — "
@@ -838,7 +839,7 @@ def main():
                     if cell.font is not F_BOLD:
                         cell.font = F_BODY
                     if c >= 5:
-                        cell.number_format = "0.000"
+                        cell.number_format = UPTO3
             for c, w in zip("ABCD", (10, 14, 9, 11)):
                 cs2.column_dimensions[c].width = w
             for c in range(5, 13):
