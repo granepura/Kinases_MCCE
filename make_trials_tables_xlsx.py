@@ -829,10 +829,20 @@ def main():
                         if r[4] is not None:
                             ens_sm += r[4] * r[7]
                     cs2.append(r)
+
+                def col_sum(j):
+                    return sum(r[j] for r in block if r[j] is not None)
+
+                # SUM and ensemble charge, as on the formula sheet
+                cs2.append([pdb, rec["inhibitor"], rec["kinase"], "SUM", None, None,
+                            col_sum(6), col_sum(7), col_sum(8), None, col_sum(10), None])
+                cs2.cell(cs2.max_row, 1).font = F_BOLD
+                sum_row = cs2.max_row
                 cs2.append([pdb, rec["inhibitor"], rec["kinase"], "ensemble charge",
                             None, None, None, ens_sm, ens_s, None, ens_b, None])
-                for c in range(1, 13):
-                    cs2.cell(cs2.max_row, c).font = F_BOLD
+                for rr in (sum_row, cs2.max_row):
+                    for c in range(1, 13):
+                        cs2.cell(rr, c).font = F_BOLD
             for rr in range(2, cs2.max_row + 1):
                 for c in range(1, 13):
                     cell = cs2.cell(rr, c)
