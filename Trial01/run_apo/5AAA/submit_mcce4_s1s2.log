@@ -1,7 +1,7 @@
 ============================================================
 MCCE4 SUBMIT SHELL JOB ENVIRONMENT (startup diagnostics)
 ------------------------------------------------------------
-Date:             Tue Sep 22 07:12:40 AM UTC 2026
+Date:             Tue Sep 22 08:58:53 PM UTC 2026
 Host:             aurora
 User:             granepura
 
@@ -20,7 +20,7 @@ Final input PDB file: prot_center.pdb
 Running STEP1 ...
 STEP1 completed SUCCESSFULLY in 00h:00m:00s.
 Running STEP2 ...
-STEP2 completed SUCCESSFULLY in 00h:00m:25s.
+STEP2 completed SUCCESSFULLY in 00h:00m:28s.
 Running custom stepB script "make_holo_apo_step2_out.py" (between STEP2 and STEP3)...
 make_holo_apo_step2_out.py completed SUCCESSFULLY in 00h:00m:00s.
 STEP3 SKIPPED (flag was f).
@@ -31,7 +31,7 @@ Subdirectories matching this pattern will be removed from temp dir: home.granepu
 STEP_CLEAN: cleaning matching pbe_data folders in /tmp...
 STEP_CLEAN: no matching /tmp pbe_data folders found.
 Script complete.
-Total runtime: 00h:00m:25s
+Total runtime: 00h:00m:28s
 Timing report written to mcce_timing.log
 
 >>> Caught termination signal. Running STEP_CLEAN before exiting...

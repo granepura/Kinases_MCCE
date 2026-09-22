@@ -42,15 +42,21 @@ Residue: VGHA2346 (Type: VGH)
     - VGH+aA2346_001 (charge group: VGH_charge2.0)
     - VGH+aA2346_002 (charge group: VGH_charge2.0)
     - VGH+1A2346_003 (charge group: VGH_charge1.0)
-    - VGH01A2346_004 (charge group: VGH_charge0.0)
-    - VGH+2A2346_005 (charge group: VGH_charge2.0)
+    - VGH+1A2346_004 (charge group: VGH_charge1.0)
+    - VGH01A2346_005 (charge group: VGH_charge0.0)
+    - VGH+2A2346_006 (charge group: VGH_charge2.0)
 
 ================================================================================
 ENTROPY PENALTIES APPLIED:
 ================================================================================
 
-No penalties applied.
-(All charge state groups had single conformers)
+Total penalties applied: 1
+
+Residue: VGHA2346 (VGH)
+  pH 7.4, Charge Group: VGH_charge1.0
+    Number of conformers (N): 2
+    Shannon entropy: 0.0000
+    Energy penalty: 0.0000 kcal/mol
 
 ================================================================================
 SUMMARY:
@@ -59,4 +65,4 @@ SUMMARY:
 Total residues processed: 273
 Non-amino acid residues corrected: 1
 Amino acid residues (unchanged): 272
-Charge groups with penalties (N>1): 0
+Charge groups with penalties (N>1): 1

@@ -1,9 +1,9 @@
 [Method] delphi
 
 [PAIRWISE confID single multi flag, kcal/mol]
-HIS+1A0265_005    0.001    0.001 *
+HIS+1A0265_005    0.001    0.002 *
 HIS+1A0265_006    0.000    0.002 
-TYR-1A0272_003   -0.003   -0.003 *
+TYR-1A0272_002   -0.003   -0.003 *
 GLU-1A0277_005   -0.002   -0.002 *
 HIS+1A0314_003   -0.001   -0.001 *
 GLU-1A0335_005    0.002    0.002 *
@@ -53,6 +53,7 @@ HIS+1A0509_006    0.000   -0.001
 [BACKBONE total including self, kcal/mol]    0.087
 
 [BACKBONE breakdown, kcal/mol]
+METBKA0337_000   -0.001
 THRBKA0338_000   -0.002
 TYRBKA0339_000   -0.003
 GLYBKA0340_000    0.002
@@ -73,7 +74,7 @@ GLYBKA0391_000    0.010
 GLUBKA0392_000   -0.007
 ASNBKA0393_000   -0.013
 HISBKA0394_000   -0.008
-LEUBKA0395_000    0.002
+LEUBKA0395_000    0.003
 
 [RXN0, kcal/mol]   -2.624
 [RXN, kcal/mol]   -2.506

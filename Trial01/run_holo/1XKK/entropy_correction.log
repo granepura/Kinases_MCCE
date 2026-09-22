@@ -42,22 +42,17 @@ Residue: FMMA0091 (Type: FMM)
     - FMM01A0091_001 (charge group: FMM_charge0.0)
     - FMM01A0091_002 (charge group: FMM_charge0.0)
     - FMM+1A0091_003 (charge group: FMM_charge1.0)
-    - FMM+1A0091_004 (charge group: FMM_charge1.0)
+    - FMM+aA0091_004 (charge group: FMM_charge2.0)
     - FMM+aA0091_005 (charge group: FMM_charge2.0)
 
 ================================================================================
 ENTROPY PENALTIES APPLIED:
 ================================================================================
 
-Total penalties applied: 2
+Total penalties applied: 1
 
 Residue: FMMA0091 (FMM)
   pH 7.4, Charge Group: FMM_charge0.0
-    Number of conformers (N): 2
-    Shannon entropy: 0.0000
-    Energy penalty: 0.0000 kcal/mol
-
-  pH 7.4, Charge Group: FMM_charge1.0
     Number of conformers (N): 2
     Shannon entropy: 0.0000
     Energy penalty: 0.0000 kcal/mol
@@ -69,4 +64,4 @@ SUMMARY:
 Total residues processed: 275
 Non-amino acid residues corrected: 1
 Amino acid residues (unchanged): 274
-Charge groups with penalties (N>1): 2
+Charge groups with penalties (N>1): 1

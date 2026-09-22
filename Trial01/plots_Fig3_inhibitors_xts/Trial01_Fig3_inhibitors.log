@@ -15,7 +15,7 @@ PROCESSING PDB DIRECTORIES
 
 [ 1/37] 1XKK                      │ Lapatinib       │ Code: FMM
       ├─ ✅ Found 1 residue(s) matching 'FMM':
-      │    • FMM+A0091_: run_inhib=0.9500, run_holo=0.5200
+      │    • FMM+A0091_: run_inhib=0.9500, run_holo=0.7000
       └─ ✓ Data collected (1 point per PDB)
 
 [ 2/37] 2EUF                      │ Palbociclib     │ Code: LQQ
@@ -30,12 +30,12 @@ PROCESSING PDB DIRECTORIES
 
 [ 4/37] 2ITO                      │ Gefitinib       │ Code: IRE
       ├─ ✅ Found 1 residue(s) matching 'IRE':
-      │    • IRE+A2020_: run_inhib=0.3000, run_holo=0.7200
+      │    • IRE+A2020_: run_inhib=0.3000, run_holo=0.7500
       └─ ✓ Data collected (1 point per PDB)
 
 [ 5/37] 2ITY                      │ Gefitinib       │ Code: IRE
       ├─ ✅ Found 1 residue(s) matching 'IRE':
-      │    • IRE+A2020_: run_inhib=0.3000, run_holo=0.3000
+      │    • IRE+A2020_: run_inhib=0.3000, run_holo=0.3500
       └─ ✓ Data collected (1 point per PDB)
 
 [ 6/37] 2ITZ                      │ Gefitinib       │ Code: IRE
@@ -45,7 +45,7 @@ PROCESSING PDB DIRECTORIES
 
 [ 7/37] 2WGJ                      │ Crizotinib      │ Code: VGH
       ├─ ✅ Found 1 residue(s) matching 'VGH':
-      │    • VGH+A2346_: run_inhib=1.6100, run_holo=0.9800
+      │    • VGH+A2346_: run_inhib=1.6100, run_holo=0.9600
       └─ ✓ Data collected (1 point per PDB)
 
 [ 8/37] 2XP2                      │ Crizotinib      │ Code: VGH
@@ -60,17 +60,17 @@ PROCESSING PDB DIRECTORIES
 
 [10/37] 3AOX                      │ Alectinib       │ Code: EMH
       ├─ ✅ Found 1 residue(s) matching 'EMH':
-      │    • EMH+A0901_: run_inhib=0.5600, run_holo=0.9000
+      │    • EMH+A0901_: run_inhib=0.5600, run_holo=0.7900
       └─ ✓ Data collected (1 point per PDB)
 
 [11/37] 3CS9                      │ Nilotinib       │ Code: NIL
       ├─ ✅ Found 1 residue(s) matching 'NIL':
-      │    • NIL+A0600_: run_inhib=0.0900, run_holo=0.1700
+      │    • NIL+A0600_: run_inhib=0.0900, run_holo=0.4200
       └─ ✓ Data collected (1 point per PDB)
 
 [12/37] 3LXK                      │ Tofacitinib     │ Code: MI1
       ├─ ✅ Found 1 residue(s) matching 'MI1':
-      │    • MI1+A1125_: run_inhib=0.0300, run_holo=0.0300
+      │    • MI1+A1125_: run_inhib=0.0300, run_holo=0.0500
       └─ ✓ Data collected (1 point per PDB)
 
 [13/37] 3PYY                      │ Imatinib        │ Code: STI
@@ -80,12 +80,12 @@ PROCESSING PDB DIRECTORIES
 
 [14/37] 3UE4                      │ Bosutinib       │ Code: DB8
       ├─ ✅ Found 1 residue(s) matching 'DB8':
-      │    • DB8+A0601_: run_inhib=0.9400, run_holo=0.9600
+      │    • DB8+A0601_: run_inhib=0.9400, run_holo=0.9500
       └─ ✓ Data collected (1 point per PDB)
 
 [15/37] 3UG2                      │ Gefitinib       │ Code: IRE
       ├─ ✅ Found 1 residue(s) matching 'IRE':
-      │    • IRE+A0001_: run_inhib=0.3000, run_holo=0.0200
+      │    • IRE+A0001_: run_inhib=0.3000, run_holo=0.0000
       └─ ✓ Data collected (1 point per PDB)
 
 [16/37] 3WZD                      │ Lenvatinib      │ Code: LEV
@@ -101,7 +101,7 @@ PROCESSING PDB DIRECTORIES
 [18/37] 3ZOS                      │ Ponatinib       │ Code: 0LI
       ├─ ✅ Found 2 residue(s) matching '0LI':
       │    • 0LI+A1000_: run_inhib=0.9600, run_holo=1.0000
-      │    • 0LI+A1004_: run_inhib=0.9600, run_holo=0.9100
+      │    • 0LI+A1004_: run_inhib=0.9600, run_holo=0.9000
       │    ⚠️  Multiple matches found - using first residue: 0LI+A1000_
       └─ ✓ Data collected (1 point per PDB)
 
@@ -117,7 +117,7 @@ PROCESSING PDB DIRECTORIES
 
 [21/37] 4AGD                      │ Sunitinib       │ Code: B49
       ├─ ✅ Found 1 residue(s) matching 'B49':
-      │    • B49+A2000_: run_inhib=0.9900, run_holo=0.9000
+      │    • B49+A2000_: run_inhib=0.9900, run_holo=0.8900
       └─ ✓ Data collected (1 point per PDB)
 
 [22/37] 4AN2                      │ Cobimetinib     │ Code: EUI
@@ -152,12 +152,12 @@ PROCESSING PDB DIRECTORIES
 
 [28/37] 4I22                      │ Gefitinib       │ Code: IRE
       ├─ ✅ Found 1 residue(s) matching 'IRE':
-      │    • IRE+A9001_: run_inhib=0.3000, run_holo=0.4500
+      │    • IRE+A9001_: run_inhib=0.3000, run_holo=0.4800
       └─ ✓ Data collected (1 point per PDB)
 
 [29/37] 4LMN                      │ Cobimetinib     │ Code: EUI
       ├─ ✅ Found 1 residue(s) matching 'EUI':
-      │    • EUI+A0503_: run_inhib=0.9900, run_holo=0.5400
+      │    • EUI+A0503_: run_inhib=0.9900, run_holo=0.5100
       └─ ✓ Data collected (1 point per PDB)
 
 [30/37] 4MKC                      │ Ceritinib       │ Code: 4MK
@@ -167,7 +167,7 @@ PROCESSING PDB DIRECTORIES
 
 [31/37] 4WKQ                      │ Gefitinib       │ Code: IRE
       ├─ ✅ Found 1 residue(s) matching 'IRE':
-      │    • IRE+A1101_: run_inhib=0.3000, run_holo=0.4900
+      │    • IRE+A1101_: run_inhib=0.3000, run_holo=0.4300
       └─ ✓ Data collected (1 point per PDB)
 
 [32/37] 4ZAU                      │ Osimertinib     │ Code: YY3
@@ -197,7 +197,7 @@ PROCESSING PDB DIRECTORIES
 
 [37/37] 5MO4                      │ Nilotinib       │ Code: NIL
       ├─ ✅ Found 1 residue(s) matching 'NIL':
-      │    • NIL+A0601_: run_inhib=0.0900, run_holo=0.4800
+      │    • NIL+A0601_: run_inhib=0.0900, run_holo=0.2300
       └─ ✓ Data collected (1 point per PDB)
 
 ================================================================================
@@ -219,7 +219,7 @@ SUMMARY
 CREATING COMBINED PLOT (ALL INHIBITORS)
 ================================================================================
 ✅ Combined plot saved: /data/home/granepura/5-Kinases/Kinases_MCCE/Trial01/plots_Fig3_inhibitors_xts/Trial01_inhibitors_all_runs.png
-   N = 37 (1 point per PDB), Fitted: 19, Outliers: 18
+   N = 37 (1 point per PDB), Fitted: 20, Outliers: 17
 ✅ Combined data saved: /data/home/granepura/5-Kinases/Kinases_MCCE/Trial01/plots_Fig3_inhibitors_xts/Trial01_inhibitors_all_runs.csv
 
 ================================================================================
@@ -255,7 +255,7 @@ CREATING INDIVIDUAL INHIBITOR PLOTS
     ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/Trial01/plots_Fig3_inhibitors_xts/Trial01_inhibitor_Crizotinib.csv
   Plotting Gefitinib (6 points)...
     ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/Trial01/plots_Fig3_inhibitors_xts/Trial01_inhibitor_Gefitinib.png
-       N = 6 (1 point per PDB), Fitted: 1, Outliers: 5
+       N = 6 (1 point per PDB), Fitted: 2, Outliers: 4
     ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/Trial01/plots_Fig3_inhibitors_xts/Trial01_inhibitor_Gefitinib.csv
   Plotting Imatinib (2 points)...
     ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/Trial01/plots_Fig3_inhibitors_xts/Trial01_inhibitor_Imatinib.png

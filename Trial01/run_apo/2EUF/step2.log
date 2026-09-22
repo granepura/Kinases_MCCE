@@ -1007,7 +1007,7 @@ Step 2. Make multi side chain conformers
    Repack side chains 5000 times, remove inaccessible conformers...
    Computing pairwise LJ potential. This may take a while.
       Estimated time on AMD 1.6GHz is 20 seconds.
-      Actual time is 4
+      Actual time is 3
    Repacking in progress, see progress.log for details...
    Done. Time spent = 4
 
@@ -1029,11 +1029,11 @@ Step 2. Make multi side chain conformers
    Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
    Done
 
-      120 conformers deleted in this cycle at    2.000    2.000    2.000
+      112 conformers deleted in this cycle at    2.000    2.000    2.000
 
    Optimizing hydroxyl and water...
-   Total number of atoms 15201
-   Done. Time spent = 26
+   Total number of atoms 15237
+   Done. Time spent = 28
 
 
    Sorting conformers...
@@ -1041,14 +1041,14 @@ Step 2. Make multi side chain conformers
 
    Skip writing full rotamer file step2_out.full.
    Delete duplicate conformers ...
-      18 conformers deleted in this cycle at    2.000    2.000    2.000
+      24 conformers deleted in this cycle at    2.000    2.000    2.000
    Done. Time spent = 5
 
 
    Write output...
    Done
 
-   Total time for step2 (rotamer making) is 47 seconds.
+   Total time for step2 (rotamer making) is 51 seconds.
 
    Output files:
       step2_out.pdb   : mcce pdb file, the input of step 3
@@ -1064,5 +1064,5 @@ Not doing "Step 4. Monte Carlo Sampling"
 
 Not doing "Step 6. Hydrogen Bond Network Analysis"
 
-[Step2.py Info]: Updated r_bound from 0.0 to 1.0 for 5068 hydrogen atoms
+[Step2.py Info]: Updated r_bound from 0.0 to 1.0 for 5070 hydrogen atoms
 [SUCCESS]: Step 2 completed successfully.

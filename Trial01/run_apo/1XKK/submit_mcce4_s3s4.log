@@ -1,7 +1,7 @@
 ============================================================
 MCCE4 SUBMIT SHELL JOB ENVIRONMENT (startup diagnostics)
 ------------------------------------------------------------
-Date:             Tue Sep 22 09:01:00 AM UTC 2026
+Date:             Tue Sep 22 09:17:46 PM UTC 2026
 Host:             aurora
 User:             granepura
 
@@ -21,7 +21,7 @@ STEP2 SKIPPED (flag was f).
 Running custom stepB script "install_apo_step2_out.py" (between STEP2 and STEP3)...
 install_apo_step2_out.py completed SUCCESSFULLY in 00h:00m:00s.
 Running STEP3 ...
-STEP3 completed SUCCESSFULLY in 00h:07m:45s.
+STEP3 completed SUCCESSFULLY in 00h:07m:50s.
 Running custom stepC script "prune_kin-inhib_head3.py" (between STEP3 and STEP4)...
 prune_kin-inhib_head3.py completed SUCCESSFULLY in 00h:00m:00s.
 Running STEP4 ...
@@ -32,7 +32,7 @@ Subdirectories matching this pattern will be removed from temp dir: home.granepu
 STEP_CLEAN: cleaning matching pbe_data folders in /tmp...
 STEP_CLEAN: no matching /tmp pbe_data folders found.
 Script complete.
-Total runtime: 00h:07m:59s
+Total runtime: 00h:08m:04s
 Timing report written to mcce_timing.log
 
 >>> Caught termination signal. Running STEP_CLEAN before exiting...

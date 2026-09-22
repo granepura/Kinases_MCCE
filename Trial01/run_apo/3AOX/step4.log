@@ -117,7 +117,9 @@ Step 4. Monte Carlo Sampling
    PRO01A1213_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ARG+1A1214_005 f 0.00 -> t 1.00 (single conformer treated as fixed)
    PRO01A1215_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   SER01A1216_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    PRO01A1218_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   SER01A1220_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A1221_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ALA01A1222_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    MET01A1223_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
@@ -174,7 +176,6 @@ Step 4. Monte Carlo Sampling
    TRP01A1320_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ILE01A1322_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    PHE01A1323_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
-   SER01A1324_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A1325_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    MET01A1328_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    PRO01A1329_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
@@ -184,6 +185,7 @@ Step 4. Monte Carlo Sampling
    LEU01A1339_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    PHE01A1341_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    VAL01A1342_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   SER01A1344_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ARG+1A1347_005 f 0.00 -> t 1.00 (single conformer treated as fixed)
    MET01A1348_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    PRO01A1350_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
@@ -209,6 +211,7 @@ Step 4. Monte Carlo Sampling
    PRO01A1390_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    VAL01A1392_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ILE01A1393_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   THR01A1395_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ALA01A1396_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A1397_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    PRO01A1398_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
@@ -218,14 +221,14 @@ Step 4. Monte Carlo Sampling
    Do titration at 1 points...
    Detailed progress is in file "mc_out"
    Monte Carlo set up time: 0 seconds.
-   Titration  1:    15 seconds, biggest stdev of conformer occ = 0.017
+   Titration  1:    14 seconds, biggest stdev of conformer occ = 0.021
    Done
 
    Fit titration curves to get pKa/Em ...
    MFE: didn't specify mfe point, do mfe at pKa or Em 
    Done
 
-   Total time on MC: 15 seconds
+   Total time on MC: 14 seconds
 
    Output files:
       mc_out          : MC progress and convergence.

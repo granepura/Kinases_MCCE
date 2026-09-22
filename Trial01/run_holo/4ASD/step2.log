@@ -493,7 +493,7 @@ Step 2. Make multi side chain conformers
 
 
    Tuning exposed rotamers...
-   Done. Time spent = 1
+   Done. Time spent = 2
 
    Hydrogen bond directed rotamer making...
    0 conformers are deleted to fit the limit (36) of derived conformer number
@@ -527,11 +527,11 @@ Step 2. Make multi side chain conformers
    Warning! assign_crg():      missing parameter(s), default value is used and saved in debug.log.
    Done
 
-       50 conformers deleted in this cycle at    2.000    2.000    2.000
+       45 conformers deleted in this cycle at    2.000    2.000    2.000
 
    Optimizing hydroxyl and water...
-   Total number of atoms 9505
-   Done. Time spent = 14
+   Total number of atoms 9560
+   Done. Time spent = 15
 
 
    Sorting conformers...
@@ -539,14 +539,14 @@ Step 2. Make multi side chain conformers
 
    Skip writing full rotamer file step2_out.full.
    Delete duplicate conformers ...
-      1 conformers deleted in this cycle at    2.000    2.000    2.000
-   Done. Time spent = 3
+      5 conformers deleted in this cycle at    2.000    2.000    2.000
+   Done. Time spent = 2
 
 
    Write output...
    Done
 
-   Total time for step2 (rotamer making) is 26 seconds.
+   Total time for step2 (rotamer making) is 27 seconds.
 
    Output files:
       step2_out.pdb   : mcce pdb file, the input of step 3

@@ -58,12 +58,12 @@ Step 4. Monte Carlo Sampling
    MET01A0256_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ARG+1A0258_005 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ILE01A0261_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   THR01A0262_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    MET01A0263_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A0267_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    VAL01A0275_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    VAL01A0279_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    TRP01A0280_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
-   SER01A0284_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A0285_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    VAL01A0287_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    ALA01A0288_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
@@ -91,6 +91,7 @@ Step 4. Monte Carlo Sampling
    ILE01A0333_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    PHE01A0336_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    MET01A0337_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
+   THR01A0338_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A0342_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A0343_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
    LEU01A0346_001 f 0.00 -> t 1.00 (single conformer treated as fixed)
@@ -193,14 +194,14 @@ Step 4. Monte Carlo Sampling
    Do titration at 1 points...
    Detailed progress is in file "mc_out"
    Monte Carlo set up time: 0 seconds.
-   Titration  1:    12 seconds, biggest stdev of conformer occ = 0.021
+   Titration  1:    12 seconds, biggest stdev of conformer occ = 0.018
    Done
 
    Fit titration curves to get pKa/Em ...
    MFE: didn't specify mfe point, do mfe at pKa or Em 
    Done
 
-   Total time on MC: 13 seconds
+   Total time on MC: 12 seconds
 
    Output files:
       mc_out          : MC progress and convergence.
