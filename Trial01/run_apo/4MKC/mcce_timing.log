@@ -10,14 +10,8 @@ Optional Features Enabled:
  - Custom Script After Step3 (stepC)
 ====================================
 
-Run started at: Tue Sep 22 08:23:09 AM UTC 2026
+Run started at: Tue Sep 22 09:11:01 AM UTC 2026
 STEP1 : skipped.      - Skipped (flag f): step not run.
 STEP2 : skipped.      - Skipped (flag f): step not run.
 STEPB : 00h:00m:00s   - Success: "install_apo_step2_out.py" executed.
-STEP3 : 00h:40m:31s   - Success: head3.lst and energies directory created.
-STEPC : 00h:00m:00s   - Success: "prune_kin-inhib_head3.py" executed.
-STEP4 : 00h:00m:15s   - Success: sum_crg.out created.
-STEP_CLEAN: skipped.  - No pbe_data dirs matching this run. (home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_apo.4MKC)
-
-Run ended at: Tue Sep 22 09:03:55 AM UTC 2026
-Total script runtime: 00h:40m:46s
+STEP3 : Running STEP3 ...

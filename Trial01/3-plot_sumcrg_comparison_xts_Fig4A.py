@@ -25,6 +25,9 @@ _ap = argparse.ArgumentParser(
 _ap.add_argument("--trial", help="trial directory (default: this script's directory)")
 _ap.add_argument("--x", default="run_apo", help="x-axis tree (default: run_apo)")
 _ap.add_argument("--y", default="run_holo", help="y-axis tree (default: run_holo)")
+_ap.add_argument("--title", action="store_true",
+                 help="draw the figure title on the PNGs (default: off, so the "
+                      "caption can supply it in the manuscript)")
 _args = _ap.parse_args()
 
 TRIAL = os.path.abspath(_args.trial) if _args.trial \
@@ -456,7 +459,8 @@ for idx, (pdb, (inhibitor, icode)) in enumerate(sorted(inhibitor_codes.items()),
     # === Titles & Labels ===
     plt.xlabel(f"{x_label.replace('run_', '').title()} Charge", fontweight="bold")
     plt.ylabel(f"{y_label.replace('run_', '').title()} Charge", fontweight="bold")
-    plt.title(f"MCCE Kinase Charge ({y_label.replace('run_', '').title()} vs {x_label.replace('run_', '').title()}) -- {TRIAL_NAME}\n {inhibitor} (PDB: {pdb})", fontweight="bold")
+    if _args.title:
+        plt.title(f"MCCE Kinase Charge ({y_label.replace('run_', '').title()} vs {x_label.replace('run_', '').title()}) -- {TRIAL_NAME}\n {inhibitor} (PDB: {pdb})", fontweight="bold")
     plt.axhline(0, color='gray', linestyle='--', linewidth=0.5)
     plt.axvline(0, color='gray', linestyle='--', linewidth=0.5)
 
@@ -557,7 +561,8 @@ if all_x_all and all_y_all:
     #plt.title(f"MCCE Kinase Protein Charge ({y_label.replace('run_', '').title()} vs {x_label.replace('run_', '').title()})", fontweight="bold")
     plt.xlabel(f"Apo-Protein Charge", fontweight="bold", fontsize=16)
     plt.ylabel(f"Holo-Protein Charge", fontweight="bold", fontsize=16)
-    plt.title(f"MCCE Kinase Protein Charge (Holo vs Apo) -- {TRIAL_NAME} Fig4A", fontweight="bold")
+    if _args.title:
+        plt.title(f"MCCE Kinase Protein Charge (Holo vs Apo) -- {TRIAL_NAME} Fig4A", fontweight="bold")
     plt.axhline(0, color='gray', linestyle='--', linewidth=0.5)
     plt.axvline(0, color='gray', linestyle='--', linewidth=0.5)
     plt.legend(loc='lower right', fontsize='small', markerscale=1, framealpha=0.9, ncol=2)

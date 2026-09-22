@@ -36,6 +36,9 @@ _ap.add_argument("--x", default="run_inhib", help="x-axis tree (default: run_inh
 _ap.add_argument("--y", default="run_holo", help="y-axis tree (default: run_holo)")
 _ap.add_argument("--threshold", type=float, default=0.15,
                  help="outlier threshold on |y-x| (default: 0.15)")
+_ap.add_argument("--title", action="store_true",
+                 help="draw the figure title on the PNGs (default: off, so the "
+                      "caption can supply it in the manuscript)")
 _args = _ap.parse_args()
 
 TRIAL = os.path.abspath(_args.trial) if _args.trial \
@@ -363,8 +366,9 @@ stats_text = (
 # Labels & styling
 ax.set_xlabel("Inhibitor Charge in Solution", fontweight="bold", fontsize=11)
 ax.set_ylabel("Inhibitor Bound Charge", fontweight="bold", fontsize=11)
-ax.set_title(f"MCCE Inhibitor Charge (Protein Bound vs Solution) -- {TRIAL_NAME}",
-             fontweight="bold", fontsize=12)
+if _args.title:
+    ax.set_title(f"MCCE Inhibitor Charge (Protein Bound vs Solution) -- {TRIAL_NAME}",
+                 fontweight="bold", fontsize=12)
 
 # Grid styling (darker major gridlines)
 ax.grid(which="major", color="gray", linestyle="-", linewidth=0.8, alpha=0.6, zorder=1)
@@ -601,8 +605,9 @@ for inh in unique_inhibitors:
     # Labels
     ax.set_xlabel("Inhibitor Solution Charge", fontweight="bold", fontsize=16)
     ax.set_ylabel("Inhibitor Bound Charge",    fontweight="bold", fontsize=16)
-    ax.set_title(f"MCCE {inh} Charge (Protein Bound vs Solution) -- {TRIAL_NAME}",
-                 fontweight="bold", fontsize=12)
+    if _args.title:
+        ax.set_title(f"MCCE {inh} Charge (Protein Bound vs Solution) -- {TRIAL_NAME}",
+                     fontweight="bold", fontsize=12)
     
     # Grid
     ax.grid(which="major", color="gray", linestyle="-", linewidth=0.8, alpha=0.6, zorder=1)
