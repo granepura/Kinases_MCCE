@@ -1,0 +1,9 @@
+[2026-09-22 07:09:47 - CRITICAL]: step3.py, pbe: Delphi run failed for conformer VGH01A9000_004: [Errno 2] No such file or directory: 'fort.13'
+Traceback (most recent call last):
+  File "/home/granepura/MCCE4/bin/step3.py", line 758, in pbe
+    rxn0, rxn = pbs_delphi.run(bound, run_options)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 281, in run
+    self.write_fort13(bound.float_bnd_xyzrcp)
+  File "/data/home/granepura/MCCE4/bin/pbs_interfaces.py", line 207, in write_fort13
+    with open("fort.13", "wb") as fh:
+FileNotFoundError: [Errno 2] No such file or directory: 'fort.13'

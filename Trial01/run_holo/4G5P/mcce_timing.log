@@ -1,0 +1,22 @@
+MCCE Timing Report
+====================================
+MCCE_HOME: /home/granepura/MCCE4
+EXTRA: /home/granepura/MCCE4/extra.tpl
+USER_PARAM: N/A
+====================================
+
+Optional Features Enabled:
+ - Custom Script After Step3 (stepC)
+====================================
+
+Run started at: Tue Sep 22 07:24:12 AM UTC 2026
+STEP1 : skipped.      - Skipped (flag f): step not run.
+STEP2 : skipped.      - Skipped (flag f): step not run.
+STEP3 : 00h:08m:24s   - Success: head3.lst and energies directory created.
+STEPC : 00h:00m:00s   - Success: "prune_kin-inhib_head3.py" executed.
+STEP4 : 00h:00m:14s   - Success: sum_crg.out created.
+STEP_CLEAN: skipped.  - No pbe_data dirs matching this run. (home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.4G5P)
+
+Run ended at: Tue Sep 22 07:32:50 AM UTC 2026
+Total script runtime: 00h:08m:38s
+STEP_CLEAN: skipped.  - No matching tmp dirs at cancel.

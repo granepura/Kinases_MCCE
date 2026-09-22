@@ -1,0 +1,132 @@
+
+============================================================
+pro_batch run: 2026-09-22 07:15:40
+Command: /home/granepura/MCCE4/MCCE_bin/pro_batch kin-pdb -custom submit_mcce4_s3s4.sh -job-name T1_holo_s3s4 --skip-prerun
+============================================================
+
+Found 37 new or missing runs to launch: 1XKK, 2EUF, 2HYY, 2ITO, 2ITY, 2ITZ, 2WGJ, 2XP2, 2YFX, 3AOX, 3CS9, 3LXK, 3PYY, 3UE4, 3UG2, 3WZD, 3WZE, 3ZOS, 4AG8, 4AGC, 4AGD, 4AN2, 4ANQ, 4ANS, 4ASD, 4G5J, 4G5P, 4I22, 4LMN, 4MKC, 4WKQ, 4ZAU, 5AAA, 5AAB, 5AAC, 5L2I, 5MO4
+
+Launching 37 runs via Slurm (max 15 concurrent, nice 1000)...
+  Log file: pro_batch_T1_holo_s3s4.log
+Backgrounding — you can continue using this terminal.
+
+  Skipping prerun for 4AGC
+  -> Submitted 4AGC (Slurm job 4806, nice 1000, 1 total)
+  Skipping prerun for 4ANQ
+  -> Submitted 4ANQ (Slurm job 4807, nice 1000, 2 total)
+  Skipping prerun for 4I22
+  -> Submitted 4I22 (Slurm job 4808, nice 1000, 3 total)
+  Skipping prerun for 5AAC
+  -> Submitted 5AAC (Slurm job 4809, nice 1000, 4 total)
+  Skipping prerun for 3UG2
+  -> Submitted 3UG2 (Slurm job 4810, nice 1000, 5 total)
+  Skipping prerun for 2ITZ
+  -> Submitted 2ITZ (Slurm job 4811, nice 1000, 6 total)
+  Skipping prerun for 1XKK
+  -> Submitted 1XKK (Slurm job 4812, nice 1000, 7 total)
+  Skipping prerun for 3WZD
+  -> Submitted 3WZD (Slurm job 4813, nice 1000, 8 total)
+  Skipping prerun for 4ZAU
+  -> Submitted 4ZAU (Slurm job 4814, nice 1000, 9 total)
+  Skipping prerun for 4AN2
+  -> Submitted 4AN2 (Slurm job 4815, nice 1000, 10 total)
+  Skipping prerun for 2XP2
+  -> Submitted 2XP2 (Slurm job 4816, nice 1000, 11 total)
+  Skipping prerun for 2ITO
+  -> Submitted 2ITO (Slurm job 4817, nice 1000, 12 total)
+  Skipping prerun for 2WGJ
+  -> Submitted 2WGJ (Slurm job 4818, nice 1000, 13 total)
+  Skipping prerun for 5MO4
+  -> Submitted 5MO4 (Slurm job 4819, nice 1000, 14 total)
+  Skipping prerun for 4AG8
+  -> Submitted 4AG8 (Slurm job 4820, nice 1000, 15 total)
+  Skipping prerun for 2ITY
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  -> Submitted 2ITY (Slurm job 4821, nice 1000, 16 total)
+  Skipping prerun for 2HYY
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  -> Submitted 2HYY (Slurm job 4822, nice 1000, 17 total)
+  Skipping prerun for 3UE4
+  -> Submitted 3UE4 (Slurm job 4823, nice 1000, 18 total)
+  Skipping prerun for 4G5P
+  -> Submitted 4G5P (Slurm job 4824, nice 1000, 19 total)
+  Skipping prerun for 4MKC
+  -> Submitted 4MKC (Slurm job 4825, nice 1000, 20 total)
+  Skipping prerun for 5AAB
+  -> Submitted 5AAB (Slurm job 4826, nice 1000, 21 total)
+  Skipping prerun for 5AAA
+  -> Submitted 5AAA (Slurm job 4827, nice 1000, 22 total)
+  Skipping prerun for 4AGD
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  -> Submitted 4AGD (Slurm job 4828, nice 1000, 23 total)
+  Skipping prerun for 4ASD
+  -> Submitted 4ASD (Slurm job 4829, nice 1000, 24 total)
+  Skipping prerun for 3PYY
+  -> Submitted 3PYY (Slurm job 4830, nice 1000, 25 total)
+  Skipping prerun for 2EUF
+  -> Submitted 2EUF (Slurm job 4831, nice 1000, 26 total)
+  Skipping prerun for 5L2I
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  -> Submitted 5L2I (Slurm job 4832, nice 1000, 27 total)
+  Skipping prerun for 4G5J
+  -> Submitted 4G5J (Slurm job 4833, nice 1000, 28 total)
+  Skipping prerun for 3WZE
+  -> Submitted 3WZE (Slurm job 4834, nice 1000, 29 total)
+  Skipping prerun for 3LXK
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  -> Submitted 3LXK (Slurm job 4835, nice 1000, 30 total)
+  Skipping prerun for 4ANS
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  -> Submitted 4ANS (Slurm job 4836, nice 1000, 31 total)
+  Skipping prerun for 2YFX
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  -> Submitted 2YFX (Slurm job 4837, nice 1000, 32 total)
+  Skipping prerun for 3ZOS
+  -> Submitted 3ZOS (Slurm job 4838, nice 1000, 33 total)
+  Skipping prerun for 4LMN
+  -> Submitted 4LMN (Slurm job 4839, nice 1000, 34 total)
+  Skipping prerun for 3AOX
+  -> Submitted 3AOX (Slurm job 4840, nice 1000, 35 total)
+  Skipping prerun for 3CS9
+  ... 15/15 Slurm slots occupied, waiting 30.0s...
+  -> Submitted 3CS9 (Slurm job 4841, nice 1000, 36 total)
+  Skipping prerun for 4WKQ
+  -> Submitted 4WKQ (Slurm job 4842, nice 1000, 37 total)
+
+=============================================
+Slurm Summary: 37 jobs submitted
+  Job name      : T1_holo_s3s4
+  Nice priority : 1000
+  Max concurrent: 15
+  Slurm status  : squeue --me --name T1_holo_s3s4 -o "%.10i %.9P %.30j %.8u %.2t %.10M %.10L %.6D %R"
+  Check status  : pro_batch <input_path> --check -job-name T1_holo_s3s4
+  Stop batch    : pro_batch --stop -job-name T1_holo_s3s4
+=============================================
+  Finished: 2026-09-22 07:33:12

@@ -1,0 +1,698 @@
+2026-09-22 07:15:41 - INFO: step3.py, <module>: Step 3. Energies calculation with PBE solver.
+2026-09-22 07:15:41 - INFO: step3.py, <module>: Calling new VDW....No Scaling Applied
+2026-09-22 07:15:41 - INFO: step3.py, <module>:    Process run time options & convert step2_out.pdb.
+2026-09-22 07:15:41 - INFO: step3.py, <module>:    Prepare input for PB solver.
+2026-09-22 07:15:41 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 07:15:41 - INFO: step3.py, <module>:    Set up parallel envrionment and run PB solver.
+2026-09-22 07:15:41 - INFO: step3.py, <module>:    Running PBE solver in 5 threads
+2026-09-22 07:15:41 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (4/675) GLU02A0697_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0697_004
+2026-09-22 07:15:41 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (1/675) GLU01A0697_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0697_001
+2026-09-22 07:15:41 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (3/675) GLU02A0697_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0697_003
+2026-09-22 07:15:41 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (2/675) GLU01A0697_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0697_002
+2026-09-22 07:15:41 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (5/675) GLU-1A0697_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0697_005
+2026-09-22 07:15:48 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (6/675) ALA01A0698_001...
+2026-09-22 07:15:48 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (7/675) PRO01A0699_001...
+2026-09-22 07:15:48 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (8/675) ASN01A0700_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0700_001
+2026-09-22 07:15:48 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (9/675) ASN01A0700_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0700_002
+2026-09-22 07:15:48 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (10/675) ASN01A0700_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0700_003
+2026-09-22 07:15:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (11/675) GLN01A0701_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0701_001
+2026-09-22 07:15:48 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (12/675) GLN01A0701_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0701_002
+2026-09-22 07:15:53 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (13/675) ALA01A0702_001...
+2026-09-22 07:15:53 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (14/675) LEU01A0703_001...
+2026-09-22 07:15:53 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (15/675) LEU01A0704_001...
+2026-09-22 07:15:53 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (17/675) ARG02A0705_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0705_002
+2026-09-22 07:15:53 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (16/675) ARG01A0705_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0705_001
+2026-09-22 07:15:54 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (18/675) ARG02A0705_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0705_003
+2026-09-22 07:15:54 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (19/675) ARG03A0705_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0705_004
+2026-09-22 07:15:54 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (20/675) ARG03A0705_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0705_005
+2026-09-22 07:15:59 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (21/675) ARG+1A0705_006 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0705_006
+2026-09-22 07:15:59 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (22/675) ILE01A0706_001...
+2026-09-22 07:15:59 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (23/675) LEU01A0707_001...
+2026-09-22 07:15:59 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (24/675) LYS01A0708_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0708_001
+2026-09-22 07:15:59 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (25/675) LYS+1A0708_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0708_002
+2026-09-22 07:15:59 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (26/675) GLU01A0709_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0709_001
+2026-09-22 07:16:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (27/675) GLU01A0709_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0709_002
+2026-09-22 07:16:04 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (28/675) GLU02A0709_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0709_003
+2026-09-22 07:16:04 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (29/675) GLU02A0709_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0709_004
+2026-09-22 07:16:05 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (30/675) GLU-1A0709_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0709_005
+2026-09-22 07:16:05 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (31/675) THR01A0710_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0710_001
+2026-09-22 07:16:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (32/675) GLU01A0711_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0711_001
+2026-09-22 07:16:08 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (33/675) GLU01A0711_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0711_002
+2026-09-22 07:16:09 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (34/675) GLU02A0711_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0711_003
+2026-09-22 07:16:10 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (35/675) GLU02A0711_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0711_004
+2026-09-22 07:16:10 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (36/675) GLU-1A0711_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0711_005
+2026-09-22 07:16:10 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (37/675) PHE01A0712_001...
+2026-09-22 07:16:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (38/675) LYS01A0713_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0713_001
+2026-09-22 07:16:13 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (39/675) LYS+1A0713_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0713_002
+2026-09-22 07:16:14 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (40/675) LYS01A0714_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0714_001
+2026-09-22 07:16:15 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (41/675) LYS+1A0714_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0714_002
+2026-09-22 07:16:15 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (42/675) ILE01A0715_001...
+2026-09-22 07:16:15 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (43/675) LYS01A0716_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0716_001
+2026-09-22 07:16:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (44/675) LYS+1A0716_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0716_002
+2026-09-22 07:16:18 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (45/675) VAL01A0717_001...
+2026-09-22 07:16:18 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (46/675) LEU01A0718_001...
+2026-09-22 07:16:18 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (47/675) SER01A0720_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0720_001
+2026-09-22 07:16:19 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (48/675) ALA01A0722_001...
+2026-09-22 07:16:19 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (49/675) PHE01A0723_001...
+2026-09-22 07:16:19 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (50/675) THR01A0725_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0725_001
+2026-09-22 07:16:20 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (51/675) VAL01A0726_001...
+2026-09-22 07:16:20 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (52/675) TYR01A0727_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0727_001
+2026-09-22 07:16:20 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (53/675) TYR01A0727_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0727_002
+2026-09-22 07:16:20 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (54/675) TYR-1A0727_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR-1A0727_003
+2026-09-22 07:16:23 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (55/675) LYS01A0728_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0728_001
+2026-09-22 07:16:23 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (56/675) LYS+1A0728_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0728_002
+2026-09-22 07:16:25 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (57/675) LEU01A0730_001...
+2026-09-22 07:16:25 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (58/675) TRP01A0731_001...
+2026-09-22 07:16:25 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (59/675) ILE01A0732_001...
+2026-09-22 07:16:25 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (60/675) PRO01A0733_001...
+2026-09-22 07:16:25 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (61/675) GLU01A0734_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0734_001
+2026-09-22 07:16:25 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (62/675) GLU01A0734_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0734_002
+2026-09-22 07:16:25 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (63/675) GLU02A0734_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0734_003
+2026-09-22 07:16:28 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (64/675) GLU02A0734_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0734_004
+2026-09-22 07:16:28 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (65/675) GLU-1A0734_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0734_005
+2026-09-22 07:16:30 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (66/675) GLU01A0736_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0736_001
+2026-09-22 07:16:30 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (67/675) GLU01A0736_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0736_002
+2026-09-22 07:16:30 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (68/675) GLU02A0736_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0736_003
+2026-09-22 07:16:33 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (69/675) GLU02A0736_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0736_004
+2026-09-22 07:16:33 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (70/675) GLU-1A0736_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0736_005
+2026-09-22 07:16:35 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (71/675) LYS01A0737_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0737_001
+2026-09-22 07:16:35 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (72/675) LYS+1A0737_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0737_002
+2026-09-22 07:16:35 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (73/675) VAL01A0738_001...
+2026-09-22 07:16:35 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (74/675) LYS01A0739_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0739_001
+2026-09-22 07:16:37 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (75/675) LYS+1A0739_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0739_002
+2026-09-22 07:16:38 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (76/675) ILE01A0740_001...
+2026-09-22 07:16:38 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (77/675) PRO01A0741_001...
+2026-09-22 07:16:38 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (78/675) VAL01A0742_001...
+2026-09-22 07:16:38 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (79/675) ALA01A0743_001...
+2026-09-22 07:16:38 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (80/675) ILE01A0744_001...
+2026-09-22 07:16:38 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (81/675) LYS01A0745_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0745_001
+2026-09-22 07:16:40 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (82/675) LYS+1A0745_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0745_002
+2026-09-22 07:16:40 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (83/675) GLU01A0746_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0746_001
+2026-09-22 07:16:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (84/675) GLU01A0746_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0746_002
+2026-09-22 07:16:42 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (85/675) GLU02A0746_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0746_003
+2026-09-22 07:16:43 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (86/675) GLU02A0746_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0746_004
+2026-09-22 07:16:45 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (87/675) GLU-1A0746_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0746_005
+2026-09-22 07:16:45 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (88/675) LEU01A0747_001...
+2026-09-22 07:16:45 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (89/675) ARG01A0748_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0748_001
+2026-09-22 07:16:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (90/675) ARG02A0748_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0748_002
+2026-09-22 07:16:47 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (91/675) ARG02A0748_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0748_003
+2026-09-22 07:16:48 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (92/675) ARG03A0748_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0748_004
+2026-09-22 07:16:50 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (93/675) ARG+1A0748_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0748_005
+2026-09-22 07:16:50 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (94/675) GLU01A0749_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0749_001
+2026-09-22 07:16:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (95/675) GLU01A0749_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0749_002
+2026-09-22 07:16:52 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (96/675) GLU02A0749_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0749_003
+2026-09-22 07:16:52 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (97/675) GLU02A0749_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0749_004
+2026-09-22 07:16:55 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (98/675) GLU-1A0749_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0749_005
+2026-09-22 07:16:55 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (99/675) ALA01A0750_001...
+2026-09-22 07:16:55 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (100/675) THR01A0751_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0751_001
+2026-09-22 07:16:56 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (101/675) THR01A0751_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0751_002
+2026-09-22 07:16:57 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (102/675) SER01A0752_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0752_001
+2026-09-22 07:16:57 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (103/675) PRO01A0753_001...
+2026-09-22 07:16:57 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (104/675) LYS01A0754_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0754_001
+2026-09-22 07:17:00 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (105/675) LYS+1A0754_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0754_002
+2026-09-22 07:17:00 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (106/675) ALA01A0755_001...
+2026-09-22 07:17:00 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (107/675) ASN01A0756_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0756_001
+2026-09-22 07:17:01 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (108/675) ASN01A0756_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0756_002
+2026-09-22 07:17:02 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (109/675) LYS01A0757_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0757_001
+2026-09-22 07:17:02 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (110/675) LYS+1A0757_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0757_002
+2026-09-22 07:17:05 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (111/675) GLU01A0758_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0758_001
+2026-09-22 07:17:05 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (112/675) GLU01A0758_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0758_002
+2026-09-22 07:17:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (113/675) GLU02A0758_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0758_003
+2026-09-22 07:17:07 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (114/675) GLU02A0758_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0758_004
+2026-09-22 07:17:07 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (115/675) GLU-1A0758_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0758_005
+2026-09-22 07:17:10 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (116/675) ILE01A0759_001...
+2026-09-22 07:17:10 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (117/675) LEU01A0760_001...
+2026-09-22 07:17:10 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (119/675) ASP01A0761_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0761_002
+2026-09-22 07:17:10 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (118/675) ASP01A0761_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0761_001
+2026-09-22 07:17:12 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (120/675) ASP02A0761_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0761_003
+2026-09-22 07:17:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (121/675) ASP02A0761_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0761_004
+2026-09-22 07:17:12 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (122/675) ASP-1A0761_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0761_005
+2026-09-22 07:17:15 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (123/675) GLU01A0762_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0762_001
+2026-09-22 07:17:15 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (124/675) GLU01A0762_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0762_002
+2026-09-22 07:17:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (125/675) GLU02A0762_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0762_003
+2026-09-22 07:17:17 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (126/675) GLU02A0762_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0762_004
+2026-09-22 07:17:17 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (127/675) GLU-1A0762_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0762_005
+2026-09-22 07:17:20 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (128/675) ALA01A0763_001...
+2026-09-22 07:17:20 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (129/675) TYR01A0764_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0764_001
+2026-09-22 07:17:20 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (130/675) TYR-1A0764_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR-1A0764_002
+2026-09-22 07:17:21 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (131/675) VAL01A0765_001...
+2026-09-22 07:17:21 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (132/675) MET01A0766_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_MET01A0766_001
+2026-09-22 07:17:22 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (133/675) ALA01A0767_001...
+2026-09-22 07:17:22 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (134/675) SER01A0768_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0768_001
+2026-09-22 07:17:22 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (135/675) SER01A0768_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0768_002
+2026-09-22 07:17:25 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (136/675) SER01A0768_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0768_003
+2026-09-22 07:17:25 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (137/675) VAL01A0769_001...
+2026-09-22 07:17:25 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (138/675) ASP01A0770_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0770_001
+2026-09-22 07:17:26 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (139/675) ASP01A0770_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0770_002
+2026-09-22 07:17:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (140/675) ASP02A0770_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0770_003
+2026-09-22 07:17:26 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (141/675) ASP02A0770_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0770_004
+2026-09-22 07:17:29 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (142/675) ASP-1A0770_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0770_005
+2026-09-22 07:17:30 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (143/675) ASN01A0771_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0771_001
+2026-09-22 07:17:31 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (144/675) PRO01A0772_001...
+2026-09-22 07:17:31 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (145/675) HIS01A0773_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS01A0773_001
+2026-09-22 07:17:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (146/675) HIS01A0773_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS01A0773_002
+2026-09-22 07:17:31 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (147/675) HIS02A0773_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS02A0773_003
+2026-09-22 07:17:34 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (148/675) HIS02A0773_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS02A0773_004
+2026-09-22 07:17:35 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (149/675) HIS+1A0773_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS+1A0773_005
+2026-09-22 07:17:36 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (150/675) HIS+1A0773_006 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS+1A0773_006
+2026-09-22 07:17:36 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (151/675) VAL01A0774_001...
+2026-09-22 07:17:36 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (152/675) CYS01A0775_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0775_001
+2026-09-22 07:17:36 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (153/675) CYS01A0775_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0775_002
+2026-09-22 07:17:39 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (154/675) CYS01A0775_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0775_003
+2026-09-22 07:17:40 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (155/675) CYS-1A0775_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS-1A0775_004
+2026-09-22 07:17:41 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (156/675) ARG01A0776_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0776_001
+2026-09-22 07:17:41 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (157/675) ARG02A0776_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0776_002
+2026-09-22 07:17:41 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (158/675) ARG03A0776_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0776_003
+2026-09-22 07:17:44 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (159/675) ARG+1A0776_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0776_004
+2026-09-22 07:17:44 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (160/675) LEU01A0777_001...
+2026-09-22 07:17:44 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (161/675) LEU01A0778_001...
+2026-09-22 07:17:44 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (162/675) ILE01A0780_001...
+2026-09-22 07:17:45 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (163/675) CYS01A0781_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0781_001
+2026-09-22 07:17:46 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (164/675) CYS01A0781_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0781_002
+2026-09-22 07:17:46 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (165/675) CYS01A0781_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0781_003
+2026-09-22 07:17:46 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (166/675) CYS-1A0781_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS-1A0781_004
+2026-09-22 07:17:49 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (167/675) LEU01A0782_001...
+2026-09-22 07:17:49 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (168/675) THR01A0783_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0783_001
+2026-09-22 07:17:49 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (169/675) THR01A0783_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0783_002
+2026-09-22 07:17:51 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (170/675) THR01A0783_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0783_003
+2026-09-22 07:17:51 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (171/675) SER01A0784_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0784_001
+2026-09-22 07:17:51 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (172/675) SER01A0784_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0784_002
+2026-09-22 07:17:54 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (173/675) THR01A0785_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0785_001
+2026-09-22 07:17:54 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (174/675) VAL01A0786_001...
+2026-09-22 07:17:54 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (175/675) GLN01A0787_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0787_001
+2026-09-22 07:17:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (176/675) GLN01A0787_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0787_002
+2026-09-22 07:17:56 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (177/675) LEU01A0788_001...
+2026-09-22 07:17:56 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (178/675) ILE01A0789_001...
+2026-09-22 07:17:56 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (179/675) THR01A0790_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0790_001
+2026-09-22 07:17:56 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (180/675) THR01A0790_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0790_002
+2026-09-22 07:17:58 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (181/675) GLN01A0791_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0791_001
+2026-09-22 07:17:59 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (182/675) GLN01A0791_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0791_002
+2026-09-22 07:18:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (183/675) GLN01A0791_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0791_003
+2026-09-22 07:18:01 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (184/675) GLN01A0791_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0791_004
+2026-09-22 07:18:01 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (185/675) LEU01A0792_001...
+2026-09-22 07:18:01 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (186/675) MET01A0793_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_MET01A0793_001
+2026-09-22 07:18:03 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (187/675) PRO01A0794_001...
+2026-09-22 07:18:03 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (188/675) PHE01A0795_001...
+2026-09-22 07:18:03 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (189/675) CYS01A0797_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0797_001
+2026-09-22 07:18:04 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (190/675) CYS01A0797_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0797_002
+2026-09-22 07:18:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (191/675) CYS01A0797_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0797_003
+2026-09-22 07:18:05 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (193/675) LEU01A0798_001...
+2026-09-22 07:18:05 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (192/675) CYS-1A0797_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS-1A0797_004
+2026-09-22 07:18:05 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (194/675) LEU01A0799_001...
+2026-09-22 07:18:05 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (195/675) ASP01A0800_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0800_001
+2026-09-22 07:18:08 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (196/675) ASP01A0800_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0800_002
+2026-09-22 07:18:09 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (197/675) ASP02A0800_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0800_003
+2026-09-22 07:18:10 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (198/675) ASP02A0800_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0800_004
+2026-09-22 07:18:10 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (199/675) ASP-1A0800_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0800_005
+2026-09-22 07:18:10 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (200/675) TYR01A0801_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0801_001
+2026-09-22 07:18:12 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (201/675) TYR-1A0801_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR-1A0801_002
+2026-09-22 07:18:13 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (202/675) VAL01A0802_001...
+2026-09-22 07:18:13 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (203/675) ARG01A0803_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0803_001
+2026-09-22 07:18:15 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (204/675) ARG02A0803_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0803_002
+2026-09-22 07:18:15 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (205/675) ARG03A0803_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0803_003
+2026-09-22 07:18:15 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (206/675) ARG+1A0803_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0803_004
+2026-09-22 07:18:17 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (207/675) GLU01A0804_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0804_001
+2026-09-22 07:18:18 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (208/675) GLU01A0804_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0804_002
+2026-09-22 07:18:20 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (209/675) GLU02A0804_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0804_003
+2026-09-22 07:18:20 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (210/675) GLU02A0804_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0804_004
+2026-09-22 07:18:20 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (211/675) GLU-1A0804_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0804_005
+2026-09-22 07:18:22 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (212/675) HIS01A0805_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS01A0805_001
+2026-09-22 07:18:23 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (213/675) HIS01A0805_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS01A0805_002
+2026-09-22 07:18:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (214/675) HIS02A0805_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS02A0805_003
+2026-09-22 07:18:25 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (215/675) HIS02A0805_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS02A0805_004
+2026-09-22 07:18:25 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (216/675) HIS+1A0805_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS+1A0805_005
+2026-09-22 07:18:27 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (217/675) HIS+1A0805_006 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS+1A0805_006
+2026-09-22 07:18:27 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (218/675) LYS01A0806_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0806_001
+2026-09-22 07:18:29 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (219/675) LYS+1A0806_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0806_002
+2026-09-22 07:18:29 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (220/675) ASP01A0807_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0807_001
+2026-09-22 07:18:29 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (221/675) ASP01A0807_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0807_002
+2026-09-22 07:18:31 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (222/675) ASP02A0807_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0807_003
+2026-09-22 07:18:32 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (223/675) ASP02A0807_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0807_004
+2026-09-22 07:18:34 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (224/675) ASP-1A0807_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0807_005
+2026-09-22 07:18:34 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (225/675) ASN01A0808_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0808_001
+2026-09-22 07:18:34 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (226/675) ASN01A0808_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0808_002
+2026-09-22 07:18:36 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (227/675) ILE01A0809_001...
+2026-09-22 07:18:36 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (228/675) SER01A0811_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0811_001
+2026-09-22 07:18:37 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (229/675) SER01A0811_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0811_002
+2026-09-22 07:18:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (230/675) SER01A0811_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0811_003
+2026-09-22 07:18:39 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (231/675) GLN01A0812_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0812_001
+2026-09-22 07:18:39 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (232/675) TYR01A0813_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0813_001
+2026-09-22 07:18:41 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (233/675) TYR01A0813_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0813_002
+2026-09-22 07:18:41 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (234/675) TYR-1A0813_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR-1A0813_003
+2026-09-22 07:18:43 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (235/675) LEU01A0814_001...
+2026-09-22 07:18:43 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (236/675) LEU01A0815_001...
+2026-09-22 07:18:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (237/675) ASN01A0816_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0816_001
+2026-09-22 07:18:44 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (238/675) ASN01A0816_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0816_002
+2026-09-22 07:18:44 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (239/675) TRP01A0817_001...
+2026-09-22 07:18:44 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (240/675) CYS01A0818_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0818_001
+2026-09-22 07:18:45 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (241/675) CYS01A0818_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0818_002
+2026-09-22 07:18:46 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (242/675) CYS01A0818_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0818_003
+2026-09-22 07:18:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (243/675) CYS-1A0818_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS-1A0818_004
+2026-09-22 07:18:48 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (244/675) VAL01A0819_001...
+2026-09-22 07:18:48 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (245/675) GLN01A0820_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0820_001
+2026-09-22 07:18:48 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (246/675) GLN01A0820_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0820_002
+2026-09-22 07:18:50 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (247/675) ILE01A0821_001...
+2026-09-22 07:18:50 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (248/675) ALA01A0822_001...
+2026-09-22 07:18:50 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (249/675) LYS01A0823_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0823_001
+2026-09-22 07:18:51 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (250/675) LYS+1A0823_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0823_002
+2026-09-22 07:18:53 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (251/675) MET01A0825_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_MET01A0825_001
+2026-09-22 07:18:53 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (252/675) ASN01A0826_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0826_001
+2026-09-22 07:18:53 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (253/675) ASN01A0826_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0826_002
+2026-09-22 07:18:55 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (254/675) TYR01A0827_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0827_001
+2026-09-22 07:18:56 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (255/675) TYR01A0827_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0827_002
+2026-09-22 07:18:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (256/675) TYR-1A0827_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR-1A0827_003
+2026-09-22 07:18:58 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (257/675) LEU01A0828_001...
+2026-09-22 07:18:58 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (258/675) GLU01A0829_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0829_001
+2026-09-22 07:18:58 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (259/675) GLU01A0829_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0829_002
+2026-09-22 07:19:00 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (260/675) GLU02A0829_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0829_003
+2026-09-22 07:19:00 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (261/675) GLU02A0829_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0829_004
+2026-09-22 07:19:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (262/675) GLU-1A0829_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0829_005
+2026-09-22 07:19:03 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (263/675) ASP01A0830_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0830_001
+2026-09-22 07:19:03 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (264/675) ASP01A0830_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0830_002
+2026-09-22 07:19:05 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (265/675) ASP02A0830_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0830_003
+2026-09-22 07:19:05 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (266/675) ASP02A0830_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0830_004
+2026-09-22 07:19:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (267/675) ASP-1A0830_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0830_005
+2026-09-22 07:19:07 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (268/675) ARG01A0831_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0831_001
+2026-09-22 07:19:08 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (269/675) ARG02A0831_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0831_002
+2026-09-22 07:19:10 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (270/675) ARG03A0831_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0831_003
+2026-09-22 07:19:10 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (271/675) ARG+1A0831_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0831_004
+2026-09-22 07:19:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (272/675) ARG01A0832_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0832_001
+2026-09-22 07:19:12 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (273/675) ARG02A0832_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0832_002
+2026-09-22 07:19:12 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (274/675) ARG03A0832_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0832_003
+2026-09-22 07:19:15 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (275/675) ARG+1A0832_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0832_004
+2026-09-22 07:19:15 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (276/675) LEU01A0833_001...
+2026-09-22 07:19:15 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (277/675) VAL01A0834_001...
+2026-09-22 07:19:15 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (278/675) HIS01A0835_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS01A0835_001
+2026-09-22 07:19:16 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (279/675) HIS02A0835_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS02A0835_002
+2026-09-22 07:19:17 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (280/675) HIS+1A0835_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS+1A0835_003
+2026-09-22 07:19:17 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (281/675) ARG01A0836_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0836_001
+2026-09-22 07:19:20 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (282/675) ARG02A0836_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0836_002
+2026-09-22 07:19:20 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (283/675) ARG03A0836_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0836_003
+2026-09-22 07:19:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (284/675) ARG03A0836_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0836_004
+2026-09-22 07:19:22 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (285/675) ARG+1A0836_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0836_005
+2026-09-22 07:19:22 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (286/675) ASP01A0837_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0837_001
+2026-09-22 07:19:24 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (287/675) ASP01A0837_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0837_002
+2026-09-22 07:19:25 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (288/675) ASP02A0837_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0837_003
+2026-09-22 07:19:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (289/675) ASP02A0837_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0837_004
+2026-09-22 07:19:26 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (290/675) ASP-1A0837_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0837_005
+2026-09-22 07:19:27 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (291/675) LEU01A0838_001...
+2026-09-22 07:19:27 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (292/675) ALA01A0839_001...
+2026-09-22 07:19:27 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (293/675) ALA01A0840_001...
+2026-09-22 07:19:27 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (294/675) ARG01A0841_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0841_001
+2026-09-22 07:19:29 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (295/675) ARG02A0841_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0841_002
+2026-09-22 07:19:30 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (296/675) ARG02A0841_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0841_003
+2026-09-22 07:19:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (297/675) ARG03A0841_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0841_004
+2026-09-22 07:19:31 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (298/675) ARG+1A0841_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0841_005
+2026-09-22 07:19:31 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (299/675) ASN01A0842_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0842_001
+2026-09-22 07:19:34 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (300/675) ASN01A0842_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASN01A0842_002
+2026-09-22 07:19:34 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (301/675) VAL01A0843_001...
+2026-09-22 07:19:34 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (302/675) LEU01A0844_001...
+2026-09-22 07:19:34 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (303/675) VAL01A0845_001...
+2026-09-22 07:19:34 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (304/675) LYS01A0846_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0846_001
+2026-09-22 07:19:36 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (305/675) LYS+1A0846_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0846_002
+2026-09-22 07:19:36 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (306/675) THR01A0847_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0847_001
+2026-09-22 07:19:36 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (307/675) THR01A0847_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0847_002
+2026-09-22 07:19:39 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (308/675) THR01A0847_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0847_003
+2026-09-22 07:19:39 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (309/675) PRO01A0848_001...
+2026-09-22 07:19:39 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (310/675) GLN01A0849_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0849_001
+2026-09-22 07:19:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (311/675) GLN01A0849_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0849_002
+2026-09-22 07:19:41 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (312/675) HIS01A0850_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS01A0850_001
+2026-09-22 07:19:41 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (313/675) HIS01A0850_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS01A0850_002
+2026-09-22 07:19:44 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (314/675) HIS02A0850_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS02A0850_003
+2026-09-22 07:19:44 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (315/675) HIS02A0850_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS02A0850_004
+2026-09-22 07:19:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (316/675) HIS+1A0850_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS+1A0850_005
+2026-09-22 07:19:45 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (317/675) HIS+1A0850_006 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS+1A0850_006
+2026-09-22 07:19:46 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (318/675) VAL01A0851_001...
+2026-09-22 07:19:46 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (319/675) LYS01A0852_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0852_001
+2026-09-22 07:19:49 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (320/675) LYS+1A0852_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0852_002
+2026-09-22 07:19:49 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (321/675) ILE01A0853_001...
+2026-09-22 07:19:49 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (322/675) THR01A0854_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0854_001
+2026-09-22 07:19:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (323/675) THR01A0854_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0854_002
+2026-09-22 07:19:50 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (324/675) ASP01A0855_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0855_001
+2026-09-22 07:19:50 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (325/675) ASP01A0855_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0855_002
+2026-09-22 07:19:54 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (326/675) ASP02A0855_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0855_003
+2026-09-22 07:19:54 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (327/675) ASP02A0855_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0855_004
+2026-09-22 07:19:55 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (328/675) ASP-1A0855_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0855_005
+2026-09-22 07:19:55 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (329/675) PHE01A0856_001...
+2026-09-22 07:19:55 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (330/675) ARG01A0858_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0858_001
+2026-09-22 07:19:55 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (331/675) ARG02A0858_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0858_002
+2026-09-22 07:19:59 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (332/675) ARG03A0858_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0858_003
+2026-09-22 07:19:59 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (333/675) ARG03A0858_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0858_004
+2026-09-22 07:20:00 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (334/675) ARG+1A0858_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0858_005
+2026-09-22 07:20:00 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (335/675) ALA01A0859_001...
+2026-09-22 07:20:00 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (336/675) LYS01A0860_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0860_001
+2026-09-22 07:20:00 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (337/675) LYS+1A0860_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0860_002
+2026-09-22 07:20:04 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (338/675) LEU01A0861_001...
+2026-09-22 07:20:04 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (339/675) LEU01A0862_001...
+2026-09-22 07:20:04 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (340/675) ALA01A0864_001...
+2026-09-22 07:20:04 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (341/675) GLU01A0865_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0865_001
+2026-09-22 07:20:04 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (342/675) GLU01A0865_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0865_002
+2026-09-22 07:20:05 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (343/675) GLU02A0865_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0865_003
+2026-09-22 07:20:05 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (344/675) GLU02A0865_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0865_004
+2026-09-22 07:20:05 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (345/675) GLU-1A0865_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0865_005
+2026-09-22 07:20:08 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (346/675) VAL01A0876_001...
+2026-09-22 07:20:08 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (347/675) PRO01A0877_001...
+2026-09-22 07:20:08 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (348/675) ILE01A0878_001...
+2026-09-22 07:20:08 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (349/675) LYS01A0879_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0879_001
+2026-09-22 07:20:08 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (350/675) LYS+1A0879_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0879_002
+2026-09-22 07:20:09 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (351/675) TRP01A0880_001...
+2026-09-22 07:20:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (352/675) MET01A0881_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_MET01A0881_001
+2026-09-22 07:20:10 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (353/675) ALA01A0882_001...
+2026-09-22 07:20:10 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (355/675) GLU01A0884_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0884_001
+2026-09-22 07:20:10 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (354/675) LEU01A0883_001...
+2026-09-22 07:20:10 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (356/675) GLU01A0884_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0884_002
+2026-09-22 07:20:13 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (357/675) GLU02A0884_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0884_003
+2026-09-22 07:20:13 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (358/675) GLU02A0884_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0884_004
+2026-09-22 07:20:14 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (359/675) GLU-1A0884_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0884_005
+2026-09-22 07:20:14 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (360/675) SER01A0885_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0885_001
+2026-09-22 07:20:14 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (361/675) SER01A0885_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0885_002
+2026-09-22 07:20:18 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (362/675) SER01A0885_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0885_003
+2026-09-22 07:20:18 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (363/675) ILE01A0886_001...
+2026-09-22 07:20:18 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (364/675) LEU01A0887_001...
+2026-09-22 07:20:18 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (365/675) HIS01A0888_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS01A0888_001
+2026-09-22 07:20:19 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (366/675) HIS02A0888_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS02A0888_002
+2026-09-22 07:20:19 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (367/675) HIS+1A0888_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS+1A0888_003
+2026-09-22 07:20:19 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (368/675) ARG01A0889_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0889_001
+2026-09-22 07:20:23 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (369/675) ARG02A0889_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0889_002
+2026-09-22 07:20:23 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (370/675) ARG03A0889_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0889_003
+2026-09-22 07:20:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (371/675) ARG+1A0889_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0889_004
+2026-09-22 07:20:24 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (372/675) ILE01A0890_001...
+2026-09-22 07:20:24 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (373/675) TYR01A0891_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0891_001
+2026-09-22 07:20:24 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (374/675) TYR01A0891_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0891_002
+2026-09-22 07:20:27 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (375/675) TYR-1A0891_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR-1A0891_003
+2026-09-22 07:20:27 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (376/675) THR01A0892_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0892_001
+2026-09-22 07:20:29 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (377/675) THR01A0892_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0892_002
+2026-09-22 07:20:29 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (378/675) HIS01A0893_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS01A0893_001
+2026-09-22 07:20:29 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (379/675) HIS01A0893_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS01A0893_002
+2026-09-22 07:20:32 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (380/675) HIS02A0893_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS02A0893_003
+2026-09-22 07:20:32 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (381/675) HIS02A0893_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS02A0893_004
+2026-09-22 07:20:33 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (382/675) HIS+1A0893_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS+1A0893_005
+2026-09-22 07:20:34 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (383/675) HIS+1A0893_006 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS+1A0893_006
+2026-09-22 07:20:34 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (384/675) GLN01A0894_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0894_001
+2026-09-22 07:20:37 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (385/675) GLN01A0894_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0894_002
+2026-09-22 07:20:37 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (386/675) SER01A0895_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0895_001
+2026-09-22 07:20:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (387/675) SER01A0895_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0895_002
+2026-09-22 07:20:38 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (388/675) SER01A0895_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0895_003
+2026-09-22 07:20:38 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (389/675) ASP01A0896_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0896_001
+2026-09-22 07:20:41 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (390/675) ASP01A0896_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0896_002
+2026-09-22 07:20:42 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (391/675) ASP02A0896_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0896_003
+2026-09-22 07:20:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (392/675) ASP02A0896_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0896_004
+2026-09-22 07:20:43 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (393/675) ASP-1A0896_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0896_005
+2026-09-22 07:20:43 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (394/675) VAL01A0897_001...
+2026-09-22 07:20:43 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (395/675) TRP01A0898_001...
+2026-09-22 07:20:43 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (396/675) SER01A0899_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0899_001
+2026-09-22 07:20:46 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (397/675) SER01A0899_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0899_002
+2026-09-22 07:20:47 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (398/675) TYR01A0900_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0900_001
+2026-09-22 07:20:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (399/675) TYR01A0900_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0900_002
+2026-09-22 07:20:48 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (400/675) TYR-1A0900_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR-1A0900_003
+2026-09-22 07:20:48 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (401/675) VAL01A0902_001...
+2026-09-22 07:20:48 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (402/675) THR01A0903_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0903_001
+2026-09-22 07:20:51 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (403/675) THR01A0903_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0903_002
+2026-09-22 07:20:51 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (404/675) THR01A0903_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0903_003
+2026-09-22 07:20:53 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (405/675) VAL01A0904_001...
+2026-09-22 07:20:53 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (406/675) TRP01A0905_001...
+2026-09-22 07:20:53 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (407/675) GLU01A0906_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0906_001
+2026-09-22 07:20:53 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (408/675) GLU01A0906_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0906_002
+2026-09-22 07:20:53 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (409/675) GLU02A0906_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0906_003
+2026-09-22 07:20:56 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (410/675) GLU02A0906_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0906_004
+2026-09-22 07:20:56 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (411/675) GLU-1A0906_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0906_005
+2026-09-22 07:20:58 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (412/675) LEU01A0907_001...
+2026-09-22 07:20:58 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (413/675) MET01A0908_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_MET01A0908_001
+2026-09-22 07:20:58 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (414/675) THR01A0909_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0909_001
+2026-09-22 07:20:58 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (415/675) THR01A0909_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0909_002
+2026-09-22 07:21:01 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (416/675) PHE01A0910_001...
+2026-09-22 07:21:01 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (417/675) SER01A0912_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0912_001
+2026-09-22 07:21:01 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (418/675) LYS01A0913_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0913_001
+2026-09-22 07:21:03 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (419/675) LYS+1A0913_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0913_002
+2026-09-22 07:21:03 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (420/675) PRO01A0914_001...
+2026-09-22 07:21:03 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (421/675) TYR01A0915_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0915_001
+2026-09-22 07:21:03 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (422/675) TYR-1A0915_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR-1A0915_002
+2026-09-22 07:21:05 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (423/675) ASP01A0916_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0916_001
+2026-09-22 07:21:06 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (424/675) ASP01A0916_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0916_002
+2026-09-22 07:21:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (425/675) ASP02A0916_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0916_003
+2026-09-22 07:21:08 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (426/675) ASP02A0916_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0916_004
+2026-09-22 07:21:08 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (427/675) ASP-1A0916_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0916_005
+2026-09-22 07:21:10 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (428/675) ILE01A0918_001...
+2026-09-22 07:21:10 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (429/675) PRO01A0919_001...
+2026-09-22 07:21:10 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (430/675) ALA01A0920_001...
+2026-09-22 07:21:10 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (431/675) SER01A0921_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0921_001
+2026-09-22 07:21:10 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (432/675) GLU01A0922_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0922_001
+2026-09-22 07:21:12 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (433/675) GLU01A0922_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0922_002
+2026-09-22 07:21:12 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (434/675) GLU02A0922_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0922_003
+2026-09-22 07:21:13 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (435/675) GLU02A0922_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0922_004
+2026-09-22 07:21:15 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (436/675) GLU-1A0922_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0922_005
+2026-09-22 07:21:15 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (437/675) ILE01A0923_001...
+2026-09-22 07:21:15 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (438/675) SER01A0924_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0924_001
+2026-09-22 07:21:17 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (439/675) SER01A0924_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0924_002
+2026-09-22 07:21:17 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (440/675) SER01A0925_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0925_001
+2026-09-22 07:21:18 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (441/675) SER01A0925_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0925_002
+2026-09-22 07:21:20 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (442/675) ILE01A0926_001...
+2026-09-22 07:21:20 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (443/675) LEU01A0927_001...
+2026-09-22 07:21:20 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (444/675) GLU01A0928_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0928_001
+2026-09-22 07:21:20 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (445/675) GLU01A0928_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0928_002
+2026-09-22 07:21:22 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (446/675) GLU02A0928_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0928_003
+2026-09-22 07:21:22 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (447/675) GLU02A0928_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0928_004
+2026-09-22 07:21:22 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (448/675) GLU-1A0928_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0928_005
+2026-09-22 07:21:25 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (449/675) LYS01A0929_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0929_001
+2026-09-22 07:21:25 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (450/675) LYS+1A0929_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0929_002
+2026-09-22 07:21:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (451/675) GLU01A0931_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0931_001
+2026-09-22 07:21:26 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (452/675) GLU01A0931_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0931_002
+2026-09-22 07:21:27 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (453/675) GLU02A0931_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0931_003
+2026-09-22 07:21:30 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (454/675) GLU02A0931_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0931_004
+2026-09-22 07:21:30 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (455/675) GLU-1A0931_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0931_005
+2026-09-22 07:21:31 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (456/675) ARG01A0932_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0932_001
+2026-09-22 07:21:31 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (457/675) ARG02A0932_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0932_002
+2026-09-22 07:21:32 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (458/675) ARG03A0932_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0932_003
+2026-09-22 07:21:34 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (459/675) ARG+1A0932_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0932_004
+2026-09-22 07:21:34 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (460/675) LEU01A0933_001...
+2026-09-22 07:21:34 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (461/675) PRO01A0934_001...
+2026-09-22 07:21:34 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (462/675) GLN01A0935_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0935_001
+2026-09-22 07:21:36 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (463/675) GLN01A0935_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0935_002
+2026-09-22 07:21:36 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (464/675) PRO01A0936_001...
+2026-09-22 07:21:36 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (465/675) PRO01A0937_001...
+2026-09-22 07:21:36 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (466/675) ILE01A0938_001...
+2026-09-22 07:21:36 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (467/675) CYS01A0939_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0939_001
+2026-09-22 07:21:36 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (468/675) CYS01A0939_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0939_002
+2026-09-22 07:21:39 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (469/675) CYS01A0939_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0939_003
+2026-09-22 07:21:39 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (470/675) CYS-1A0939_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS-1A0939_004
+2026-09-22 07:21:40 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (471/675) THR01A0940_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0940_001
+2026-09-22 07:21:41 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (472/675) THR01A0940_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_THR01A0940_002
+2026-09-22 07:21:41 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (473/675) ILE01A0941_001...
+2026-09-22 07:21:41 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (474/675) ASP01A0942_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0942_001
+2026-09-22 07:21:44 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (475/675) ASP01A0942_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0942_002
+2026-09-22 07:21:44 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (476/675) ASP02A0942_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0942_003
+2026-09-22 07:21:45 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (477/675) ASP02A0942_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0942_004
+2026-09-22 07:21:45 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (478/675) ASP-1A0942_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0942_005
+2026-09-22 07:21:46 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (479/675) VAL01A0943_001...
+2026-09-22 07:21:46 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (480/675) TYR01A0944_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0944_001
+2026-09-22 07:21:49 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (481/675) TYR01A0944_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0944_002
+2026-09-22 07:21:49 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (482/675) TYR-1A0944_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR-1A0944_003
+2026-09-22 07:21:50 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (483/675) MET01A0945_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_MET01A0945_001
+2026-09-22 07:21:50 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (484/675) ILE01A0946_001...
+2026-09-22 07:21:50 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (485/675) MET01A0947_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_MET01A0947_001
+2026-09-22 07:21:50 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (486/675) VAL01A0948_001...
+2026-09-22 07:21:50 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (487/675) LYS01A0949_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0949_001
+2026-09-22 07:21:54 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (488/675) LYS+1A0949_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0949_002
+2026-09-22 07:21:54 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (489/675) CYS01A0950_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0950_001
+2026-09-22 07:21:54 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (490/675) CYS01A0950_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0950_002
+2026-09-22 07:21:55 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (491/675) CYS01A0950_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS01A0950_003
+2026-09-22 07:21:55 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (492/675) CYS-1A0950_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_CYS-1A0950_004
+2026-09-22 07:21:59 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (493/675) TRP01A0951_001...
+2026-09-22 07:21:59 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (494/675) MET01A0952_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_MET01A0952_001
+2026-09-22 07:21:59 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (495/675) ILE01A0953_001...
+2026-09-22 07:21:59 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (496/675) ASP01A0954_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0954_001
+2026-09-22 07:21:59 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (497/675) ASP01A0954_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0954_002
+2026-09-22 07:21:59 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (498/675) ASP02A0954_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0954_003
+2026-09-22 07:22:00 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (499/675) ASP02A0954_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0954_004
+2026-09-22 07:22:03 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (500/675) ASP-1A0954_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0954_005
+2026-09-22 07:22:04 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (501/675) ALA01A0955_001...
+2026-09-22 07:22:04 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (502/675) ASP01A0956_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0956_001
+2026-09-22 07:22:04 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (503/675) ASP01A0956_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0956_002
+2026-09-22 07:22:04 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (504/675) ASP02A0956_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0956_003
+2026-09-22 07:22:05 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (505/675) ASP02A0956_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0956_004
+2026-09-22 07:22:08 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (506/675) ASP-1A0956_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0956_005
+2026-09-22 07:22:08 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (507/675) SER01A0957_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0957_001
+2026-09-22 07:22:09 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (508/675) SER01A0957_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0957_002
+2026-09-22 07:22:09 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (509/675) SER01A0957_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0957_003
+2026-09-22 07:22:10 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (510/675) ARG01A0958_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0958_001
+2026-09-22 07:22:13 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (511/675) ARG02A0958_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0958_002
+2026-09-22 07:22:13 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (512/675) ARG02A0958_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0958_003
+2026-09-22 07:22:14 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (513/675) ARG03A0958_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0958_004
+2026-09-22 07:22:14 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (514/675) ARG03A0958_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0958_005
+2026-09-22 07:22:15 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (515/675) ARG+1A0958_006 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0958_006
+2026-09-22 07:22:18 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (516/675) PRO01A0959_001...
+2026-09-22 07:22:18 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (517/675) LYS01A0960_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0960_001
+2026-09-22 07:22:18 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (518/675) LYS+1A0960_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0960_002
+2026-09-22 07:22:19 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (519/675) PHE01A0961_001...
+2026-09-22 07:22:19 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (520/675) ARG01A0962_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0962_001
+2026-09-22 07:22:19 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (521/675) ARG02A0962_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0962_002
+2026-09-22 07:22:20 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (522/675) ARG03A0962_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0962_003
+2026-09-22 07:22:23 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (523/675) ARG+1A0962_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0962_004
+2026-09-22 07:22:23 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (524/675) GLU01A0963_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0963_001
+2026-09-22 07:22:24 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (525/675) GLU01A0963_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0963_002
+2026-09-22 07:22:24 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (526/675) GLU02A0963_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0963_003
+2026-09-22 07:22:24 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (527/675) GLU02A0963_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0963_004
+2026-09-22 07:22:28 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (528/675) GLU-1A0963_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0963_005
+2026-09-22 07:22:28 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (529/675) LEU01A0964_001...
+2026-09-22 07:22:28 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (530/675) ILE01A0965_001...
+2026-09-22 07:22:28 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (531/675) ILE01A0966_001...
+2026-09-22 07:22:28 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (532/675) GLU01A0967_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0967_001
+2026-09-22 07:22:28 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (533/675) GLU01A0967_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0967_002
+2026-09-22 07:22:29 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (534/675) GLU02A0967_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0967_003
+2026-09-22 07:22:30 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (535/675) GLU02A0967_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0967_004
+2026-09-22 07:22:33 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (536/675) GLU-1A0967_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0967_005
+2026-09-22 07:22:33 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (537/675) PHE01A0968_001...
+2026-09-22 07:22:33 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (538/675) SER01A0969_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0969_001
+2026-09-22 07:22:33 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (539/675) SER01A0969_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_SER01A0969_002
+2026-09-22 07:22:33 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (540/675) LYS01A0970_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS01A0970_001
+2026-09-22 07:22:34 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (541/675) LYS+1A0970_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_LYS+1A0970_002
+2026-09-22 07:22:38 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (542/675) MET01A0971_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_MET01A0971_001
+2026-09-22 07:22:38 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (543/675) ALA01A0972_001...
+2026-09-22 07:22:38 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (544/675) ARG01A0973_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0973_001
+2026-09-22 07:22:38 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (545/675) ARG02A0973_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0973_002
+2026-09-22 07:22:38 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (546/675) ARG02A0973_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0973_003
+2026-09-22 07:22:39 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (547/675) ARG03A0973_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0973_004
+2026-09-22 07:22:42 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (548/675) ARG+1A0973_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0973_005
+2026-09-22 07:22:42 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (549/675) ASP01A0974_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0974_001
+2026-09-22 07:22:43 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (550/675) ASP01A0974_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0974_002
+2026-09-22 07:22:43 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (551/675) ASP02A0974_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0974_003
+2026-09-22 07:22:44 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (552/675) ASP02A0974_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0974_004
+2026-09-22 07:22:47 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (553/675) ASP-1A0974_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0974_005
+2026-09-22 07:22:47 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (554/675) PRO01A0975_001...
+2026-09-22 07:22:47 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (555/675) GLN01A0976_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0976_001
+2026-09-22 07:22:47 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (556/675) GLN01A0976_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0976_002
+2026-09-22 07:22:48 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (557/675) ARG01A0977_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0977_001
+2026-09-22 07:22:49 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (558/675) ARG02A0977_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0977_002
+2026-09-22 07:22:52 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (559/675) ARG03A0977_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0977_003
+2026-09-22 07:22:52 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (560/675) ARG+1A0977_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0977_004
+2026-09-22 07:22:52 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (561/675) TYR01A0978_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0978_001
+2026-09-22 07:22:52 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (562/675) TYR01A0978_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A0978_002
+2026-09-22 07:22:53 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (563/675) TYR-1A0978_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR-1A0978_003
+2026-09-22 07:22:56 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (564/675) TYR-1A0978_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR-1A0978_004
+2026-09-22 07:22:57 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (565/675) LEU01A0979_001...
+2026-09-22 07:22:57 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (566/675) VAL01A0980_001...
+2026-09-22 07:22:57 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (567/675) ILE01A0981_001...
+2026-09-22 07:22:57 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (568/675) GLN01A0982_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0982_001
+2026-09-22 07:22:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (569/675) GLN01A0982_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A0982_002
+2026-09-22 07:22:57 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (570/675) ASP01A0984_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0984_001
+2026-09-22 07:22:58 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (571/675) ASP01A0984_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0984_002
+2026-09-22 07:23:01 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (572/675) ASP01A0984_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0984_003
+2026-09-22 07:23:01 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (573/675) ASP01A0984_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A0984_004
+2026-09-22 07:23:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (574/675) ASP02A0984_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0984_005
+2026-09-22 07:23:02 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (575/675) ASP02A0984_006 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0984_006
+2026-09-22 07:23:03 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (576/675) ASP02A0984_007 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0984_007
+2026-09-22 07:23:06 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (577/675) ASP02A0984_008 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A0984_008
+2026-09-22 07:23:06 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (578/675) ASP-1A0984_009 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0984_009
+2026-09-22 07:23:06 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (579/675) ASP-1A0984_010 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A0984_010
+2026-09-22 07:23:07 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (580/675) GLU01A0985_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0985_001
+2026-09-22 07:23:08 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (581/675) GLU01A0985_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A0985_002
+2026-09-22 07:23:11 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (582/675) GLU02A0985_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0985_003
+2026-09-22 07:23:11 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (583/675) GLU02A0985_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A0985_004
+2026-09-22 07:23:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (584/675) GLU-1A0985_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A0985_005
+2026-09-22 07:23:11 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (585/675) ARG01A0986_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG01A0986_001
+2026-09-22 07:23:12 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (586/675) ARG02A0986_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG02A0986_002
+2026-09-22 07:23:15 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (587/675) ARG03A0986_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG03A0986_003
+2026-09-22 07:23:15 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (588/675) ARG+1A0986_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ARG+1A0986_004
+2026-09-22 07:23:16 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (589/675) MET01A0987_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_MET01A0987_001
+2026-09-22 07:23:16 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (590/675) HIS01A0988_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS01A0988_001
+2026-09-22 07:23:17 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (591/675) HIS01A0988_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS01A0988_002
+2026-09-22 07:23:20 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (592/675) HIS02A0988_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS02A0988_003
+2026-09-22 07:23:20 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (593/675) HIS02A0988_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS02A0988_004
+2026-09-22 07:23:20 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (594/675) HIS+1A0988_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS+1A0988_005
+2026-09-22 07:23:21 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (595/675) HIS+1A0988_006 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_HIS+1A0988_006
+2026-09-22 07:23:22 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (596/675) LEU01A0989_001...
+2026-09-22 07:23:22 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (597/675) PRO01A0990_001...
+2026-09-22 07:23:22 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (598/675) MET01A1002_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_MET01A1002_001
+2026-09-22 07:23:25 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (599/675) ASP01A1003_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1003_001
+2026-09-22 07:23:25 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (600/675) ASP01A1003_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1003_002
+2026-09-22 07:23:25 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (601/675) ASP02A1003_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1003_003
+2026-09-22 07:23:25 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (602/675) ASP02A1003_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1003_004
+2026-09-22 07:23:26 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (603/675) ASP-1A1003_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A1003_005
+2026-09-22 07:23:29 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (604/675) GLU01A1004_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A1004_001
+2026-09-22 07:23:29 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (605/675) GLU01A1004_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A1004_002
+2026-09-22 07:23:30 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (606/675) GLU02A1004_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A1004_003
+2026-09-22 07:23:30 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (607/675) GLU02A1004_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A1004_004
+2026-09-22 07:23:31 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (608/675) GLU-1A1004_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A1004_005
+2026-09-22 07:23:34 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (609/675) GLU01A1005_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A1005_001
+2026-09-22 07:23:34 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (610/675) GLU01A1005_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A1005_002
+2026-09-22 07:23:35 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (611/675) GLU02A1005_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A1005_003
+2026-09-22 07:23:35 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (612/675) GLU02A1005_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A1005_004
+2026-09-22 07:23:36 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (613/675) GLU-1A1005_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A1005_005
+2026-09-22 07:23:38 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (614/675) ASP01A1006_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1006_001
+2026-09-22 07:23:39 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (615/675) ASP01A1006_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1006_002
+2026-09-22 07:23:39 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (616/675) ASP02A1006_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1006_003
+2026-09-22 07:23:39 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (617/675) ASP02A1006_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1006_004
+2026-09-22 07:23:40 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (618/675) ASP-1A1006_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A1006_005
+2026-09-22 07:23:43 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (619/675) MET01A1007_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_MET01A1007_001
+2026-09-22 07:23:43 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (620/675) ASP01A1008_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1008_001
+2026-09-22 07:23:44 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (621/675) ASP01A1008_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1008_002
+2026-09-22 07:23:44 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (622/675) ASP02A1008_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1008_003
+2026-09-22 07:23:45 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (623/675) ASP02A1008_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1008_004
+2026-09-22 07:23:48 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (624/675) ASP-1A1008_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A1008_005
+2026-09-22 07:23:48 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (625/675) ASP01A1009_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1009_001
+2026-09-22 07:23:48 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (626/675) ASP01A1009_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1009_002
+2026-09-22 07:23:49 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (627/675) ASP01A1009_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1009_003
+2026-09-22 07:23:50 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (628/675) ASP01A1009_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1009_004
+2026-09-22 07:23:52 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (629/675) ASP02A1009_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1009_005
+2026-09-22 07:23:53 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (630/675) ASP02A1009_006 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1009_006
+2026-09-22 07:23:53 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (631/675) ASP02A1009_007 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1009_007
+2026-09-22 07:23:53 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (632/675) ASP02A1009_008 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1009_008
+2026-09-22 07:23:54 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (633/675) ASP-1A1009_009 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A1009_009
+2026-09-22 07:23:57 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (634/675) ASP-1A1009_010 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A1009_010
+2026-09-22 07:23:57 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (635/675) VAL01A1010_001...
+2026-09-22 07:23:57 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (636/675) VAL01A1011_001...
+2026-09-22 07:23:57 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (637/675) ASP01A1012_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1012_001
+2026-09-22 07:23:57 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (638/675) ASP01A1012_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1012_002
+2026-09-22 07:23:58 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (639/675) ASP01A1012_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1012_003
+2026-09-22 07:23:59 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (640/675) ASP01A1012_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1012_004
+2026-09-22 07:24:01 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (641/675) ASP02A1012_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1012_005
+2026-09-22 07:24:02 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (642/675) ASP02A1012_006 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1012_006
+2026-09-22 07:24:02 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (643/675) ASP02A1012_007 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1012_007
+2026-09-22 07:24:03 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (644/675) ASP02A1012_008 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1012_008
+2026-09-22 07:24:03 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (645/675) ASP-1A1012_009 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A1012_009
+2026-09-22 07:24:06 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (646/675) ASP-1A1012_010 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A1012_010
+2026-09-22 07:24:06 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (647/675) ALA01A1013_001...
+2026-09-22 07:24:06 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (648/675) ASP01A1014_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1014_001
+2026-09-22 07:24:07 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (649/675) ASP01A1014_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1014_002
+2026-09-22 07:24:07 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (650/675) ASP01A1014_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1014_003
+2026-09-22 07:24:08 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (651/675) ASP01A1014_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP01A1014_004
+2026-09-22 07:24:11 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (652/675) ASP02A1014_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1014_005
+2026-09-22 07:24:11 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (653/675) ASP02A1014_006 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1014_006
+2026-09-22 07:24:11 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (654/675) ASP02A1014_007 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1014_007
+2026-09-22 07:24:12 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (655/675) ASP02A1014_008 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP02A1014_008
+2026-09-22 07:24:13 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (656/675) ASP-1A1014_009 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A1014_009
+2026-09-22 07:24:15 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (657/675) ASP-1A1014_010 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_ASP-1A1014_010
+2026-09-22 07:24:16 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (658/675) GLU01A1015_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A1015_001
+2026-09-22 07:24:16 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (659/675) GLU01A1015_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU01A1015_002
+2026-09-22 07:24:17 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (660/675) GLU02A1015_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A1015_003
+2026-09-22 07:24:17 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (661/675) GLU02A1015_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU02A1015_004
+2026-09-22 07:24:20 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (662/675) GLU-1A1015_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLU-1A1015_005
+2026-09-22 07:24:21 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (663/675) TYR01A1016_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A1016_001
+2026-09-22 07:24:21 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (664/675) TYR01A1016_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR01A1016_002
+2026-09-22 07:24:21 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (665/675) TYR-1A1016_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_TYR-1A1016_003
+2026-09-22 07:24:22 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (666/675) LEU01A1017_001...
+2026-09-22 07:24:22 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (667/675) ILE01A1018_001...
+2026-09-22 07:24:22 - INFO: step3.py, pbe: Skipping PBE solver for non-charge conformer (668/675) PRO01A1019_001...
+2026-09-22 07:24:22 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (669/675) GLN01A1020_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_GLN01A1020_001
+2026-09-22 07:24:25 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (670/675) _CL-1A2020_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ__CL-1A2020_001
+2026-09-22 07:24:25 - INFO: step3.py, pbe: ForkPoolWorker-5: Calling delphi to calculate conformer (671/675) IRE+aA2021_001 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_IRE+aA2021_001
+2026-09-22 07:24:26 - INFO: step3.py, pbe: ForkPoolWorker-1: Calling delphi to calculate conformer (672/675) IRE01A2021_002 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_IRE01A2021_002
+2026-09-22 07:24:26 - INFO: step3.py, pbe: ForkPoolWorker-3: Calling delphi to calculate conformer (673/675) IRE+1A2021_003 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_IRE+1A2021_003
+2026-09-22 07:24:27 - INFO: step3.py, pbe: ForkPoolWorker-4: Calling delphi to calculate conformer (674/675) IRE+2A2021_004 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_IRE+2A2021_004
+2026-09-22 07:24:29 - INFO: step3.py, pbe: ForkPoolWorker-2: Calling delphi to calculate conformer (675/675) IRE+3A2021_005 in /tmp/pbe_data.data.home.granepura.5-Kinases.Kinases_MCCE.Trial01.run_holo.2ITZ_IRE+3A2021_005
+2026-09-22 07:24:34 - INFO: step3.py, <module>:    Time needed: 533 seconds.
+2026-09-22 07:24:34 - INFO: step3.py, <module>:    Post-processing of electrostatic potential.
+2026-09-22 07:24:34 - INFO: step3.py, <module>:    Processing ele pairwise interaction...
+2026-09-22 07:24:36 - INFO: step3.py, <module>:    Time needed: 1 seconds.
+2026-09-22 07:24:36 - INFO: step3.py, <module>:    Making atom connectivity ...
+2026-09-22 07:24:36 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 07:24:36 - INFO: step3.py, <module>:    Calculating vdw ...
+2026-09-22 07:24:42 - INFO: step3.py, <module>:    Time needed: 5 seconds.
+2026-09-22 07:24:42 - INFO: step3.py, <module>:    Calculating torsion energy ...
+2026-09-22 07:24:42 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 07:24:42 - INFO: step3.py, <module>:    Composing head3.lst ...
+2026-09-22 07:24:42 - WARNING: step3.py, compose_head3: CONFORMER record of _CLDM not defined in ftpl file; em0, pka0, ne and nh are assumed to be 0
+2026-09-22 07:24:42 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 07:24:42 - INFO: step3.py, <module>:    Composing opp files ...
+2026-09-22 07:24:43 - INFO: step3.py, <module>:    Time needed: 0 seconds.
+2026-09-22 07:24:43 - INFO: step3.py, <module>:    Total time for step3 is 541 seconds.
