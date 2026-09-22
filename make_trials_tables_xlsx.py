@@ -58,6 +58,7 @@ import glob
 import math
 import os
 import re
+import shutil
 import statistics as st
 import sys
 from datetime import datetime
@@ -212,6 +213,72 @@ def read_head3_charges(path):
     return out
 
 
+def find_param_dir():
+    """MCCE4's param/ directory, where the ligand .ftpl topologies live."""
+    for cand in (os.environ.get("MCCE_HOME"), None):
+        if cand:
+            d = os.path.join(cand, "param")
+            if os.path.isdir(d):
+                return d
+    mcce = shutil.which("mcce")
+    if mcce:
+        d = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(mcce))), "param")
+        if os.path.isdir(d):
+            return d
+    d = os.path.expanduser("~/MCCE4/param")
+    return d if os.path.isdir(d) else None
+
+
+def protonated_atoms(param_dir, code):
+    """
+    {conformer: "NAU, NBI"} -- the polar (N/O) atoms carrying an H in each
+    conformer, read from the ligand's .ftpl CONNECT records.  This is the
+    "protonated atoms" column of SI.3.Conf, derived rather than transcribed.
+    """
+    out = {}
+    if not param_dir:
+        return out
+    path = os.path.join(param_dir, f"{code}.ftpl")
+    if not os.path.isfile(path):
+        return out
+    per_conf = {}
+    for line in open(path):
+        if not line.startswith("CONNECT"):
+            continue
+        m = re.match(r'CONNECT,\s*"(.{4})",\s*(\S+?):\s*\S*,?(.*)', line.strip())
+        if not m:
+            continue
+        atom, conf, rest = m.group(1).strip(), m.group(2).rstrip(":"), m.group(3)
+        if not atom or atom[0] not in "NO":
+            continue
+        bonded = re.findall(r'"(.{4})"', rest)
+        if any(b.strip().startswith("H") for b in bonded):
+            per_conf.setdefault(conf, set()).add(atom)
+    for conf, atoms in per_conf.items():
+        out[conf] = ", ".join(sorted(atoms))
+    return out
+
+
+def conformer_labels(types, charges):
+    """
+    {conformer: "DB8+1a"} -- the readable label of SI.3.Conf: ligand code, the
+    charge, then a letter when a charge has more than one conformer (a single
+    one gets no letter, as B49+1 does in the original).
+    """
+    by_charge = {}
+    for ctype in sorted(types):
+        q = charges.get(ctype)
+        key = 0 if q is None else int(round(q))
+        by_charge.setdefault(key, []).append(ctype)
+    out = {}
+    for q, members in by_charge.items():
+        tag = f"+{q}" if q > 0 else (f"{q}" if q < 0 else " 0")
+        for i, ctype in enumerate(members):
+            suffix = "" if len(members) == 1 else chr(ord("a") + i)
+            out[ctype] = f"{ctype[:3]}{tag}{suffix}"
+    return out
+
+
 def gather_conformers(root, trials, manifest):
     """
     Per PDB, the ligand's conformer TYPES (e.g. FMM+1, FMM01) with their
@@ -225,6 +292,7 @@ def gather_conformers(root, trials, manifest):
     before averaging across trials.
     """
     out = {}
+    param_dir = find_param_dir()
     for pdb in sorted(manifest):
         inhibitor, code, kinase = manifest[pdb]
         types = {}
@@ -251,7 +319,10 @@ def gather_conformers(root, trials, manifest):
                     if rec["charge"] is None:
                         rec["charge"] = crg.get(name)
         if types:
-            out[pdb] = {"inhibitor": inhibitor, "kinase": kinase, "types": types}
+            charges = {c: d["charge"] for c, d in types.items()}
+            out[pdb] = {"inhibitor": inhibitor, "kinase": kinase, "types": types,
+                        "labels": conformer_labels(types, charges),
+                        "protons": protonated_atoms(param_dir, code)}
     return out
 
 
@@ -472,13 +543,13 @@ def sheet_si_table2(wb, conf, index, trials, n):
     ws["B3"] = RT_KCAL
     ws["B3"].font = F_BODY
     ws["B3"].number_format = "0.0000"
-    ws["C3"] = ("energy = -RT·ln(P(i) soln) ; Boltzmann = exp(-energy/RT) ; "
+    ws["D3"] = ("energy = -RT·ln(P(i) soln) ; Boltzmann = exp(-energy/RT) ; "
                 "Stat Mech = Boltzmann / ΣBoltzmann")
-    ws["C3"].font = F_NOTE
+    ws["D3"].font = F_NOTE
 
-    GROUPS = [("", 4), ("from P(i) soln", 3), ("P(i) soln", 2), ("P(i) bound", 2)]
+    GROUPS = [("", 6), ("from P(i) soln", 3), ("P(i) soln", 2), ("P(i) bound", 2)]
     group = [label for label, span in GROUPS for _ in range(span)]
-    head = ["PDBID", "Ligand", "Conf type",
+    head = ["PDBID", "Ligand", "conformer", "protonated atoms", "MCCE Conf Name",
             "charge", "energy", "Boltzmann Factor", "Stat Mech",
             "mean", "± SEM", "mean", "± SEM"]
     assert len(group) == len(head), f"{len(group)} group labels vs {len(head)} columns"
@@ -520,19 +591,21 @@ def sheet_si_table2(wb, conf, index, trials, n):
             for ctype, src in index[pdb]:
                 ws.cell(i, 1).value = pdb
                 ws.cell(i, 2).value = rec["inhibitor"]
-                ws.cell(i, 3).value = ctype
-                ws.cell(i, 4).value = r3(f"'Per-Trial Conf'!$D{src}")
-                ws.cell(i, 8).value = r3(f"AVERAGE({rng(5, src)})")
-                ws.cell(i, 9).value = r3(
+                ws.cell(i, 3).value = rec["labels"].get(ctype, ctype)
+                ws.cell(i, 4).value = rec["protons"].get(ctype, "")
+                ws.cell(i, 5).value = ctype
+                ws.cell(i, 6).value = r3(f"'Per-Trial Conf'!$D{src}")
+                ws.cell(i, 10).value = r3(f"AVERAGE({rng(5, src)})")
+                ws.cell(i, 11).value = r3(
                     f"IF(COUNT({rng(5, src)})>1,"
                     f"STDEV({rng(5, src)})/SQRT(COUNT({rng(5, src)})),0)")
-                ws.cell(i, 10).value = r3(f"AVERAGE({rng(5 + n, src)})")
-                ws.cell(i, 11).value = r3(
+                ws.cell(i, 12).value = r3(f"AVERAGE({rng(5 + n, src)})")
+                ws.cell(i, 13).value = r3(
                     f"IF(COUNT({rng(5 + n, src)})>1,"
                     f"STDEV({rng(5 + n, src)})/SQRT(COUNT({rng(5 + n, src)})),0)")
                 for c in range(1, len(head) + 1):
                     ws.cell(i, c).font = F_BODY
-                    if c >= 4:                       # every numeric column
+                    if c >= 6:                       # every numeric column
                         ws.cell(i, c).number_format = UPTO3
                 i += 1
             last = i - 1
@@ -540,23 +613,23 @@ def sheet_si_table2(wb, conf, index, trials, n):
             # A conformer whose P rounds to 0.000 in xts_fort.38 has no defined
             # energy, so those cells stay blank rather than showing a fake value.
             for rr in range(first_row, last + 1):
-                ws.cell(rr, 5).value = f'=IF(H{rr}>0,-$B$3*LN(H{rr}),"")'
-                ws.cell(rr, 6).value = f'=IF(E{rr}="","",EXP(-E{rr}/$B$3))'
-                ws.cell(rr, 7).value = (
-                    f'=IF(F{rr}="","",F{rr}/SUM(F${first_row}:F${last}))')
-            ws.cell(i, 3).value = "SUM"
-            for c in (6, 7, 8, 10):
+                ws.cell(rr, 7).value = f'=IF(J{rr}>0,-$B$3*LN(J{rr}),"")'
+                ws.cell(rr, 8).value = f'=IF(G{rr}="","",EXP(-G{rr}/$B$3))'
+                ws.cell(rr, 9).value = (
+                    f'=IF(H{rr}="","",H{rr}/SUM(H${first_row}:H${last}))')
+            ws.cell(i, 5).value = "SUM"
+            for c in (8, 9, 10, 12):
                 L = get_column_letter(c)
                 ws.cell(i, c).value = r3(f"SUM({L}{first_row}:{L}{last})")
-            ws.cell(i + 1, 3).value = "ensemble charge"
-            for c in (7, 8, 10):
+            ws.cell(i + 1, 5).value = "ensemble charge"
+            for c in (9, 10, 12):
                 L = get_column_letter(c)
                 ws.cell(i + 1, c).value = r3(
-                    f"SUMPRODUCT($D{first_row}:$D{last},{L}{first_row}:{L}{last})")
+                    f"SUMPRODUCT($F{first_row}:$F{last},{L}{first_row}:{L}{last})")
             for rr in (i, i + 1):
                 for c in range(1, len(head) + 1):
                     ws.cell(rr, c).font = F_BOLD
-                    if c >= 4:
+                    if c >= 6:
                         ws.cell(rr, c).number_format = UPTO3
             i += 3
     note = ws.cell(i, 1)
@@ -566,11 +639,11 @@ def sheet_si_table2(wb, conf, index, trials, n):
                   "value reproduces crg bound, so the conformer populations and the residue "
                   "charges are checked against each other.")
     note.font = F_NOTE
-    for c, w in zip("ABCD", (10, 14, 11, 9)):
+    for c, w in zip("ABCDE", (10, 14, 11, 24, 15)):
         ws.column_dimensions[c].width = w
-    for c in range(5, len(head) + 1):
+    for c in range(6, len(head) + 1):
         ws.column_dimensions[get_column_letter(c)].width = 10
-    ws.column_dimensions["F"].width = 15      # "Boltzmann Factor" header is the widest
+    ws.column_dimensions["H"].width = 15      # "Boltzmann Factor" header is the widest
     ws.freeze_panes = f"A{FIRST_DATA}"
 
 
