@@ -142,6 +142,103 @@ def spearman_rho(x, y):
         return np.nan
     return np.corrcoef(rx, ry)[0, 1]
 
+
+# === Methods record + reproducibility table ===
+# Nothing else in the outputs says HOW the statistics were formed, so write it
+# next to them: what varied between trials, what the error bar is, and how many
+# points the mean is actually a fair summary of.
+def _trial_seeds(root, names):
+    """MONTE_SEED actually used by each trial, read from its submit script."""
+    out = {}
+    for t in names:
+        seed = "?"
+        for rel in ("run_holo/submit_mcce4_s3s4.sh", "run_inhib/submit_mcce4.sh"):
+            p = os.path.join(root, t, rel)
+            if os.path.isfile(p):
+                for line in open(p):
+                    if line.startswith("STEP4=") and "MONTE_SEED=" in line:
+                        seed = line.split("MONTE_SEED=")[1].split()[0].rstrip('"')
+                        break
+                break
+        out[t] = seed
+    return out
+
+
+def write_methods(path, tsv_path, which, trials, root, values, err_choice):
+    """
+    values: {key: list of per-trial numbers} for the quantity carrying the error
+    bar (Fig3: bound charge; Fig4A: the paired holo-apo delta).
+    """
+    seeds = _trial_seeds(root, trials)
+    n = len(trials)
+    cats = {"identical": [], "scattered": [], "two-state": []}
+    for k, v in values.items():
+        rng = max(v) - min(v)
+        if rng < 1e-9:
+            cats["identical"].append((k, v, rng))
+        elif len(set(round(x, 2) for x in v)) == 2 and rng > 0.05:
+            cats["two-state"].append((k, v, rng))
+        else:
+            cats["scattered"].append((k, v, rng))
+    tot = len(values)
+
+    with open(tsv_path, "w") as f:
+        f.write("Category\tN\tPercent\tMeaning\n")
+        for c, meaning in (
+            ("identical", "all trials gave the same value; SEM is exactly 0"),
+            ("scattered", "unimodal spread; mean +/- SEM is a fair summary"),
+            ("two-state", "discrete bistability; the mean is a value never sampled"),
+        ):
+            f.write(f"{c}\t{len(cats[c])}\t{100*len(cats[c])/tot:.1f}\t{meaning}\n")
+        f.write("\n# points NOT summarised well by mean +/- SEM\n")
+        f.write("Key\tPerTrial\tRange\n")
+        for k, v, rng in sorted(cats["two-state"] + cats["scattered"],
+                                key=lambda r: -r[2]):
+            if rng > 0.05:
+                f.write(f"{k}\t{';'.join(f'{x:+.2f}' for x in v)}\t{rng:.2f}\n")
+
+    with open(path, "w") as f:
+        f.write(f"# {which}: how the statistics were computed\n\n")
+        f.write(f"Written: {__import__('datetime').datetime.now():%Y-%m-%d %H:%M:%S}\n")
+        f.write(f"Script : {os.path.basename(__file__)}\n\n")
+        f.write("## Replicates\n\n")
+        f.write(f"n = {n} independent trials of the full MCCE pipeline (steps 1-4).\n\n")
+        f.write("| Trial | MONTE_SEED |\n|---|---|\n")
+        for t in trials:
+            f.write(f"| {t} | {seeds[t]} |\n")
+        f.write("\nBoth of the pipeline's stochastic stages differ between trials:\n\n")
+        f.write("  * step2 rotamer generation does not reproduce between runs, so each\n")
+        f.write("    trial has a different conformer set (0 of 37 holo structures match).\n")
+        f.write("  * step4 Monte Carlo uses an explicit per-trial MONTE_SEED.\n\n")
+        f.write("A trial is therefore the correct replicate unit; re-running step4 alone\n")
+        f.write("in a finished tree would hold the conformers fixed and understate the\n")
+        f.write("spread.  (The exception is a residue whose conformers happen to be\n")
+        f.write("identical across trials -- there the split is pure Monte Carlo.)\n\n")
+        f.write("## Statistics\n\n")
+        f.write("| Quantity | Definition |\n|---|---|\n")
+        f.write("| mean | arithmetic mean over the n trials |\n")
+        f.write("| sd | sample standard deviation, n-1 denominator |\n")
+        f.write(f"| sem | sd / sqrt(n) -- **the plotted error bar** (--err {err_choice}) |\n")
+        f.write("| min, max | the extreme trial values |\n")
+        if "Fig4A" in which:
+            f.write("| delta | holo - apo computed WITHIN each trial, then averaged |\n")
+            f.write("\nThe difference is paired inside a trial because apo reuses holo's\n")
+            f.write("step2 conformers there, so the pairing cancels the conformer set.\n")
+            f.write("Combining two independent SEMs instead would overstate the error.\n")
+        f.write("\nError bars are +/- 1 SEM, NOT a confidence interval.  With n = 3 there\n")
+        f.write("are 2 degrees of freedom, so a 95% CI would be mean +/- 4.30 x SEM.\n\n")
+        f.write("## Is the mean a fair summary?\n\n")
+        f.write("| Category | N | % |\n|---|---|---|\n")
+        for c in ("identical", "scattered", "two-state"):
+            f.write(f"| {c} | {len(cats[c])} | {100*len(cats[c])/tot:.1f} |\n")
+        f.write(f"\nTotal points: {tot}\n\n")
+        f.write("  * identical -- every trial agreed exactly; SEM is 0 and no bar is\n")
+        f.write("    drawn.  That is agreement, not a missing error bar.\n")
+        f.write("  * scattered -- unimodal; mean +/- SEM is appropriate.\n")
+        f.write("  * two-state -- the trials fall into two discrete states, so the mean\n")
+        f.write("    is a value the simulation never produced.  Report the state\n")
+        f.write("    populations instead; see the companion .tsv.\n")
+
 # === Collect the per-trial CSVs and average them ===
 print_log()
 print_log("="*80)
@@ -673,6 +770,14 @@ for inh in unique_inhibitors:
     print_log(f"    ✅ Plot: {inh_fig_path}")
     print_log(f"       N = {N_inh} (1 point per PDB), Fitted: {n_fitted_inh}, Outliers: {n_outliers_inh}")
     print_log(f"    ✅ Data: {inh_csv_path}")
+
+
+_methods = os.path.join(plot_dir, f"{LABEL}_Fig3_METHODS.md")
+_repro = os.path.join(plot_dir, f"{LABEL}_Fig3_reproducibility.tsv")
+write_methods(_methods, _repro, "Fig3 (inhibitor charge, bound vs in solution)",
+              trials, ROOT, {p_[2]: agg[p_[2]]["y"] for p_ in points}, _args.err)
+print_log(f"✅ Methods record: {_methods}")
+print_log(f"✅ Reproducibility table: {_repro}")
 
 print_log()
 print_log("="*80)
