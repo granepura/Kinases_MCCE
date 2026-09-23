@@ -12,22 +12,27 @@ Ranepura, Chowdhury, Rosenzweig, Rustenburg, López-Ríos de Castro, Mao, Choder
 The protonation and tautomeric states of a ligand and its target are first-order determinants of
 binding affinity, yet most structure-based modeling workflows assign them heuristically and hold
 them fixed. This project uses **MCCE4** (Multi-Conformer Continuum Electrostatics) to compute the
-full Boltzmann distribution of protonation and tautomer states, for both partners simultaneously
+full Boltzmann distribution of protonation and tautomer states, for both partners simultaneously,
 across **37 co-crystal structures spanning 18 FDA-approved inhibitors and 9 kinase domains**.
 
 For every complex, three matched calculations are compared at pH 7.4:
 
-| State | What is titrated |
-|---|---|
-| **Holo** | kinase + inhibitor (the parent calculation) |
-| **Apo** | the same protein coordinates with the ligand removed |
-| **Solution** | the inhibitor alone in continuum solvent |
+| State | Directory | What is titrated |
+|---|---|---|
+| **Holo** | `run_holo` | kinase + inhibitor (the parent calculation) |
+| **Apo** | `run_apo` | the same protein coordinates with the ligand removed |
+| **Solution** | `run_inhib` | the inhibitor alone in continuum solvent |
 
-The apo and solution runs are derived from the holo run *after* rotamer generation, so side-chain
-conformers are held identical and the only difference between holo and apo is the presence of the
-ligand. Inhibitor proton affinities and tautomer energies are taken from Schrödinger's Epik;
-electrostatics are solved with DelPhi (ε = 4 protein / 80 solvent, 0.15 M salt, crystallographic
-waters removed).
+Apo is derived from holo *after* rotamer generation, so the side-chain conformers are identical and
+the only difference between the two is the presence of the ligand. Inhibitor proton affinities and
+tautomer energies come from Schrödinger's Epik; electrostatics are solved with DelPhi
+(ε = 4 protein / 80 solvent, 0.15 M salt, crystallographic waters removed).
+
+**Everything is run in triplicate.** `Trial01`, `Trial02` and `Trial03` are independent repeats of
+the whole pipeline. This matters because two stages are stochastic: step 2's rotamer generation does
+not reproduce between runs (no two trials share a conformer count for any of the 37 structures), and
+step 4's Monte Carlo uses a per-trial seed. The trials therefore measure run-to-run reproducibility
+of the entire calculation, not just the Monte Carlo.
 
 ---
 
@@ -37,114 +42,186 @@ waters removed).
 Ensemble-average inhibitor charges in solution span 0 to +1.6 at pH 7.4; none are negative.
 Inhibitors that are weakly charged in solution (q < 0.3) tend to *gain* positive charge on binding,
 while those already substantially protonated (q ≥ 0.9) largely retain it. The correlation between
-solution and bound charge is weak (r = 0.55, ρ = 0.54), reflecting the diversity of binding-site
-electrostatic environments. Desolvation does not simply drive ligands toward neutrality — several
-pockets stabilize the +1 form instead.
+solution and bound charge is weak, reflecting the diversity of binding-site electrostatic
+environments. Desolvation does not simply drive ligands toward neutrality — several pockets
+stabilize the +1 form instead.
 
 **The protein's net charge is buffered.**
-Across all 37 complexes, the holo and apoprotein charge difference is < |0.2| except for three EGFR
-structures (two afatinib complexes lose 0.5–0.75 protons from Asp837; osimertinib-bound 4ZAU loses
-1.05 protons across a network including Asp837, Glu711/736, and His805/893). This stability is not
-the result of compensating shifts at different sites: the per-residue distributions themselves are
-largely unchanged (N = 3508 titratable residues), with responses confined to a handful of residues.
+Across all 37 complexes the holo/apo charge difference is small, with the exception of a few EGFR
+structures. This is not the result of compensating shifts at different sites: the per-residue
+distributions themselves are largely unchanged (3668 titratable residues compared), with responses
+confined to a handful of residues.
 
 **Responding residues are few, mostly Lys and His, and not always near the pocket.**
-Strong responders (|Δq| ≥ 0.5) and affected residues (0.2 ≤ |Δq| < 0.5) sit between ~6 and ~16 Å
-from the ligand center of mass. The largest single shift, Lys1205 in 4MKC (ceritinib), is ~10 Å
-away — inhibitor binding can perturb protonation well beyond the first shell.
+The largest single shift, Lys1205 in 4MKC (ceritinib), is ~10 Å from the ligand — inhibitor binding
+can perturb protonation well beyond the first shell. It reproduces to **SEM 0.000** across all three
+trials.
 
-**Tautomer populations can invert on binding.**
-Four inhibitors (axitinib, bosutinib, imatinib, ponatinib) have two tautomers within 2.8 kcal/mol in
-solution, and this is where the largest redistributions occur: for imatinib bound to ABL and
-ponatinib bound to DDR1, the lowest-energy *solution* tautomer is not the one populated when bound.
-Binding shifts the relative probabilities of low-energy conformers (ΔG < 2.5 kcal/mol) without
-recruiting higher-energy ones; typical ensemble free-energy changes are < 1 kcal/mol, but tautomers
-that are degenerate in solution can differ by 3–6 kcal/mol when bound.
+**Tautomer populations can invert on binding.** Several inhibitors have two tautomers within a few
+kcal/mol in solution, and this is where the largest redistributions occur.
 
-**DFG conformation is not predictive.**
-Splitting the dataset by DFG-in vs. DFG-out label (bootstrapped ECDFs, 2000 resamples) shows no
-strong conformational dependence for net-charge change in either partner. DFG-out complexes show
-almost no inhibitor charge change; the broader spread among DFG-in complexes tracks the greater
-structural diversity of that class. The DFG residues themselves never change protonation state
-measurably in any structure studied.
+**DFG conformation is not predictive.** Splitting by DFG-in vs DFG-out shows no strong
+conformational dependence for net-charge change in either partner.
 
-**Practical implication.** Protonation and tautomer assignment should be treated as a
-binding-site-specific property of each kinase–inhibitor complex, not inferred from solution-state
-ligand energetics, kinase conformational label, or a single fixed-protonation model. Because the
-protein response is local, dynamically titrating a limited binding-site shell may capture most of it
-without titrating the whole protein.
+### What the replicates added
+
+Reproducibility is predictable from how close a site sits to half-ionisation, since
+`d(charge)/d(pKa) = ln(10)·f·(1−f)` peaks at f = 0.5:
+
+| mean bound charge | n | mean spread over 3 trials |
+|---|---|---|
+| near half-ionised, f(1−f) > 0.15 | 10 | 0.086 |
+| intermediate | 4 | 0.040 |
+| saturated | 24 | **0.001** |
+
+Two thirds of the ligands reproduce to ±0.01 across independent conformer sets. A large spread means
+the site is genuinely poised, not that the calculation failed — 3CS9 nilotinib is the clearest case,
+where binding raises the pKa from 6.40 in solution to ~7.2, landing it on the working pH of 7.4.
+Such sites should be reported as a range rather than mean ± SEM. See `CLAUDE.md` for the full
+treatment.
 
 ---
 
 ## Repository layout
 
 ```
-final_scripts/           curated analysis and run-setup scripts
-  xts_corr.py            conformer-count entropy correction (see below)
-  create_cof2.sh         builds the ligand-in-solution tree from the holo tree
-  rm_cofs_step2_out.sh   builds the apo tree (ligand stripped after rotamer generation)
-  rm_cofs.sh             older apo variant (ligand stripped before rotamer generation)
-  plot_sumcrg_inhibitors_xts_Fig3.py    Figure 3: inhibitor charge, bound vs. solution
-  plot_sumcrg_comparison_xts_Fig4.py    Figure 4: per-residue charge, holo vs. apo
-  pdb_inhibitor.lst      PDB -> inhibitor -> ligand-code map (37 rows)
+kin-pdb/                  37 holo PDBs      | shared inputs, copied or symlinked
+cof-pdb/                  37 ligand-only PDBs |   into every trial
+pdb_inhibitor.lst         PDB -> inhibitor -> ligand code -> kinase (37 rows)
 
-outlier-analysis/        Figure 4 structural overlay (PyMOL) and the outlier table
-dfg-split-analysis/      Figure 5 DFG-in/DFG-out ECDFs with bootstrap CIs
-test_xts_corr/           development lineage and test cases for the entropy correction
-cof_tpl_mg/              snapshot of the MCCE run tree
-  run_kin/               holo complexes, one directory per PDB ID
-  run_prot2/             apo proteins (matched conformers; used for Fig. 4)
-  run_cof2/              inhibitors alone in solution
-  run_prot/              older apo variant, superseded
-kinase_project-final-tables.xlsx   manuscript Table 1 and SI tables
+Trial01/  Trial02/  Trial03/          one independent repeat each
+  run_holo/ run_apo/ run_inhib/       MCCE run trees, one directory per PDB
+  0-prepare_run_apo.py                seed run_apo from run_holo
+  1-run_xts_corr.py                   entropy correction, all three trees
+  2-plot_sumcrg_inhibitors_xts_Fig3.py   Fig 3: inhibitor charge, bound vs solution
+  3-plot_sumcrg_comparison_xts_Fig4A.py  Fig 4A: per-residue charge, holo vs apo
+  RUNBOOK.md                          the order of operations + script fingerprints
+
+scripts_Kinases_MCCE/                 canonical pipeline scripts
+  setup_trial.sh  trial_config.sh     scaffold a trial; shared configuration
+  submit_mcce4_template.sh            SBATCH/env template the submit scripts derive from
+  make_holo_apo_step2_out.py          stepB in holo: split step2_out.pdb into holo/apo variants
+  install_apo_step2_out.py            stepB in apo: verify the pair, link step2_out.pdb
+  prune_kin-inhib_head3.py            stepC: prune inhibitor conformers, force ARG positive
+  prepare_run_apo.py  run_xts_corr.py  plot_*.py    sources of the numbered trial scripts
+  superseded/                         earlier versions and the published snapshot (cof_tpl_mg)
+
+plot_trials_inhibitors_xts_Fig3.py    cross-trial Fig 3, mean ± SEM
+plot_trials_comparison_xts_Fig4A.py   cross-trial Fig 4A, mean ± SEM
+make_trials_tables_xlsx.py            builds tables_Trials/kinase_project-trials-tables.xlsx
+
+plots_Trials_*/  tables_Trials/       cross-trial figures, CSVs and the workbook
+outlier-analysis/  dfg-split-analysis/  test_xts_corr/    figure-specific analyses
+kinase_project-final-tables.xlsx      manuscript Table 1 and SI tables (published run)
 ```
 
 ---
 
 ## Reproducing the calculations
 
-MCCE4 is run per structure from inside a run directory, via SLURM or directly:
+Requires MCCE4 (`mcce` on `PATH`), `pro_batch`, and Python with `numpy`, `matplotlib`, `openpyxl`.
+Inhibitor topologies (`FMM.ftpl`, `IRE.ftpl`, …) and the conformer energies in `extra.tpl` ship with
+MCCE4, so nothing needs staging per run.
+
+### 1. Scaffold a trial
 
 ```bash
-cd cof_tpl_mg/run_prot2/2HYY
-sbatch ../submit_mcce4_delphi.sh      # or: bash ../submit_mcce4_delphi.sh
+scripts_Kinases_MCCE/setup_trial.sh 1        # creates Trial01/ (--force to regenerate)
 ```
 
-Production settings:
+This copies the PDB folders, symlinks `pdb_inhibitor.lst`, writes the four numbered scripts, and
+generates the submit scripts — which differ only in job name, step flags, `CPUS`, the hook scripts
+and `MONTE_SEED` (Trial01 → 1001, Trial02 → 1002, Trial03 → 1003).
 
-```
-step1.py -d 4 --noter --dry
-step2.py -d 4 -l 1
-step3.py -d 4 -s delphi -salt 0.15 --fly -p $CPUS -t $TMP
-step4.py --xts --ms -i 7.4 -n 1
-```
+### 2. Run the three trees
 
-The derived trees (`run_cof2`, `run_prot2`, `run_prot`) inherit steps 1–2 from `run_kin` and are
-submitted with `step1="f" step2="f"`. Re-running step 1 or 2 in a derived tree breaks the
-shared-conformer premise that makes the holo/apo comparison meaningful.
-
-### Entropy correction
-
-`xts_corr.py` post-processes `fort.38` to remove the bias by which a charge state with more
-conformers appears more probable purely from conformer count: it groups conformers by charge,
-computes a Shannon entropy per group, adds it to each conformer's relative free energy, and
-re-Boltzmanns.
+Each tree is launched with `pro_batch` from inside its own directory. Clear a tree first if you are
+restarting it — **this deletes all results in it**:
 
 ```bash
-cd <run_dir>/<PDB>
-python3 xts_corr.py            # non-amino-acid residues only (as used in the paper)
+rm -rf 1* 2* 3* 4* 5* meta_bench pro_batch_* book.txt
 ```
 
-It writes `xts_fort.38` and `xts_sum_crg.out` alongside the uncorrected files. **All published
-figures read `xts_sum_crg.out`**; scripts without `_xts` in the name read the uncorrected output and
-are retained only for reference.
+**Solution** (shortest; independent of the other two, so a good first check):
 
-### Analysis scripts
+```bash
+cd Trial01/run_inhib
+pro_batch cof-pdb -custom submit_mcce4.sh -job-name T01_inhib --skip-prerun
+cat */mcce_timing.log | grep STEP4 | grep Success | wc -l      # 37 when done
+```
 
-Run with `python3 <script>`. There are no command-line arguments — configuration is by editing the
-`dir1` / `dir2` / `lst_file` paths at the top of each file, which must be pointed at your local copy
-of the run tree before use. Requires `numpy`, `matplotlib`, `pandas`, and `seaborn`; the Figure 4
-structural overlay additionally requires PyMOL.
+**Holo, steps 1–2.** stepB here splits the finished `step2_out.pdb` into `holo_step2_out.pdb` and
+`apo_step2_out.pdb` (the inhibitor deleted, matched on residue-name columns 18–20):
+
+```bash
+cd Trial01/run_holo
+pro_batch kin-pdb -custom submit_mcce4_s1s2.sh -job-name T01_holo_s1s2 --skip-prerun
+cat */mcce_timing.log | grep STEP2 | grep Success | wc -l      # 37
+```
+
+**Seed apo from holo.** Needs only steps 1–2, so it can run while holo's step 3 is still going:
+
+```bash
+cd Trial01 && ./0-prepare_run_apo.py           # --dry-run | --keep | 1XKK 2ITZ
+```
+
+It copies each `run_holo/<PDBID>` across — minus holo's own `step2_out.pdb` and any step 3/4
+products — and links `step2_out.pdb` to `apo_step2_out.pdb`.
+
+**Holo steps 3–4, and apo steps 3–4.** These are independent of each other and can run
+concurrently. Apo's stepB re-checks that `apo_step2_out.pdb` is exactly `holo_step2_out.pdb` minus
+the inhibitor before step 3 begins:
+
+```bash
+cd Trial01/run_holo
+pro_batch kin-pdb -custom submit_mcce4_s3s4.sh -job-name T01_holo_s3s4 --skip-prerun
+cd ../run_apo
+pro_batch kin-pdb -custom submit_mcce4_s3s4.sh -job-name T01_apo_s3s4  --skip-prerun
+cat */mcce_timing.log | grep STEP4 | grep Success | wc -l      # 37 each
+```
+
+Progress can also be checked with `pro_batch --check -job-name <name>` (`r` pending, `c` complete,
+`e` error). Step 3 dominates at roughly 8 min/structure; step 4 takes ~15 s.
+
+### 3. Entropy correction, then the per-trial figures
+
+**step 4 does not apply the entropy correction** — `--xts` only switches on MCCE's internal entropy
+term. The correction is a separate pass that removes the bias by which a charge state with more
+conformers appears more probable purely from conformer count:
+
+```bash
+cd Trial01
+./1-run_xts_corr.py                            # writes xts_sum_crg.out in all three trees
+./2-plot_sumcrg_inhibitors_xts_Fig3.py         # --title to draw titles on the PNGs
+./3-plot_sumcrg_comparison_xts_Fig4A.py
+```
+
+Every figure reads `xts_sum_crg.out`, so this must be done in all three trees or corrected numbers
+would be compared against uncorrected ones.
+
+### 4. Repeat for Trial02 and Trial03, then aggregate
+
+```bash
+./plot_trials_inhibitors_xts_Fig3.py           # --err sem|sd|range
+./plot_trials_comparison_xts_Fig4A.py
+./make_trials_tables_xlsx.py                   # -> tables_Trials/
+```
+
+The cross-trial scripts read the per-trial CSVs and the workbook reads both, so run them in that
+order. All three discover `Trial*/` themselves — adding a Trial04 and re-running is all that is
+needed to widen the averages, the error bars and the seed table.
+
+### Things that silently corrupt the comparison
+
+- **Never run step 1 or step 2 in `run_apo`.** It inherits holo's rotamers; regenerating them
+  destroys the shared-conformer premise. Its submit script has `step1="f" step2="f"`.
+- **Re-seed apo whenever holo is re-run.** step 2 is stochastic, so a new holo run has a different
+  conformer set, and an apo tree left over from the previous one is silently mismatched.
+- **stepC must run in all three trees.** `prune_kin-inhib_head3.py` does two unrelated edits —
+  inhibitor conformer pruning *and* forcing ARG positive — so skipping it in apo would give holo and
+  apo different ARG treatments.
+
+`CLAUDE.md` documents these and the rest of the pipeline's invariants in detail.
 
 ---
 
@@ -161,4 +238,4 @@ CA286801 (S.S.); NIH R35GM152017 and P30CA008748 (J.D.C.).
 ## Contact
 
 Gehan A. Ranepura — granepura@gc.cuny.edu
-Sukrit Singh - sukrit.singh@choderalab.org
+Sukrit Singh — sukrit.singh@choderalab.org
