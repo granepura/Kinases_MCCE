@@ -5,7 +5,7 @@ Created on Sep 22 2026
 
 Name: make_trials_tables_xlsx.py
 Builds kinase_project-trials-tables.xlsx from whatever trials are on disk --
-the Trials counterpart of kinase_project-final-tables.xlsx.
+the Trials counterpart of kinase_project-final-tables_v0.xlsx.
 
 It discovers Trial*/ directories itself, so adding Trial04, Trial05 ... and
 re-running is all that is needed: the per-trial columns, the AVERAGE/STDEV
@@ -16,7 +16,7 @@ SHEETS:
   Per-Trial Data      the raw numbers, one row per PDB, one column per trial.
                       The only hardcoded values in the workbook.
   Table 1 (Trials)    the headline table, laid out like Table 1 of
-                      kinase_project-final-tables.xlsx (kinase section rows,
+                      kinase_project-final-tables_v0.xlsx (kinase section rows,
                       Arial 12) but with a +/- SEM column beside every value.
                       Every cell is a FORMULA over Per-Trial Data, so editing
                       or adding raw values updates the table.
@@ -75,7 +75,7 @@ def r3(formula):
     """Formulas are stored unrounded; the number format does the rounding."""
     return formula if formula.startswith("=") else f"={formula}"
 # Structural / tautomer annotations carried over from Table 1 of
-# kinase_project-final-tables.xlsx.  They are manual assignments that MCCE does
+# kinase_project-final-tables_v0.xlsx.  They are manual assignments that MCCE does
 # not output, so they are hardcoded here and the workbook no longer needs that
 # file.  (PDB: (delta-Taut, DFG, kinase conformation))
 ANNOTATIONS = {
@@ -123,7 +123,7 @@ ANNOTATIONS = {
 # Conformer energies (kcal/mol).  MCCE's own extra.tpl is the live source --
 # "EXTRA  DB8+1  0.071" -- and read_extra_energies() below prefers it, so a new
 # ligand is picked up without touching this file.  The table here is the frozen
-# copy from SI.3.Conf of kinase_project-final-tables.xlsx, used when extra.tpl
+# copy from SI.3.Conf of kinase_project-final-tables_v0.xlsx, used when extra.tpl
 # cannot be found; all 63 entries were verified identical to it.
 #
 # Not recomputed: energy is -RT*ln(P(i) soln), and xts_fort.38 stores
@@ -196,7 +196,7 @@ CONF_ENERGY = {
 }
 
 # Full kinase names for the section headers, as Table 1 of
-# kinase_project-final-tables.xlsx writes them.  Transcribed from that file with
+# kinase_project-final-tables_v0.xlsx writes them.  Transcribed from that file with
 # its spelling tidied ("Groth" -> "Growth", "Tyr" -> "Tyrosine"); the short code
 # is the one in pdb_inhibitor.lst.  VGFR in the published table was a
 # typo for VEGFR and is corrected here and in the manifest.
@@ -649,7 +649,7 @@ def sheet_table1(wb, rows, trials, n):
         ws.cell(i, 2).font = F_BOLD
         i += 1
         # within a kinase, order by inhibitor then PDB -- as Table 1 of
-        # kinase_project-final-tables.xlsx does
+        # kinase_project-final-tables_v0.xlsx does
         for r in sorted(by_kinase[kinase],
                         key=lambda x: (x["inhibitor"], x["pdb"], x["resid"])):
             p = (r["pdb"], r["resid"])
@@ -754,7 +754,7 @@ def sheet_conf_raw(wb, conf, trials):
 def sheet_si_table2(wb, conf, index, trials, n):
     """
     SI-Table2: ligand conformer populations, in the column order of SI.3.Conf of
-    kinase_project-final-tables.xlsx --
+    kinase_project-final-tables_v0.xlsx --
 
         conf type | charge | energy | Boltzmann Factor | Stat Mech | P(i) soln | P(i) bound
 

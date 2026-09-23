@@ -104,7 +104,9 @@ scripts_Kinases_MCCE/                 canonical pipeline scripts
   install_apo_step2_out.py            stepB in apo: verify the pair, link step2_out.pdb
   prune_kin-inhib_head3.py            stepC: prune inhibitor conformers, force ARG positive
   prepare_run_apo.py  run_xts_corr.py  plot_*.py    sources of the numbered trial scripts
-  superseded/                         earlier versions and the published snapshot (cof_tpl_mg)
+  superseded/                         earlier versions and the published snapshot
+    cof_tpl_mg/                       the published run tree (read-only history)
+      kinase_project-final-tables_v0.xlsx   manuscript Table 1 and SI tables, published run
 
 plot_trials_inhibitors_xts_Fig3.py    cross-trial Fig 3, mean ± SEM
 plot_trials_comparison_xts_Fig4A.py   cross-trial Fig 4A, mean ± SEM
@@ -112,7 +114,6 @@ make_trials_tables_xlsx.py            builds tables_Trials/kinase_project-trials
 
 plots_Trials_*/  tables_Trials/       cross-trial figures, CSVs and the workbook
 outlier-analysis/  dfg-split-analysis/  test_xts_corr/    figure-specific analyses
-kinase_project-final-tables.xlsx      manuscript Table 1 and SI tables (published run)
 ```
 
 ---
