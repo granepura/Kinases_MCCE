@@ -38,8 +38,7 @@ WHERE THE NUMBERS COME FROM:
 
 USAGE:
 ======
-  ./make_trials_tables_xlsx.py                  # every Trial*/ here, both files
-  ./make_trials_tables_xlsx.py --no-values-copy # workbook only
+  ./make_trials_tables_xlsx.py                  # every Trial*/ here
   ./make_trials_tables_xlsx.py --glob 'Trial0[12]'
   ./make_trials_tables_xlsx.py --outdir tables_v2
   ./make_trials_tables_xlsx.py --root /path/to/Kinases_MCCE
@@ -47,10 +46,8 @@ USAGE:
 The workbook is written into tables_Trials/ (--outdir), next to the
 plots_Trials_* directories the two plot_trials_*.py scripts produce.
 
-Two files are written by default: the workbook itself, and a *_values.xlsx with
-the numbers baked in.  The second exists because openpyxl writes formulas
-without cached values, so the main workbook's computed columns read as blank
-until Excel opens it (or LibreOffice recalculates it).  --no-values-copy skips it.
+NOTE: openpyxl writes formulas with no cached value, so the computed columns
+read as blank until Excel opens the file and calculates them.
 """
 
 import argparse
@@ -77,6 +74,51 @@ UPTO3 = "0.000"
 def r3(formula):
     """Formulas are stored unrounded; the number format does the rounding."""
     return formula if formula.startswith("=") else f"={formula}"
+# Structural / tautomer annotations carried over from Table 1 of
+# kinase_project-final-tables.xlsx.  They are manual assignments that MCCE does
+# not output, so they are hardcoded here and the workbook no longer needs that
+# file.  (PDB: (delta-Taut, DFG, kinase conformation))
+ANNOTATIONS = {
+    "1XKK": ("N/A", "In", "DFG-in (active)"),
+    "2EUF": ("N/A", "In", "DFG-in (active)"),
+    "2HYY": ("Yes", "Out", "DFG-out (inactive)"),
+    "2ITO": ("No", "In", "DFG-in (active)"),
+    "2ITY": ("No", "In", "DFG-in (active)"),
+    "2ITZ": ("No", "In", "DFG-in (active)"),
+    "2WGJ": ("No", "In", "DFG-in (active)"),
+    "2XP2": ("No", "In", "DFG-in (active)"),
+    "2YFX": ("No", "In", "DFG-in (active)"),
+    "3AOX": ("N/A", "In", "DFG-in (active)"),
+    "3CS9": ("No", "Out", "DFG-out (inactive)"),
+    "3LXK": ("N/A", "In", "DFG-in (active)"),
+    "3PYY": ("Yes", "Out", "DFG-out (inactive)"),
+    "3UE4": ("Yes", "In", "DFG-in (active)"),
+    "3UG2": ("No", "In", "DFG-in (active)"),
+    "3WZD": ("No", "In", "DFG-in (active)"),
+    "3WZE": ("No", "Out", "DFG-out (inactive)"),
+    "3ZOS": ("Yes", "Out", "DFG-out (inactive)"),
+    "4AG8": ("Yes", "Out", "DFG-out (inactive)"),
+    "4AGC": ("Yes", "Out", "DFG-out (inactive)"),
+    "4AGD": ("No", "Out", "DFG-out (inactive)"),
+    "4AN2": ("No", "In", "DFG-in (active)"),
+    "4ANQ": ("No", "In", "DFG-in (active)"),
+    "4ANS": ("No", "In", "DFG-in (active)"),
+    "4ASD": ("No", "Out", "DFG-out (inactive)"),
+    "4G5J": ("N/A", "In", "DFG-in (active)"),
+    "4G5P": ("N/A", "In", "DFG-in (active)"),
+    "4I22": ("No", "In", "DFG-in (active)"),
+    "4LMN": ("No", "In", "DFG-in (active)"),
+    "4MKC": ("N/A", "In", "DFG-in (active)"),
+    "4WKQ": ("No", "In", "DFG-in (active)"),
+    "4ZAU": ("No", "In", "DFG-in (active)"),
+    "5AAA": ("No", "In", "DFG-in (active)"),
+    "5AAB": ("No", "In", "DFG-in (active)"),
+    # 5AAC is absent from that Table 1; taken from its 5AAA/5AAB series
+    "5AAC": ("No", "In", "DFG-in (active)"),
+    "5L2I": ("N/A", "In", "DFG-in (active)"),
+    "5MO4": ("No", "Out", "DFG-out (inactive)"),
+}
+
 RT_KCAL = 0.5925          # kcal/mol, as used in SI.3.Conf of the published workbook
 TREES = {"inhib": "run_inhib", "holo": "run_holo", "apo": "run_apo"}
 LEGACY = {"run_holo": "run_kin", "run_apo": "run_prot2", "run_inhib": "run_cof2"}
@@ -390,11 +432,12 @@ def sheet_table1(wb, rows, trials, n):
 
     # One group label per column, so each "± SEM" sits under the same group as the
     # value it belongs to.  GROUPS also drives the merges below.
-    GROUPS = [("", 3), ("Ligand", 7), ("Apo-kinase", 2),
-              ("Holo-kinase", 2), ("Holo-Apo", 2)]
+    GROUPS = [("", 3), ("Ligand", 8), ("Apo-kinase", 2),
+              ("Holo-kinase", 2), ("Holo-Apo", 2), ("Structure", 2)]
     group = [label for label, span in GROUPS for _ in range(span)]
     head = ["PDBID", "Ligand", "Kinase", "#conf", "crg soln", "± SEM", "crg bound", "± SEM",
-            "∆crg", "± SEM", "charge", "± SEM", "charge", "± SEM", "∆crg", "± SEM"]
+            "∆crg", "± SEM", "∆Taut", "charge", "± SEM", "charge", "± SEM",
+            "∆crg", "± SEM", "DFG", "Kinase conformation"]
     assert len(group) == len(head), f"group row {len(group)} != header row {len(head)}"
     ws.append([]); ws.append(group); ws.append(head)
     for c in range(1, len(head) + 1):
@@ -438,22 +481,26 @@ def sheet_table1(wb, rows, trials, n):
             ws.cell(i, 3).value = r["kinase"]
             ws.cell(i, 4).value = f"=AVERAGE({rng('nconf', p)})"
             for col, key in ((5, "crg_soln"), (7, "crg_bound"),
-                             (11, "apo_net"), (13, "holo_net")):
+                             (12, "apo_net"), (14, "holo_net")):
                 ws.cell(i, col).value = f"=AVERAGE({rng(key, p)})"
                 ws.cell(i, col + 1).value = (
                     f"=IF(COUNT({rng(key, p)})>1,"
                     f"STDEV({rng(key, p)})/SQRT(COUNT({rng(key, p)})),0)")
             ws.cell(i, 9).value = f"=G{i}-E{i}"
             ws.cell(i, 10).value = f"=SQRT(F{i}^2+H{i}^2)"
-            ws.cell(i, 15).value = f"=M{i}-K{i}"
-            ws.cell(i, 16).value = f"=SQRT(L{i}^2+N{i}^2)"
+            ws.cell(i, 16).value = f"=N{i}-L{i}"
+            ws.cell(i, 17).value = f"=SQRT(M{i}^2+O{i}^2)"
+            taut, dfg, conf_txt = ANNOTATIONS.get(p, ("", "", ""))
+            ws.cell(i, 11).value = taut
+            ws.cell(i, 18).value = dfg
+            ws.cell(i, 19).value = conf_txt
             for c in range(1, len(head) + 1):
                 ws.cell(i, c).font = F_BODY
                 if c == 4:
                     ws.cell(i, c).number_format = "0.0"
-                elif c in (6, 8, 10, 12, 14, 16):
+                elif c in (6, 8, 10, 13, 15, 17):
                     ws.cell(i, c).number_format = "0.000"
-                elif c >= 5:
+                elif c in (5, 7, 9, 12, 14, 16):
                     ws.cell(i, c).number_format = "0.00"
             i += 1
     note = ws.cell(i + 1, 1)
@@ -465,6 +512,9 @@ def sheet_table1(wb, rows, trials, n):
         ws.column_dimensions[c].width = w
     for c in range(4, len(head) + 1):
         ws.column_dimensions[get_column_letter(c)].width = 9
+    ws.column_dimensions["K"].width = 8       # ∆Taut
+    ws.column_dimensions["R"].width = 6       # DFG
+    ws.column_dimensions["S"].width = 20      # Kinase conformation
     ws.freeze_panes = "A6"
 
 
@@ -612,8 +662,15 @@ def sheet_si_table2(wb, conf, index, trials, n):
             # energy / Boltzmann / Stat Mech from the mean solution occupancy.
             # A conformer whose P rounds to 0.000 in xts_fort.38 has no defined
             # energy, so those cells stay blank rather than showing a fake value.
-            for rr in range(first_row, last + 1):
-                ws.cell(rr, 7).value = f'=IF(J{rr}>0,-$B$3*LN(J{rr}),"")'
+            # energy is written as a number, computed here from the mean
+            # P(i) soln; Boltzmann and Stat Mech are live formulas off it, the
+            # same arrangement as SI.3.Conf of the published workbook.
+            for rr, (ctype, _src) in zip(range(first_row, last + 1), index[pdb]):
+                vals = [v for v in (rec["types"][ctype]["soln"].get(tr)
+                                    for tr in trials) if v is not None]
+                mean_soln = (sum(vals) / len(vals)) if vals else 0.0
+                if mean_soln > 0:
+                    ws.cell(rr, 7).value = -RT_KCAL * math.log(mean_soln)
                 ws.cell(rr, 8).value = f'=IF(G{rr}="","",EXP(-G{rr}/$B$3))'
                 ws.cell(rr, 9).value = (
                     f'=IF(H{rr}="","",H{rr}/SUM(H${first_row}:H${last}))')
@@ -747,13 +804,6 @@ def main():
                          "directories (default: %(default)s)")
     ap.add_argument("--out", default="kinase_project-trials-tables.xlsx",
                     help="workbook filename inside --outdir (default: %(default)s)")
-    # The values copy is written by default: openpyxl leaves formula cells with no
-    # cached value, so without it the main workbook previews as blank until Excel
-    # opens it.  --values-copy is still accepted so older commands keep working.
-    ap.add_argument("--values-copy", dest="values_copy", action="store_true",
-                    default=True, help=argparse.SUPPRESS)
-    ap.add_argument("--no-values-copy", dest="values_copy", action="store_false",
-                    help="skip the static *_values.xlsx preview copy (written by default)")
     args = ap.parse_args()
 
     root = os.path.abspath(args.root) if args.root \
@@ -852,100 +902,6 @@ def main():
     wb.save(out)
     print(f"{GREEN}  wrote {os.path.relpath(out, root)}{RESET}")
     print(f"  sheets: {', '.join(wb.sheetnames)}")
-
-    if args.values_copy:
-        vals = out.replace(".xlsx", "_values.xlsx")
-        vb = Workbook(); vb.remove(vb.active)
-
-        def mean_sem(values):
-            v = [x for x in values if x is not None]
-            if not v:
-                return None, None
-            return st.fmean(v), (st.stdev(v) / len(v) ** 0.5 if len(v) > 1 else 0.0)
-
-        vs = vb.create_sheet("Table 1 (Trials) values")
-        vs.append(["PDBID", "Ligand", "Kinase", "#conf",
-                   "crg soln", "sem", "crg bound", "sem", "dcrg", "sem",
-                   "apo charge", "sem", "holo charge", "sem", "holo-apo", "sem"])
-        for c in range(1, 17):
-            vs.cell(1, c).font = F_BOLD
-        for r in rows:
-            def ms(key):
-                return mean_sem([r["per"][t][key] for t in trials])
-            cs, cse = ms("crg_soln"); cb, cbe = ms("crg_bound")
-            an, ane = ms("apo_net"); hn, hne = ms("holo_net")
-            nc, _ = ms("nconf")
-            d = (cb - cs) if (cb is not None and cs is not None) else None
-            de = ((cse ** 2 + cbe ** 2) ** 0.5) if (cse is not None and cbe is not None) else None
-            ha = (hn - an) if (hn is not None and an is not None) else None
-            hae = ((ane ** 2 + hne ** 2) ** 0.5) if (ane is not None and hne is not None) else None
-            vs.append([r["pdb"], r["inhibitor"], r["kinase"], nc,
-                       cs, cse, cb, cbe, d, de, an, ane, hn, hne, ha, hae])
-        for rr in range(2, vs.max_row + 1):
-            for c in range(1, 17):
-                vs.cell(rr, c).font = F_BODY
-                if c >= 5:
-                    vs.cell(rr, c).number_format = "0.000" if c % 2 == 0 else "0.00"
-        if conf:
-            cs2 = vb.create_sheet("SI-Table2 values")
-            cs2.append(["PDBID", "Ligand", "Kinase", "Conf type", "charge",
-                        "energy", "Boltzmann Factor", "Stat Mech",
-                        "P(i) soln", "sem", "P(i) bound", "sem"])
-            for c in range(1, 13):
-                cs2.cell(1, c).font = F_BOLD
-            for pdb in sorted(conf, key=lambda x: (conf[x]["kinase"],
-                                                   conf[x]["inhibitor"], x)):
-                rec = conf[pdb]
-                block, ens_s, ens_b, ens_sm = [], 0.0, 0.0, 0.0
-                for ctype in sorted(rec["types"]):
-                    d = rec["types"][ctype]
-                    sm, sse = mean_sem([d["soln"].get(t) for t in trials])
-                    bm, bse = mean_sem([d["bound"].get(t) for t in trials])
-                    crg = d["charge"]
-                    energy = (-RT_KCAL * math.log(sm)) if sm else None
-                    boltz = math.exp(-energy / RT_KCAL) if energy is not None else None
-                    block.append([pdb, rec["inhibitor"], rec["kinase"], ctype, crg,
-                                  energy, boltz, None, sm, sse, bm, bse])
-                    if crg is not None:
-                        ens_s += crg * (sm or 0.0)
-                        ens_b += crg * (bm or 0.0)
-                zsum = sum(r[6] for r in block if r[6] is not None)
-                for r in block:
-                    if r[6] is not None and zsum:
-                        r[7] = r[6] / zsum                      # Stat Mech
-                        if r[4] is not None:
-                            ens_sm += r[4] * r[7]
-                    cs2.append(r)
-
-                def col_sum(j):
-                    return sum(r[j] for r in block if r[j] is not None)
-
-                # SUM and ensemble charge, as on the formula sheet
-                cs2.append([pdb, rec["inhibitor"], rec["kinase"], "SUM", None, None,
-                            col_sum(6), col_sum(7), col_sum(8), None, col_sum(10), None])
-                cs2.cell(cs2.max_row, 1).font = F_BOLD
-                sum_row = cs2.max_row
-                cs2.append([pdb, rec["inhibitor"], rec["kinase"], "ensemble charge",
-                            None, None, None, ens_sm, ens_s, None, ens_b, None])
-                for rr in (sum_row, cs2.max_row):
-                    for c in range(1, 13):
-                        cs2.cell(rr, c).font = F_BOLD
-            for rr in range(2, cs2.max_row + 1):
-                for c in range(1, 13):
-                    cell = cs2.cell(rr, c)
-                    if cell.font is not F_BOLD:
-                        cell.font = F_BODY
-                    if c >= 5:
-                        cell.number_format = UPTO3
-            for c, w in zip("ABCD", (10, 14, 9, 11)):
-                cs2.column_dimensions[c].width = w
-            for c in range(5, 13):
-                cs2.column_dimensions[get_column_letter(c)].width = 11
-
-        vb.save(vals)
-        print(f"{GREEN}  wrote {os.path.relpath(vals, root)}{RESET}  (static values, "
-              f"no formulas; {', '.join(vb.sheetnames)})")
-
 
 if __name__ == "__main__":
     main()
