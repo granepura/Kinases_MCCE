@@ -119,6 +119,82 @@ ANNOTATIONS = {
     "5MO4": ("No", "Out", "DFG-out (inactive)"),
 }
 
+
+# Conformer energies (kcal/mol).  MCCE's own extra.tpl is the live source --
+# "EXTRA  DB8+1  0.071" -- and read_extra_energies() below prefers it, so a new
+# ligand is picked up without touching this file.  The table here is the frozen
+# copy from SI.3.Conf of kinase_project-final-tables.xlsx, used when extra.tpl
+# cannot be found; all 63 entries were verified identical to it.
+#
+# Not recomputed: energy is -RT*ln(P(i) soln), and xts_fort.38 stores
+# occupancies to 3 decimals, so a conformer whose population rounds to 0.000
+# would have no defined energy (DB802 is one).
+CONF_ENERGY = {
+    "0LI+1": 0.316,
+    "0LI+2": 0.573,
+    "0LI01": 2.03,
+    "0WN+1": 0.005,
+    "0WN+a": 4.147,
+    "0WN01": 2.861,
+    "4MK+1": 0.0,
+    "4MK+a": 5.439,
+    "4MK01": 3.967,
+    "AXI+1": 3.79,
+    "AXI01": 0.124,
+    "AXI02": 0.993,
+    "B49+1": 0.008,
+    "B4901": 2.573,
+    "B4902": 5.676,
+    "B4903": 5.692,
+    "BAX+1": 3.207,
+    "BAX-1": 5.84,
+    "BAX01": 0.004,
+    "BAX02": 3.62,
+    "DB8+1": 0.071,
+    "DB8+2": 1.695,
+    "DB801": 1.715,
+    "DB802": 5.065,
+    "EMH+1": 0.342,
+    "EMH01": 0.488,
+    "EUI+1": 0.008,
+    "EUI01": 2.536,
+    "EUI02": 5.637,
+    "FMM+1": 0.031,
+    "FMM+a": 5.085,
+    "FMM01": 1.766,
+    "IRE+1": 0.717,
+    "IRE+2": 3.728,
+    "IRE+3": 4.395,
+    "IRE+a": 4.412,
+    "IRE01": 0.212,
+    "LEV-1": 5.763,
+    "LEV-2": 5.763,
+    "LEV01": 0.0,
+    "LQQ+1": 0.256,
+    "LQQ01": 2.434,
+    "MI1+1": 2.096,
+    "MI101": 0.018,
+    "NIL+1": 1.404,
+    "NIL+2": 5.173,
+    "NIL01": 0.058,
+    "STI+1": 0.316,
+    "STI+2": 0.573,
+    "STI+a": 5.43,
+    "STI+b": 5.687,
+    "STI01": 2.031,
+    "VGH+1": 0.585,
+    "VGH+2": 3.587,
+    "VGH+a": 0.283,
+    "VGH01": 3.192,
+    "YY3+1": 0.016,
+    "YY3+2": 3.31,
+    "YY3+3": 3.893,
+    "YY3+4": 4.431,
+    "YY3+a": 4.972,
+    "YY3+b": 5.449,
+    "YY301": 2.299,
+}
+
 RT_KCAL = 0.5925          # kcal/mol, as used in SI.3.Conf of the published workbook
 TREES = {"inhib": "run_inhib", "holo": "run_holo", "apo": "run_apo"}
 LEGACY = {"run_holo": "run_kin", "run_apo": "run_prot2", "run_inhib": "run_cof2"}
@@ -253,6 +329,36 @@ def read_head3_charges(path):
         except ValueError:
             pass
     return out
+
+
+def read_extra_energies():
+    """
+    {conformer: energy} from MCCE4's extra.tpl ("EXTRA  DB8+1  0.071").
+    Returns {} when the file cannot be found, and the caller falls back to the
+    CONF_ENERGY table above.
+    """
+    cands = []
+    if os.environ.get("MCCE_HOME"):
+        cands.append(os.path.join(os.environ["MCCE_HOME"], "extra.tpl"))
+    mcce = shutil.which("mcce")
+    if mcce:
+        cands.append(os.path.join(
+            os.path.dirname(os.path.dirname(os.path.realpath(mcce))), "extra.tpl"))
+    cands.append(os.path.expanduser("~/MCCE4/extra.tpl"))
+    for path in cands:
+        if not os.path.isfile(path):
+            continue
+        out = {}
+        for line in open(path):
+            f = line.split()
+            if len(f) >= 3 and f[0] == "EXTRA":
+                try:
+                    out[f[1]] = float(f[2])
+                except ValueError:
+                    pass
+        if out:
+            return out, path
+    return {}, None
 
 
 def find_param_dir():
@@ -593,7 +699,7 @@ def sheet_si_table2(wb, conf, index, trials, n):
     ws["B3"] = RT_KCAL
     ws["B3"].font = F_BODY
     ws["B3"].number_format = "0.0000"
-    ws["D3"] = ("energy = -RT·ln(P(i) soln) ; Boltzmann = exp(-energy/RT) ; "
+    ws["D3"] = ("energy: published values (SI.3.Conf) ; Boltzmann = exp(-energy/RT) ; "
                 "Stat Mech = Boltzmann / ΣBoltzmann")
     ws["D3"].font = F_NOTE
 
@@ -627,6 +733,13 @@ def sheet_si_table2(wb, conf, index, trials, n):
     for pdb in conf:
         by_kinase.setdefault(conf[pdb]["kinase"] or "(unassigned)", []).append(pdb)
 
+    extra, extra_path = read_extra_energies()
+    energies = dict(CONF_ENERGY)
+    energies.update(extra)                      # extra.tpl wins where both have it
+    ws["A4"] = (f"conformer energies: {extra_path}" if extra_path
+                else "conformer energies: built-in table (extra.tpl not found)")
+    ws["A4"].font = F_NOTE
+    unpublished = []
     i = FIRST_DATA
     for kinase in sorted(by_kinase):
         for c in range(1, len(head) + 1):
@@ -666,11 +779,17 @@ def sheet_si_table2(wb, conf, index, trials, n):
             # P(i) soln; Boltzmann and Stat Mech are live formulas off it, the
             # same arrangement as SI.3.Conf of the published workbook.
             for rr, (ctype, _src) in zip(range(first_row, last + 1), index[pdb]):
-                vals = [v for v in (rec["types"][ctype]["soln"].get(tr)
-                                    for tr in trials) if v is not None]
-                mean_soln = (sum(vals) / len(vals)) if vals else 0.0
-                if mean_soln > 0:
-                    ws.cell(rr, 7).value = -RT_KCAL * math.log(mean_soln)
+                if ctype in energies:
+                    ws.cell(rr, 7).value = energies[ctype]
+                else:
+                    # unpublished conformer: fall back to -RT*ln(P(i) soln)
+                    vals = [v for v in (rec["types"][ctype]["soln"].get(tr)
+                                        for tr in trials) if v is not None]
+                    mean_soln = (sum(vals) / len(vals)) if vals else 0.0
+                    if mean_soln > 0:
+                        ws.cell(rr, 7).value = -RT_KCAL * math.log(mean_soln)
+                        unpublished.append(f"{pdb}/{ctype}")
+                    # else: no occupancy and no tabulated energy -- left blank
                 ws.cell(rr, 8).value = f'=IF(G{rr}="","",EXP(-G{rr}/$B$3))'
                 ws.cell(rr, 9).value = (
                     f'=IF(H{rr}="","",H{rr}/SUM(H${first_row}:H${last}))')
@@ -702,6 +821,10 @@ def sheet_si_table2(wb, conf, index, trials, n):
         ws.column_dimensions[get_column_letter(c)].width = 10
     ws.column_dimensions["H"].width = 15      # "Boltzmann Factor" header is the widest
     ws.freeze_panes = f"A{FIRST_DATA}"
+    if unpublished:
+        print(f"  {YELLOW}[NOTE] {len(unpublished)} conformer(s) have no published "
+              f"energy; used -RT*ln(P): {', '.join(unpublished[:6])}"
+              f"{' ...' if len(unpublished) > 6 else ''}{RESET}")
 
 
 def sheet_methods(wb, trials, seeds, n, incomplete):
