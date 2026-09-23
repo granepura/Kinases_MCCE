@@ -910,6 +910,105 @@ def sheet_si_table2(wb, conf, index, trials, n):
               f"{' ...' if len(unpublished) > 6 else ''}{RESET}")
 
 
+def sheet_ddg(wb, conf, trials):
+    """Differential binding free energy between same-charge states of one ligand.
+
+    For two states i and j of the same inhibitor at the same site, the free energy
+    that has to be supplied to interconvert them on going from solution into the
+    binding site is
+
+        ddG(i->j) = -RT ln [ ( P(j)_prot / P(i)_prot ) / ( P(j)_soln / P(i)_soln ) ]
+
+    This is a relative quantity between two states of one ligand in one complex.  It
+    is NOT an absolute or alchemical relative binding free energy between ligands.
+    Pairs are formed within a net-charge group, so a pair is a tautomer pair; a
+    population below MIN_P in any of the four terms makes the logarithm meaningless
+    and the pair is skipped.
+    """
+    MIN_P = 1e-3
+    ws = wb.create_sheet("ddG (tautomers)")
+    n = len(trials)
+    ws.append(["Differential binding free energy between tautomers, "
+               f"RT = {RT_KCAL} kcal/mol"])
+    ws.append(["ddG(i->j) = -RT ln[ (P(j)prot/P(i)prot) / (P(j)soln/P(i)soln) ].  "
+               "Negative favours state j when bound.  Computed within each trial, "
+               f"then averaged.  Pairs with any population < {MIN_P} are skipped."])
+    ws.append([])
+    head = ["PDBID", "Ligand", "site", "charge", "state i", "state j",
+            "P(i) soln", "P(j) soln", "P(i) bound", "P(j) bound",
+            "ddG mean", "± SEM", "min", "max"] + \
+           [f"ddG {t.replace('Trial', 'T')}" for t in trials]
+    ws.append(head)
+    hrow = ws.max_row
+
+    out = []
+    for pdb in sorted(conf):
+        rec = conf[pdb]
+        bysite = {}
+        for (resid, ctype), d in rec["types"].items():
+            bysite.setdefault(resid, []).append((ctype, d))
+        for resid, items in bysite.items():
+            bych = {}
+            for ctype, d in items:
+                bych.setdefault(round(d["charge"]), []).append((ctype, d))
+            for q, lst in sorted(bych.items()):
+                lst.sort(key=lambda x: x[0])
+                for a in range(len(lst)):
+                    for b in range(a + 1, len(lst)):
+                        (ni, di), (nj, dj) = lst[a], lst[b]
+                        per = []
+                        for t in trials:
+                            ps_i, ps_j = di["soln"].get(t), dj["soln"].get(t)
+                            pb_i, pb_j = di["bound"].get(t), dj["bound"].get(t)
+                            if None in (ps_i, ps_j, pb_i, pb_j):
+                                per = []
+                                break
+                            if min(ps_i, ps_j, pb_i, pb_j) < MIN_P:
+                                per = []
+                                break
+                            per.append(-RT_KCAL * math.log((pb_j / pb_i) / (ps_j / ps_i)))
+                        if not per:
+                            continue
+                        mean = sum(per) / len(per)
+                        if len(set(per)) > 1:
+                            sd = (sum((x - mean) ** 2 for x in per) / (len(per) - 1)) ** 0.5
+                            sem = sd / len(per) ** 0.5
+                        else:
+                            sem = 0.0
+                        out.append([pdb, rec["inhibitor"], rec["sites"].get(resid, ""), q,
+                                    ni, nj,
+                                    mean_of(di["soln"], trials), mean_of(dj["soln"], trials),
+                                    mean_of(di["bound"], trials), mean_of(dj["bound"], trials),
+                                    mean, sem, min(per), max(per)] + per)
+
+    out.sort(key=lambda r: -abs(r[10]))
+    for row in out:
+        ws.append(row)
+
+    ncol = len(head)
+    for c in range(1, ncol + 1):
+        ws.cell(hrow, c).font = F_BOLD
+        ws.cell(hrow, c).border = UNDER
+        ws.cell(hrow, c).alignment = Alignment(horizontal="center")
+    ws.cell(1, 1).font = F_BOLD
+    for r in range(hrow + 1, ws.max_row + 1):
+        for c in range(1, ncol + 1):
+            cell = ws.cell(r, c)
+            cell.font = F_BODY
+            if c in (7, 8, 9, 10):
+                cell.number_format = "0.000"
+            elif c >= 11:
+                cell.number_format = "0.00"
+    for c, w in zip("ABCDEFGHIJKLMN", (9, 13, 9, 8, 11, 11, 10, 10, 11, 11, 11, 9, 8, 8)):
+        ws.column_dimensions[c].width = w
+    return len(out)
+
+
+def mean_of(d, trials):
+    vals = [d.get(t) for t in trials if d.get(t) is not None]
+    return sum(vals) / len(vals) if vals else None
+
+
 def sheet_methods(wb, trials, seeds, n, incomplete):
     ws = wb.create_sheet("Methods")
 
@@ -1051,6 +1150,8 @@ def main():
         sheet_si_table2(wb, conf, idx, trials, n)
         print(f"  conformer types: {sum(len(v['types']) for v in conf.values())} "
               f"across {len(conf)} ligands")
+        npair = sheet_ddg(wb, conf, trials)
+        print(f"  tautomer ddG pairs: {npair}")
     else:
         print(f"  {YELLOW}[SKIP] no xts_fort.38 found -- SI-Table2 omitted{RESET}")
     sheet_methods(wb, trials, seeds, n, incomplete)
