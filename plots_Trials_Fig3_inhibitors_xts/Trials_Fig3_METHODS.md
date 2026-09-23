@@ -1,6 +1,6 @@
 # Fig3 (inhibitor charge, bound vs in solution): how the statistics were computed
 
-Written: 2026-09-22 23:33:51
+Written: 2026-09-23 07:06:42
 Script : plot_trials_inhibitors_xts_Fig3.py
 
 ## Replicates
@@ -40,11 +40,11 @@ are 2 degrees of freedom, so a 95% CI would be mean +/- 4.30 x SEM.
 
 | Category | N | % |
 |---|---|---|
-| identical | 22 | 59.5 |
-| scattered | 13 | 35.1 |
-| two-state | 2 | 5.4 |
+| identical | 22 | 57.9 |
+| scattered | 14 | 36.8 |
+| two-state | 2 | 5.3 |
 
-Total points: 37
+Total points: 38
 
   * identical -- every trial agreed exactly; SEM is 0 and no bar is
     drawn.  That is agreement, not a missing error bar.

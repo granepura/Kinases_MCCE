@@ -13,9 +13,9 @@ LOADED 37 PDB ENTRIES from /data/home/granepura/5-Kinases/Kinases_MCCE/pdb_inhib
 READING PER-TRIAL Fig3 CSVs
 ================================================================================
 
-  Trial01/plots_Fig3_inhibitors_xts/Trial01_inhibitors_all_runs.csv  ->  37 points
-  Trial02/plots_Fig3_inhibitors_xts/Trial02_inhibitors_all_runs.csv  ->  37 points
-  Trial03/plots_Fig3_inhibitors_xts/Trial03_inhibitors_all_runs.csv  ->  37 points
+  Trial01/plots_Fig3_inhibitors_xts/Trial01_inhibitors_all_runs.csv  ->  38 points
+  Trial02/plots_Fig3_inhibitors_xts/Trial02_inhibitors_all_runs.csv  ->  38 points
+  Trial03/plots_Fig3_inhibitors_xts/Trial03_inhibitors_all_runs.csv  ->  38 points
 
   trials found: Trial01, Trial02, Trial03  (n = 3)
 
@@ -40,7 +40,8 @@ AVERAGING
   3UG2  Gefitinib     x= 0.30+/-0.000   y= 0.01+/-0.003   d=-0.29+/-0.003  <-- varies
   3WZD  Lenvatinib    x= 0.00+/-0.000   y= 0.00+/-0.000   d=+0.00+/-0.000
   3WZE  Sorafenib     x= 0.00+/-0.000   y= 0.00+/-0.000   d=+0.00+/-0.000
-  3ZOS  Ponatinib     x= 0.96+/-0.000   y= 1.00+/-0.000   d=+0.04+/-0.000
+  3ZOS (buried) Ponatinib     x= 0.96+/-0.000   y= 1.00+/-0.000   d=+0.04+/-0.000
+  3ZOS (surface) Ponatinib     x= 0.96+/-0.000   y= 0.90+/-0.003   d=-0.06+/-0.003  <-- varies
   4AG8  Axitinib      x= 0.00+/-0.000   y= 0.00+/-0.000   d=+0.00+/-0.000
   4AGC  Axitinib      x= 0.00+/-0.000   y= 0.00+/-0.000   d=+0.00+/-0.000
   4AGD  Sunitinib     x= 0.99+/-0.000   y= 0.90+/-0.010   d=-0.09+/-0.010  <-- varies
@@ -63,13 +64,13 @@ AVERAGING
 ================================================================================
 SUMMARY
 ================================================================================
-  Total PDB entries:           37
-  Files found (both dirs):     37
+  Total PDB entries:           38
+  Files found (both dirs):     38
   Files missing:               0
-  PDBs with matching data:     37
+  PDBs with matching data:     38
   PDBs without matching data:  0
-  Total residue data points:   37
-  Points actually plotted:     37
+  Total residue data points:   38
+  Points actually plotted:     38
 
   Outlier threshold:           ±0.15 (15%)
 ================================================================================
@@ -79,7 +80,7 @@ SUMMARY
 CREATING COMBINED PLOT (ALL INHIBITORS)
 ================================================================================
 ✅ Combined plot saved: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitors_all_runs.png
-   N = 37 (1 point per PDB), Fitted: 19, Outliers: 18
+   N = 38 (1 point per PDB), Fitted: 20, Outliers: 18
 ✅ Combined data saved: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitors_all_runs.csv
 
 ================================================================================
@@ -141,9 +142,9 @@ CREATING INDIVIDUAL INHIBITOR PLOTS
     ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Palbociclib.png
        N = 2 (1 point per PDB), Fitted: 2, Outliers: 0
     ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Palbociclib.csv
-  Plotting Ponatinib (1 points)...
+  Plotting Ponatinib (2 points)...
     ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Ponatinib.png
-       N = 1 (1 point per PDB), Fitted: 1, Outliers: 0
+       N = 2 (1 point per PDB), Fitted: 2, Outliers: 0
     ✅ Data: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Ponatinib.csv
   Plotting Sorafenib (2 points)...
     ✅ Plot: /data/home/granepura/5-Kinases/Kinases_MCCE/plots_Trials_Fig3_inhibitors_xts/Trials_inhibitor_Sorafenib.png

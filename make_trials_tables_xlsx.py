@@ -195,6 +195,23 @@ CONF_ENERGY = {
     "YY301": 2.299,
 }
 
+# Full kinase names for the section headers, as Table 1 of
+# kinase_project-final-tables.xlsx writes them.  Transcribed from that file with
+# its spelling tidied ("Groth" -> "Growth", "Tyr" -> "Tyrosine"); the short code
+# is the one in pdb_inhibitor.lst.  VGFR in the published table was a
+# typo for VEGFR and is corrected here and in the manifest.
+KINASE_NAMES = {
+    "ABL":  "ABL: Tyrosine Protein Kinase",
+    "ALK":  "ALK: Anaplastic Lymphoma Kinase",
+    "CDK6": "CDK6: Cyclin Dependent Kinase 6",
+    "DDR1": "DDR1: Discoidin Domain Receptor Tyrosine Kinase",
+    "EGFR": "EGFR: Epidermal Growth Factor Receptor Kinase",
+    "JAK3": "JAK3: Janus Kinase 3",
+    "MEK":  "MEK: Mitogen-Activated Protein Kinase",
+    "MET":  "MET: Tyrosine Protein Kinase",
+    "VEGFR": "VEGFR: Vascular Endothelial Growth Factor Receptor Kinase",
+}
+
 RT_KCAL = 0.5925          # kcal/mol, as used in SI.3.Conf of the published workbook
 TREES = {"inhib": "run_inhib", "holo": "run_holo", "apo": "run_apo"}
 LEGACY = {"run_holo": "run_kin", "run_apo": "run_prot2", "run_inhib": "run_cof2"}
@@ -222,6 +239,39 @@ def tree_dir(trial, which):
         if os.path.isdir(p):
             return p
     return os.path.join(trial, name)
+
+
+def read_accessibility(path):
+    """acc.res -> {resid: exposed fraction}.  'RES   0LI A1000  40.577  0.047'."""
+    out = {}
+    if not os.path.isfile(path):
+        return out
+    for line in open(path):
+        f = line.split()
+        if len(f) >= 5 and f[0] == "RES":
+            try:
+                out[f[1] + f[2]] = float(f[4])
+            except ValueError:
+                pass
+    return out
+
+
+def site_labels(copies, acc):
+    """
+    Label the copies of a ligand that appears more than once in one structure.
+    The least solvent-exposed copy is 'buried', the most exposed 'surface'
+    (3ZOS's two Ponatinibs are 0.047 and 0.518).  A single copy gets no label,
+    so every other structure is unaffected.
+    """
+    if len(copies) < 2:
+        return {c: "" for c in copies}
+    ranked = sorted(copies, key=lambda c: acc.get(c, 1.0))
+    out = {c: "" for c in copies}
+    out[ranked[0]] = "buried"
+    out[ranked[-1]] = "surface"
+    for c in ranked[1:-1]:
+        out[c] = "intermediate"
+    return out
 
 
 def read_sum_crg(path):
@@ -276,28 +326,44 @@ def gather(root, trials, manifest):
     rows, incomplete = [], []
     for pdb in sorted(manifest):
         inhibitor, code, kinase = manifest[pdb]
-        rec = {"pdb": pdb, "inhibitor": inhibitor, "kinase": kinase, "per": {}}
-        for t in trials:
-            td = os.path.join(root, t)
-            inh = read_sum_crg(os.path.join(tree_dir(td, "inhib"), pdb, "xts_sum_crg.out"))
-            holo = read_sum_crg(os.path.join(tree_dir(td, "holo"), pdb, "xts_sum_crg.out"))
-            apo = read_sum_crg(os.path.join(tree_dir(td, "apo"), pdb, "xts_sum_crg.out"))
-            lig_s = sorted(k for k in inh if k[:3] == code)
-            lig_b = sorted(k for k in holo if k[:3] == code)
-            rec["per"][t] = {
-                "nconf": count_conformers(
-                    os.path.join(tree_dir(td, "inhib"), pdb, "head3.lst"), code),
-                "crg_soln": inh.get(lig_s[0]) if lig_s else None,
-                "crg_bound": holo.get(lig_b[0]) if lig_b else None,
-                "apo_net": apo.get("Net_Charge"),
-                "holo_net": holo.get("Net_Charge"),
-            }
-        missing = [t for t in trials
-                   if any(rec["per"][t][k] is None
-                          for k in ("crg_soln", "crg_bound", "apo_net", "holo_net"))]
-        if missing:
-            incomplete.append((pdb, missing))
-        rows.append(rec)
+        # A structure can carry more than one copy of its ligand -- 3ZOS has two
+        # Ponatinibs, one buried and one on the surface -- and they titrate
+        # differently, so each copy gets its own row.
+        ref = os.path.join(tree_dir(os.path.join(root, trials[0]), "holo"), pdb)
+        holo0 = read_sum_crg(os.path.join(ref, "xts_sum_crg.out"))
+        copies = sorted({k[5:10] for k in holo0 if k[:3] == code})
+        labels = site_labels(copies, read_accessibility(os.path.join(ref, "acc.res")))
+        if not copies:
+            copies, labels = [""], {"": ""}
+        for resid in copies:
+            rec = {"pdb": pdb, "inhibitor": inhibitor, "kinase": kinase,
+                   "resid": resid, "site": labels.get(resid, ""), "per": {}}
+            for t in trials:
+                td = os.path.join(root, t)
+                inh = read_sum_crg(os.path.join(tree_dir(td, "inhib"), pdb,
+                                                "xts_sum_crg.out"))
+                holo = read_sum_crg(os.path.join(tree_dir(td, "holo"), pdb,
+                                                 "xts_sum_crg.out"))
+                apo = read_sum_crg(os.path.join(tree_dir(td, "apo"), pdb,
+                                                "xts_sum_crg.out"))
+                def pick(d):
+                    hits = sorted(k for k in d if k[:3] == code
+                                  and (not resid or k[5:10] == resid))
+                    return d.get(hits[0]) if hits else None
+                rec["per"][t] = {
+                    "nconf": count_conformers(
+                        os.path.join(tree_dir(td, "inhib"), pdb, "head3.lst"), code),
+                    "crg_soln": pick(inh),
+                    "crg_bound": pick(holo),
+                    "apo_net": apo.get("Net_Charge"),
+                    "holo_net": holo.get("Net_Charge"),
+                }
+            missing = [t for t in trials
+                       if any(rec["per"][t][k] is None
+                              for k in ("crg_soln", "crg_bound", "apo_net", "holo_net"))]
+            if missing:
+                incomplete.append((pdb, missing))
+            rows.append(rec)
     return rows, incomplete
 
 
@@ -413,17 +479,17 @@ def conformer_labels(types, charges):
     charge, then a letter when a charge has more than one conformer (a single
     one gets no letter, as B49+1 does in the original).
     """
-    by_charge = {}
-    for ctype in sorted(types):
-        q = charges.get(ctype)
-        key = 0 if q is None else int(round(q))
-        by_charge.setdefault(key, []).append(ctype)
+    by_key = {}
+    for key in sorted(types):
+        resid, ctype = key
+        q = charges.get(key)
+        by_key.setdefault((resid, 0 if q is None else int(round(q))), []).append(key)
     out = {}
-    for q, members in by_charge.items():
+    for (resid, q), members in by_key.items():
         tag = f"+{q}" if q > 0 else (f"{q}" if q < 0 else " 0")
-        for i, ctype in enumerate(members):
+        for i, key in enumerate(members):
             suffix = "" if len(members) == 1 else chr(ord("a") + i)
-            out[ctype] = f"{ctype[:3]}{tag}{suffix}"
+            out[key] = f"{key[1][:3]}{tag}{suffix}"
     return out
 
 
@@ -453,11 +519,10 @@ def gather_conformers(root, trials, manifest):
                 lig = sorted(k for k in occ if k[:3] == code)
                 if not lig:
                     continue
-                resid = lig[0][5:10]          # first copy only, as in Table 1
+                # every copy, not just the first: 3ZOS carries two Ponatinibs
+                # that titrate differently once bound.
                 for name in lig:
-                    if name[5:10] != resid:
-                        continue
-                    ctype = name[:5]
+                    ctype = (name[5:10], name[:5])       # (resid, conformer type)
                     rec = types.setdefault(ctype, {"charge": crg.get(name),
                                                    "soln": {}, "bound": {},
                                                    "nrot": {}})
@@ -468,9 +533,14 @@ def gather_conformers(root, trials, manifest):
                         rec["charge"] = crg.get(name)
         if types:
             charges = {c: d["charge"] for c, d in types.items()}
+            ref = os.path.join(tree_dir(os.path.join(root, trials[0]), "holo"), pdb)
+            acc = read_accessibility(os.path.join(ref, "acc.res"))
+            copies = sorted({k[0] for k in types})
             out[pdb] = {"inhibitor": inhibitor, "kinase": kinase, "types": types,
                         "labels": conformer_labels(types, charges),
-                        "protons": protonated_atoms(param_dir, code)}
+                        "protons": protonated_atoms(param_dir, code),
+                        "sites": site_labels(copies, acc),
+                        "copies": copies}
     return out
 
 
@@ -485,20 +555,20 @@ QUANTITIES = [("nconf", "Ligand #conf", "0.0"),
 def sheet_raw(wb, rows, trials):
     ws = wb.create_sheet("Per-Trial Data")
     n = len(trials)
-    top = ["", "", ""]
-    sub = ["PDBID", "Ligand", "Kinase"]
+    top = ["", "", "", ""]
+    sub = ["PDBID", "Ligand", "Kinase", "site"]
     for _, title, _fmt in QUANTITIES:
         top += [title] + [""] * (n - 1)
         sub += [t.replace("Trial", "T") for t in trials]
     ws.append(top)
     ws.append(sub)
     for r in rows:
-        line = [r["pdb"], r["inhibitor"], r["kinase"]]
+        line = [r["pdb"], r["inhibitor"], r["kinase"], r["site"]]
         for key, _t, _f in QUANTITIES:
             line += [r["per"][t][key] for t in trials]
         ws.append(line)
 
-    ncol = 3 + len(QUANTITIES) * n
+    ncol = 4 + len(QUANTITIES) * n
     for c in range(1, ncol + 1):
         ws.cell(1, c).font = F_BOLD
         ws.cell(1, c).alignment = Alignment(horizontal="center")
@@ -508,16 +578,16 @@ def sheet_raw(wb, rows, trials):
     for rr in range(3, 3 + len(rows)):
         for c in range(1, ncol + 1):
             ws.cell(rr, c).font = F_BODY
-            if c > 3 + n:                       # everything after #conf is a charge
+            if c > 4 + n:                       # everything after #conf is a charge
                 ws.cell(rr, c).number_format = "0.00"
     for col in range(1, len(QUANTITIES) + 1):   # merge each quantity's group header
-        first = 4 + (col - 1) * n
+        first = 5 + (col - 1) * n
         if n > 1:
             ws.merge_cells(start_row=1, start_column=first, end_row=1, end_column=first + n - 1)
-    ws.freeze_panes = "D3"
-    for c, w in zip("ABC", (10, 14, 9)):
+    ws.freeze_panes = "E3"
+    for c, w in zip("ABCD", (10, 14, 9, 12)):
         ws.column_dimensions[c].width = w
-    for c in range(4, ncol + 1):
+    for c in range(5, ncol + 1):
         ws.column_dimensions[get_column_letter(c)].width = 8
     note = ws.cell(4 + len(rows), 1)
     note.value = ("Source: xts_sum_crg.out (pH 7.4, entropy-corrected by xts_corr.py) in each "
@@ -559,13 +629,13 @@ def sheet_table1(wb, rows, trials, n):
         col += span
 
     # source column for each quantity on Per-Trial Data
-    first_col = {key: 4 + i * n for i, (key, _t, _f) in enumerate(QUANTITIES)}
-    src_row = {r["pdb"]: i + 3 for i, r in enumerate(rows)}
+    first_col = {key: 5 + i * n for i, (key, _t, _f) in enumerate(QUANTITIES)}
+    src_row = {(r["pdb"], r["resid"]): i + 3 for i, r in enumerate(rows)}
 
-    def rng(key, pdb):
+    def rng(key, rowkey):
         a = get_column_letter(first_col[key])
         b = get_column_letter(first_col[key] + n - 1)
-        return f"'Per-Trial Data'!${a}{src_row[pdb]}:${b}{src_row[pdb]}"
+        return f"'Per-Trial Data'!${a}{src_row[rowkey]}:${b}{src_row[rowkey]}"
 
     by_kinase = {}
     for r in rows:
@@ -575,14 +645,16 @@ def sheet_table1(wb, rows, trials, n):
     for kinase in sorted(by_kinase):
         for c in range(1, len(head) + 1):
             ws.cell(i, c).fill = GREY
-        ws.cell(i, 2).value = kinase
+        ws.cell(i, 2).value = KINASE_NAMES.get(kinase, kinase)
         ws.cell(i, 2).font = F_BOLD
         i += 1
         # within a kinase, order by inhibitor then PDB -- as Table 1 of
         # kinase_project-final-tables.xlsx does
-        for r in sorted(by_kinase[kinase], key=lambda x: (x["inhibitor"], x["pdb"])):
-            p = r["pdb"]
-            ws.cell(i, 1).value = p
+        for r in sorted(by_kinase[kinase],
+                        key=lambda x: (x["inhibitor"], x["pdb"], x["resid"])):
+            p = (r["pdb"], r["resid"])
+            ws.cell(i, 1).value = (f'{r["pdb"]} ({r["site"]})' if r["site"]
+                                   else r["pdb"])
             ws.cell(i, 2).value = r["inhibitor"]
             ws.cell(i, 3).value = r["kinase"]
             ws.cell(i, 4).value = f"=AVERAGE({rng('nconf', p)})"
@@ -628,24 +700,26 @@ def sheet_conf_raw(wb, conf, trials):
     """Per-trial occupancies per ligand conformer type -- the raw layer for SI-Table2."""
     ws = wb.create_sheet("Per-Trial Conf")
     n = len(trials)
-    top = ["", "", "", ""] + ["P(i) soln"] + [""] * (n - 1) \
+    top = ["", "", "", "", ""] + ["P(i) soln"] + [""] * (n - 1) \
           + ["P(i) bound"] + [""] * (n - 1) + ["# rotamers"] + [""] * (n - 1)
-    sub = ["PDBID", "Ligand", "Conf type", "charge"] + \
+    sub = ["PDBID", "Ligand", "site", "Conf type", "charge"] + \
           [t.replace("Trial", "T") for _ in range(3) for t in trials]
     ws.append(top); ws.append(sub)
     index = {}
     r = 3
     for pdb in sorted(conf):
         rec = conf[pdb]
-        for ctype in sorted(rec["types"]):
-            d = rec["types"][ctype]
-            ws.append([pdb, rec["inhibitor"], ctype, d["charge"]]
+        for key in sorted(rec["types"]):
+            resid, ctype = key
+            d = rec["types"][key]
+            ws.append([pdb, rec["inhibitor"], rec["sites"].get(resid, ""), ctype,
+                       d["charge"]]
                       + [d["soln"].get(t) for t in trials]
                       + [d["bound"].get(t) for t in trials]
                       + [d["nrot"].get(t) for t in trials])
-            index.setdefault(pdb, []).append((ctype, r))
+            index.setdefault((pdb, resid), []).append((key, r))
             r += 1
-    ncol = 4 + 3 * n
+    ncol = 5 + 3 * n
     for c in range(1, ncol + 1):
         ws.cell(1, c).font = F_BOLD
         ws.cell(1, c).alignment = Alignment(horizontal="center")
@@ -655,18 +729,18 @@ def sheet_conf_raw(wb, conf, trials):
     for rr in range(3, r):
         for c in range(1, ncol + 1):
             ws.cell(rr, c).font = F_BODY
-            if c == 4:
+            if c == 5:
                 ws.cell(rr, c).number_format = "0.000"
-            elif 5 <= c <= 4 + 2 * n:
+            elif 6 <= c <= 5 + 2 * n:
                 ws.cell(rr, c).number_format = "0.000"
     for col in range(3):
-        first = 5 + col * n
+        first = 6 + col * n
         if n > 1:
             ws.merge_cells(start_row=1, start_column=first, end_row=1, end_column=first + n - 1)
-    ws.freeze_panes = "E3"
-    for c, w in zip("ABCD", (10, 14, 11, 9)):
+    ws.freeze_panes = "F3"
+    for c, w in zip("ABCDE", (10, 14, 12, 11, 9)):
         ws.column_dimensions[c].width = w
-    for c in range(5, ncol + 1):
+    for c in range(6, ncol + 1):
         ws.column_dimensions[get_column_letter(c)].width = 8
     note = ws.cell(r + 1, 1)
     note.value = ("Occupancy at pH 7.4 from xts_fort.38, summed over the rotamers of each "
@@ -729,9 +803,13 @@ def sheet_si_table2(wb, conf, index, trials, n):
         b = get_column_letter(first_col + n - 1)
         return f"'Per-Trial Conf'!${a}{src_row}:${b}{src_row}"
 
+    SOLN0, BOUND0, CHARGE = 6, 6 + n, "$E"      # columns on Per-Trial Conf
+
     by_kinase = {}
     for pdb in conf:
-        by_kinase.setdefault(conf[pdb]["kinase"] or "(unassigned)", []).append(pdb)
+        for resid in conf[pdb]["copies"]:
+            by_kinase.setdefault(conf[pdb]["kinase"] or "(unassigned)", []).append(
+                (pdb, resid))
 
     extra, extra_path = read_extra_energies()
     energies = dict(CONF_ENERGY)
@@ -744,28 +822,31 @@ def sheet_si_table2(wb, conf, index, trials, n):
     for kinase in sorted(by_kinase):
         for c in range(1, len(head) + 1):
             ws.cell(i, c).fill = GREY
-        ws.cell(i, 2).value = kinase
+        ws.cell(i, 2).value = KINASE_NAMES.get(kinase, kinase)
         ws.cell(i, 2).font = F_BOLD
         i += 1
         # within a kinase, order by inhibitor then PDB, as Table 1 does
-        for pdb in sorted(by_kinase[kinase], key=lambda x: (conf[x]["inhibitor"], x)):
+        for pdb, resid in sorted(by_kinase[kinase],
+                                 key=lambda x: (conf[x[0]]["inhibitor"], x[0], x[1])):
             rec = conf[pdb]
+            site = rec["sites"].get(resid, "")
             first_row = i
-            for ctype, src in index[pdb]:
-                ws.cell(i, 1).value = pdb
+            for key, src in index[(pdb, resid)]:
+                ctype = key[1]
+                ws.cell(i, 1).value = f"{pdb} ({site})" if site else pdb
                 ws.cell(i, 2).value = rec["inhibitor"]
-                ws.cell(i, 3).value = rec["labels"].get(ctype, ctype)
+                ws.cell(i, 3).value = rec["labels"].get(key, ctype)
                 ws.cell(i, 4).value = rec["protons"].get(ctype, "")
                 ws.cell(i, 5).value = ctype
-                ws.cell(i, 6).value = r3(f"'Per-Trial Conf'!$D{src}")
-                ws.cell(i, 10).value = r3(f"AVERAGE({rng(5, src)})")
+                ws.cell(i, 6).value = r3(f"'Per-Trial Conf'!{CHARGE}{src}")
+                ws.cell(i, 10).value = r3(f"AVERAGE({rng(SOLN0, src)})")
                 ws.cell(i, 11).value = r3(
-                    f"IF(COUNT({rng(5, src)})>1,"
-                    f"STDEV({rng(5, src)})/SQRT(COUNT({rng(5, src)})),0)")
-                ws.cell(i, 12).value = r3(f"AVERAGE({rng(5 + n, src)})")
+                    f"IF(COUNT({rng(SOLN0, src)})>1,"
+                    f"STDEV({rng(SOLN0, src)})/SQRT(COUNT({rng(SOLN0, src)})),0)")
+                ws.cell(i, 12).value = r3(f"AVERAGE({rng(BOUND0, src)})")
                 ws.cell(i, 13).value = r3(
-                    f"IF(COUNT({rng(5 + n, src)})>1,"
-                    f"STDEV({rng(5 + n, src)})/SQRT(COUNT({rng(5 + n, src)})),0)")
+                    f"IF(COUNT({rng(BOUND0, src)})>1,"
+                    f"STDEV({rng(BOUND0, src)})/SQRT(COUNT({rng(BOUND0, src)})),0)")
                 for c in range(1, len(head) + 1):
                     ws.cell(i, c).font = F_BODY
                     if c >= 6:                       # every numeric column
@@ -778,12 +859,14 @@ def sheet_si_table2(wb, conf, index, trials, n):
             # energy is written as a number, computed here from the mean
             # P(i) soln; Boltzmann and Stat Mech are live formulas off it, the
             # same arrangement as SI.3.Conf of the published workbook.
-            for rr, (ctype, _src) in zip(range(first_row, last + 1), index[pdb]):
+            for rr, (key, _src) in zip(range(first_row, last + 1),
+                                       index[(pdb, resid)]):
+                ctype = key[1]
                 if ctype in energies:
                     ws.cell(rr, 7).value = energies[ctype]
                 else:
                     # unpublished conformer: fall back to -RT*ln(P(i) soln)
-                    vals = [v for v in (rec["types"][ctype]["soln"].get(tr)
+                    vals = [v for v in (rec["types"][key]["soln"].get(tr)
                                         for tr in trials) if v is not None]
                     mean_soln = (sum(vals) / len(vals)) if vals else 0.0
                     if mean_soln > 0:

@@ -215,19 +215,42 @@ for idx, (pdb, (inhibitor, icode)) in enumerate(sorted(inhibitor_map.items()), 1
 
     if matches:
         stats['pdbs_with_data'] += 1
-        stats['residues_found'] += 1  # Count only 1 per PDB since we only plot 1 per PDB
+        stats['residues_found'] += len(matches)
         print_log(f"      ├─ ✅ Found {len(matches)} residue(s) matching '{icode}':")
         for res, val1, val2 in matches:
             print_log(f"      │    • {res}: {x_label}={val1:.4f}, {y_label}={val2:.4f}")
-        
-        # Only use the FIRST matching residue per PDB for plotting
-        first_res, first_val1, first_val2 = matches[0]
-        points.append((first_val1, first_val2, pdb, first_res, inhibitor))
-        
+
+        # EVERY copy is plotted, not just the first.  A structure can hold more
+        # than one copy of its ligand -- 3ZOS has two Ponatinibs, one buried in
+        # the pocket and one on the surface -- and they titrate differently once
+        # bound, so collapsing them to one point hides a real result.  When
+        # there is more than one, each point is labelled from its solvent
+        # accessibility in acc.res (least exposed = buried).
+        sites = {}
         if len(matches) > 1:
-            print_log(f"      │    ⚠️  Multiple matches found - using first residue: {first_res}")
-        
-        print_log(f"      └─ ✓ Data collected (1 point per PDB)")
+            acc = {}
+            acc_path = os.path.join(dir2, pdb, "acc.res")
+            if os.path.isfile(acc_path):
+                for line in open(acc_path):
+                    f = line.split()
+                    if len(f) >= 5 and f[0] == "RES":
+                        try:
+                            acc[f[1] + f[2]] = float(f[4])
+                        except ValueError:
+                            pass
+            keyed = [(res, acc.get(res[:3] + " " + res[5:10].strip(), 1.0))
+                     for res, _, _ in matches]
+            ranked = [r for r, _ in sorted(keyed, key=lambda kv: kv[1])]
+            sites[ranked[0]] = "buried"
+            sites[ranked[-1]] = "surface"
+            print_log(f"      │    ⚠️  {len(matches)} copies -- plotting each: "
+                      f"{', '.join(f'{r}={sites.get(r, str(i))}' for i, r in enumerate(ranked))}")
+
+        for res, val1, val2 in matches:
+            tag = f"{pdb} ({sites[res]})" if res in sites else pdb
+            points.append((val1, val2, tag, res, inhibitor))
+
+        print_log(f"      └─ ✓ Data collected ({len(matches)} point(s))")
         print_log()
     else:
         stats['pdbs_without_data'] += 1
