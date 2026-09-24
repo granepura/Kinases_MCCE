@@ -30,7 +30,7 @@ tautomer energies come from Schrödinger's Epik; electrostatics are solved with 
 
 **Everything is run in triplicate.** `Trial01`, `Trial02` and `Trial03` are independent repeats of
 the whole pipeline. This matters because two stages are stochastic: step 2's rotamer generation does
-not reproduce between runs (no two trials share a conformer count for any of the 37 structures), and
+not reproduce between runs (no structure reproduces its conformer count across all three trials), and
 step 4's Monte Carlo uses a per-trial seed. The trials therefore measure run-to-run reproducibility
 of the entire calculation, not just the Monte Carlo.
 
@@ -65,20 +65,25 @@ conformational dependence for net-charge change in either partner.
 
 ### What the replicates added
 
-Reproducibility is predictable from how close a site sits to half-ionisation, since
-`d(charge)/d(pKa) = ln(10)·f·(1−f)` peaks at f = 0.5:
+Reproducibility is predictable from the occupancies themselves, with no appeal to a pKa. The
+quantity being averaged is a state occupancy, and for a site divided between two states with
+occupancy `f` the variance is `f(1−f)`, largest when the two are evenly populated and vanishing
+when either saturates:
 
-| mean bound charge | n | mean spread over 3 trials |
+| bound population at pH 7.4 | n | mean spread over 3 trials |
 |---|---|---|
-| near half-ionised, f(1−f) > 0.15 | 10 | 0.086 |
+| most evenly divided, f(1−f) > 0.15 | 10 | 0.086 |
 | intermediate | 4 | 0.040 |
-| saturated | 24 | **0.001** |
+| saturated in one state | 24 | **0.001** |
 
 Two thirds of the ligands reproduce to ±0.01 across independent conformer sets. A large spread means
-the site is genuinely poised, not that the calculation failed — 3CS9 nilotinib is the clearest case,
-where binding raises the pKa from 6.40 in solution to ~7.2, landing it on the working pH of 7.4.
-Such sites should be reported as a range rather than mean ± SEM. See `CLAUDE.md` for the full
-treatment.
+the population is genuinely divided, not that the calculation failed. 3CS9 nilotinib is the clearest
+case, with a bound charge of 0.42, 0.63 and 0.19 in the three trials. Such sites should be reported
+as a range rather than mean ± SEM.
+
+Note that these runs use `TITR_STEPS = 1` at pH 7.4, so no titration is performed and no pKa is
+determined by them; `pK.out` reports only `<7.4` or `>7.4` for every residue. Statements about where
+a site sits relative to its pKa would require a titration. See `CLAUDE.md` for the full treatment.
 
 ---
 
