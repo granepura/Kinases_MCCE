@@ -82,8 +82,10 @@ case, with a bound charge of 0.42, 0.63 and 0.19 in the three trials. Such sites
 as a range rather than mean ± SEM.
 
 Note that these runs use `TITR_STEPS = 1` at pH 7.4, so no titration is performed and no pKa is
-determined by them; `pK.out` reports only `<7.4` or `>7.4` for every residue. Statements about where
-a site sits relative to its pKa would require a titration. See `CLAUDE.md` for the full treatment.
+determined by them; `pK.out` reports only `<7.4` or `>7.4` for every residue. An effective pKa can be
+back-computed from the occupancy as `pKa = 7.4 - log10((1-f)/f)`, but that assumes the site has
+exactly two charge states and is not a titration result, so label it as such wherever it is used.
+See `CLAUDE.md` for the full treatment.
 
 ---
 
