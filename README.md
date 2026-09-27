@@ -121,6 +121,7 @@ make_trials_tables_xlsx.py            builds tables_Trials/kinase_project-trials
 
 plots_Trials_*/  tables_Trials/       cross-trial figures, CSVs and the workbook
 outlier-analysis/  dfg-split-analysis/  test_xts_corr/    figure-specific analyses
+experimental_pka/                     literature pKa values behind Table S6, with sources
 ```
 
 ---
